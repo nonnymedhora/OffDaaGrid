@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig>
+   <AppModuleConfigBag>
+      <AppModuleConfig name="PlatformAppModuleLocal">
+         <DeployPlatform>LOCAL</DeployPlatform>
+         <JDBCName>SALESDEV</JDBCName>
+         <jbo.project>Model</jbo.project>
+         <AppModuleJndiName>com.bawaweb.appmodule.PlatformAppModule</AppModuleJndiName>
+         <java.naming.factory.initial>oracle.jbo.common.JboInitialContextFactory</java.naming.factory.initial>
+         <ApplicationName>com.bawaweb.appmodule.PlatformAppModule</ApplicationName>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <ConnectionDefinition name="SANDBOX">
+      <ENTRY name="JDBC_PORT" value="1521"/>
+      <ENTRY name="ConnectionType" value="JDBC"/>
+      <ENTRY name="HOSTNAME" value="san-sv-sbox.ox.com"/>
+      <ENTRY name="DeployPassword" value="true"/>
+      <ENTRY name="user" value="sales"/>
+      <ENTRY name="ConnectionName" value="SANDBOX"/>
+      <ENTRY name="ServiceName" value="XE"/>
+      <ENTRY name="password">{904}05E8556FDBD32E921A60F8AC957DCC01FF</ENTRY>
+      <ENTRY name="JdbcDriver" value="oracle.jdbc.OracleDriver"/>
+      <ENTRY name="ORACLE_JDBC_TYPE" value="thin"/>
+      <ENTRY name="DeployPassword" value="true"/>
+   </ConnectionDefinition>
+   <ConnectionDefinition name="sales_xe">
+      <ENTRY name="JDBC_PORT" value="1522"/>
+      <ENTRY name="ConnectionType" value="JDBC"/>
+      <ENTRY name="HOSTNAME" value="san-wk-aweinste.ox.com"/>
+      <ENTRY name="DeployPassword" value="true"/>
+      <ENTRY name="user" value="SALES"/>
+      <ENTRY name="ConnectionName" value="sales_xe"/>
+      <ENTRY name="URL" value="jdbc:oracle:thin:@san-wk-aweinste.ox.com:1522:xe"/>
+      <ENTRY name="ServiceName" value="xe"/>
+      <ENTRY name="Role" value="Normal"/>
+      <ENTRY name="password">{904}054F0DEB69DFEB3A5C34777FEE19A16DC0</ENTRY>
+      <ENTRY name="JdbcDriver" value="oracle.jdbc.OracleDriver"/>
+      <ENTRY name="ORACLE_JDBC_TYPE" value="thin"/>
+      <ENTRY name="DeployPassword" value="true"/>
+   </ConnectionDefinition>
+   <ConnectionDefinition name="SALESPROD">
+      <ENTRY name="JDBC_PORT" value="1521"/>
+      <ENTRY name="ConnectionType" value="JDBC"/>
+      <ENTRY name="HOSTNAME" value="otrdb.ox.com"/>
+      <ENTRY name="DeployPassword" value="true"/>
+      <ENTRY name="user" value="SALES"/>
+      <ENTRY name="ConnectionName" value="SALESPROD"/>
+      <ENTRY name="SID" value="SALES"/>
+      <ENTRY name="Role" value="Normal"/>
+      <ENTRY name="JdbcDriver" value="oracle.jdbc.OracleDriver"/>
+      <ENTRY name="password">{904}05210F51296BAD831F0793F7C18A326ED9</ENTRY>
+      <ENTRY name="ORACLE_JDBC_TYPE" value="thin"/>
+      <ENTRY name="DeployPassword" value="true"/>
+   </ConnectionDefinition>
+   <ConnectionDefinition name="SALESDEV">
+      <ENTRY name="JDBC_PORT" value="1521"/>
+      <ENTRY name="ConnectionType" value="JDBC"/>
+      <ENTRY name="HOSTNAME" value="otrdb.ox.com"/>
+      <ENTRY name="DeployPassword" value="true"/>
+      <ENTRY name="user" value="SALES"/>
+      <ENTRY name="ConnectionName" value="SALESDEV"/>
+      <ENTRY name="URL" value="jdbc:oracle:thin:@otrdevdb.ox.com:1521:salesdev"/>
+      <ENTRY name="SID" value="salesdev"/>
+      <ENTRY name="Role" value="Normal"/>
+      <ENTRY name="password">
+         <![CDATA[{904}052295E16E5C301F3BE698342927E5E5E3]]>
+      </ENTRY>
+      <ENTRY name="JdbcDriver" value="oracle.jdbc.OracleDriver"/>
+      <ENTRY name="ORACLE_JDBC_TYPE" value="thin"/>
+      <ENTRY name="DeployPassword" value="true"/>
+   </ConnectionDefinition>
+</BC4JConfig>

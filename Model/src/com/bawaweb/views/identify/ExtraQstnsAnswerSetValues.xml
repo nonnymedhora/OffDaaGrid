@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="ExtraQstnsAnswerSetValues" OrderBy="QST_ID ASC,ANS_ID ASC,ASV_DISPLAY_SEQ ASC"
+	BindingStyle="OracleName" CustomQuery="true"
+	RowClass="com.bawaweb.views.identify.ExtraQstnsAnswerSetValuesRowImpl"
+	ComponentClass="com.bawaweb.views.identify.ExtraQstnsAnswerSetValuesImpl"
+	DefClass="com.bawaweb.views.identify.ExtraQstnsAnswerSetValuesDefImpl"
+	ComponentInterface="com.bawaweb.views.identify.common.ExtraQstnsAnswerSetValues"
+	ClientProxyName="com.bawaweb.views.identify.client.ExtraQstnsAnswerSetValuesClient"
+	RowInterface="com.bawaweb.views.identify.common.ExtraQstnsAnswerSetValuesRow"
+	ClientRowProxyName="com.bawaweb.views.identify.client.ExtraQstnsAnswerSetValuesRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rprt_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+--SELECT OtlQuestions.QST_ID, 
+--       OtlQuestions.QST_RAS_ID, 
+--       OtlAnswerSetValues.ASV_ID, 
+--       OtlAnswerSetValues.ASV_ANS_ID, 
+--       OtlAnswerSetValues.ASV_ANSWER, 
+--       OtlAnswerSetValues.ASV_DISPLAY_SEQ, 
+--       OtlAnswerSetValues.ASV_DELETE_YN, 
+--       OtlAnswerSets.ANS_ID, 
+--       OtlQuestions.QST_ANS_ID
+--FROM BAwaWEb_QUESTIONS OtlQuestions, BAwaWEb_ANSWER_SETS OtlAnswerSets, BAwaWEb_ANSWER_SET_VALUES OtlAnswerSetValues
+--WHERE OtlQuestions.QST_ANS_ID = OtlAnswerSets.ANS_ID and OtlAnswerSets.ANS_ID = OtlAnswerSetValues.ASV_ANS_ID and OtlQuestions.QST_RPRT_ID = :rprt_id and OtlQuestions.QST_ANS_ID IN (SELECT ANS_ID                                        FROM BAwaWEb_ANSWER_SETS                                        WHERE ANS_ADD_ANSWER_YN = 'Y'             AND ANS_DELETE_YN = 'N') and OtlQuestions.QST_DELETE_YN = 'N'
+
+SELECT DISTINCT 
+    qst.qst_id, 
+    qst.qst_ras_id, 
+    asv.asv_id, 
+    asv.asv_ans_id, 
+    asv.asv_answer, 
+    asv.asv_display_seq, 
+    asv.asv_delete_yn,
+    ans.ans_id, 
+    qst.qst_ans_id
+FROM 
+    bawaweb_questions qst, 
+    bawaweb_answer_sets ans, 
+    bawaweb_answer_set_values asv, 
+    bawaweb_report_answer_sets ras
+WHERE 
+    ras.ras_ans_id = ans.ans_id
+ AND ans.ans_id = asv.asv_ans_id
+ AND qst.qst_rprt_id = :rprt_id
+ AND ras.ras_rprt_id = qst.qst_rprt_id
+ AND qst.qst_ras_id IN (
+        SELECT ras_id
+        FROM bawaweb_report_answer_sets
+        WHERE ras_add_answer_yn = 'Y'
+        AND ras_delete_yn = 'N'
+        AND ras_ans_id IN (
+            SELECT ans_id
+            FROM bawaweb_answer_sets
+            WHERE ans_add_answer_yn = 'Y' 
+            AND ans_delete_yn = 'N')
+ )
+ AND qst.qst_delete_yn = 'N'
+   ]]></SQLQuery>
+	<EntityUsage Name="OtlQuestions" Entity="com.bawaweb.model.OtlQuestions">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryOrderBy" Value="QST_ID ASC, ANS_ID ASC, ASV_DISPLAY_SEQ ASC" />
+			<Attr Name="_queryWhere"
+				Value="OtlQuestions.QST_ANS_ID = OtlAnswerSets.ANS_ID and OtlAnswerSets.ANS_ID = OtlAnswerSetValues.ASV_ANS_ID and OtlQuestions.QST_RPRT_ID = :rprt_id and OtlQuestions.QST_ANS_ID IN (SELECT ANS_ID                                        FROM BAwaWEb_ANSWER_SETS                                        WHERE ANS_ADD_ANSWER_YN = &#39;Y&#39;             AND ANS_DELETE_YN = &#39;N&#39;) and OtlQuestions.QST_DELETE_YN = &#39;N&#39;" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlAnswerSets" Entity="com.bawaweb.model.OtlAnswerSets"
+		SourceUsage="com.bawaweb.views.identify.ExtraQstnsAnswerSetValues.OtlQuestions"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlAnswerSetValues" Entity="com.bawaweb.model.OtlAnswerSetValues"
+		Association="com.bawaweb.model.AsvAnsFkAssoc" AssociationEnd="com.bawaweb.model.AsvAnsFkAssoc.OtlAnswerSetValues"
+		SourceUsage="com.bawaweb.views.identify.ExtraQstnsAnswerSetValues.OtlAnswerSets"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlAnswerSetValues.AsvAnsId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.OtlAnswerSets.AnsId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlReportAnswerSets" Entity="com.bawaweb.model.OtlReportAnswerSets"
+		Association="com.bawaweb.model.RasAnsFkAssoc" AssociationEnd="com.bawaweb.model.RasAnsFkAssoc.OtlReportAnswerSets"
+		SourceUsage="com.bawaweb.views.identify.ExtraQstnsAnswerSetValues.OtlAnswerSets"
+		ReadOnly="true" Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasAnsId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.OtlAnswerSets.AnsId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="QstId" IsNotNull="true"
+		EntityAttrName="QstId" EntityUsage="OtlQuestions" AliasName="QST_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QstRasId" EntityAttrName="QstRasId"
+		EntityUsage="OtlQuestions" AliasName="QST_RAS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="AsvId" IsNotNull="true"
+		EntityAttrName="AsvId" EntityUsage="OtlAnswerSetValues" AliasName="ASV_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="AsvAnsId" IsNotNull="true"
+		EntityAttrName="AsvAnsId" EntityUsage="OtlAnswerSetValues" AliasName="ASV_ANS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="AsvAnswer" IsNotNull="true"
+		EntityAttrName="AsvAnswer" EntityUsage="OtlAnswerSetValues" AliasName="ASV_ANSWER">
+	</ViewAttribute>
+	<ViewAttribute Name="AsvDisplaySeq" IsNotNull="true"
+		EntityAttrName="AsvDisplaySeq" EntityUsage="OtlAnswerSetValues"
+		AliasName="ASV_DISPLAY_SEQ">
+	</ViewAttribute>
+	<ViewAttribute Name="AsvDeleteYn" IsNotNull="true"
+		EntityAttrName="AsvDeleteYn" EntityUsage="OtlAnswerSetValues"
+		AliasName="ASV_DELETE_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="AnsId" IsNotNull="true"
+		EntityAttrName="AnsId" EntityUsage="OtlAnswerSets" AliasName="ANS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QstAnsId" EntityAttrName="QstAnsId"
+		EntityUsage="OtlQuestions" AliasName="QST_ANS_ID">
+	</ViewAttribute>
+</ViewObject>

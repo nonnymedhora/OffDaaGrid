@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlReportAnswerSetValuesUView"
+	SelectList="OtlReportAnswerSetValues.RAV_ID, 
+       OtlReportAnswerSetValues.RAV_RAS_ID, 
+       OtlReportAnswerSetValues.RAV_ANSWER, 
+       OtlReportAnswerSetValues.RAV_DISPLAY_SEQ, 
+       OtlReportAnswerSetValues.RAV_ASV_ID, 
+       OtlReportAnswerSetValues.RAV_DELETE_YN"
+	FromList="BAwaWEb_REPORT_ANSWER_SET_VALUES OtlReportAnswerSetValues"
+	Where="OtlReportAnswerSetValues.RAV_ID = :rav_id" BindingStyle="OracleName"
+	CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.OtlReportAnswerSetValuesUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.OtlReportAnswerSetValuesUViewImpl"
+	DefClass="com.bawaweb.views.updatable.OtlReportAnswerSetValuesUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.OtlReportAnswerSetValuesUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.OtlReportAnswerSetValuesUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.OtlReportAnswerSetValuesUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.OtlReportAnswerSetValuesUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rav_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlReportAnswerSetValues"
+		Entity="com.bawaweb.model.OtlReportAnswerSetValues">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="OtlReportAnswerSetValues.RAV_ID = :rav_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="RavId" IsNotNull="true"
+		EntityAttrName="RavId" EntityUsage="OtlReportAnswerSetValues"
+		AliasName="RAV_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RavRasId" IsNotNull="true"
+		EntityAttrName="RavRasId" EntityUsage="OtlReportAnswerSetValues"
+		AliasName="RAV_RAS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RavAnswer" IsNotNull="true"
+		EntityAttrName="RavAnswer" EntityUsage="OtlReportAnswerSetValues"
+		AliasName="RAV_ANSWER">
+	</ViewAttribute>
+	<ViewAttribute Name="RavDisplaySeq" IsNotNull="true"
+		EntityAttrName="RavDisplaySeq" EntityUsage="OtlReportAnswerSetValues"
+		AliasName="RAV_DISPLAY_SEQ">
+	</ViewAttribute>
+	<ViewAttribute Name="RavAsvId" IsNotNull="true"
+		EntityAttrName="RavAsvId" EntityUsage="OtlReportAnswerSetValues"
+		AliasName="RAV_ASV_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RavDeleteYn" IsNotNull="true"
+		EntityAttrName="RavDeleteYn" EntityUsage="OtlReportAnswerSetValues"
+		AliasName="RAV_DELETE_YN">
+	</ViewAttribute>
+	<ViewLinkAccessor Name="OtlSourceAnswersUView"
+		ViewLink="com.bawaweb.views.updatable.SraRavFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+	<ViewLinkAccessor Name="OtlSourceMultiAnswersUView"
+		ViewLink="com.bawaweb.views.updatable.OtlSmaRavFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+</ViewObject>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlAnswerSetValues"
+	SelectList="OtlAnswerSetValues.ASV_ID, 
+       OtlAnswerSetValues.ASV_ANS_ID, 
+       OtlAnswerSetValues.ASV_ANSWER, 
+       OtlAnswerSetValues.ASV_DISPLAY_SEQ, 
+       OtlAnswerSetValues.ASV_DELETE_YN"
+	FromList="BAwaWEb_ANSWER_SET_VALUES OtlAnswerSetValues" Where="OtlAnswerSetValues.ASV_ID = :asv_id"
+	OrderBy="ASV_DISPLAY_SEQ ASC" BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.model.OtlAnswerSetValuesRowImpl"
+	ComponentClass="com.bawaweb.views.model.OtlAnswerSetValuesImpl"
+	DefClass="com.bawaweb.views.model.OtlAnswerSetValuesDefImpl"
+	ComponentInterface="com.bawaweb.views.model.common.OtlAnswerSetValues"
+	ClientProxyName="com.bawaweb.views.model.client.OtlAnswerSetValuesClient"
+	RowInterface="com.bawaweb.views.model.common.OtlAnswerSetValuesRow"
+	ClientRowProxyName="com.bawaweb.views.model.client.OtlAnswerSetValuesRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="asv_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlAnswerSetValues" Entity="com.bawaweb.model.OtlAnswerSetValues">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryOrderBy" Value="ASV_DISPLAY_SEQ ASC" />
+			<Attr Name="_queryWhere" Value="OtlAnswerSetValues.ASV_ID = :asv_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="AsvId" IsNotNull="true"
+		EntityAttrName="AsvId" EntityUsage="OtlAnswerSetValues" AliasName="ASV_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="AsvAnsId" IsNotNull="true"
+		EntityAttrName="AsvAnsId" EntityUsage="OtlAnswerSetValues" AliasName="ASV_ANS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="AsvAnswer" IsNotNull="true"
+		EntityAttrName="AsvAnswer" EntityUsage="OtlAnswerSetValues" AliasName="ASV_ANSWER">
+	</ViewAttribute>
+	<ViewAttribute Name="AsvDisplaySeq" IsNotNull="true"
+		EntityAttrName="AsvDisplaySeq" EntityUsage="OtlAnswerSetValues"
+		AliasName="ASV_DISPLAY_SEQ">
+	</ViewAttribute>
+	<ViewAttribute Name="AsvDeleteYn" IsNotNull="true"
+		EntityAttrName="AsvDeleteYn" EntityUsage="OtlAnswerSetValues"
+		AliasName="ASV_DELETE_YN">
+	</ViewAttribute>
+</ViewObject>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtrTabLocksUView"
+	SelectList="OtrTabLocks.OTL_ID, 
+       OtrTabLocks.OTL_TAB_NAME, 
+       OtrTabLocks.OTL_TAB_ID, 
+       OtrTabLocks.OTL_EMPL_ID, 
+       OtrTabLocks.OTL_CREATED_DT"
+	FromList="BAwaWEb_TAB_LOCKS OtrTabLocks" Where="otl_id = :otl_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.OtrTabLocksUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.OtrTabLocksUViewImpl"
+	DefClass="com.bawaweb.views.updatable.OtrTabLocksUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.OtrTabLocksUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.OtrTabLocksUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.OtrTabLocksUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.OtrTabLocksUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="otl_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtrTabLocks" Entity="com.bawaweb.model.OtrTabLocks">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="otl_id = :otl_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="OtlId" IsNotNull="true"
+		EntityAttrName="OtlId" EntityUsage="OtrTabLocks" AliasName="OTL_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="OtlTabName" IsNotNull="true"
+		EntityAttrName="OtlTabName" EntityUsage="OtrTabLocks" AliasName="OTL_TAB_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="OtlTabId" IsNotNull="true"
+		EntityAttrName="OtlTabId" EntityUsage="OtrTabLocks" AliasName="OTL_TAB_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="OtlEmplId" IsNotNull="true"
+		EntityAttrName="OtlEmplId" EntityUsage="OtrTabLocks" AliasName="OTL_EMPL_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="OtlCreatedDt" IsNotNull="true"
+		EntityAttrName="OtlCreatedDt" EntityUsage="OtrTabLocks" AliasName="OTL_CREATED_DT">
+	</ViewAttribute>
+</ViewObject>

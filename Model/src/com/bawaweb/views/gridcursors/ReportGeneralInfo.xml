@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="ReportGeneralInfo" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.gridcursors.ReportGeneralInfoRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.ReportGeneralInfoImpl"
+	DefClass="com.bawaweb.views.gridcursors.ReportGeneralInfoDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.common.ReportGeneralInfo"
+	ClientProxyName="com.bawaweb.views.gridcursors.client.ReportGeneralInfoClient"
+	RowInterface="com.bawaweb.views.gridcursors.common.ReportGeneralInfoRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.client.ReportGeneralInfoRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rprt_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+select r.rprt_id, r.edtr_id, t.rtyp_id, r.rprt_desc, r.rprt_duedate, t.rtyp_desc, r.rprt_source_display_field from rprt_reports r, rtyp_report_types t where r.rprt_id = :rprt_id and r.rtyp_id = t.rtyp_id
+   ]]></SQLQuery>
+	<EntityUsage Name="RprtReports" Entity="com.bawaweb.model.RprtReports">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="RtypReportTypes" Entity="com.bawaweb.model.RtypReportTypes"
+		Association="com.bawaweb.model.RprtRtypFkAssoc" AssociationEnd="com.bawaweb.model.RprtRtypFkAssoc.RtypReportTypes"
+		SourceUsage="com.bawaweb.views.gridcursors.ReportGeneralInfo.RprtReports"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.RtypReportTypes.RtypId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.RprtReports.RtypId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="RprtId" IsNotNull="true"
+		EntityAttrName="RprtId" EntityUsage="RprtReports" AliasName="RPRT_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="EdtrId" EntityAttrName="EdtrId"
+		EntityUsage="RprtReports" AliasName="EDTR_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RtypId" IsNotNull="true"
+		EntityAttrName="RtypId" EntityUsage="RtypReportTypes" AliasName="RTYP_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RprtDesc" EntityAttrName="RprtDesc"
+		EntityUsage="RprtReports" AliasName="RPRT_DESC">
+	</ViewAttribute>
+	<ViewAttribute Name="RprtDuedate" EntityAttrName="RprtDuedate"
+		EntityUsage="RprtReports" AliasName="RPRT_DUEDATE">
+	</ViewAttribute>
+	<ViewAttribute Name="RtypDesc" EntityAttrName="RtypDesc"
+		EntityUsage="RtypReportTypes" AliasName="RTYP_DESC">
+	</ViewAttribute>
+	<ViewAttribute Name="RprtSourceDisplayField"
+		EntityAttrName="RprtSourceDisplayField" EntityUsage="RprtReports"
+		AliasName="RPRT_SOURCE_DISPLAY_FIELD">
+	</ViewAttribute>
+</ViewObject>

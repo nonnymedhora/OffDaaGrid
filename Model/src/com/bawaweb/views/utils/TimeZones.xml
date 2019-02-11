@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="TimeZones"
+	SelectList="OtlTimeZones.TMZ_ID, 
+       OtlTimeZones.TMZ_NAME, 
+       OtlTimeZones.TMZ_DESCRIPTION, 
+       OtlTimeZones.TMZ_GMT_ADJUSTMENT_HRS, 
+       OtlTimeZones.TMZ_GMT_ADJUSTMENT_MIN, 
+       OtlTimeZones.TMZ_DELETE_YN, 
+       OtlTimeZones.TMZ_NAME || &#39; &#39; || OtlTimeZones.TMZ_DESCRIPTION
+AS TMZ_NAME_DESCRIPTION"
+	FromList="BAwaWEb_TIME_ZONES OtlTimeZones" Where="OtlTimeZones.TMZ_DELETE_YN = &#39;N&#39;"
+	OrderBy="OtlTimeZones.TMZ_ID" BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.utils.TimeZonesRowImpl" ComponentClass="com.bawaweb.views.utils.TimeZonesImpl"
+	DefClass="com.bawaweb.views.utils.TimeZonesDefImpl" ComponentInterface="com.bawaweb.views.utils.common.TimeZones"
+	ClientProxyName="com.bawaweb.views.utils.client.TimeZonesClient"
+	RowInterface="com.bawaweb.views.utils.common.TimeZonesRow"
+	ClientRowProxyName="com.bawaweb.views.utils.client.TimeZonesRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<EntityUsage Name="OtlTimeZones" Entity="com.bawaweb.model.OtlTimeZones">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryOrderBy" Value="OtlTimeZones.TMZ_ID" />
+			<Attr Name="_queryWhere" Value="OtlTimeZones.TMZ_DELETE_YN = &#39;N&#39;" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="TmzId" IsNotNull="true"
+		EntityAttrName="TmzId" EntityUsage="OtlTimeZones" AliasName="TMZ_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="TmzName" IsNotNull="true"
+		EntityAttrName="TmzName" EntityUsage="OtlTimeZones" AliasName="TMZ_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="TmzDescription" EntityAttrName="TmzDescription"
+		EntityUsage="OtlTimeZones" AliasName="TMZ_DESCRIPTION">
+	</ViewAttribute>
+	<ViewAttribute Name="TmzGmtAdjustmentHrs" IsNotNull="true"
+		EntityAttrName="TmzGmtAdjustmentHrs" EntityUsage="OtlTimeZones"
+		AliasName="TMZ_GMT_ADJUSTMENT_HRS">
+	</ViewAttribute>
+	<ViewAttribute Name="TmzGmtAdjustmentMin" EntityAttrName="TmzGmtAdjustmentMin"
+		EntityUsage="OtlTimeZones" AliasName="TMZ_GMT_ADJUSTMENT_MIN">
+	</ViewAttribute>
+	<ViewAttribute Name="TmzDeleteYn" IsNotNull="true"
+		EntityAttrName="TmzDeleteYn" EntityUsage="OtlTimeZones" AliasName="TMZ_DELETE_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="TmzNameDescription" IsUpdateable="false"
+		IsPersistent="false" Precision="255" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="TMZ_NAME_DESCRIPTION"
+		Expression="OtlTimeZones.TMZ_NAME || &#39; &#39; || OtlTimeZones.TMZ_DESCRIPTION"
+		SQLType="VARCHAR">
+	</ViewAttribute>
+</ViewObject>

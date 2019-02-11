@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlSortingCriteriaValues" DBObjectType="table"
+	DBObjectName="BAwaWEb_SORTING_CRITERIA_VALUES" AliasName="OtlSortingCriteriaValues"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlSortingCriteriaValuesImpl" DefClass="com.bawaweb.model.OtlSortingCriteriaValuesDefImpl"
+	CollClass="com.bawaweb.model.OtlSortingCriteriaValuesCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="ScvId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SCV_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SORTING_CRITERIA_VALUES"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="ScvSrtId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SCV_SRT_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SORTING_CRITERIA_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="ScvScvId" Precision="12" Scale="0"
+		ColumnName="SCV_SCV_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_SORTING_CRITERIA_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="ScvDisplaySeq" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SCV_DISPLAY_SEQ" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SORTING_CRITERIA_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="ScvName" IsNotNull="true" Precision="50"
+		ColumnName="SCV_NAME" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SORTING_CRITERIA_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="ScvDataLevelYn" IsNotNull="true" Precision="1"
+		ColumnName="SCV_DATA_LEVEL_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SORTING_CRITERIA_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="ScvDeleteYn" IsNotNull="true" Precision="1"
+		ColumnName="SCV_DELETE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SORTING_CRITERIA_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="OtlSortingCriteriaValues"
+		Association="com.bawaweb.model.OtlScvScvFkAssoc"
+		AssociationEnd="com.bawaweb.model.OtlScvScvFkAssoc.OtlSortingCriteriaValues"
+		AssociationOtherEnd="com.bawaweb.model.OtlScvScvFkAssoc.OtlSortingCriteriaValues1"
+		Type="com.bawaweb.model.OtlSortingCriteriaValuesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlSortingCriteria"
+		Association="com.bawaweb.model.OtlScvSrtFkAssoc" AssociationEnd="com.bawaweb.model.OtlScvSrtFkAssoc.OtlSortingCriteria"
+		AssociationOtherEnd="com.bawaweb.model.OtlScvSrtFkAssoc.OtlSortingCriteriaValues"
+		Type="com.bawaweb.model.OtlSortingCriteriaImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlSortingCriteriaValues1"
+		Association="com.bawaweb.model.OtlScvScvFkAssoc"
+		AssociationEnd="com.bawaweb.model.OtlScvScvFkAssoc.OtlSortingCriteriaValues1"
+		AssociationOtherEnd="com.bawaweb.model.OtlScvScvFkAssoc.OtlSortingCriteriaValues"
+		Type="com.bawaweb.model.OtlSortingCriteriaValuesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlSourceSortingCriteria"
+		Association="com.bawaweb.model.OtlSscScvFkAssoc"
+		AssociationEnd="com.bawaweb.model.OtlSscScvFkAssoc.OtlSourceSortingCriteria"
+		AssociationOtherEnd="com.bawaweb.model.OtlSscScvFkAssoc.OtlSortingCriteriaValues"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<Key Name="OtlScvDataLevelYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteriaValues.ScvDataLevelYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="SCV_DATA_LEVEL_YN IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SCV_DATA_LEVEL_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlScvDeleteYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteriaValues.ScvDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="scv_delete_yn IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SCV_DELETE_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlScvPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteriaValues.ScvId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SCV_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005701">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteriaValues.ScvId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SCV_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005701" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005702">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteriaValues.ScvSrtId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SCV_SRT_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005702" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005703">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteriaValues.ScvDisplaySeq" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SCV_DISPLAY_SEQ&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005703" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005704">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteriaValues.ScvName" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SCV_NAME&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005704" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005705">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteriaValues.ScvDataLevelYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SCV_DATA_LEVEL_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005705" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005706">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteriaValues.ScvDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SCV_DELETE_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005706" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlScvScvFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteriaValues.ScvId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_SCV_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SCV_SCV_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlScvSrtFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteriaValues.ScvSrtId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_SRT_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SCV_SRT_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

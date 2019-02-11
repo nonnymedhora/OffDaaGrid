@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtrTabLocks" DBObjectType="table" DBObjectName="BAwaWEb_TAB_LOCKS"
+	AliasName="OtrTabLocks" BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtrTabLocksImpl" DefClass="com.bawaweb.model.OtrTabLocksDefImpl"
+	CollClass="com.bawaweb.model.OtrTabLocksCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Def|Coll|Val|VarAccess" />
+	</DesignTime>
+	<Attribute Name="OtlId" IsUnique="true" IsNotNull="true"
+		ColumnName="OTL_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_TAB_LOCKS" PrimaryKey="true"
+		RetrievedOnUpdate="true" RetrievedOnInsert="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="OtlTabName" IsNotNull="true" Precision="30"
+		ColumnName="OTL_TAB_NAME" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_TAB_LOCKS" PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="OtlTabId" IsNotNull="true" ColumnName="OTL_TAB_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="BAwaWEb_TAB_LOCKS" PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="OtlEmplId" IsNotNull="true" Precision="40"
+		ColumnName="OTL_EMPL_ID" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_TAB_LOCKS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="40" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="OtlCreatedDt" IsNotNull="true" ColumnName="OTL_CREATED_DT"
+		Type="oracle.jbo.domain.Date" ColumnType="DATE" SQLType="DATE"
+		TableName="BAwaWEb_TAB_LOCKS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="OtlStatus" DefaultValue="&#39;PENDING&#39;"
+		Precision="30" ColumnName="OTL_STATUS" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="BAwaWEb_TAB_LOCKS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Key Name="OtrtablocksPrimaryKey">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtrTabLocks.OtlId" />
+			<Item Value="com.bawaweb.model.OtrTabLocks.OtlTabName" />
+			<Item Value="com.bawaweb.model.OtrTabLocks.OtlTabId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="OTRTABLOCKS_PRIMARY_KEY" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC006288">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtrTabLocks.OtlId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;OTL_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C006288" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC006289">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtrTabLocks.OtlTabName" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;OTL_TAB_NAME&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C006289" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC006290">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtrTabLocks.OtlTabId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;OTL_TAB_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C006290" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC006291">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtrTabLocks.OtlEmplId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;OTL_EMPL_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C006291" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC006292">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtrTabLocks.OtlCreatedDt" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;OTL_CREATED_DT&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C006292" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC009746">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtrTabLocks.OtlId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;OTL_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C009746" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC009747">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtrTabLocks.OtlTabName" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;OTL_TAB_NAME&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C009747" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC009748">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtrTabLocks.OtlTabId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;OTL_TAB_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C009748" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC009749">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtrTabLocks.OtlEmplId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;OTL_EMPL_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C009749" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC009750">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtrTabLocks.OtlCreatedDt" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;OTL_CREATED_DT&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C009750" />
+		</DesignTime>
+	</Key>
+</Entity>

@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="RtypReportTypes" DBObjectType="table" DBObjectName="RTYP_REPORT_TYPES"
+	AliasName="RtypReportTypes" BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.RtypReportTypesImpl" DefClass="com.bawaweb.model.RtypReportTypesDefImpl"
+	CollClass="com.bawaweb.model.RtypReportTypesCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="RtypId" IsNotNull="true" Precision="10"
+		Scale="0" ColumnName="RTYP_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RTYP_REPORT_TYPES"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RtypDesc" Precision="50" ColumnName="RTYP_DESC"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="RTYP_REPORT_TYPES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RtypLimitNumber" IsNotNull="true" Precision="1"
+		ColumnName="RTYP_LIMIT_NUMBER" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="RTYP_REPORT_TYPES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RtypDisplaySeq" Precision="3" Scale="0"
+		ColumnName="RTYP_DISPLAY_SEQ" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RTYP_REPORT_TYPES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RtypInterviewDays" ColumnName="RTYP_INTERVIEW_DAYS"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="RTYP_REPORT_TYPES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RtypTallyDays" ColumnName="RTYP_TALLY_DAYS"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="RTYP_REPORT_TYPES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="RprtReports"
+		Association="com.bawaweb.model.RprtRtypFkAssoc" AssociationEnd="com.bawaweb.model.RprtRtypFkAssoc.RprtReports"
+		AssociationOtherEnd="com.bawaweb.model.RprtRtypFkAssoc.RtypReportTypes"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<Key Name="OtlRtypLimitYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.RtypReportTypes.RtypLimitNumber" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="rtyp_limit_number IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_RTYP_LIMIT_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="RtypPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.RtypReportTypes.RtypId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="RTYP_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004859">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.RtypReportTypes.RtypId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RTYP_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004859" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004860">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.RtypReportTypes.RtypLimitNumber" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RTYP_LIMIT_NUMBER&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004860" />
+		</DesignTime>
+	</Key>
+</Entity>

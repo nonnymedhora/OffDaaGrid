@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlSortingCriteriaValuesUView"
+	SelectList="OtlSortingCriteriaValues.SCV_ID, 
+       OtlSortingCriteriaValues.SCV_SRT_ID, 
+       OtlSortingCriteriaValues.SCV_SCV_ID, 
+       OtlSortingCriteriaValues.SCV_DISPLAY_SEQ, 
+       OtlSortingCriteriaValues.SCV_NAME, 
+       OtlSortingCriteriaValues.SCV_DATA_LEVEL_YN, 
+       OtlSortingCriteriaValues.SCV_DELETE_YN"
+	FromList="BAwaWEb_SORTING_CRITERIA_VALUES OtlSortingCriteriaValues"
+	Where="OtlSortingCriteriaValues.SCV_ID = :scv_id" BindingStyle="OracleName"
+	CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.OtlSortingCriteriaValuesUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.OtlSortingCriteriaValuesUViewImpl"
+	DefClass="com.bawaweb.views.updatable.OtlSortingCriteriaValuesUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.OtlSortingCriteriaValuesUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.OtlSortingCriteriaValuesUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.OtlSortingCriteriaValuesUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.OtlSortingCriteriaValuesUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="scv_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlSortingCriteriaValues"
+		Entity="com.bawaweb.model.OtlSortingCriteriaValues">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="OtlSortingCriteriaValues.SCV_ID = :scv_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="ScvId" IsNotNull="true"
+		EntityAttrName="ScvId" EntityUsage="OtlSortingCriteriaValues"
+		AliasName="SCV_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="ScvSrtId" IsNotNull="true"
+		EntityAttrName="ScvSrtId" EntityUsage="OtlSortingCriteriaValues"
+		AliasName="SCV_SRT_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="ScvScvId" EntityAttrName="ScvScvId"
+		EntityUsage="OtlSortingCriteriaValues" AliasName="SCV_SCV_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="ScvDisplaySeq" IsNotNull="true"
+		EntityAttrName="ScvDisplaySeq" EntityUsage="OtlSortingCriteriaValues"
+		AliasName="SCV_DISPLAY_SEQ">
+	</ViewAttribute>
+	<ViewAttribute Name="ScvName" IsNotNull="true"
+		EntityAttrName="ScvName" EntityUsage="OtlSortingCriteriaValues"
+		AliasName="SCV_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="ScvDataLevelYn" IsNotNull="true"
+		EntityAttrName="ScvDataLevelYn" EntityUsage="OtlSortingCriteriaValues"
+		AliasName="SCV_DATA_LEVEL_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="ScvDeleteYn" IsNotNull="true"
+		EntityAttrName="ScvDeleteYn" EntityUsage="OtlSortingCriteriaValues"
+		AliasName="SCV_DELETE_YN">
+	</ViewAttribute>
+	<ViewLinkAccessor Name="OtlSortingCriteriaValuesUView"
+		ViewLink="com.bawaweb.views.updatable.OtlScvScvFkLink" Type="oracle.jbo.Row"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+	<ViewLinkAccessor Name="OtlSourceSortingCriteriaUView"
+		ViewLink="com.bawaweb.views.updatable.OtlSscScvFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+</ViewObject>

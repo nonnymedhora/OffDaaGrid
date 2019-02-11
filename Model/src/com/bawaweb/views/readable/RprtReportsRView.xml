@@ -1,0 +1,1495 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="RprtReportsRView" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.readable.RprtReportsRViewRowImpl"
+	ComponentClass="com.bawaweb.views.readable.RprtReportsRViewImpl"
+	DefClass="com.bawaweb.views.readable.RprtReportsRViewDefImpl"
+	ComponentInterface="com.bawaweb.views.readable.common.RprtReportsRView"
+	ClientProxyName="com.bawaweb.views.readable.client.RprtReportsRViewClient"
+	RowInterface="com.bawaweb.views.readable.common.RprtReportsRViewRow"
+	ClientRowProxyName="com.bawaweb.views.readable.client.RprtReportsRViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rprt_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<Data>
+		<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+		<Property Name="ID"
+			Value="6bca2273-011d-1000-87c4-814d53431e28::::ViewObject" />
+		<Property Name="IS_ABSTRACT" Value="FALSE" />
+		<Property Name="IS_ACTIVE" Value="FALSE" />
+		<Property Name="IS_LEAF" Value="FALSE" />
+		<Property Name="IS_ROOT" Value="FALSE" />
+		<Property Name="VISIBILITY" Value="PUBLIC" />
+	</Data>
+	<SQLQuery><![CDATA[
+SELECT RprtReports.RPRT_ID,
+       RprtReports.RPRT_DESC,
+       RprtReports.RPRT_PDF,
+       RprtReports.RPST_ID,
+       RprtReports.RTYP_ID,
+       RprtReports.RPTR_ID,
+       RprtReports.EDTR_ID,
+       RprtReports.RPRT_ISPROPRIETARY,
+       RprtReports.RPRT_REPORTDATE,
+       RprtReports.RPRT_DUEDATE,
+       RprtReports.RPRT_COMPLETEDDATE,
+       RprtReports.RPRT_PRODCODE,
+       RprtReports.RPRT_MKTCAP,
+       RprtReports.RPRT_ISCOFOCUS,
+       RprtReports.RPRT_ISSMALLCAP,
+       RprtReports.RPRT_ISTHUMBSUP,
+       RprtReports.RPRT_LASTISTHUMBSUP,
+       RprtReports.RPRT_ACCURACYINDEX,
+       RprtReports.RPRT_HIGHLIGHTS,
+       RprtReports.LAST_UPDATE_DATE,
+       RprtReports.LAST_UPDATE_BY,
+       RprtReports.OLDID,
+       RprtReports.RPRT_NOTES,
+       RprtReports.INDR_CODE,
+       RprtReports.INDUSTRY,
+       RprtReports.FLASH_PARENT,
+       RprtReports.RPRT_AHA,
+       RprtReports.IS_DELETED,
+       RprtReports.IVST_ID,
+       RprtReports.RPRT_ISCLASSIFIED,
+       RprtReports.FRID_ID,
+       RprtReports.RPRT_RESEARCHIN,
+       RprtReports.RPRT_INTL_DUEDATE,
+       RprtReports.RPRT_IMPORTANCE_RATING,
+       RprtReports.RPRT_RD_PERSON,
+       RprtReports.RPRT_PROP_APPR,
+       RprtReports.PAN_ID,
+       RprtReports.RPRT_IDEA_GEN_IND,
+       RprtReports.RPRT_HIT_BONUS,
+       RprtReports.RPRT_TOP_STORY_OFF_DATE,
+       RprtReports.RPRT_SOURCE_DISPLAY_FIELD,
+       RprtReports.RPRT_REPORTERS_VIEW_ALL_YN,
+       RprtReports.RPRT_SOURCE_REPORT,
+       RprtReports.RPRT_SCHEDULING_NOTES,
+       RprtReports.RPRT_GROUP_NOTES,
+       RprtReports.RPRT_PARENT_ID,
+       RprtReports.RPRT_PROP_COST,
+       RprtReports.RPRT_LAUNCH_DATE,
+       RprtReports.RPRT_HOLD_SOURCE_DIST,
+       RprtReports.RPRT_SOURCES,
+       RprtReports.RPRT_REPEAT_SRCS,
+       RprtReports.RPRT_FIELD_FORCE_VISITS,
+       RprtReports.SCST_ID,
+       RprtReports.RPRT_LATE_RSCHED,
+       RprtReports.RPRT_HIDE_FROM_SCHEDULE_YN,
+       RprtReports.RPRT_RSMV_ID
+FROM RPRT_REPORTS RprtReports
+where RprtReports.RPRT_ID = :rprt_id
+   ]]></SQLQuery>
+	<ViewAttribute Name="RprtId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="10" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="RPRT_ID"
+		Expression="RPRT_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87c5-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtDesc" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_DESC" Expression="RPRT_DESC"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87c6-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtPdf" IsUpdateable="false"
+		IsPersistent="false" Precision="50" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_PDF" Expression="RPRT_PDF"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87c7-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RpstId" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPST_ID" Expression="RPST_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87c8-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RtypId" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RTYP_ID" Expression="RTYP_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87c9-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RptrId" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPTR_ID" Expression="RPTR_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87ca-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EdtrId" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="EDTR_ID" Expression="EDTR_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87cb-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtIsproprietary" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_ISPROPRIETARY" Expression="RPRT_ISPROPRIETARY"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87cc-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtReportdate" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Date" ColumnType="DATE"
+		AliasName="RPRT_REPORTDATE" Expression="RPRT_REPORTDATE" SQLType="DATE">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87cd-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtDuedate" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Date" ColumnType="DATE"
+		AliasName="RPRT_DUEDATE" Expression="RPRT_DUEDATE" SQLType="DATE">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87ce-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtCompleteddate" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Date" ColumnType="DATE"
+		AliasName="RPRT_COMPLETEDDATE" Expression="RPRT_COMPLETEDDATE"
+		SQLType="DATE">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87cf-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtProdcode" IsUpdateable="false"
+		IsPersistent="false" Precision="50" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_PRODCODE" Expression="RPRT_PRODCODE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87d0-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtMktcap" IsUpdateable="false"
+		IsPersistent="false" Precision="50" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_MKTCAP" Expression="RPRT_MKTCAP"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87d1-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtIscofocus" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_ISCOFOCUS" Expression="RPRT_ISCOFOCUS"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87d2-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtIssmallcap" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_ISSMALLCAP" Expression="RPRT_ISSMALLCAP"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87d3-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtIsthumbsup" IsUpdateable="false"
+		IsPersistent="false" Precision="50" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_ISTHUMBSUP" Expression="RPRT_ISTHUMBSUP"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87d4-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtLastisthumbsup" IsUpdateable="false"
+		IsPersistent="false" Precision="50" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_LASTISTHUMBSUP" Expression="RPRT_LASTISTHUMBSUP"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87d5-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtAccuracyindex" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_ACCURACYINDEX" Expression="RPRT_ACCURACYINDEX"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87d6-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtHighlights" IsUpdateable="false"
+		IsPersistent="false" Precision="1000" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_HIGHLIGHTS" Expression="RPRT_HIGHLIGHTS"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87d7-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1000" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="LastUpdateDate" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Date" ColumnType="DATE"
+		AliasName="LAST_UPDATE_DATE" Expression="LAST_UPDATE_DATE" SQLType="DATE">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87d8-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="LastUpdateBy" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="LAST_UPDATE_BY" Expression="LAST_UPDATE_BY"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87d9-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Oldid" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="OLDID" Expression="OLDID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87da-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtNotes" IsUpdateable="false"
+		IsPersistent="false" Precision="2000" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_NOTES" Expression="RPRT_NOTES"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87db-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="2000" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="IndrCode" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="INDR_CODE" Expression="INDR_CODE"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87dc-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Industry" IsUpdateable="false"
+		IsPersistent="false" Precision="50" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="INDUSTRY" Expression="INDUSTRY"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87dd-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="FlashParent" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="FLASH_PARENT" Expression="FLASH_PARENT"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87de-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtAha" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_AHA" Expression="RPRT_AHA"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87df-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="IsDeleted" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="IS_DELETED" Expression="IS_DELETED"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87e0-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="IvstId" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="IVST_ID" Expression="IVST_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87e1-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtIsclassified" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_ISCLASSIFIED" Expression="RPRT_ISCLASSIFIED"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87e2-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="FridId" IsUpdateable="false"
+		IsPersistent="false" Precision="38" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="FRID_ID" Expression="FRID_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87e3-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtResearchin" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Date" ColumnType="DATE"
+		AliasName="RPRT_RESEARCHIN" Expression="RPRT_RESEARCHIN" SQLType="DATE">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87e4-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtIntlDuedate" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Date" ColumnType="DATE"
+		AliasName="RPRT_INTL_DUEDATE" Expression="RPRT_INTL_DUEDATE" SQLType="DATE">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87e5-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtImportanceRating" IsUpdateable="false"
+		IsPersistent="false" Precision="38" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_IMPORTANCE_RATING" Expression="RPRT_IMPORTANCE_RATING"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87e6-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtRdPerson" IsUpdateable="false"
+		IsPersistent="false" Precision="38" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_RD_PERSON" Expression="RPRT_RD_PERSON"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87e7-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtPropAppr" IsUpdateable="false"
+		IsPersistent="false" Precision="38" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_PROP_APPR" Expression="RPRT_PROP_APPR"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87e8-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="PanId" IsUpdateable="false"
+		IsPersistent="false" Precision="38" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="PAN_ID" Expression="PAN_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87e9-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtIdeaGenInd" IsUpdateable="false"
+		IsPersistent="false" Precision="38" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_IDEA_GEN_IND" Expression="RPRT_IDEA_GEN_IND"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87ea-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtHitBonus" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_HIT_BONUS" Expression="RPRT_HIT_BONUS"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87eb-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtTopStoryOffDate" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Date" ColumnType="DATE"
+		AliasName="RPRT_TOP_STORY_OFF_DATE" Expression="RPRT_TOP_STORY_OFF_DATE"
+		SQLType="DATE">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87ec-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtSourceDisplayField"
+		IsUpdateable="false" IsPersistent="false" Precision="10" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_SOURCE_DISPLAY_FIELD"
+		Expression="RPRT_SOURCE_DISPLAY_FIELD" SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87ed-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="10" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtReportersViewAllYn"
+		IsUpdateable="false" IsPersistent="false" Precision="1" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_REPORTERS_VIEW_ALL_YN"
+		Expression="RPRT_REPORTERS_VIEW_ALL_YN" SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87ee-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtSourceReport" IsUpdateable="false"
+		IsPersistent="false" Precision="50" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_SOURCE_REPORT" Expression="RPRT_SOURCE_REPORT"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87ef-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtSchedulingNotes" IsUpdateable="false"
+		IsPersistent="false" Precision="1000" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_SCHEDULING_NOTES" Expression="RPRT_SCHEDULING_NOTES"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87f0-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1000" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtGroupNotes" IsUpdateable="false"
+		IsPersistent="false" Precision="1000" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_GROUP_NOTES" Expression="RPRT_GROUP_NOTES"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87f1-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1000" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtParentId" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_PARENT_ID" Expression="RPRT_PARENT_ID"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87f2-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtPropCost" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_PROP_COST" Expression="RPRT_PROP_COST"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87f3-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtLaunchDate" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Date" ColumnType="DATE"
+		AliasName="RPRT_LAUNCH_DATE" Expression="RPRT_LAUNCH_DATE" SQLType="DATE">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87f4-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtHoldSourceDist" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_HOLD_SOURCE_DIST" Expression="RPRT_HOLD_SOURCE_DIST"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87f5-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtSources" IsUpdateable="false"
+		IsPersistent="false" Precision="38" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_SOURCES" Expression="RPRT_SOURCES"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87f6-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtRepeatSrcs" IsUpdateable="false"
+		IsPersistent="false" Precision="38" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_REPEAT_SRCS" Expression="RPRT_REPEAT_SRCS"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87f7-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtFieldForceVisits" IsUpdateable="false"
+		IsPersistent="false" Precision="38" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_FIELD_FORCE_VISITS" Expression="RPRT_FIELD_FORCE_VISITS"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87f8-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="ScstId" IsUpdateable="false"
+		IsPersistent="false" Precision="38" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="SCST_ID" Expression="SCST_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87f9-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtLateRsched" IsUpdateable="false"
+		IsPersistent="false" Precision="38" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_LATE_RSCHED" Expression="RPRT_LATE_RSCHED"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87fa-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtHideFromScheduleYn"
+		IsUpdateable="false" IsPersistent="false" Precision="1" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_HIDE_FROM_SCHEDULE_YN"
+		Expression="RPRT_HIDE_FROM_SCHEDULE_YN" SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87fb-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtRsmvId" IsUpdateable="false"
+		IsPersistent="false" Precision="38" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_RSMV_ID" Expression="RPRT_RSMV_ID"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-87fc-814d53431e28::readable.RprtReportsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="RprtId" />
+	</AttrArray>
+	<ViewLinkAccessor Name="OtlQuestionsRView"
+		ViewLink="com.bawaweb.views.readable.OtlqRprtFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+	<ViewLinkAccessor Name="OtlReportAnswerSetsRView"
+		ViewLink="com.bawaweb.views.readable.OtlRasRprtFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+	<ViewLinkAccessor Name="OtlReportSortingCriteriaRView"
+		ViewLink="com.bawaweb.views.readable.OtlRsoRprtFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+	<ViewLinkAccessor Name="OtlReportSourcesRView"
+		ViewLink="com.bawaweb.views.readable.RpsRprtFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+</ViewObject>

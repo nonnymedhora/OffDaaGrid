@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adf-config xmlns="http://xmlns.oracle.com/adf/config"
+	xmlns:wpsC="http://xmlns.oracle.com/webcenter/framework/service"
+	xmlns:mdsC="http://xmlns.oracle.com/adf/mds/config" xmlns:sec="http://xmlns.oracle.com/adf/security/config">
+	<wpsC:adf-service-config>
+		<extension-registry-config>
+			<extension-registry
+				id="oracle.webcenter.framework.service.ServiceRegistry" tag-name="service-definition"
+				handler-class="oracle.webcenter.framework.internal.service.ServiceExtensionHandler"
+				registry-class="oracle.webcenter.framework.internal.service.DefaultServiceRegistry"
+				namespace="http://xmlns.oracle.com/webcenter/framework/service" />
+			<extension-registry id="oracle.webcenter.lifecycle.ServiceRegistry"
+				tag-name="lifecycle-definition"
+				handler-class="oracle.webcenter.lifecycle.handler.service.LifecycleExtensionHandler"
+				registry-class="oracle.webcenter.framework.service.ExtensionRegistry"
+				namespace="http://xmlns.oracle.com/webcenter/lifecycle" />
+			<extension-registry
+				id="oracle.webcenter.service.extension.ExtensionRegistry" tag-name="security-definition"
+				handler-class="oracle.webcenter.security.internal.extension.SecurityExtensionHandler"
+				registry-class="oracle.webcenter.framework.service.ExtensionRegistry"
+				namespace="http://xmlns.oracle.com/webcenter/security" />
+			<extension-registry id="oracle.webcenter.command.ServiceRegistry"
+				tag-name="command-definition" handler-class="oracle.webcenter.command.CommandExtensionHandler"
+				registry-class="oracle.webcenter.framework.service.ExtensionRegistry"
+				namespace="http://xmlns.oracle.com/webcenter/command" />
+		</extension-registry-config>
+	</wpsC:adf-service-config>
+	<mdsC:adf-mds-config version="11.1.1.000">
+		<mds-config xmlns="http://xmlns.oracle.com/mds/config">
+			<type-config>
+				<type-definitions>
+					<classpath>
+						/oracle/mds/xsd/mds.xsd
+					</classpath>
+					<classpath>
+						/oracle/adf/share/prefs/resources/PreferenceNode.xsd
+					</classpath>
+					<classpath>
+						/oracle/webcenter/lifecycle/schema/Lifecycle.xsd
+					</classpath>
+					<classpath>
+						/oracle/webcenter/lock/schema/Lock.xsd
+					</classpath>
+					<classpath>
+						/oracle/webcenter/framework/service/Scope.xsd
+					</classpath>
+				</type-definitions>
+			</type-config>
+			<persistence-config>
+				<metadata-namespaces>
+					<namespace path="/oracle/adf/share/prefs"
+						metadata-store-usage="WebCenterFileMetadataStore" />
+					<namespace path="/oracle/webcenter/lifecycle"
+						metadata-store-usage="WebCenterFileMetadataStore" />
+					<namespace path="/oracle/webcenter/lock"
+						metadata-store-usage="WebCenterFileMetadataStore" />
+					<namespace path="/oracle/webcenter/rc"
+						metadata-store-usage="WebCenterFileMetadataStore" />
+					<namespace path="/persdef/" metadata-store-usage="WebCenterFileMetadataStore" />
+				</metadata-namespaces>
+				<metadata-store-usages>
+					<metadata-store-usage id="WebCenterFileMetadataStore"
+						default-cust-store="true">
+						<metadata-store
+							class-name="oracle.mds.persistence.stores.file.FileMetadataStore">
+							<property name="metadata-path" value="../../mds" />
+						</metadata-store>
+					</metadata-store-usage>
+				</metadata-store-usages>
+			</persistence-config>
+			<cust-config>
+				<match>
+					<customization-class name="oracle.adf.share.config.UserCC" />
+				</match>
+			</cust-config>
+		</mds-config>
+	</mdsC:adf-mds-config>
+	<sec:adf-config-child xmlns="http://xmlns.oracle.com/adf/security/config">
+		<CredentialStoreContext
+			credentialStoreClass="oracle.adf.share.security.providers.jps.CSFCredentialStore"
+			credentialStoreLocation="../../src/META-INF/jps-config.xml" />
+	</sec:adf-config-child>
+</adf-config>

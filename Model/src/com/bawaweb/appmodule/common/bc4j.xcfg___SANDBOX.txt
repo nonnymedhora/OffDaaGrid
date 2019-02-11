@@ -1,0 +1,28 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!-- note this file gets overwritten with every run -->
+<BC4JConfig>
+   <AppModuleConfigBag>
+      <AppModuleConfig name="PlatformAppModuleLocal">
+         <AppModuleJndiName>com.bawaweb.appmodule.PlatformAppModule</AppModuleJndiName>
+         <DeployPlatform>LOCAL</DeployPlatform>
+         <JDBCName>SANDBOX</JDBCName>
+         <ApplicationName>com.bawaweb.appmodule.PlatformAppModule</ApplicationName>
+         <jbo.project>Model</jbo.project>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <ConnectionDefinition name="SANDBOX">
+      <ENTRY name="JDBC_PORT" value="1521"/>
+      <ENTRY name="ConnectionType" value="JDBC"/>
+      <ENTRY name="HOSTNAME" value="san-sv-sbox.ox.com"/>
+      <ENTRY name="DeployPassword" value="true"/>
+      <ENTRY name="user" value="sales"/>
+      <ENTRY name="ConnectionName" value="SANDBOX"/>
+      <ENTRY name="ServiceName" value="XE"/>
+      <ENTRY name="password">
+         <![CDATA[{904}05FFE046AAA92E9AE5D1D7023E6070A7C9]]>
+      </ENTRY>
+      <ENTRY name="JdbcDriver" value="oracle.jdbc.OracleDriver"/>
+      <ENTRY name="ORACLE_JDBC_TYPE" value="thin"/>
+      <ENTRY name="DeployPassword" value="true"/>
+   </ConnectionDefinition>
+</BC4JConfig>

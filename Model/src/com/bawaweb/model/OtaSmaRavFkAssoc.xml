@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+
+<Association Name="OtlSmaRavFkAssoc">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+	</DesignTime>
+	<AssociationEnd Name="OtlReportAnswerSetValues"
+		Cardinality="1" Source="true" Owner="com.bawaweb.model.OtlReportAnswerSetValues">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSetValues.RavId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_finderName" Value="OtlReportAnswerSetValues" />
+			<Attr Name="_aggregation" Value="0" />
+			<Attr Name="_foreignKey"
+				Value="com.bawaweb.model.OtlReportAnswerSetValues.OtlReportAnswerSetValuespk" />
+			<Attr Name="_isUpdateable" Value="true" />
+		</DesignTime>
+	</AssociationEnd>
+	<AssociationEnd Name="OtlSourceMultiAnswers"
+		Cardinality="-1" Owner="com.bawaweb.model.OtlSourceMultiAnswers">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceMultiAnswers.SmaRavId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_finderName" Value="OtlSourceMultiAnswers" />
+			<Attr Name="_aggregation" Value="0" />
+			<Attr Name="_foreignKey" Value="com.bawaweb.model.OtlSourceMultiAnswers.OtlSmaRavFk" />
+			<Attr Name="_isUpdateable" Value="true" />
+		</DesignTime>
+	</AssociationEnd>
+</Association>

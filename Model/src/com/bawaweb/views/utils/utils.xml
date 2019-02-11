@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage Name="utils" SeparateXMLFiles="true"
+	PackageName="com.bawaweb.views.utils">
+	<DesignTime>
+		<Attr Name="_ejbPackage" Value="false" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+	</DesignTime>
+	<Containee Name="CourtesyTitles" FullName="com.bawaweb.views.utils.CourtesyTitles"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="IndustryViews" FullName="com.bawaweb.views.utils.IndustryViews"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="QualityRatings" FullName="com.bawaweb.views.utils.QualityRatings"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SourceDistributionPreferences"
+		FullName="com.bawaweb.views.utils.SourceDistributionPreferences"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SuffixTitles" FullName="com.bawaweb.views.utils.SuffixTitles"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="TimeZones" FullName="com.bawaweb.views.utils.TimeZones"
+		ObjectType="ViewObject">
+	</Containee>
+</JboPackage>

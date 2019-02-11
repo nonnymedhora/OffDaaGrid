@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="SourcesAnswerSetsView"
+	SelectList="SourcesAnswerSetsView.RAV_ID, 
+       SourcesAnswerSetsView.SRA_ID, 
+       SourcesAnswerSetsView.QST_TYPE, 
+       SourcesAnswerSetsView.ANSWER, 
+       SourcesAnswerSetsView.SRA_ANSWER_TEXT, 
+       SourcesAnswerSetsView.SRA_COLOR, 
+       SourcesAnswerSetsView.SRA_COMMENT, 
+       SourcesAnswerSetsView.SRA_RPS_ID, 
+       SourcesAnswerSetsView.SRA_QST_ID, 
+       SourcesAnswerSetsView.RAV_ASV_ID, 
+       SourcesAnswerSetsView.SRA_EXCLUDE_YN, 
+       SourcesAnswerSetsView.RAV_DISPLAY_SEQ, 
+       SourcesAnswerSetsView.RAV_DELETE_YN, 
+       SourcesAnswerSetsView.SRA_WEIGHT_MULTIPLIER, 
+       SourcesAnswerSetsView.RPRT_ID"
+	FromList="SOURCES_ANSWER_SETS_VIEW SourcesAnswerSetsView"
+	Where="SourcesAnswerSetsView.SRA_QST_ID = :qst_id AND SourcesAnswerSetsView.RPRT_ID = :rprt_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.gridcursors.views.SourcesAnswerSetsViewRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.views.SourcesAnswerSetsViewImpl"
+	DefClass="com.bawaweb.views.gridcursors.views.SourcesAnswerSetsViewDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.views.common.SourcesAnswerSetsView"
+	ClientProxyName="com.bawaweb.views.gridcursors.views.client.SourcesAnswerSetsViewClient"
+	RowInterface="com.bawaweb.views.gridcursors.views.common.SourcesAnswerSetsViewRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.views.client.SourcesAnswerSetsViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="qst_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<Variable Name="rprt_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="SourcesAnswerSetsView"
+		Entity="com.bawaweb.model.viewobjects.SourcesAnswerSetsView">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere"
+				Value="SourcesAnswerSetsView.SRA_QST_ID = :qst_id AND SourcesAnswerSetsView.RPRT_ID = :rprt_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="RavId" EntityAttrName="RavId"
+		EntityUsage="SourcesAnswerSetsView" AliasName="RAV_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SraId" IsNotNull="true"
+		EntityAttrName="SraId" EntityUsage="SourcesAnswerSetsView" AliasName="SRA_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QstType" IsNotNull="true"
+		EntityAttrName="QstType" EntityUsage="SourcesAnswerSetsView"
+		AliasName="QST_TYPE">
+	</ViewAttribute>
+	<ViewAttribute Name="Answer" EntityAttrName="Answer"
+		EntityUsage="SourcesAnswerSetsView" AliasName="ANSWER">
+	</ViewAttribute>
+	<ViewAttribute Name="SraAnswerText" EntityAttrName="SraAnswerText"
+		EntityUsage="SourcesAnswerSetsView" AliasName="SRA_ANSWER_TEXT">
+	</ViewAttribute>
+	<ViewAttribute Name="SraColor" EntityAttrName="SraColor"
+		EntityUsage="SourcesAnswerSetsView" AliasName="SRA_COLOR">
+	</ViewAttribute>
+	<ViewAttribute Name="SraComment" EntityAttrName="SraComment"
+		EntityUsage="SourcesAnswerSetsView" AliasName="SRA_COMMENT">
+	</ViewAttribute>
+	<ViewAttribute Name="SraRpsId" IsNotNull="true"
+		EntityAttrName="SraRpsId" EntityUsage="SourcesAnswerSetsView"
+		AliasName="SRA_RPS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SraQstId" IsNotNull="true"
+		EntityAttrName="SraQstId" EntityUsage="SourcesAnswerSetsView"
+		AliasName="SRA_QST_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RavAsvId" EntityAttrName="RavAsvId"
+		EntityUsage="SourcesAnswerSetsView" AliasName="RAV_ASV_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SraExcludeYn" IsNotNull="true"
+		EntityAttrName="SraExcludeYn" EntityUsage="SourcesAnswerSetsView"
+		AliasName="SRA_EXCLUDE_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="RavDisplaySeq" EntityAttrName="RavDisplaySeq"
+		EntityUsage="SourcesAnswerSetsView" AliasName="RAV_DISPLAY_SEQ">
+	</ViewAttribute>
+	<ViewAttribute Name="RavDeleteYn" EntityAttrName="RavDeleteYn"
+		EntityUsage="SourcesAnswerSetsView" AliasName="RAV_DELETE_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="SraWeightMultiplier" EntityAttrName="SraWeightMultiplier"
+		EntityUsage="SourcesAnswerSetsView" AliasName="SRA_WEIGHT_MULTIPLIER">
+	</ViewAttribute>
+	<ViewAttribute Name="RprtId" IsNotNull="true"
+		EntityAttrName="RprtId" EntityUsage="SourcesAnswerSetsView" AliasName="RPRT_ID">
+	</ViewAttribute>
+</ViewObject>

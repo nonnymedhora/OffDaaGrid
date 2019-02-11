@@ -1,0 +1,523 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="RprtReports" DBObjectType="table" DBObjectName="RPRT_REPORTS"
+	AliasName="RprtReports" BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.RprtReportsImpl" DefClass="com.bawaweb.model.RprtReportsDefImpl"
+	CollClass="com.bawaweb.model.RprtReportsCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="RprtId" IsNotNull="true" Precision="10"
+		Scale="0" ColumnName="RPRT_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtDesc" Precision="100" ColumnName="RPRT_DESC"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtPdf" Precision="50" ColumnName="RPRT_PDF"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RpstId" Precision="10" Scale="0" ColumnName="RPST_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RtypId" Precision="10" Scale="0" ColumnName="RTYP_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RptrId" Precision="10" Scale="0" ColumnName="RPTR_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EdtrId" Precision="10" Scale="0" ColumnName="EDTR_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtIsproprietary" Precision="10" Scale="0"
+		ColumnName="RPRT_ISPROPRIETARY" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtReportdate" ColumnName="RPRT_REPORTDATE"
+		Type="oracle.jbo.domain.Date" ColumnType="DATE" SQLType="DATE"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtDuedate" ColumnName="RPRT_DUEDATE"
+		Type="oracle.jbo.domain.Date" ColumnType="DATE" SQLType="DATE"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtCompleteddate" ColumnName="RPRT_COMPLETEDDATE"
+		Type="oracle.jbo.domain.Date" ColumnType="DATE" SQLType="DATE"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtProdcode" Precision="50" ColumnName="RPRT_PRODCODE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtMktcap" Precision="50" ColumnName="RPRT_MKTCAP"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtIscofocus" Precision="10" Scale="0"
+		ColumnName="RPRT_ISCOFOCUS" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtIssmallcap" Precision="10" Scale="0"
+		ColumnName="RPRT_ISSMALLCAP" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtIsthumbsup" Precision="50" ColumnName="RPRT_ISTHUMBSUP"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtLastisthumbsup" Precision="50"
+		ColumnName="RPRT_LASTISTHUMBSUP" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtAccuracyindex" Precision="100"
+		ColumnName="RPRT_ACCURACYINDEX" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtHighlights" Precision="1000" ColumnName="RPRT_HIGHLIGHTS"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1000" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="LastUpdateDate" ColumnName="LAST_UPDATE_DATE"
+		Type="oracle.jbo.domain.Date" ColumnType="DATE" SQLType="DATE"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="LastUpdateBy" Precision="10" Scale="0"
+		ColumnName="LAST_UPDATE_BY" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="Oldid" Precision="10" Scale="0" ColumnName="OLDID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtNotes" Precision="2000" ColumnName="RPRT_NOTES"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="2000" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="IndrCode" Precision="10" Scale="0"
+		ColumnName="INDR_CODE" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="Industry" Precision="50" ColumnName="INDUSTRY"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="FlashParent" Precision="10" Scale="0"
+		ColumnName="FLASH_PARENT" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtAha" Precision="10" Scale="0"
+		ColumnName="RPRT_AHA" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="IsDeleted" Precision="10" Scale="0"
+		ColumnName="IS_DELETED" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="IvstId" Precision="10" Scale="0" ColumnName="IVST_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtIsclassified" Precision="10" Scale="0"
+		ColumnName="RPRT_ISCLASSIFIED" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="FridId" Precision="38" Scale="0" ColumnName="FRID_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtResearchin" ColumnName="RPRT_RESEARCHIN"
+		Type="oracle.jbo.domain.Date" ColumnType="DATE" SQLType="DATE"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtIntlDuedate" ColumnName="RPRT_INTL_DUEDATE"
+		Type="oracle.jbo.domain.Date" ColumnType="DATE" SQLType="DATE"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtImportanceRating" Precision="38" Scale="0"
+		ColumnName="RPRT_IMPORTANCE_RATING" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtRdPerson" Precision="38" Scale="0"
+		ColumnName="RPRT_RD_PERSON" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtPropAppr" Precision="38" Scale="0"
+		ColumnName="RPRT_PROP_APPR" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="PanId" Precision="38" Scale="0" ColumnName="PAN_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtIdeaGenInd" Precision="38" Scale="0"
+		ColumnName="RPRT_IDEA_GEN_IND" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtHitBonus" Precision="100" ColumnName="RPRT_HIT_BONUS"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtTopStoryOffDate" ColumnName="RPRT_TOP_STORY_OFF_DATE"
+		Type="oracle.jbo.domain.Date" ColumnType="DATE" SQLType="DATE"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtSourceDisplayField" Precision="10"
+		ColumnName="RPRT_SOURCE_DISPLAY_FIELD" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="10" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtReportersViewAllYn" Precision="1"
+		ColumnName="RPRT_REPORTERS_VIEW_ALL_YN" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtSourceReport" Precision="50"
+		ColumnName="RPRT_SOURCE_REPORT" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtSchedulingNotes" Precision="1000"
+		ColumnName="RPRT_SCHEDULING_NOTES" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1000" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtGroupNotes" Precision="1000" ColumnName="RPRT_GROUP_NOTES"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1000" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtParentId" Precision="10" Scale="0"
+		ColumnName="RPRT_PARENT_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtPropCost" Precision="10" Scale="0"
+		ColumnName="RPRT_PROP_COST" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtLaunchDate" ColumnName="RPRT_LAUNCH_DATE"
+		Type="oracle.jbo.domain.Date" ColumnType="DATE" SQLType="DATE"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtHoldSourceDist" Precision="10" Scale="0"
+		ColumnName="RPRT_HOLD_SOURCE_DIST" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtSources" Precision="38" Scale="0"
+		ColumnName="RPRT_SOURCES" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtRepeatSrcs" Precision="38" Scale="0"
+		ColumnName="RPRT_REPEAT_SRCS" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtFieldForceVisits" Precision="38" Scale="0"
+		ColumnName="RPRT_FIELD_FORCE_VISITS" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="ScstId" Precision="38" Scale="0" ColumnName="SCST_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtLateRsched" Precision="38" Scale="0"
+		ColumnName="RPRT_LATE_RSCHED" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtHideFromScheduleYn" Precision="1"
+		ColumnName="RPRT_HIDE_FROM_SCHEDULE_YN" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtRsmvId" Precision="38" Scale="0"
+		ColumnName="RPRT_RSMV_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="RPRT_REPORTS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="EmplOtlEmployees"
+		Association="com.bawaweb.model.RprtEmplEdtrFkAssoc" AssociationEnd="com.bawaweb.model.RprtEmplEdtrFkAssoc.EmplOtlEmployees"
+		AssociationOtherEnd="com.bawaweb.model.RprtEmplEdtrFkAssoc.RprtReports"
+		Type="com.bawaweb.model.EmplOtlEmployeesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="EmplOtlEmployees1"
+		Association="com.bawaweb.model.RprtEmplRptrFkAssoc" AssociationEnd="com.bawaweb.model.RprtEmplRptrFkAssoc.EmplOtlEmployees1"
+		AssociationOtherEnd="com.bawaweb.model.RprtEmplRptrFkAssoc.RprtReports1"
+		Type="com.bawaweb.model.EmplOtlEmployeesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="FridFirmIndustries"
+		Association="com.bawaweb.model.RprtFridFiFkAssoc" AssociationEnd="com.bawaweb.model.RprtFridFiFkAssoc.FridFirmIndustries"
+		AssociationOtherEnd="com.bawaweb.model.RprtFridFiFkAssoc.RprtReports"
+		Type="com.bawaweb.model.FridFirmIndustriesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="PanPanel"
+		Association="com.bawaweb.model.RprtPanFkAssoc" AssociationEnd="com.bawaweb.model.RprtPanFkAssoc.PanPanel"
+		AssociationOtherEnd="com.bawaweb.model.RprtPanFkAssoc.RprtReports"
+		Type="com.bawaweb.model.PanPanelImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlReportSortingCriteria"
+		Association="com.bawaweb.model.OtlRsoRprtFkAssoc"
+		AssociationEnd="com.bawaweb.model.OtlRsoRprtFkAssoc.OtlReportSortingCriteria"
+		AssociationOtherEnd="com.bawaweb.model.OtlRsoRprtFkAssoc.RprtReports"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlReportSources"
+		Association="com.bawaweb.model.RpsRprtFkAssoc" AssociationEnd="com.bawaweb.model.RpsRprtFkAssoc.OtlReportSources"
+		AssociationOtherEnd="com.bawaweb.model.RpsRprtFkAssoc.RprtReports"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlQuestions"
+		Association="com.bawaweb.model.OtlqRprtFkAssoc" AssociationEnd="com.bawaweb.model.OtlqRprtFkAssoc.OtlQuestions"
+		AssociationOtherEnd="com.bawaweb.model.OtlqRprtFkAssoc.RprtReports"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlReportAnswerSets"
+		Association="com.bawaweb.model.OtlRasRprtFkAssoc" AssociationEnd="com.bawaweb.model.OtlRasRprtFkAssoc.OtlReportAnswerSets"
+		AssociationOtherEnd="com.bawaweb.model.OtlRasRprtFkAssoc.RprtReports"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="RtypReportTypes"
+		Association="com.bawaweb.model.RprtRtypFkAssoc" AssociationEnd="com.bawaweb.model.RprtRtypFkAssoc.RtypReportTypes"
+		AssociationOtherEnd="com.bawaweb.model.RprtRtypFkAssoc.RprtReports"
+		Type="com.bawaweb.model.RtypReportTypesImpl">
+	</AccessorAttribute>
+	<Key Name="PkRprtId">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.RprtReports.RprtId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="PK_RPRT_ID" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004880">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.RprtReports.RprtId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RPRT_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004880" />
+		</DesignTime>
+	</Key>
+	<Key Name="RprtEmplEdtrFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.RprtReports.EdtrId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="PKY_EMPL_ID" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="RPRT_EMPL_EDTR_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="RprtEmplRptrFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.RprtReports.RptrId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="PKY_EMPL_ID" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="RPRT_EMPL_RPTR_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="RprtFridFiFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.RprtReports.FridId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="FRID_FI_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="RPRT_FRID_FI_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="RprtPanFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.RprtReports.PanId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="PK_PAN_PANEL" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="RPRT_PAN_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="RprtRtypFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.RprtReports.RtypId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="RTYP_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="RPRT_RTYP_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

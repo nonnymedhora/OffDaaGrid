@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage Name="readable" SeparateXMLFiles="true"
+	PackageName="com.bawaweb.views.readable">
+	<DesignTime>
+		<Attr Name="_ejbPackage" Value="false" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+	</DesignTime>
+	<Containee Name="AnsFridFkLink" FullName="com.bawaweb.views.readable.AnsFridFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="AsvAnsFkLink" FullName="com.bawaweb.views.readable.AsvAnsFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="CtryCountriesRView"
+		FullName="com.bawaweb.views.readable.CtryCountriesRView" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="EmplOtlEmployeesRView"
+		FullName="com.bawaweb.views.readable.EmplOtlEmployeesRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="FridFirmIndustriesRView"
+		FullName="com.bawaweb.views.readable.FridFirmIndustriesRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlAnswerSetsRView"
+		FullName="com.bawaweb.views.readable.OtlAnswerSetsRView" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlAnswerSetValuesRView"
+		FullName="com.bawaweb.views.readable.OtlAnswerSetValuesRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlEmplRolesRView"
+		FullName="com.bawaweb.views.readable.OtlEmplRolesRView" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlEmrEmplFkLink" FullName="com.bawaweb.views.readable.OtlEmrEmplFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlEmrRolFkLink" FullName="com.bawaweb.views.readable.OtlEmrRolFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlFunctionsRView"
+		FullName="com.bawaweb.views.readable.OtlFunctionsRView" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlMultiQuestionsRView"
+		FullName="com.bawaweb.views.readable.OtlMultiQuestionsRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlqRprtFkLink" FullName="com.bawaweb.views.readable.OtlqRprtFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlQuestionsRView"
+		FullName="com.bawaweb.views.readable.OtlQuestionsRView" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlRasFridFkLink" FullName="com.bawaweb.views.readable.OtlRasFridFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlRasRprtFkLink" FullName="com.bawaweb.views.readable.OtlRasRprtFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlReportAnswerSetsRView"
+		FullName="com.bawaweb.views.readable.OtlReportAnswerSetsRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlReportAnswerSetValuesRView"
+		FullName="com.bawaweb.views.readable.OtlReportAnswerSetValuesRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlReportSortingCriteriaRView"
+		FullName="com.bawaweb.views.readable.OtlReportSortingCriteriaRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlReportSourcesRView"
+		FullName="com.bawaweb.views.readable.OtlReportSourcesRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlRolesRView" FullName="com.bawaweb.views.readable.OtlRolesRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlRsoRprtFkLink" FullName="com.bawaweb.views.readable.OtlRsoRprtFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlRsoSrtFkLink" FullName="com.bawaweb.views.readable.OtlRsoSrtFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlScvScvFkLink" FullName="com.bawaweb.views.readable.OtlScvScvFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlScvSrtFkLink" FullName="com.bawaweb.views.readable.OtlScvSrtFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlSmaAsvFkLink" FullName="com.bawaweb.views.readable.OtlSmaAsvFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlSmaRavFkLink" FullName="com.bawaweb.views.readable.OtlSmaRavFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlSmaSraFkLink" FullName="com.bawaweb.views.readable.OtlSmaSraFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlSortingCriteriaRView"
+		FullName="com.bawaweb.views.readable.OtlSortingCriteriaRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlSortingCriteriaValuesRView"
+		FullName="com.bawaweb.views.readable.OtlSortingCriteriaValuesRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlSourceAnswersRView"
+		FullName="com.bawaweb.views.readable.OtlSourceAnswersRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlSourceMultiAnswersRView"
+		FullName="com.bawaweb.views.readable.OtlSourceMultiAnswersRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlSourceSortingCriteriaRView"
+		FullName="com.bawaweb.views.readable.OtlSourceSortingCriteriaRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlSourcesRView" FullName="com.bawaweb.views.readable.OtlSourcesRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlSrcCtryFkLink" FullName="com.bawaweb.views.readable.OtlSrcCtryFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlSrcTmzFkLink" FullName="com.bawaweb.views.readable.OtlSrcTmzFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlSrtFridFkLink" FullName="com.bawaweb.views.readable.OtlSrtFridFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlSscRpsFkLink" FullName="com.bawaweb.views.readable.OtlSscRpsFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlSscScvFkLink" FullName="com.bawaweb.views.readable.OtlSscScvFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="OtlTallyRangeLimitsRView"
+		FullName="com.bawaweb.views.readable.OtlTallyRangeLimitsRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlTallyRangesRView"
+		FullName="com.bawaweb.views.readable.OtlTallyRangesRView" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlTimeZonesRView"
+		FullName="com.bawaweb.views.readable.OtlTimeZonesRView" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtrEmployeeInfoRView"
+		FullName="com.bawaweb.views.readable.OtrEmployeeInfoRView" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtrTabLocksRView" FullName="com.bawaweb.views.readable.OtrTabLocksRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="PanEmplFkLink" FullName="com.bawaweb.views.readable.PanEmplFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="PanFridFkLink" FullName="com.bawaweb.views.readable.PanFridFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="PanPanelRView" FullName="com.bawaweb.views.readable.PanPanelRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="RasAnsFkLink" FullName="com.bawaweb.views.readable.RasAnsFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="RavAsvFkLink" FullName="com.bawaweb.views.readable.RavAsvFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="RavRasFkLink" FullName="com.bawaweb.views.readable.RavRasFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="RprtEmplEdtrFkLink"
+		FullName="com.bawaweb.views.readable.RprtEmplEdtrFkLink" ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="RprtEmplRptrFkLink"
+		FullName="com.bawaweb.views.readable.RprtEmplRptrFkLink" ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="RprtFridFiFkLink" FullName="com.bawaweb.views.readable.RprtFridFiFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="RprtPanFkLink" FullName="com.bawaweb.views.readable.RprtPanFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="RprtReportReporterXrefRView"
+		FullName="com.bawaweb.views.readable.RprtReportReporterXrefRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="RprtReportsRView" FullName="com.bawaweb.views.readable.RprtReportsRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="RprtRtypFkLink" FullName="com.bawaweb.views.readable.RprtRtypFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="RpsRprtFkLink" FullName="com.bawaweb.views.readable.RpsRprtFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="RpsSrcFkLink" FullName="com.bawaweb.views.readable.RpsSrcFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="RptyReporterTypesRView"
+		FullName="com.bawaweb.views.readable.RptyReporterTypesRView"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="RtypReportTypesRView"
+		FullName="com.bawaweb.views.readable.RtypReportTypesRView" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SraAsvFkLink" FullName="com.bawaweb.views.readable.SraAsvFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="SraQstFkLink" FullName="com.bawaweb.views.readable.SraQstFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="SraRavFkLink" FullName="com.bawaweb.views.readable.SraRavFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+	<Containee Name="SraRpsFkLink" FullName="com.bawaweb.views.readable.SraRpsFkLink"
+		ObjectType="ViewLink">
+	</Containee>
+</JboPackage>

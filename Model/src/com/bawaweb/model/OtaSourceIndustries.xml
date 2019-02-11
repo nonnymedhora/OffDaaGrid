@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlSourceIndustries" DBObjectType="table"
+	DBObjectName="BAwaWEb_SOURCE_INDUSTRIES" AliasName="OtlSourceIndustries"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlSourceIndustriesImpl" DefClass="com.bawaweb.model.OtlSourceIndustriesDefImpl"
+	CollClass="com.bawaweb.model.OtlSourceIndustriesCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|VarAccess" />
+	</DesignTime>
+	<Attribute Name="SciSrcId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SCI_SRC_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SOURCE_INDUSTRIES"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SciFridId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SCI_FRID_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SOURCE_INDUSTRIES"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SciDeleteYn" Precision="1" ColumnName="SCI_DELETE_YN"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCE_INDUSTRIES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="OtlSources"
+		Association="com.bawaweb.model.OtlSciSrcFkAssoc" AssociationEnd="com.bawaweb.model.OtlSciSrcFkAssoc.OtlSources"
+		AssociationOtherEnd="com.bawaweb.model.OtlSciSrcFkAssoc.OtlSourceIndustries"
+		Type="com.bawaweb.model.OtlSourcesImpl">
+	</AccessorAttribute>
+	<Key Name="OtlSciDeleteYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceIndustries.SciDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="SCI_DELETE_YN IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SCI_DELETE_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SrcIndPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceIndustries.SciSrcId" />
+			<Item Value="com.bawaweb.model.OtlSourceIndustries.SciFridId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="SRC_IND_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC0014495">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceIndustries.SciSrcId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SCI_SRC_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C0014495" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC0014496">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceIndustries.SciFridId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SCI_FRID_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C0014496" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlSciSrcFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceIndustries.SciSrcId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_SRC_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SCI_SRC_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

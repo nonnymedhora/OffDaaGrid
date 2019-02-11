@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="ReporterSources"
+	SelectList="OtlReporterSources.RSC_SRC_ID, 
+       OtlReporterSources.RSC_EMPL_ID, 
+       OtlReporterSources.RSC_DELETE_YN, 
+       OtlReporterSources.ROWID"
+	FromList="BAwaWEb_REPORTER_SOURCES OtlReporterSources"
+	Where="OtlReporterSources.RSC_SRC_ID = :src_id and OtlReporterSources.RSC_EMPL_ID = :rprtr_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.model.ReporterSourcesRowImpl"
+	ComponentClass="com.bawaweb.views.model.ReporterSourcesImpl" DefClass="com.bawaweb.views.model.ReporterSourcesDefImpl"
+	ComponentInterface="com.bawaweb.views.model.common.ReporterSources"
+	ClientProxyName="com.bawaweb.views.model.client.ReporterSourcesClient"
+	RowInterface="com.bawaweb.views.model.common.ReporterSourcesRow"
+	ClientRowProxyName="com.bawaweb.views.model.client.ReporterSourcesRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="src_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<Variable Name="rprtr_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlReporterSources" Entity="com.bawaweb.model.OtlReporterSources">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere"
+				Value="OtlReporterSources.RSC_SRC_ID = :src_id and OtlReporterSources.RSC_EMPL_ID = :rprtr_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="RscSrcId" IsNotNull="true"
+		EntityAttrName="RscSrcId" EntityUsage="OtlReporterSources" AliasName="RSC_SRC_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RscEmplId" IsNotNull="true"
+		EntityAttrName="RscEmplId" EntityUsage="OtlReporterSources" AliasName="RSC_EMPL_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RscDeleteYn" IsNotNull="true"
+		EntityAttrName="RscDeleteYn" EntityUsage="OtlReporterSources"
+		AliasName="RSC_DELETE_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="RowID" IsUpdateable="false"
+		EntityAttrName="RowID" EntityUsage="OtlReporterSources" AliasName="ROWID">
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="RscSrcId" />
+		<Item Value="RscEmplId" />
+		<Item Value="RowID" />
+	</AttrArray>
+</ViewObject>

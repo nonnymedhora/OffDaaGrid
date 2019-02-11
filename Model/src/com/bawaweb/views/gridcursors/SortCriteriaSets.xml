@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="SortCriteriaSets" OrderBy="scv_srt_id, scv_display_seq"
+	BindingStyle="OracleName" CustomQuery="true"
+	RowClass="com.bawaweb.views.gridcursors.SortCriteriaSetsRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.SortCriteriaSetsImpl"
+	DefClass="com.bawaweb.views.gridcursors.SortCriteriaSetsDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.common.SortCriteriaSets"
+	ClientProxyName="com.bawaweb.views.gridcursors.client.SortCriteriaSetsClient"
+	RowInterface="com.bawaweb.views.gridcursors.common.SortCriteriaSetsRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.client.SortCriteriaSetsRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rprt_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<Variable Name="qst_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+select * from bawaweb_sorting_criteria_values where scv_srt_id in (  
+                             select rso_srt_id from bawaweb_report_sorting_criteria where rso_rprt_id = :rprt_id
+                             and rso_srt_id = :qst_id                                                         
+                         )
+   ]]></SQLQuery>
+	<EntityUsage Name="OtlSortingCriteriaValues"
+		Entity="com.bawaweb.model.OtlSortingCriteriaValues">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlSortingCriteria.SrtId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.OtlSortingCriteriaValues.ScvSrtId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlReportSortingCriteria"
+		Entity="com.bawaweb.model.OtlReportSortingCriteria"
+		SourceUsage="com.bawaweb.views.gridcursors.SortCriteriaSets.OtlSortingCriteriaValues"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="ScvId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="SCV_ID"
+		Expression="SCV_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="ScvSrtId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="SCV_SRT_ID"
+		Expression="SCV_SRT_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="ScvScvId" IsUpdateable="false"
+		IsPersistent="false" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="SCV_SCV_ID" Expression="SCV_SCV_ID"
+		SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="ScvDisplaySeq" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="SCV_DISPLAY_SEQ"
+		Expression="SCV_DISPLAY_SEQ" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="ScvName" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="50" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SCV_NAME" Expression="SCV_NAME"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="ScvDataLevelYn" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="1" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SCV_DATA_LEVEL_YN" Expression="SCV_DATA_LEVEL_YN"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="ScvDeleteYn" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="1" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SCV_DELETE_YN" Expression="SCV_DELETE_YN"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="ScvId" />
+	</AttrArray>
+</ViewObject>

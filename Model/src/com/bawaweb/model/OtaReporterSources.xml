@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlReporterSources" DBObjectType="table"
+	DBObjectName="BAwaWEb_REPORTER_SOURCES" AliasName="OtlReporterSources"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlReporterSourcesImpl" DefClass="com.bawaweb.model.OtlReporterSourcesDefImpl"
+	CollClass="com.bawaweb.model.OtlReporterSourcesCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Def|Coll|Val|VarAccess" />
+	</DesignTime>
+	<Attribute Name="RscSrcId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="RSC_SRC_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_REPORTER_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RscEmplId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="RSC_EMPL_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_REPORTER_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RscDeleteYn" IsNotNull="true" Precision="1"
+		ColumnName="RSC_DELETE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_REPORTER_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RowID" IsUpdateable="false" ColumnName="ROWID"
+		Type="oracle.jbo.domain.RowID" ColumnType="ROWID" SQLType="ROWID"
+		PrimaryKey="true">
+	</Attribute>
+	<AccessorAttribute Name="OtlSources"
+		Association="com.bawaweb.model.OtlRscSrcFkAssoc" AssociationEnd="com.bawaweb.model.OtlRscSrcFkAssoc.OtlSources"
+		AssociationOtherEnd="com.bawaweb.model.OtlRscSrcFkAssoc.OtlReporterSources"
+		Type="com.bawaweb.model.OtlSourcesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="EmplOtlEmployees"
+		Association="com.bawaweb.model.OtlRscEmplFkAssoc" AssociationEnd="com.bawaweb.model.OtlRscEmplFkAssoc.EmplOtlEmployees"
+		AssociationOtherEnd="com.bawaweb.model.OtlRscEmplFkAssoc.OtlReporterSources"
+		Type="com.bawaweb.model.EmplOtlEmployeesImpl">
+	</AccessorAttribute>
+	<Key Name="OtlRscDeleteYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReporterSources.RscDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="rsc_delete_yn IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_RSC_DELETE_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC0014426">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReporterSources.RscSrcId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RSC_SRC_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C0014426" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC0014427">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReporterSources.RscEmplId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RSC_EMPL_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C0014427" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC0014428">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReporterSources.RscDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RSC_DELETE_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C0014428" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlRscEmplFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReporterSources.RscEmplId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="PKY_EMPL_ID" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_RSC_EMPL_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlRscSrcFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReporterSources.RscSrcId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_SRC_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_RSC_SRC_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

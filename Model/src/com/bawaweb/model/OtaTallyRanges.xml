@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlTallyRanges" DBObjectType="table" DBObjectName="BAwaWEb_TALLY_RANGES"
+	AliasName="OtlTallyRanges" BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlTallyRangesImpl" DefClass="com.bawaweb.model.OtlTallyRangesDefImpl"
+	CollClass="com.bawaweb.model.OtlTallyRangesCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="TlyId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="TLY_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_TALLY_RANGES"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="TlyName" IsNotNull="true" Precision="30"
+		ColumnName="TLY_NAME" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_TALLY_RANGES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="TlyPrefix" Precision="6" ColumnName="TLY_PREFIX"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_TALLY_RANGES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="6" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="TlySuffix" Precision="6" ColumnName="TLY_SUFFIX"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_TALLY_RANGES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="6" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="TlyDeleteYn" IsNotNull="true" Precision="1"
+		ColumnName="TLY_DELETE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_TALLY_RANGES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="OtlTallyRangeLimits"
+		Association="com.bawaweb.model.OtlTrlTlyFkAssoc" AssociationEnd="com.bawaweb.model.OtlTrlTlyFkAssoc.OtlTallyRangeLimits"
+		AssociationOtherEnd="com.bawaweb.model.OtlTrlTlyFkAssoc.OtlTallyRanges"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<Key Name="OtlTlyDeleteYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlTallyRanges.TlyDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="tly_delete_yn IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_TLY_DELETE_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlTlyPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlTallyRanges.TlyId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_TLY_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005010">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlTallyRanges.TlyId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;TLY_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005010" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005011">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlTallyRanges.TlyName" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;TLY_NAME&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005011" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005012">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlTallyRanges.TlyDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;TLY_DELETE_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005012" />
+		</DesignTime>
+	</Key>
+</Entity>

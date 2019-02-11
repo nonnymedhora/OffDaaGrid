@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlReportAnswerSetsRView" BindingStyle="OracleName"
+	CustomQuery="true"
+	RowClass="com.bawaweb.views.readable.OtlReportAnswerSetsRViewRowImpl"
+	ComponentClass="com.bawaweb.views.readable.OtlReportAnswerSetsRViewImpl"
+	DefClass="com.bawaweb.views.readable.OtlReportAnswerSetsRViewDefImpl"
+	ComponentInterface="com.bawaweb.views.readable.common.OtlReportAnswerSetsRView"
+	ClientProxyName="com.bawaweb.views.readable.client.OtlReportAnswerSetsRViewClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="ras_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<Data>
+		<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+		<Property Name="ID"
+			Value="6bca22a1-011d-1000-887d-814d53431e28::::ViewObject" />
+		<Property Name="IS_ABSTRACT" Value="FALSE" />
+		<Property Name="IS_ACTIVE" Value="FALSE" />
+		<Property Name="IS_LEAF" Value="FALSE" />
+		<Property Name="IS_ROOT" Value="FALSE" />
+		<Property Name="VISIBILITY" Value="PUBLIC" />
+	</Data>
+	<SQLQuery><![CDATA[
+SELECT OtlReportAnswerSets.RAS_ID,
+       OtlReportAnswerSets.RAS_RPRT_ID,
+       OtlReportAnswerSets.RAS_ANS_ID,
+       OtlReportAnswerSets.RAS_NAME,
+       OtlReportAnswerSets.RAS_FRID_ID,
+       OtlReportAnswerSets.RAS_ORDER_BY_NAME_YN,
+       OtlReportAnswerSets.RAS_ADD_ANSWER_YN,
+       OtlReportAnswerSets.RAS_DELETE_YN
+FROM BAwaWEb_REPORT_ANSWER_SETS OtlReportAnswerSets
+where OtlReportAnswerSets.RAS_ID = :ras_id
+   ]]></SQLQuery>
+	<EntityUsage Name="OtlReportAnswerSets" Entity="com.bawaweb.model.OtlReportAnswerSets">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6c054bb5-011d-1000-8c33-814d53431e28::readable.OtlReportAnswerSetsRView$OtlReportAnswerSets::EntityObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="RasId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="RAS_ID"
+		Expression="RAS_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca22a1-011d-1000-887e-814d53431e28::readable.OtlReportAnswerSetsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RasRprtId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="RAS_RPRT_ID"
+		Expression="RAS_RPRT_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca22a1-011d-1000-887f-814d53431e28::readable.OtlReportAnswerSetsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RasAnsId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="RAS_ANS_ID"
+		Expression="RAS_ANS_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca22a1-011d-1000-8880-814d53431e28::readable.OtlReportAnswerSetsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RasName" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RAS_NAME" Expression="RAS_NAME"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca22a1-011d-1000-8881-814d53431e28::readable.OtlReportAnswerSetsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RasFridId" IsUpdateable="false"
+		IsPersistent="false" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RAS_FRID_ID" Expression="RAS_FRID_ID"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca22a1-011d-1000-8882-814d53431e28::readable.OtlReportAnswerSetsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RasOrderByNameYn" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="1" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RAS_ORDER_BY_NAME_YN" Expression="RAS_ORDER_BY_NAME_YN"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca22a1-011d-1000-8883-814d53431e28::readable.OtlReportAnswerSetsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RasAddAnswerYn" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="1" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RAS_ADD_ANSWER_YN" Expression="RAS_ADD_ANSWER_YN"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca22a1-011d-1000-8884-814d53431e28::readable.OtlReportAnswerSetsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RasDeleteYn" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="1" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RAS_DELETE_YN" Expression="RAS_DELETE_YN"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca22a1-011d-1000-8885-814d53431e28::readable.OtlReportAnswerSetsRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="RasId" />
+	</AttrArray>
+	<ViewLinkAccessor Name="OtlReportAnswerSetValuesRView"
+		ViewLink="com.bawaweb.views.readable.RavRasFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+</ViewObject>

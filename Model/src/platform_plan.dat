@@ -1,0 +1,26 @@
+moduleType=ear
+applicationID=Platform
+bindWebApp=default-web-site
+webSiteBindings=
+parent=default
+moduleID=.
+doctype=orion-application
+<?xml version="1.0" encoding="UTF-8"?>
+<orion-application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/orion-application-10_0.xsd">
+</orion-application>
+moduleID=platform.jar
+doctype=orion-ejb-jar
+<?xml version="1.0" encoding="UTF-8"?>
+<orion-ejb-jar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/orion-ejb-jar-10_0.xsd">
+	<enterprise-beans>
+	</enterprise-beans>
+	<assembly-descriptor>
+	</assembly-descriptor>
+</orion-ejb-jar>
+moduleID=platform.war
+doctype=orion-web-app
+<?xml version="1.0" encoding="UTF-8"?>
+<orion-web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/orion-web-10_0.xsd" context-root="Platform">
+	<web-app-class-loader>
+	</web-app-class-loader>
+</orion-web-app>

@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlSourcesUView"
+	SelectList="OtlSources.SRC_ID, 
+       OtlSources.SRC_LAST_NAME, 
+       OtlSources.SRC_FIRST_NAME, 
+       OtlSources.SRC_COURTESY_TITLE, 
+       OtlSources.SRC_JOB_TITLE, 
+       OtlSources.SRC_JOB_DESCRIPTION, 
+       OtlSources.SRC_COMPANY, 
+       OtlSources.SRC_ADDRESS1, 
+       OtlSources.SRC_ADDRESS2, 
+       OtlSources.SRC_ADDRESS3, 
+       OtlSources.SRC_CITY, 
+       OtlSources.SRC_STATE, 
+       OtlSources.SRC_ZIP, 
+       OtlSources.SRC_CTRY_ID, 
+       OtlSources.SRC_TMZ_ID, 
+       OtlSources.SRC_EMAIL, 
+       OtlSources.SRC_PHONE, 
+       OtlSources.SRC_PHONE_EXT, 
+       OtlSources.SRC_CELL_PHONE, 
+       OtlSources.SRC_FAX, 
+       OtlSources.SRC_STATUS, 
+       OtlSources.SRC_EXCLUSIVE_SOURCE_YN, 
+       OtlSources.SRC_DONT_CONTACT_YN, 
+       OtlSources.SRC_COMPANY_TYPE, 
+       OtlSources.SRC_AREA_OF_EXPERTISE, 
+       OtlSources.SRC_INDUSTRY_SECTOR, 
+       OtlSources.SRC_INDUSTRY_VIEW, 
+       OtlSources.SRC_VENDORS, 
+       OtlSources.SRC_COMPANY_SIZE, 
+       OtlSources.SRC_DISTRIBUTION_PREFERENCE, 
+       OtlSources.SRC_DISTRIBUTION_NOTES, 
+       OtlSources.SRC_SPECIAL_REQUESTS, 
+       OtlSources.SRC_REPORTERS_NOTES, 
+       OtlSources.SRC_QUALITY_RATING, 
+       OtlSources.SRC_MODIFIED_DATE, 
+       OtlSources.SRC_MODIFIED_BY, 
+       OtlSources.SRC_SUFFIX_TITLE, 
+       OtlSources.SRC_INFORMED_OF_WEBSITE, 
+       OtlSources.SRC_OFFERED_REPORT"
+	FromList="BAwaWEb_SOURCES OtlSources" Where="OtlSources.SRC_ID = :src_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.OtlSourcesUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.OtlSourcesUViewImpl"
+	DefClass="com.bawaweb.views.updatable.OtlSourcesUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.OtlSourcesUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.OtlSourcesUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.OtlSourcesUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.OtlSourcesUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="src_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlSources" Entity="com.bawaweb.model.OtlSources">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="OtlSources.SRC_ID = :src_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="SrcId" IsNotNull="true"
+		EntityAttrName="SrcId" EntityUsage="OtlSources" AliasName="SRC_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcLastName" EntityAttrName="SrcLastName"
+		EntityUsage="OtlSources" AliasName="SRC_LAST_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcFirstName" EntityAttrName="SrcFirstName"
+		EntityUsage="OtlSources" AliasName="SRC_FIRST_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCourtesyTitle" EntityAttrName="SrcCourtesyTitle"
+		EntityUsage="OtlSources" AliasName="SRC_COURTESY_TITLE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcJobTitle" EntityAttrName="SrcJobTitle"
+		EntityUsage="OtlSources" AliasName="SRC_JOB_TITLE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcJobDescription" EntityAttrName="SrcJobDescription"
+		EntityUsage="OtlSources" AliasName="SRC_JOB_DESCRIPTION">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCompany" EntityAttrName="SrcCompany"
+		EntityUsage="OtlSources" AliasName="SRC_COMPANY">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAddress1" EntityAttrName="SrcAddress1"
+		EntityUsage="OtlSources" AliasName="SRC_ADDRESS1">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAddress2" EntityAttrName="SrcAddress2"
+		EntityUsage="OtlSources" AliasName="SRC_ADDRESS2">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAddress3" EntityAttrName="SrcAddress3"
+		EntityUsage="OtlSources" AliasName="SRC_ADDRESS3">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCity" IsNotNull="true"
+		EntityAttrName="SrcCity" EntityUsage="OtlSources" AliasName="SRC_CITY">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcState" EntityAttrName="SrcState"
+		EntityUsage="OtlSources" AliasName="SRC_STATE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcZip" EntityAttrName="SrcZip"
+		EntityUsage="OtlSources" AliasName="SRC_ZIP">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCtryId" IsNotNull="true"
+		EntityAttrName="SrcCtryId" EntityUsage="OtlSources" AliasName="SRC_CTRY_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcTmzId" EntityAttrName="SrcTmzId"
+		EntityUsage="OtlSources" AliasName="SRC_TMZ_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcEmail" EntityAttrName="SrcEmail"
+		EntityUsage="OtlSources" AliasName="SRC_EMAIL">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcPhone" IsNotNull="true"
+		EntityAttrName="SrcPhone" EntityUsage="OtlSources" AliasName="SRC_PHONE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcPhoneExt" EntityAttrName="SrcPhoneExt"
+		EntityUsage="OtlSources" AliasName="SRC_PHONE_EXT">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCellPhone" EntityAttrName="SrcCellPhone"
+		EntityUsage="OtlSources" AliasName="SRC_CELL_PHONE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcFax" EntityAttrName="SrcFax"
+		EntityUsage="OtlSources" AliasName="SRC_FAX">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcStatus" IsNotNull="true"
+		EntityAttrName="SrcStatus" EntityUsage="OtlSources" AliasName="SRC_STATUS">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcExclusiveSourceYn" IsNotNull="true"
+		EntityAttrName="SrcExclusiveSourceYn" EntityUsage="OtlSources"
+		AliasName="SRC_EXCLUSIVE_SOURCE_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcDontContactYn" IsNotNull="true"
+		EntityAttrName="SrcDontContactYn" EntityUsage="OtlSources" AliasName="SRC_DONT_CONTACT_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCompanyType" EntityAttrName="SrcCompanyType"
+		EntityUsage="OtlSources" AliasName="SRC_COMPANY_TYPE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAreaOfExpertise" EntityAttrName="SrcAreaOfExpertise"
+		EntityUsage="OtlSources" AliasName="SRC_AREA_OF_EXPERTISE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcIndustrySector" EntityAttrName="SrcIndustrySector"
+		EntityUsage="OtlSources" AliasName="SRC_INDUSTRY_SECTOR">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcIndustryView" EntityAttrName="SrcIndustryView"
+		EntityUsage="OtlSources" AliasName="SRC_INDUSTRY_VIEW">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcVendors" EntityAttrName="SrcVendors"
+		EntityUsage="OtlSources" AliasName="SRC_VENDORS">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCompanySize" EntityAttrName="SrcCompanySize"
+		EntityUsage="OtlSources" AliasName="SRC_COMPANY_SIZE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcDistributionPreference"
+		EntityAttrName="SrcDistributionPreference" EntityUsage="OtlSources"
+		AliasName="SRC_DISTRIBUTION_PREFERENCE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcDistributionNotes"
+		EntityAttrName="SrcDistributionNotes" EntityUsage="OtlSources"
+		AliasName="SRC_DISTRIBUTION_NOTES">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcSpecialRequests" EntityAttrName="SrcSpecialRequests"
+		EntityUsage="OtlSources" AliasName="SRC_SPECIAL_REQUESTS">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcReportersNotes" EntityAttrName="SrcReportersNotes"
+		EntityUsage="OtlSources" AliasName="SRC_REPORTERS_NOTES">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcQualityRating" EntityAttrName="SrcQualityRating"
+		EntityUsage="OtlSources" AliasName="SRC_QUALITY_RATING">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcModifiedDate" EntityAttrName="SrcModifiedDate"
+		EntityUsage="OtlSources" AliasName="SRC_MODIFIED_DATE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcModifiedBy" IsNotNull="true"
+		EntityAttrName="SrcModifiedBy" EntityUsage="OtlSources" AliasName="SRC_MODIFIED_BY">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcSuffixTitle" EntityAttrName="SrcSuffixTitle"
+		EntityUsage="OtlSources" AliasName="SRC_SUFFIX_TITLE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcInformedOfWebsite"
+		EntityAttrName="SrcInformedOfWebsite" EntityUsage="OtlSources"
+		AliasName="SRC_INFORMED_OF_WEBSITE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcOfferedReport" EntityAttrName="SrcOfferedReport"
+		EntityUsage="OtlSources" AliasName="SRC_OFFERED_REPORT">
+	</ViewAttribute>
+	<ViewLinkAccessor Name="OtlReportSourcesUView"
+		ViewLink="com.bawaweb.views.updatable.RpsSrcFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+</ViewObject>

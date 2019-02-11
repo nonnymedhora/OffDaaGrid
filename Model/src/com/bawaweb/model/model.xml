@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage Name="model" SeparateXMLFiles="true" PackageName="com.bawaweb.model">
+	<DesignTime>
+		<Attr Name="_ejbPackage" Value="false" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+	</DesignTime>
+	<Containee Name="AnsFridFkAssoc" FullName="com.bawaweb.model.AnsFridFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="AnsGridErrorFile" FullName="com.bawaweb.model.AnsGridErrorFile"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="AsvAnsFkAssoc" FullName="com.bawaweb.model.AsvAnsFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="CtryCountries" FullName="com.bawaweb.model.CtryCountries"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="EmplOtlEmployees" FullName="com.bawaweb.model.EmplOtlEmployees"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="FridFirmIndustries" FullName="com.bawaweb.model.FridFirmIndustries"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlAnswerSets" FullName="com.bawaweb.model.OtlAnswerSets"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlAnswerSetValues" FullName="com.bawaweb.model.OtlAnswerSetValues"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlCourtesyTitles" FullName="com.bawaweb.model.OtlCourtesyTitles"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlEmplRoles" FullName="com.bawaweb.model.OtlEmplRoles"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlEmrEmplFkAssoc" FullName="com.bawaweb.model.OtlEmrEmplFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlEmrRolFkAssoc" FullName="com.bawaweb.model.OtlEmrRolFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlFunctions" FullName="com.bawaweb.model.OtlFunctions"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlLookupData" FullName="com.bawaweb.model.OtlLookupData"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlMultiQuestions" FullName="com.bawaweb.model.OtlMultiQuestions"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlqRprtFkAssoc" FullName="com.bawaweb.model.OtlqRprtFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlQuestions" FullName="com.bawaweb.model.OtlQuestions"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlRasFridFkAssoc" FullName="com.bawaweb.model.OtlRasFridFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlRasRprtFkAssoc" FullName="com.bawaweb.model.OtlRasRprtFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlReportAnswerSets" FullName="com.bawaweb.model.OtlReportAnswerSets"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlReportAnswerSetValues" FullName="com.bawaweb.model.OtlReportAnswerSetValues"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlReporterSources" FullName="com.bawaweb.model.OtlReporterSources"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlReportSortingCriteria" FullName="com.bawaweb.model.OtlReportSortingCriteria"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlReportSources" FullName="com.bawaweb.model.OtlReportSources"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlRoles" FullName="com.bawaweb.model.OtlRoles"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlRscEmplFkAssoc" FullName="com.bawaweb.model.OtlRscEmplFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlRscSrcFkAssoc" FullName="com.bawaweb.model.OtlRscSrcFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlRsoRprtFkAssoc" FullName="com.bawaweb.model.OtlRsoRprtFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlRsoSrtFkAssoc" FullName="com.bawaweb.model.OtlRsoSrtFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlSciSrcFkAssoc" FullName="com.bawaweb.model.OtlSciSrcFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlScvScvFkAssoc" FullName="com.bawaweb.model.OtlScvScvFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlScvSrtFkAssoc" FullName="com.bawaweb.model.OtlScvSrtFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlSmaAsvFkAssoc" FullName="com.bawaweb.model.OtlSmaAsvFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlSmaRavFkAssoc" FullName="com.bawaweb.model.OtlSmaRavFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlSmaSraFkAssoc" FullName="com.bawaweb.model.OtlSmaSraFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlSortingCriteria" FullName="com.bawaweb.model.OtlSortingCriteria"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlSortingCriteriaValues" FullName="com.bawaweb.model.OtlSortingCriteriaValues"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlSourceAnswers" FullName="com.bawaweb.model.OtlSourceAnswers"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlSourceIndustries" FullName="com.bawaweb.model.OtlSourceIndustries"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlSourceMultiAnswers" FullName="com.bawaweb.model.OtlSourceMultiAnswers"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlSources" FullName="com.bawaweb.model.OtlSources"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlSourceSortingCriteria" FullName="com.bawaweb.model.OtlSourceSortingCriteria"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlSrcCtryFkAssoc" FullName="com.bawaweb.model.OtlSrcCtryFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlSrcTmzFkAssoc" FullName="com.bawaweb.model.OtlSrcTmzFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlSrtFridFkAssoc" FullName="com.bawaweb.model.OtlSrtFridFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlSscRpsFkAssoc" FullName="com.bawaweb.model.OtlSscRpsFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlSscScvFkAssoc" FullName="com.bawaweb.model.OtlSscScvFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtlSuffixTitles" FullName="com.bawaweb.model.OtlSuffixTitles"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlTallyRangeLimits" FullName="com.bawaweb.model.OtlTallyRangeLimits"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlTallyRanges" FullName="com.bawaweb.model.OtlTallyRanges"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlTimeZones" FullName="com.bawaweb.model.OtlTimeZones"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtlTrlTlyFkAssoc" FullName="com.bawaweb.model.OtlTrlTlyFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="OtrEmployeeInfo" FullName="com.bawaweb.model.OtrEmployeeInfo"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="OtrTabLocks" FullName="com.bawaweb.model.OtrTabLocks"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="PanEmplFkAssoc" FullName="com.bawaweb.model.PanEmplFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="PanFridFkAssoc" FullName="com.bawaweb.model.PanFridFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="PanPanel" FullName="com.bawaweb.model.PanPanel"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="RasAnsFkAssoc" FullName="com.bawaweb.model.RasAnsFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="RavAsvFkAssoc" FullName="com.bawaweb.model.RavAsvFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="RavRasFkAssoc" FullName="com.bawaweb.model.RavRasFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="RprtEmplEdtrFkAssoc" FullName="com.bawaweb.model.RprtEmplEdtrFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="RprtEmplRptrFkAssoc" FullName="com.bawaweb.model.RprtEmplRptrFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="RprtFridFiFkAssoc" FullName="com.bawaweb.model.RprtFridFiFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="RprtPanFkAssoc" FullName="com.bawaweb.model.RprtPanFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="RprtReportReporterXref" FullName="com.bawaweb.model.RprtReportReporterXref"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="RprtReports" FullName="com.bawaweb.model.RprtReports"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="RprtRtypFkAssoc" FullName="com.bawaweb.model.RprtRtypFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="RpsRprtFkAssoc" FullName="com.bawaweb.model.RpsRprtFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="RpsSrcFkAssoc" FullName="com.bawaweb.model.RpsSrcFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="RptyReporterTypes" FullName="com.bawaweb.model.RptyReporterTypes"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="RtypReportTypes" FullName="com.bawaweb.model.RtypReportTypes"
+		ObjectType="Entity">
+	</Containee>
+	<Containee Name="SraAsvFkAssoc" FullName="com.bawaweb.model.SraAsvFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="SraQstFkAssoc" FullName="com.bawaweb.model.SraQstFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="SraRavFkAssoc" FullName="com.bawaweb.model.SraRavFkAssoc"
+		ObjectType="Association">
+	</Containee>
+	<Containee Name="SraRpsFkAssoc" FullName="com.bawaweb.model.SraRpsFkAssoc"
+		ObjectType="Association">
+	</Containee>
+</JboPackage>

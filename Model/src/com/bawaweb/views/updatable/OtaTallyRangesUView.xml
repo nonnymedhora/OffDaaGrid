@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlTallyRangesUView"
+	SelectList="OtlTallyRanges.TLY_ID, 
+       OtlTallyRanges.TLY_NAME, 
+       OtlTallyRanges.TLY_PREFIX, 
+       OtlTallyRanges.TLY_SUFFIX, 
+       OtlTallyRanges.TLY_DELETE_YN"
+	FromList="BAwaWEb_TALLY_RANGES OtlTallyRanges" Where="OtlTallyRanges.TLY_ID = :tly_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.OtlTallyRangesUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.OtlTallyRangesUViewImpl"
+	DefClass="com.bawaweb.views.updatable.OtlTallyRangesUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.OtlTallyRangesUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.OtlTallyRangesUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.OtlTallyRangesUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.OtlTallyRangesUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="tly_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlTallyRanges" Entity="com.bawaweb.model.OtlTallyRanges">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="OtlTallyRanges.TLY_ID = :tly_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="TlyId" IsNotNull="true"
+		EntityAttrName="TlyId" EntityUsage="OtlTallyRanges" AliasName="TLY_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="TlyName" IsNotNull="true"
+		EntityAttrName="TlyName" EntityUsage="OtlTallyRanges" AliasName="TLY_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="TlyPrefix" EntityAttrName="TlyPrefix"
+		EntityUsage="OtlTallyRanges" AliasName="TLY_PREFIX">
+	</ViewAttribute>
+	<ViewAttribute Name="TlySuffix" EntityAttrName="TlySuffix"
+		EntityUsage="OtlTallyRanges" AliasName="TLY_SUFFIX">
+	</ViewAttribute>
+	<ViewAttribute Name="TlyDeleteYn" IsNotNull="true"
+		EntityAttrName="TlyDeleteYn" EntityUsage="OtlTallyRanges" AliasName="TLY_DELETE_YN">
+	</ViewAttribute>
+</ViewObject>

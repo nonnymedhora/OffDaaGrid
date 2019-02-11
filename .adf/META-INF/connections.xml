@@ -1,0 +1,154 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ns2:References xmlns:ns2="http://xmlns.oracle.com/adf/jndi">
+	<Reference credentialStoreKey="SANDBOX"
+		className="oracle.jdeveloper.db.adapter.DatabaseProvider" name="SANDBOX">
+		<Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory" />
+		<RefAddresses>
+			<StringRefAddr addrType="oraDriverType">
+				<Contents>thin</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="port">
+				<Contents>1521</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="DeployPassword">
+				<Contents>true</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="user">
+				<Contents>sales</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="subtype">
+				<Contents>oraJDBC</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="serviceName">
+				<Contents>XE</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="hostname">
+				<Contents>san-sv-sbox.ox.com</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="SavePassword">
+				<Contents>true</Contents>
+			</StringRefAddr>
+			<SecureRefAddr addrType="password" />
+			<StringRefAddr addrType="driver">
+				<Contents>oracle.jdbc.OracleDriver</Contents>
+			</StringRefAddr>
+		</RefAddresses>
+	</Reference>
+	<Reference credentialStoreKey="sales_xe"
+		className="oracle.jdeveloper.db.adapter.DatabaseProvider" name="sales_xe">
+		<Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory" />
+		<RefAddresses>
+			<StringRefAddr addrType="oraDriverType">
+				<Contents>thin</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="port">
+				<Contents>1522</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="DeployPassword">
+				<Contents>true</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="user">
+				<Contents>SALES</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="role">
+				<Contents>Normal</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="subtype">
+				<Contents>oraJDBC</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="serviceName">
+				<Contents>xe</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="hostname">
+				<Contents>san-wk-aweinste.ox.com</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="customUrl">
+				<Contents>jdbc:oracle:thin:@san-wk-aweinste.ox.com:1522:xe</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="SavePassword">
+				<Contents>true</Contents>
+			</StringRefAddr>
+			<SecureRefAddr addrType="password" />
+			<StringRefAddr addrType="driver">
+				<Contents>oracle.jdbc.OracleDriver</Contents>
+			</StringRefAddr>
+		</RefAddresses>
+	</Reference>
+	<Reference credentialStoreKey="SALESPROD"
+		className="oracle.jdeveloper.db.adapter.DatabaseProvider" name="SALESPROD">
+		<Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory" />
+		<RefAddresses>
+			<StringRefAddr addrType="oraDriverType">
+				<Contents>thin</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="sid">
+				<Contents>SALES</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="port">
+				<Contents>1521</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="DeployPassword">
+				<Contents>true</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="user">
+				<Contents>SALES</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="role">
+				<Contents>Normal</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="subtype">
+				<Contents>oraJDBC</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="hostname">
+				<Contents>otrdb.ox.com</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="SavePassword">
+				<Contents>true</Contents>
+			</StringRefAddr>
+			<SecureRefAddr addrType="password" />
+			<StringRefAddr addrType="driver">
+				<Contents>oracle.jdbc.OracleDriver</Contents>
+			</StringRefAddr>
+		</RefAddresses>
+	</Reference>
+	<Reference credentialStoreKey="SALESDEV"
+		className="oracle.jdeveloper.db.adapter.DatabaseProvider" name="SALESDEV">
+		<Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory" />
+		<RefAddresses>
+			<StringRefAddr addrType="oraDriverType">
+				<Contents>thin</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="sid">
+				<Contents>salesdev</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="port">
+				<Contents>1521</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="DeployPassword">
+				<Contents>true</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="user">
+				<Contents>SALES</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="role">
+				<Contents>Normal</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="subtype">
+				<Contents>oraJDBC</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="hostname">
+				<Contents>otrdb.ox.com</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="customUrl">
+				<Contents>jdbc:oracle:thin:@otrdevdb.ox.com:1521:salesdev</Contents>
+			</StringRefAddr>
+			<StringRefAddr addrType="SavePassword">
+				<Contents>true</Contents>
+			</StringRefAddr>
+			<SecureRefAddr addrType="password" />
+			<StringRefAddr addrType="driver">
+				<Contents>oracle.jdbc.OracleDriver</Contents>
+			</StringRefAddr>
+		</RefAddresses>
+	</Reference>
+</ns2:References>

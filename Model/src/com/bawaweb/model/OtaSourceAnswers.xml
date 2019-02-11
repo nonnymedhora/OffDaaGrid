@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlSourceAnswers" DBObjectType="table"
+	DBObjectName="BAwaWEb_SOURCE_ANSWERS" AliasName="OtlSourceAnswers"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlSourceAnswersImpl" DefClass="com.bawaweb.model.OtlSourceAnswersDefImpl"
+	CollClass="com.bawaweb.model.OtlSourceAnswersCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="SraId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SRA_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SOURCE_ANSWERS"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraQstId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SRA_QST_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SOURCE_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraRpsId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SRA_RPS_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SOURCE_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraAnswer" Precision="1900" ColumnName="SRA_ANSWER"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCE_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1900" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraAnswerText" Precision="1900" ColumnName="SRA_ANSWER_TEXT"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCE_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1900" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraAsvId" Precision="12" Scale="0"
+		ColumnName="SRA_ASV_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_SOURCE_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraExcludeYn" IsNotNull="true" Precision="1"
+		ColumnName="SRA_EXCLUDE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCE_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraWeightMultiplier" Precision="12" Scale="3"
+		ColumnName="SRA_WEIGHT_MULTIPLIER" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SOURCE_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraRavId" Precision="12" Scale="0"
+		ColumnName="SRA_RAV_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_SOURCE_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraColor" Precision="100" ColumnName="SRA_COLOR"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCE_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraComment" Precision="1900" ColumnName="SRA_COMMENT"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCE_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1900" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="OtlAnswerSetValues"
+		Association="com.bawaweb.model.SraAsvFkAssoc" AssociationEnd="com.bawaweb.model.SraAsvFkAssoc.OtlAnswerSetValues"
+		AssociationOtherEnd="com.bawaweb.model.SraAsvFkAssoc.OtlSourceAnswers"
+		Type="com.bawaweb.model.OtlAnswerSetValuesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlQuestions"
+		Association="com.bawaweb.model.SraQstFkAssoc" AssociationEnd="com.bawaweb.model.SraQstFkAssoc.OtlQuestions"
+		AssociationOtherEnd="com.bawaweb.model.SraQstFkAssoc.OtlSourceAnswers"
+		Type="com.bawaweb.model.OtlQuestionsImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlReportAnswerSetValues"
+		Association="com.bawaweb.model.SraRavFkAssoc" AssociationEnd="com.bawaweb.model.SraRavFkAssoc.OtlReportAnswerSetValues"
+		AssociationOtherEnd="com.bawaweb.model.SraRavFkAssoc.OtlSourceAnswers"
+		Type="com.bawaweb.model.OtlReportAnswerSetValuesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlReportSources"
+		Association="com.bawaweb.model.SraRpsFkAssoc" AssociationEnd="com.bawaweb.model.SraRpsFkAssoc.OtlReportSources"
+		AssociationOtherEnd="com.bawaweb.model.SraRpsFkAssoc.OtlSourceAnswers"
+		Type="com.bawaweb.model.OtlReportSourcesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlSourceMultiAnswers"
+		Association="com.bawaweb.model.OtlSmaSraFkAssoc" AssociationEnd="com.bawaweb.model.OtlSmaSraFkAssoc.OtlSourceMultiAnswers"
+		AssociationOtherEnd="com.bawaweb.model.OtlSmaSraFkAssoc.OtlSourceAnswers"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<Key Name="OtlSourceAnswersPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceAnswers.SraId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SOURCE_ANSWERS_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005168">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceAnswers.SraId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRA_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005168" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005169">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceAnswers.SraQstId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRA_QST_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005169" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005170">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceAnswers.SraRpsId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRA_RPS_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005170" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005171">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceAnswers.SraExcludeYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRA_EXCLUDE_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005171" />
+		</DesignTime>
+	</Key>
+	<Key Name="SraAsvFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceAnswers.SraAsvId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_ANSWER_SET_VALUES_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="SRA_ASV_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SraQstFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceAnswers.SraQstId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_QUESTIONS_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="SRA_QST_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SraRavFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceAnswers.SraRavId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_REPORT_ANSWER_SET_VALUESPK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="SRA_RAV_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SraRpsFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceAnswers.SraRpsId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_REPORT_SOURCES_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="SRA_RPS_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

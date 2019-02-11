@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+<project name="testOTR" default="all" basedir="." xmlns:oracle="antlib:oracle" xmlns="antlib:org.apache.tools.ant">
+<!--
+<property environment="env"/>-->
+
+
+        <property file="ant-oracle.properties"/>
+        
+	<property name="baseWs" value="${base_Ws}" />
+        <property name="baseClasses" value="${base_Classes}" />
+        <property name="dist.dir" value="${dist_Dir}" />
+        
+	<property name="source.dir" value="${baseWs}"/>
+        <property name="build.dir" value="${baseClasses}"/>
+	<property name="generated.pojo" value="${build.dir}/com/bawaweb/db/generated" />
+	<property name="generated.domain" value="${build.dir}/com/bawaweb/db/domain" />
+	<property name="generated.pojo.sales" value="${build.dir}/com/bawaweb/db/generated/sales" />
+	<property name="generated.domain.sales" value="${build.dir}/com/bawaweb/db/domain/sales" />
+	<property name="generated.pojo.otrrep" value="${build.dir}/com/bawaweb/db/generated/otrrep" />
+	<property name="generated.domain.otrrep" value="${build.dir}/com/bawaweb/db/domain/otrrep" />
+        
+        
+	<property name="generated.pojo.classes" value="${baseClasses}/com/bawaweb/db/generated" />
+	<property name="generated.domain.classes" value="${baseClasses}/com/bawaweb/db/domain" />
+	<property name="generated.pojo.sales.classes" value="${baseClasses}/com/bawaweb/db/generated/sales" />
+	<property name="generated.domain.sales.classes" value="${baseClasses}/com/bawaweb/db/domain/sales" />
+	<property name="generated.pojo.otrrep.classes" value="${baseClasses}/com/bawaweb/db/generated/otrrep" />
+	<property name="generated.domain.otrrep.classes" value="${baseClasses}/com/bawaweb/db/domain/otrrep" />
+        
+	<property name="lib.dir" value="${lib.dir}" />    <!-- value="${basedir}/lib"/> -->
+	
+        
+        <!--sandbox db name xe, u sales, p salesxe-->
+        <property name="salesDBURL" value="${salesdb.host}" />
+        
+	<!--<property name="salesDBURL" value="jdbc:oracle:thin:@otrdb.ox.com:1521:SALESDEV" />-->
+	<!-- <property name="salesDBURL" value="jdbc:oracle:thin:@otrdb.ox.com:1521:SALESDEV" /> -->
+	<!--    <property name="otrRepDBURL" value="jdbc:oracle:thin:@capella.ox.com:1521:IASDBEXT" />  -->
+          <property name="otrRepDBURL" value="${bawaweb_reporterdb.host}" />
+
+<!--
+        <taskdef name="generatorSales" classname="com.bawaweb.db.build.GeneratePojosTask" />--><!-- classpathref="C:\jdevstudio10132\jdev\mywork\OffDaGrid\OffDaGrid\classes\com\bawaweb\db\build\GeneratePojosTask" />	 -->
+	<!--<taskdef name="generatorOtrRep" classname="com.bawaweb.db.build.GeneratePojosTask" />--><!-- classpathref="C:\jdevstudio10132\jdev\mywork\OffDaGrid\OffDaGrid\classes\com\bawaweb\db\build\GeneratePojosTask" />	 -->
+	
+	<!-- Setup the Classpath -->
+	<path id="bawaweb.classpath">
+		<pathelement location="${lib.dir}" />
+	</path>     
+        
+        <path id="master-classpath">
+
+		<fileset dir="${lib.dir}/ant">
+			<include name="ant.jar" />
+		</fileset>
+		<fileset dir="${lib.dir}/acegi">
+			<include name="acegi-security.jar" />
+		</fileset>
+		<fileset dir="${lib.dir}/dbunit">
+			<include name="dbunit.jar"/>
+		</fileset>
+		<fileset dir="${lib.dir}/hibernate">
+			<include name="ant-antlr.jar" />
+                        <include name="asm-attrs.jar" />
+                        <include name="asm.jar" />
+                        <include name="cglib.jar" />
+                        <include name="commons-collections.jar" />
+                        <include name="commons-logging.jar" />
+                        <include name="dom4j.jar" />
+                        <include name="ehcache.jar" />
+                        <include name="hibernate.jar" />
+                        <include name="jaas.jar" />
+                        <include name="jta.jar" />
+                        <include name="log4j.jar" />
+		</fileset>
+		<fileset dir="${lib.dir}/spring">
+			<include name="spring.jar"/>
+                        <include name="spring-mock.jar"/>
+		</fileset>
+		<fileset dir="${lib.dir}/j2ee">
+			<include name="j2ee.jar"/>
+		</fileset>
+		<fileset dir="${lib.dir}/jakarta-commons">
+			<include name="commons-attributes-api.jar" />
+                        <include name="commons-attributes-compiler.jar" />
+                        <include name="commons-beanutils.jar" />
+                        <include name="commons-codec.jar" />
+                        <include name="commons-dbcp.jar" />
+                        <include name="commons-digester.jar" />
+                        <include name="commons-discovery.jar" />
+                        <include name="commons-fileupload.jar" />
+                        <include name="commons-httpclient.jar" />
+                        <include name="commons-io.jar" />
+                        <include name="commons-lang.jar" />
+                        <include name="commons-pool.jar" />
+                        <include name="commons-validator.jar" />
+		</fileset>
+		<fileset dir="${lib.dir}/jxl">
+			<include name="jxl.jar"/>
+		</fileset>
+		<fileset dir="${lib.dir}/oracle">
+			<include name="class12.jar.jar"/>
+                        <include name="ant-oracle.jar.jar"/>
+		</fileset>
+		<fileset dir="${lib.dir}/toplink">
+			<include name="toplink.jar"/>
+		</fileset>
+                <fileset dir="${lib.dir}/bc4j">
+                    <include name="adfbinding.jar"/>
+                    <include name="adfcm.jar"/>
+                    <include name="adfm.jar"/>
+                    <include name="adfmweb.jar"/>
+                    <include name="adfs-jazn.jar"/>
+                    <include name="adfs.jar"/>
+                    <include name="bc4jct.jar"/>
+                    <include name="bc4jctejb.jar"/>
+                    <include name="bc4jdomorcl.jar"/>
+                    <include name="bc4jimdomains.jar"/>
+                    <include name="bc4jmt.jar"/>
+                    <include name="bc4jmtejb.jar"/>
+                    <include name="bc4jsyscat.jar"/>
+                    <include name="collections.jar"/>                    
+                </fileset>
+	</path>
+	
+	<property name="classes.dir" value="${base_Classes}" />
+	   
+	<property name="internal.cp" refid="bawaweb.classpath" />
+	<property name="classpath" value="${classes.dir};${bawaweb.classpath}" />
+        
+	<target name="all" depends="dist">
+	</target>
+        
+                <!--bindAllWebApps="${oc4j.binding.module}"-->
+        <target name="deployClean"  depends="earClean">     
+            <oracle:deploy 
+                userid="${oc4j.admin.user}"
+                password="${oc4j.admin.password}"
+                file="${dist_Dir}/bawaweb.ear"
+                deploymentname="${app.name}"
+                logfile="${log.dir}/deploy-ear.log"
+                deployeruri="${deployer.uri}"
+            />
+            <oracle:bindAllWebApps
+                deployerUri="${deployer.uri}"
+                userid="${oc4j.admin.user}"
+                password="${oc4j.admin.password}"
+                deploymentName="${app.name}"
+                webSiteName="${oc4j.binding.module}"/>
+  <!--   ===============================================
+            <oracle:bindWebApp 
+                 deployerUri="${deployer.uri}"
+                userid="${oc4j.admin.user}"
+                password="${oc4j.admin.password}"
+                deploymentName="${app.name}"
+                webModule="${web.name}"
+                webSiteName="${oc4j.binding.module}"
+                logfile="${log.dir}/bindWebApp.log" 
+                contextRoot="/${context.root}" 
+                />    
+        ===========================================     -->
+<!--    ===========================================    contextRoot="/${context.root}"       
+http://www.approach-alliance.nl/index.php?option=com_jd-wp&Itemid=2&m=200711
+        <oracle:deploy 
+            userid="${oc4j.admin.user}"
+            password="${oc4j.admin.password}"
+            file="${dist_Dir}/bawaweb.ear"
+            deploymentname="${app.name}-ear"
+            logfile="${log.dir}/deploy-ear.log"
+            deployeruri="${deployer.uri}"/>
+        <oracle:bindWebApp
+            userid="${oc4j.admin.user}"
+            password="${oc4j.admin.password}"
+            deploymentname="${app.name}-ear" 
+            webmodule="${app.name}-webapp"
+            websitename="${oc4j.binding.module}"
+            contextroot="/${app.name}" />
+            
+   
+   ==================================== -->                       
+                
+                <!--host="${oc4j.host}" 
+                port="${oc4j.admin.port}"-->
+
+	</target>
+        
+        
+        <target name="bindWebApp">
+                
+            <oracle:bindWebApp 
+                userId="${oc4j.admin.user}"
+                password="${oc4j.admin.password}"
+                deploymentName="${app.name}" 
+                webModule="${web.name}"
+                webSiteName="${oc4j.binding.module}"
+                logfile="${log.dir}/bindWebApp.log"
+                contextRoot="/${context.root}" />
+
+	</target>
+        
+                <!--bindAllWebApps="default-web-site"   -->
+	<target name="deployEar">
+            <oracle:deploy 
+                userid="${oc4j.admin.user}"
+                password="${oc4j.admin.password}"
+                file="${dist_Dir}/bawaweb.ear"
+                deploymentname="${app.name}"
+                logfile="${log.dir}/deploy-ear.log"
+                deployeruri="${deployer.uri}"/>
+                
+            <oracle:bindWebApp 
+                userId="${oc4j.admin.user}"
+                password="${oc4j.admin.password}"
+                deploymentName="${app.name}" 
+                webModule="${web.name}"
+                webSiteName="${oc4j.binding.module}"
+                logfile="${log.dir}/bindWebApp.log"
+                contextRoot="/${context.root}" />
+
+	</target>
+                
+                <!--host="${oc4j.host}" 
+                port="${oc4j.admin.port}"-->
+	<!--depends = "generate">-->
+        <target name="dist" depends="compile">
+            <javac srcdir="${base_Ws}" destdir="${base_Classes}"  source="1.4" target="1.4" debug="true"
+				deprecation="false" optimize="false" failonerror="true" >
+		<classpath refid="master-classpath"/>
+                
+            </javac>
+            <jar destfile="${dist_Dir}/bawaweb.jar" basedir="${base_Classes}" 
+                                includes="com/bawaweb/**"
+                                />
+            <!--<jar destfile="${dist_Dir}/bawaweb.jar" basedir="${base_Classes}" 
+                                includes="com/bawaweb/**"
+                                excludes="com/bawaweb/db/build/**, com/bawaweb/testing/**, com/bawaweb/grid/templates/grid_etc/**, com/bawaweb/qa/**" 
+                                />-->
+            <copy file="${dist_Dir}/bawaweb.jar" todir="${base_war}/public_html/WEB-INF/lib"/>
+
+	</target>
+        
+        <target name="warClean" depends="dist">
+            <war 
+                destfile="${dist_Dir}/bawaweb.war" 
+                webxml="${base_war}/public_html/WEB-INF/web.xml">
+                
+                    <fileset dir="${base_war}/public_html" />  
+                    <webinf dir="${base_war}/public_html/WEB-INF" />
+                    <classes dir="${war_Classes}" />
+                    <lib dir="${base_war}/public_html/WEB-INF/lib" />
+            </war>
+        </target>
+        
+                <!--basedir="${base_war}/public_html" -->
+        <target name="war">
+            <war 
+                destfile="${dist_Dir}/bawaweb.war" 
+                webxml="${base_war}/public_html/WEB-INF/web.xml">
+                
+                    <fileset dir="${base_war}/public_html" />  
+                    <webinf dir="${base_war}/public_html/WEB-INF" />
+                    <classes dir="${war_Classes}" />
+                    <lib dir="${base_war}/public_html/WEB-INF/lib" />
+            </war>
+        </target>
+        
+        <target name="ear">
+            <ear 
+                destfile="${dist_Dir}/bawaweb.ear"
+                appxml="${basedir}/application.xml">
+                    <fileset dir="${dist_Dir}/" includes="bawaweb.jar, bawaweb.war"/>
+            </ear>
+        </target>
+
+        <target name="earClean" depends="warClean">
+            <ear 
+                destfile="${dist_Dir}/bawaweb.ear"
+                appxml="${basedir}/application.xml">
+                    <fileset dir="${dist_Dir}/" includes="bawaweb.jar, bawaweb.war"/>
+            </ear>
+        </target>
+
+        
+        
+        <target name="deploy" depends="dist">
+        </target>
+
+	<target name="prepare" depends="compile">			
+            		
+	</target>
+	
+	<target name="generate" depends="prepare">
+		
+
+			<echo message="Using DB ${salesDBURL}"/> 
+			<generatorSales 
+				dbUserName="SALES" 
+				dbPassword="salesxe"
+				dbURL="${salesDBURL}"
+				baseWs = "${baseWs}"/>
+   <!--
+			<echo message="Using DB ${otrRepDBURL}"/> 
+	             
+			<generatorOtrRep 
+				dbUserName="BAwaWEb_REPORTER_DEV" 
+				dbPassword="ricadble"
+				dbURL="${otrRepDBURL}"
+				baseWs = "${baseWs}"/>
+				-->
+<!-- removing for now                                
+                        <generatorOtrRep 
+				dbUserName="BAwaWEb_REPORTER" 
+				dbPassword="ciremate"
+				dbURL="${otrRepDBURL}"
+				baseWs = "${baseWs}"/>
+                                -->
+		</target>
+	
+		
+	<target name="compile" depends="clean">
+           <javac srcdir="${base_Ws}" destdir="${base_Classes}"  source="1.4" target="1.4" debug="true"
+				deprecation="false" optimize="false" failonerror="true">
+		<classpath refid="master-classpath"/>
+            </javac>
+		
+	</target>
+	
+	<target name="clean">
+<!--		
+		<delete  dir="${generated.pojo}" includes="**/*"  includeemptydirs="true" failonerror="false" />
+		<delete  dir="${generated.domain}" includes="**/*"  includeemptydirs="true" failonerror="false" />
+-->		
+		<delete includeemptydirs="true" failonerror="false">
+			<fileset dir="${generated.pojo}" includes="**/*"/>
+			<fileset dir="${generated.domain}" includes="**/*"/>
+		</delete>
+    <!--       
+                <delete includeemptydirs="true" failonerror="true">
+			<fileset dir="${baseClasses}" includes="**/*"/>
+		</delete>
+   -->             
+                <delete dir="${dist.dir}" />
+          
+                
+		<delete  dir="${generated.pojo}"/>
+		<delete  dir="${generated.domain}"/>
+
+		<mkdir dir="${generated.pojo}" />
+		<mkdir dir="${generated.domain}" />
+		
+		<mkdir dir="${generated.pojo.sales}" />
+		<mkdir dir="${generated.domain.sales}" />
+				
+		<mkdir dir="${generated.pojo.otrrep}" />
+		<mkdir dir="${generated.domain.otrrep}" />
+                
+                
+                
+                
+		<delete  dir="${generated.pojo.classes}"/>
+		<delete  dir="${generated.domain.classes}"/>
+                
+                <mkdir dir="${baseClasses}" />
+
+		<mkdir dir="${generated.pojo.classes}" />
+		<mkdir dir="${generated.domain.classes}" />
+		
+		<mkdir dir="${generated.pojo.sales.classes}" />
+		<mkdir dir="${generated.domain.sales.classes}" />
+				
+		<mkdir dir="${generated.pojo.otrrep.classes}" />
+		<mkdir dir="${generated.domain.otrrep.classes}" />
+                
+                <mkdir dir="${dist.dir}" />
+				
+	</target>
+</project>

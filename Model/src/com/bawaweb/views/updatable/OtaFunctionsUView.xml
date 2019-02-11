@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlFunctionsUView"
+	SelectList="OtlFunctions.FNC_ID, 
+       OtlFunctions.FNC_NAME, 
+       OtlFunctions.FNC_MENU, 
+       OtlFunctions.FNC_CALL_MENU, 
+       OtlFunctions.FNC_PAGE, 
+       OtlFunctions.FNC_MENU_SEQ, 
+       OtlFunctions.FNC_ICON_1, 
+       OtlFunctions.FNC_LINK_1, 
+       OtlFunctions.FNC_PAGE_NEW_VERSION"
+	FromList="BAwaWEb_FUNCTIONS OtlFunctions" Where="OtlFunctions.FNC_ID = :fnc_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.OtlFunctionsUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.OtlFunctionsUViewImpl"
+	DefClass="com.bawaweb.views.updatable.OtlFunctionsUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.OtlFunctionsUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.OtlFunctionsUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.OtlFunctionsUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.OtlFunctionsUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="fnc_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlFunctions" Entity="com.bawaweb.model.OtlFunctions">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="OtlFunctions.FNC_ID = :fnc_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="FncId" IsNotNull="true"
+		EntityAttrName="FncId" EntityUsage="OtlFunctions" AliasName="FNC_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="FncName" IsNotNull="true"
+		EntityAttrName="FncName" EntityUsage="OtlFunctions" AliasName="FNC_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="FncMenu" EntityAttrName="FncMenu"
+		EntityUsage="OtlFunctions" AliasName="FNC_MENU">
+	</ViewAttribute>
+	<ViewAttribute Name="FncCallMenu" EntityAttrName="FncCallMenu"
+		EntityUsage="OtlFunctions" AliasName="FNC_CALL_MENU">
+	</ViewAttribute>
+	<ViewAttribute Name="FncPage" IsNotNull="true"
+		EntityAttrName="FncPage" EntityUsage="OtlFunctions" AliasName="FNC_PAGE">
+	</ViewAttribute>
+	<ViewAttribute Name="FncMenuSeq" EntityAttrName="FncMenuSeq"
+		EntityUsage="OtlFunctions" AliasName="FNC_MENU_SEQ">
+	</ViewAttribute>
+	<ViewAttribute Name="FncIcon1" EntityAttrName="FncIcon1"
+		EntityUsage="OtlFunctions" AliasName="FNC_ICON_1">
+	</ViewAttribute>
+	<ViewAttribute Name="FncLink1" EntityAttrName="FncLink1"
+		EntityUsage="OtlFunctions" AliasName="FNC_LINK_1">
+	</ViewAttribute>
+	<ViewAttribute Name="FncPageNewVersion" EntityAttrName="FncPageNewVersion"
+		EntityUsage="OtlFunctions" AliasName="FNC_PAGE_NEW_VERSION">
+	</ViewAttribute>
+</ViewObject>

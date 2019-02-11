@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="RprtReportReporterXrefUView"
+	SelectList="RprtReportReporterXref.RPRT_ID, 
+       RprtReportReporterXref.RPTR_ID, 
+       RprtReportReporterXref.RPTY_ID, 
+       RprtReportReporterXref.DISTRIBUTION_NOTES, 
+       RprtReportReporterXref.ROWID"
+	FromList="RPRT_REPORT_REPORTER_XREF RprtReportReporterXref" Where="RprtReportReporterXref.RPRT_ID = :rprt_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.RprtReportReporterXrefUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.RprtReportReporterXrefUViewImpl"
+	DefClass="com.bawaweb.views.updatable.RprtReportReporterXrefUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.RprtReportReporterXrefUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.RprtReportReporterXrefUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.RprtReportReporterXrefUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.RprtReportReporterXrefUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rprt_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="RprtReportReporterXref"
+		Entity="com.bawaweb.model.RprtReportReporterXref">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="RprtReportReporterXref.RPRT_ID = :rprt_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="RprtId" IsNotNull="true"
+		EntityAttrName="RprtId" EntityUsage="RprtReportReporterXref"
+		AliasName="RPRT_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RptrId" IsNotNull="true"
+		EntityAttrName="RptrId" EntityUsage="RprtReportReporterXref"
+		AliasName="RPTR_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RptyId" EntityAttrName="RptyId"
+		EntityUsage="RprtReportReporterXref" AliasName="RPTY_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="DistributionNotes" EntityAttrName="DistributionNotes"
+		EntityUsage="RprtReportReporterXref" AliasName="DISTRIBUTION_NOTES">
+	</ViewAttribute>
+	<ViewAttribute Name="RowID" IsUpdateable="false"
+		EntityAttrName="RowID" EntityUsage="RprtReportReporterXref" AliasName="ROWID">
+	</ViewAttribute>
+</ViewObject>

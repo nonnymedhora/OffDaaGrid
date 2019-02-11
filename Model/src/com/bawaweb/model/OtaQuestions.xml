@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlQuestions" DBObjectType="table" DBObjectName="BAwaWEb_QUESTIONS"
+	AliasName="OtlQuestions" BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlQuestionsImpl" DefClass="com.bawaweb.model.OtlQuestionsDefImpl"
+	CollClass="com.bawaweb.model.OtlQuestionsCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="QstId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="QST_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_QUESTIONS"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstRprtId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="QST_RPRT_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstDisplaySeq" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="QST_DISPLAY_SEQ" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstUniqueId" Precision="12" Scale="0"
+		ColumnName="QST_UNIQUE_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstNumber" IsNotNull="true" Precision="6"
+		ColumnName="QST_NUMBER" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="6" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstType" IsNotNull="true" Precision="20"
+		ColumnName="QST_TYPE" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstQuestion" IsNotNull="true" Precision="500"
+		ColumnName="QST_QUESTION" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstQuestionHint" Precision="100"
+		ColumnName="QST_QUESTION_HINT" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstTextRequiredYn" IsNotNull="true"
+		Precision="1" ColumnName="QST_TEXT_REQUIRED_YN" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstTextHint" Precision="100" ColumnName="QST_TEXT_HINT"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstAnsId" Precision="12" Scale="0"
+		ColumnName="QST_ANS_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstComment" Precision="500" ColumnName="QST_COMMENT"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstMultiAnswers" Precision="12" Scale="0"
+		ColumnName="QST_MULTI_ANSWERS" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstTlyId" Precision="12" Scale="0"
+		ColumnName="QST_TLY_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstDeleteYn" IsNotNull="true" Precision="1"
+		ColumnName="QST_DELETE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstPointSpread" Precision="12" Scale="3"
+		ColumnName="QST_POINT_SPREAD" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstRasId" Precision="12" Scale="0"
+		ColumnName="QST_RAS_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstAnalysisShowYn" Precision="1"
+		ColumnName="QST_ANALYSIS_SHOW_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="OtlSourceAnswers"
+		Association="com.bawaweb.model.SraQstFkAssoc" AssociationEnd="com.bawaweb.model.SraQstFkAssoc.OtlSourceAnswers"
+		AssociationOtherEnd="com.bawaweb.model.SraQstFkAssoc.OtlQuestions"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="RprtReports"
+		Association="com.bawaweb.model.OtlqRprtFkAssoc" AssociationEnd="com.bawaweb.model.OtlqRprtFkAssoc.RprtReports"
+		AssociationOtherEnd="com.bawaweb.model.OtlqRprtFkAssoc.OtlQuestions"
+		Type="com.bawaweb.model.RprtReportsImpl">
+	</AccessorAttribute>
+	<Key Name="OtlQuestionsPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlQuestions.QstId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_QUESTIONS_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005031">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlQuestions.QstId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;QST_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005031" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005032">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlQuestions.QstRprtId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;QST_RPRT_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005032" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005033">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlQuestions.QstDisplaySeq" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;QST_DISPLAY_SEQ&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005033" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005034">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlQuestions.QstNumber" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;QST_NUMBER&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005034" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005035">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlQuestions.QstType" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;QST_TYPE&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005035" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005036">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlQuestions.QstQuestion" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;QST_QUESTION&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005036" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005037">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlQuestions.QstTextRequiredYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;QST_TEXT_REQUIRED_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005037" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005038">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlQuestions.QstDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;QST_DELETE_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005038" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlqRprtFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlQuestions.QstRprtId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="PK_RPRT_ID" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="BaWaWEBQ_RPRT_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

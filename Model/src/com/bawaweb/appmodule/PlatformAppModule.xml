@@ -1,0 +1,3527 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule Name="PlatformAppModule" ComponentClass="com.bawaweb.appmodule.PlatformAppModuleImpl"
+	DefClass="com.bawaweb.appmodule.PlatformAppModuleDefImpl">
+	<Data>
+		<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+		<Property Name="ID"
+			Value="6bca234d-011d-1000-8acc-814d53431e28::::ApplicationModule" />
+		<Property Name="IS_ABSTRACT" Value="FALSE" />
+		<Property Name="IS_ACTIVE" Value="FALSE" />
+		<Property Name="IS_LEAF" Value="FALSE" />
+		<Property Name="IS_ROOT" Value="TRUE" />
+		<Property Name="VISIBILITY" Value="PUBLIC" />
+	</Data>
+	<DesignTime>
+		<Attr Name="_isDefCodegen" Value="true" />
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_deployType" Value="0" />
+	</DesignTime>
+	<ViewUsage Name="CtryCountriesUView1"
+		ViewObjectName="com.bawaweb.views.updatable.CtryCountriesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8acd-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="EmplOtlEmployeesUView1"
+		ViewObjectName="com.bawaweb.views.updatable.EmplOtlEmployeesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ace-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="FridFirmIndustriesUView1"
+		ViewObjectName="com.bawaweb.views.updatable.FridFirmIndustriesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8acf-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlAnswerSetValuesUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlAnswerSetValuesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ad0-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlAnswerSetsUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlAnswerSetsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ad1-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlEmplRolesUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlEmplRolesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ad2-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlFunctionsUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlFunctionsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ad3-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlMultiQuestionsUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlMultiQuestionsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ad4-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlQuestionsUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlQuestionsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ad5-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetValuesUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlReportAnswerSetValuesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ad6-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetsUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlReportAnswerSetsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ad7-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportSortingCriteriaUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlReportSortingCriteriaUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ad8-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportSourcesUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlReportSourcesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ad9-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlRolesUView1" ViewObjectName="com.bawaweb.views.updatable.OtlRolesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ada-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSortingCriteriaValuesUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSortingCriteriaValuesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8adb-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSortingCriteriaUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSortingCriteriaUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8adc-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceAnswersUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSourceAnswersUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8add-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceMultiAnswersUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSourceMultiAnswersUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ade-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceSortingCriteriaUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSourceSortingCriteriaUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8adf-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourcesUView1" ViewObjectName="com.bawaweb.views.updatable.OtlSourcesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ae0-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlTallyRangesUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlTallyRangesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ae1-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlTimeZonesUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlTimeZonesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ae2-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtrEmployeeInfoUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtrEmployeeInfoUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ae3-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="PanPanelUView1" ViewObjectName="com.bawaweb.views.updatable.PanPanelUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ae4-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RprtReportReporterXrefUView1"
+		ViewObjectName="com.bawaweb.views.updatable.RprtReportReporterXrefUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ae5-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RprtReportsUView1"
+		ViewObjectName="com.bawaweb.views.updatable.RprtReportsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ae6-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RptyReporterTypesUView1"
+		ViewObjectName="com.bawaweb.views.updatable.RptyReporterTypesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ae7-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RtypReportTypesUView1"
+		ViewObjectName="com.bawaweb.views.updatable.RtypReportTypesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ae8-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="CtryCountriesRView1"
+		ViewObjectName="com.bawaweb.views.readable.CtryCountriesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8ae9-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="EmplOtlEmployeesRView1"
+		ViewObjectName="com.bawaweb.views.readable.EmplOtlEmployeesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8aea-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="FridFirmIndustriesRView1"
+		ViewObjectName="com.bawaweb.views.readable.FridFirmIndustriesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8aeb-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlAnswerSetsRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlAnswerSetsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8aec-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlAnswerSetValuesRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlAnswerSetValuesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8aed-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlEmplRolesRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlEmplRolesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8aee-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlFunctionsRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlFunctionsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8aef-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlMultiQuestionsRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlMultiQuestionsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8af0-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlQuestionsRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlQuestionsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8af1-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetsRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlReportAnswerSetsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8af2-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetValuesRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlReportAnswerSetValuesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8af3-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportSortingCriteriaRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlReportSortingCriteriaRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8af4-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportSourcesRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlReportSourcesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8af5-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlRolesRView1" ViewObjectName="com.bawaweb.views.readable.OtlRolesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8af6-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSortingCriteriaRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlSortingCriteriaRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8af7-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSortingCriteriaValuesRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlSortingCriteriaValuesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8af8-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourcesRView1" ViewObjectName="com.bawaweb.views.readable.OtlSourcesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8af9-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceAnswersRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlSourceAnswersRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8afa-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceMultiAnswersRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlSourceMultiAnswersRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8afb-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceSortingCriteriaRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlSourceSortingCriteriaRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8afc-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlTallyRangesRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlTallyRangesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8afd-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlTimeZonesRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlTimeZonesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8afe-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtrEmployeeInfoRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtrEmployeeInfoRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8aff-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="PanPanelRView1" ViewObjectName="com.bawaweb.views.readable.PanPanelRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b00-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RprtReportsRView1" ViewObjectName="com.bawaweb.views.readable.RprtReportsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b01-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RprtReportReporterXrefRView1"
+		ViewObjectName="com.bawaweb.views.readable.RprtReportReporterXrefRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b02-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RptyReporterTypesRView1"
+		ViewObjectName="com.bawaweb.views.readable.RptyReporterTypesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b03-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RtypReportTypesRView1"
+		ViewObjectName="com.bawaweb.views.readable.RtypReportTypesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b04-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlAnswerSetsUView2"
+		ViewObjectName="com.bawaweb.views.updatable.OtlAnswerSetsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b05-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlAnswerSetValuesUView2"
+		ViewObjectName="com.bawaweb.views.updatable.OtlAnswerSetValuesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b06-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlEmplRolesUView2"
+		ViewObjectName="com.bawaweb.views.updatable.OtlEmplRolesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b07-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetsUView2"
+		ViewObjectName="com.bawaweb.views.updatable.OtlReportAnswerSetsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b08-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetsUView3"
+		ViewObjectName="com.bawaweb.views.updatable.OtlReportAnswerSetsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b09-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetValuesUView2"
+		ViewObjectName="com.bawaweb.views.updatable.OtlReportAnswerSetValuesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b0a-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetValuesUView3"
+		ViewObjectName="com.bawaweb.views.updatable.OtlReportAnswerSetValuesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b0b-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlEmplRolesUView3"
+		ViewObjectName="com.bawaweb.views.updatable.OtlEmplRolesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b0c-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportSortingCriteriaUView2"
+		ViewObjectName="com.bawaweb.views.updatable.OtlReportSortingCriteriaUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b0d-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSortingCriteriaUView2"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSortingCriteriaUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b0e-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSortingCriteriaValuesUView2"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSortingCriteriaValuesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b0f-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSortingCriteriaValuesUView3"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSortingCriteriaValuesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b10-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportSourcesUView2"
+		ViewObjectName="com.bawaweb.views.updatable.OtlReportSourcesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b11-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourcesUView2" ViewObjectName="com.bawaweb.views.updatable.OtlSourcesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b12-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceAnswersUView2"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSourceAnswersUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b13-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceAnswersUView3"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSourceAnswersUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b14-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceAnswersUView4"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSourceAnswersUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b15-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceAnswersUView5"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSourceAnswersUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b16-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceMultiAnswersUView2"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSourceMultiAnswersUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b17-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceMultiAnswersUView3"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSourceMultiAnswersUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b18-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceMultiAnswersUView4"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSourceMultiAnswersUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b19-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceSortingCriteriaUView2"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSourceSortingCriteriaUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b1a-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceSortingCriteriaUView3"
+		ViewObjectName="com.bawaweb.views.updatable.OtlSourceSortingCriteriaUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b1b-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourcesUView3" ViewObjectName="com.bawaweb.views.updatable.OtlSourcesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b1c-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="PanPanelUView2" ViewObjectName="com.bawaweb.views.updatable.PanPanelUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b1d-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="PanPanelUView3" ViewObjectName="com.bawaweb.views.updatable.PanPanelUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b1e-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportSortingCriteriaUView3"
+		ViewObjectName="com.bawaweb.views.updatable.OtlReportSortingCriteriaUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b1f-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportSourcesUView3"
+		ViewObjectName="com.bawaweb.views.updatable.OtlReportSourcesUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b20-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlQuestionsUView2"
+		ViewObjectName="com.bawaweb.views.updatable.OtlQuestionsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b21-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetsUView4"
+		ViewObjectName="com.bawaweb.views.updatable.OtlReportAnswerSetsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b22-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RprtReportsUView2"
+		ViewObjectName="com.bawaweb.views.updatable.RprtReportsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b23-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RprtReportsUView3"
+		ViewObjectName="com.bawaweb.views.updatable.RprtReportsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b24-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RprtReportsUView4"
+		ViewObjectName="com.bawaweb.views.updatable.RprtReportsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b25-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RprtReportsUView5"
+		ViewObjectName="com.bawaweb.views.updatable.RprtReportsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b26-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RprtReportsUView6"
+		ViewObjectName="com.bawaweb.views.updatable.RprtReportsUView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b27-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourcesRView2" ViewObjectName="com.bawaweb.views.readable.OtlSourcesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b28-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlEmplRolesRView2"
+		ViewObjectName="com.bawaweb.views.readable.OtlEmplRolesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b29-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="PanPanelRView2" ViewObjectName="com.bawaweb.views.readable.PanPanelRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca234d-011d-1000-8b2a-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RprtReportsRView2" ViewObjectName="com.bawaweb.views.readable.RprtReportsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b2b-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RprtReportsRView3" ViewObjectName="com.bawaweb.views.readable.RprtReportsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b2c-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlAnswerSetsRView2"
+		ViewObjectName="com.bawaweb.views.readable.OtlAnswerSetsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b2d-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetsRView2"
+		ViewObjectName="com.bawaweb.views.readable.OtlReportAnswerSetsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b2e-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSortingCriteriaRView2"
+		ViewObjectName="com.bawaweb.views.readable.OtlSortingCriteriaRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b2f-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="PanPanelRView3" ViewObjectName="com.bawaweb.views.readable.PanPanelRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b30-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RprtReportsRView4" ViewObjectName="com.bawaweb.views.readable.RprtReportsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b31-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlAnswerSetValuesRView2"
+		ViewObjectName="com.bawaweb.views.readable.OtlAnswerSetValuesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b32-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetsRView3"
+		ViewObjectName="com.bawaweb.views.readable.OtlReportAnswerSetsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b33-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetValuesRView2"
+		ViewObjectName="com.bawaweb.views.readable.OtlReportAnswerSetValuesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b34-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceAnswersRView2"
+		ViewObjectName="com.bawaweb.views.readable.OtlSourceAnswersRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b35-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceMultiAnswersRView2"
+		ViewObjectName="com.bawaweb.views.readable.OtlSourceMultiAnswersRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b36-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceAnswersRView3"
+		ViewObjectName="com.bawaweb.views.readable.OtlSourceAnswersRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b37-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetValuesRView3"
+		ViewObjectName="com.bawaweb.views.readable.OtlReportAnswerSetValuesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b38-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceAnswersRView4"
+		ViewObjectName="com.bawaweb.views.readable.OtlSourceAnswersRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b39-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceMultiAnswersRView3"
+		ViewObjectName="com.bawaweb.views.readable.OtlSourceMultiAnswersRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b3a-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceAnswersRView5"
+		ViewObjectName="com.bawaweb.views.readable.OtlSourceAnswersRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b3b-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceSortingCriteriaRView2"
+		ViewObjectName="com.bawaweb.views.readable.OtlSourceSortingCriteriaRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b3c-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlEmplRolesRView3"
+		ViewObjectName="com.bawaweb.views.readable.OtlEmplRolesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b3d-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportSortingCriteriaRView2"
+		ViewObjectName="com.bawaweb.views.readable.OtlReportSortingCriteriaRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b3e-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSortingCriteriaValuesRView2"
+		ViewObjectName="com.bawaweb.views.readable.OtlSortingCriteriaValuesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b3f-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSortingCriteriaValuesRView3"
+		ViewObjectName="com.bawaweb.views.readable.OtlSortingCriteriaValuesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b40-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceSortingCriteriaRView3"
+		ViewObjectName="com.bawaweb.views.readable.OtlSourceSortingCriteriaRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b41-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportSourcesRView2"
+		ViewObjectName="com.bawaweb.views.readable.OtlReportSourcesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b42-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourceMultiAnswersRView4"
+		ViewObjectName="com.bawaweb.views.readable.OtlSourceMultiAnswersRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b43-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlSourcesRView3" ViewObjectName="com.bawaweb.views.readable.OtlSourcesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b44-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RprtReportsRView5" ViewObjectName="com.bawaweb.views.readable.RprtReportsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b45-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlQuestionsRView2"
+		ViewObjectName="com.bawaweb.views.readable.OtlQuestionsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b46-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetsRView4"
+		ViewObjectName="com.bawaweb.views.readable.OtlReportAnswerSetsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b47-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportSortingCriteriaRView3"
+		ViewObjectName="com.bawaweb.views.readable.OtlReportSortingCriteriaRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b48-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="OtlReportSourcesRView3"
+		ViewObjectName="com.bawaweb.views.readable.OtlReportSourcesRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b49-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="RprtReportsRView6" ViewObjectName="com.bawaweb.views.readable.RprtReportsRView">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b4a-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="EmployeeInfoView" ViewObjectName="com.bawaweb.views.gridcursors.EmployeeInfo">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bd837ff-011d-1000-8c1f-814d53431e28::appmodule.PlatformAppModule$EmployeeInfoView::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="MultiAnswerSetsView"
+		ViewObjectName="com.bawaweb.views.gridcursors.MultiAnswerSets">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bf5747f-011d-1000-8c21-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="MultiQuestionsListView"
+		ViewObjectName="com.bawaweb.views.gridcursors.MultiQuestionsList">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bf5747f-011d-1000-8c22-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="SingleAnswerSetsView"
+		ViewObjectName="com.bawaweb.views.gridcursors.SingleAnswerSets">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bd837ff-011d-1000-8c20-814d53431e28::appmodule.PlatformAppModule$SingleAnswerSetsView::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="SortCriteriaSetsView"
+		ViewObjectName="com.bawaweb.views.gridcursors.SortCriteriaSets">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bf5747f-011d-1000-8c25-814d53431e28::::ViewObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="TRUE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+	</ViewUsage>
+	<ViewUsage Name="SourceMultiAnswerSetsView"
+		ViewObjectName="com.bawaweb.views.gridcursors.SourceMultiAnswerSets">
+	</ViewUsage>
+	<ViewUsage Name="SourcesSortingCriteriaSetsView"
+		ViewObjectName="com.bawaweb.views.gridcursors.SourcesSortingCriteriaSets">
+	</ViewUsage>
+	<ViewUsage Name="RoleScopeView" ViewObjectName="com.bawaweb.views.gridcursors.RoleScope">
+	</ViewUsage>
+	<ViewUsage Name="TableLocksInfo"
+		ViewObjectName="com.bawaweb.views.gridcursors.TableLocksInfo">
+	</ViewUsage>
+	<ViewUsage Name="DBInstance" ViewObjectName="com.bawaweb.views.DBInstance">
+	</ViewUsage>
+	<ViewUsage Name="SourceMultiAnswerSets"
+		ViewObjectName="com.bawaweb.views.gridcursors.SourceMultiAnswerSets">
+	</ViewUsage>
+	<ViewUsage Name="OtlTallyRangeLimitsUView1"
+		ViewObjectName="com.bawaweb.views.updatable.OtlTallyRangeLimitsUView">
+	</ViewUsage>
+	<ViewUsage Name="OtlTallyRangeLimitsRView1"
+		ViewObjectName="com.bawaweb.views.readable.OtlTallyRangeLimitsRView">
+	</ViewUsage>
+	<ViewUsage Name="TallyRangeSets"
+		ViewObjectName="com.bawaweb.views.gridcursors.TallyRangeSets">
+	</ViewUsage>
+	<ViewUsage Name="SourceAnswers" ViewObjectName="com.bawaweb.views.model.SourceAnswers">
+	</ViewUsage>
+	<ViewUsage Name="ReportAnswerSetValues"
+		ViewObjectName="com.bawaweb.views.model.ReportAnswerSetValues">
+	</ViewUsage>
+	<ViewUsage Name="SourcesSingleQuestionAnswers"
+		ViewObjectName="com.bawaweb.views.gridcursors.SourcesSingleQuestionAnswers">
+	</ViewUsage>
+	<ViewUsage Name="SourceSortingCriteria"
+		ViewObjectName="com.bawaweb.views.model.SourceSortingCriteria">
+	</ViewUsage>
+	<ViewUsage Name="SourcesMultiSingleQuestionAnswers"
+		ViewObjectName="com.bawaweb.views.gridcursors.SourcesMultiSingleQuestionAnswers">
+	</ViewUsage>
+	<ViewUsage Name="SourceMultiAnswers" ViewObjectName="com.bawaweb.views.model.SourceMultiAnswers">
+	</ViewUsage>
+	<ViewUsage Name="RAVInfo" ViewObjectName="com.bawaweb.views.identify.RAVInfo">
+	</ViewUsage>
+	<ViewUsage Name="SSCInfo" ViewObjectName="com.bawaweb.views.identify.SSCInfo">
+	</ViewUsage>
+	<ViewUsage Name="Questions" ViewObjectName="com.bawaweb.views.model.Questions">
+	</ViewUsage>
+	<ViewUsage Name="ReportSources" ViewObjectName="com.bawaweb.views.model.ReportSources">
+	</ViewUsage>
+	<ViewUsage Name="ReportLockInfo" ViewObjectName="com.bawaweb.views.identify.ReportLockInfo">
+	</ViewUsage>
+	<ViewUsage Name="SrcAnsUniqueInfo" ViewObjectName="com.bawaweb.views.identify.SrcAnsUniqueInfo">
+	</ViewUsage>
+	<ViewUsage Name="AnsGridErrFileInfo"
+		ViewObjectName="com.bawaweb.views.gridcursors.AnsGridErrFileInfo">
+	</ViewUsage>
+	<ViewUsage Name="GetErrXLFile" ViewObjectName="com.bawaweb.views.identify.GetErrXLFileInfo">
+	</ViewUsage>
+	<ViewUsage Name="AnswerSets" ViewObjectName="com.bawaweb.views.model.AnswerSets">
+	</ViewUsage>
+	<ViewUsage Name="AddAnswerSetForQstn"
+		ViewObjectName="com.bawaweb.views.identify.AddAnswerSetForQstn">
+	</ViewUsage>
+	<ViewUsage Name="EditorInfo" ViewObjectName="com.bawaweb.views.gridcursors.EditorInfo">
+	</ViewUsage>
+	<ViewUsage Name="LeadReporterInfo"
+		ViewObjectName="com.bawaweb.views.gridcursors.LeadReporterInfo">
+	</ViewUsage>
+	<ViewUsage Name="CourtesyTitles" ViewObjectName="com.bawaweb.views.utils.CourtesyTitles">
+	</ViewUsage>
+	<ViewUsage Name="SuffixTitles" ViewObjectName="com.bawaweb.views.utils.SuffixTitles">
+	</ViewUsage>
+	<ViewUsage Name="CountriesList" ViewObjectName="com.bawaweb.views.model.CountriesList">
+	</ViewUsage>
+	<ViewUsage Name="TimeZones" ViewObjectName="com.bawaweb.views.utils.TimeZones">
+	</ViewUsage>
+	<ViewUsage Name="IndustryViews" ViewObjectName="com.bawaweb.views.utils.IndustryViews">
+	</ViewUsage>
+	<ViewUsage Name="QualityRatings" ViewObjectName="com.bawaweb.views.utils.QualityRatings">
+	</ViewUsage>
+	<ViewUsage Name="SourceDistributionPreferences"
+		ViewObjectName="com.bawaweb.views.utils.SourceDistributionPreferences">
+	</ViewUsage>
+	<ViewUsage Name="AnswerSetsInfo"
+		ViewObjectName="com.bawaweb.views.gridcursors.AnswerSetsInfo">
+	</ViewUsage>
+	<ViewUsage Name="ReportGeneralInfo"
+		ViewObjectName="com.bawaweb.views.gridcursors.ReportGeneralInfo">
+	</ViewUsage>
+	<ViewUsage Name="QuestionsListView"
+		ViewObjectName="com.bawaweb.views.gridcursors.views.QuestionsListView">
+	</ViewUsage>
+	<ViewUsage Name="QuestionsList" ViewObjectName="com.bawaweb.views.gridcursors.QuestionsList">
+	</ViewUsage>
+	<ViewUsage Name="SourceNumReportsReportersLastDateView"
+		ViewObjectName="com.bawaweb.views.gridcursors.views.SourceNumReportsReportersLastDateView">
+	</ViewUsage>
+	<ViewUsage Name="SourcesListView"
+		ViewObjectName="com.bawaweb.views.gridcursors.views.SourcesListView">
+	</ViewUsage>
+	<ViewUsage Name="SourcesList" ViewObjectName="com.bawaweb.views.gridcursors.SourcesList">
+	</ViewUsage>
+	<ViewUsage Name="ASVAnswerValues" ViewObjectName="com.bawaweb.views.identify.ASVAnswerValues">
+	</ViewUsage>
+	<ViewUsage Name="SourcesAnswerSetsView"
+		ViewObjectName="com.bawaweb.views.gridcursors.views.SourcesAnswerSetsView">
+	</ViewUsage>
+	<ViewUsage Name="ExtraQstnsReportAnswerSetValues"
+		ViewObjectName="com.bawaweb.views.identify.ExtraQstnsReportAnswerSetValues">
+	</ViewUsage>
+	<ViewUsage Name="AnswerSetValues" ViewObjectName="com.bawaweb.views.model.AnswerSetValues">
+	</ViewUsage>
+	<ViewUsage Name="DoesSourceAnswerExist"
+		ViewObjectName="com.bawaweb.views.identify.DoesSourceAnswerExist">
+	</ViewUsage>
+	<ViewUsage Name="ExtraQstnsAnswerSetValues"
+		ViewObjectName="com.bawaweb.views.identify.ExtraQstnsAnswerSetValues">
+	</ViewUsage>
+	<ViewUsage Name="OtlAnswerSetValues" ViewObjectName="com.bawaweb.views.model.OtlAnswerSetValues">
+	</ViewUsage>
+	<ViewUsage Name="OtlReportAnswerSetValues"
+		ViewObjectName="com.bawaweb.views.model.OtlReportAnswerSetValues">
+	</ViewUsage>
+	<ViewUsage Name="MaxAsvId" ViewObjectName="com.bawaweb.views.identify.MaxAsvId">
+	</ViewUsage>
+	<ViewUsage Name="MaxRavId" ViewObjectName="com.bawaweb.views.identify.MaxRavId">
+	</ViewUsage>
+	<ViewUsage Name="GetBestSourceId" ViewObjectName="com.bawaweb.views.identify.GetBestSourceId">
+	</ViewUsage>
+	<ViewUsage Name="Sources" ViewObjectName="com.bawaweb.views.model.Sources">
+	</ViewUsage>
+	<ViewUsage Name="SourceIndustries" ViewObjectName="com.bawaweb.views.model.SourceIndustries">
+	</ViewUsage>
+	<ViewUsage Name="ReporterSources" ViewObjectName="com.bawaweb.views.model.ReporterSources">
+	</ViewUsage>
+	<ViewUsage Name="GetNxtRpsId" ViewObjectName="com.bawaweb.views.identify.MaxRpsId">
+	</ViewUsage>
+	<ViewUsage Name="AllSourcesListView"
+		ViewObjectName="com.bawaweb.views.gridcursors.views.AllSourcesListView">
+	</ViewUsage>
+	<ViewUsage Name="DoesSourceMultiAnswerExist"
+		ViewObjectName="com.bawaweb.views.identify.DoesSourceMultiAnswerExist">
+	</ViewUsage>
+	<ViewLinkUsage Name="AnsFridFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.AnsFridFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.FridFirmIndustriesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlAnswerSetsUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b4d-814d53431e28::appmodule.PlatformAppModule.AnsFridFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b4b-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b4c-814d53431e28::appmodule.PlatformAppModule.AnsFridFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="AsvAnsFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.AsvAnsFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlAnswerSetsUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlAnswerSetValuesUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b50-814d53431e28::appmodule.PlatformAppModule.AsvAnsFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b4e-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b4f-814d53431e28::appmodule.PlatformAppModule.AsvAnsFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlEmrEmplFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlEmrEmplFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.EmplOtlEmployeesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlEmplRolesUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b53-814d53431e28::appmodule.PlatformAppModule.OtlEmrEmplFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b51-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b52-814d53431e28::appmodule.PlatformAppModule.OtlEmrEmplFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlRasFridFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlRasFridFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.FridFirmIndustriesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetsUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b56-814d53431e28::appmodule.PlatformAppModule.OtlRasFridFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b54-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b55-814d53431e28::appmodule.PlatformAppModule.OtlRasFridFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RasAnsFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.RasAnsFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlAnswerSetsUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetsUView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b59-814d53431e28::appmodule.PlatformAppModule.RasAnsFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b57-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b58-814d53431e28::appmodule.PlatformAppModule.RasAnsFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RavAsvFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.RavAsvFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlAnswerSetValuesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetValuesUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b5c-814d53431e28::appmodule.PlatformAppModule.RavAsvFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b5a-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b5b-814d53431e28::appmodule.PlatformAppModule.RavAsvFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RavRasFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.RavRasFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetsUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetValuesUView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b5f-814d53431e28::appmodule.PlatformAppModule.RavRasFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b5d-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b5e-814d53431e28::appmodule.PlatformAppModule.RavRasFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlEmrRolFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlEmrRolFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlRolesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlEmplRolesUView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b62-814d53431e28::appmodule.PlatformAppModule.OtlEmrRolFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b60-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b61-814d53431e28::appmodule.PlatformAppModule.OtlEmrRolFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlRsoSrtFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlRsoSrtFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSortingCriteriaUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportSortingCriteriaUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b65-814d53431e28::appmodule.PlatformAppModule.OtlRsoSrtFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b63-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b64-814d53431e28::appmodule.PlatformAppModule.OtlRsoSrtFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSrtFridFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlSrtFridFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.FridFirmIndustriesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSortingCriteriaUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b68-814d53431e28::appmodule.PlatformAppModule.OtlSrtFridFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b66-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b67-814d53431e28::appmodule.PlatformAppModule.OtlSrtFridFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlScvScvFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlScvScvFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSortingCriteriaValuesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSortingCriteriaValuesUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b6b-814d53431e28::appmodule.PlatformAppModule.OtlScvScvFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b69-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b6a-814d53431e28::appmodule.PlatformAppModule.OtlScvScvFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlScvSrtFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlScvSrtFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSortingCriteriaUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSortingCriteriaValuesUView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b6e-814d53431e28::appmodule.PlatformAppModule.OtlScvSrtFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b6c-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b6d-814d53431e28::appmodule.PlatformAppModule.OtlScvSrtFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RpsSrcFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.RpsSrcFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourcesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportSourcesUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b71-814d53431e28::appmodule.PlatformAppModule.RpsSrcFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b6f-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b70-814d53431e28::appmodule.PlatformAppModule.RpsSrcFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSrcCtryFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlSrcCtryFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.CtryCountriesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourcesUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b74-814d53431e28::appmodule.PlatformAppModule.OtlSrcCtryFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b72-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b73-814d53431e28::appmodule.PlatformAppModule.OtlSrcCtryFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="SraAsvFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.SraAsvFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlAnswerSetValuesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceAnswersUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b77-814d53431e28::appmodule.PlatformAppModule.SraAsvFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b75-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b76-814d53431e28::appmodule.PlatformAppModule.SraAsvFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="SraQstFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.SraQstFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlQuestionsUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceAnswersUView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b7a-814d53431e28::appmodule.PlatformAppModule.SraQstFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b78-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b79-814d53431e28::appmodule.PlatformAppModule.SraQstFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="SraRavFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.SraRavFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetValuesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceAnswersUView4">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b7d-814d53431e28::appmodule.PlatformAppModule.SraRavFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b7b-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b7c-814d53431e28::appmodule.PlatformAppModule.SraRavFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="SraRpsFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.SraRpsFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportSourcesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceAnswersUView5">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b80-814d53431e28::appmodule.PlatformAppModule.SraRpsFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b7e-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b7f-814d53431e28::appmodule.PlatformAppModule.SraRpsFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSmaAsvFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlSmaAsvFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlAnswerSetValuesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceMultiAnswersUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b83-814d53431e28::appmodule.PlatformAppModule.OtlSmaAsvFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b81-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b82-814d53431e28::appmodule.PlatformAppModule.OtlSmaAsvFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSmaRavFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlSmaRavFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetValuesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceMultiAnswersUView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b86-814d53431e28::appmodule.PlatformAppModule.OtlSmaRavFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b84-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b85-814d53431e28::appmodule.PlatformAppModule.OtlSmaRavFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSmaSraFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlSmaSraFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceAnswersUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceMultiAnswersUView4">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b89-814d53431e28::appmodule.PlatformAppModule.OtlSmaSraFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b87-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b88-814d53431e28::appmodule.PlatformAppModule.OtlSmaSraFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSscRpsFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlSscRpsFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportSourcesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceSortingCriteriaUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b8c-814d53431e28::appmodule.PlatformAppModule.OtlSscRpsFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b8a-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b8b-814d53431e28::appmodule.PlatformAppModule.OtlSscRpsFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSscScvFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlSscScvFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSortingCriteriaValuesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceSortingCriteriaUView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b8f-814d53431e28::appmodule.PlatformAppModule.OtlSscScvFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b8d-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b8e-814d53431e28::appmodule.PlatformAppModule.OtlSscScvFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSrcTmzFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlSrcTmzFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlTimeZonesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourcesUView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b92-814d53431e28::appmodule.PlatformAppModule.OtlSrcTmzFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b90-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b91-814d53431e28::appmodule.PlatformAppModule.OtlSrcTmzFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="PanEmplFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.PanEmplFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.EmplOtlEmployeesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.PanPanelUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b95-814d53431e28::appmodule.PlatformAppModule.PanEmplFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b93-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b94-814d53431e28::appmodule.PlatformAppModule.PanEmplFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="PanFridFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.PanFridFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.FridFirmIndustriesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.PanPanelUView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b98-814d53431e28::appmodule.PlatformAppModule.PanFridFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b96-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b97-814d53431e28::appmodule.PlatformAppModule.PanFridFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlRsoRprtFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlRsoRprtFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportSortingCriteriaUView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b9b-814d53431e28::appmodule.PlatformAppModule.OtlRsoRprtFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b99-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b9a-814d53431e28::appmodule.PlatformAppModule.OtlRsoRprtFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RpsRprtFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.RpsRprtFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportSourcesUView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca235d-011d-1000-8b9e-814d53431e28::appmodule.PlatformAppModule.RpsRprtFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca235d-011d-1000-8b9c-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca235d-011d-1000-8b9d-814d53431e28::appmodule.PlatformAppModule.RpsRprtFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlqRprtFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlqRprtFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlQuestionsUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8ba1-814d53431e28::appmodule.PlatformAppModule.OtlqRprtFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8b9f-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8ba0-814d53431e28::appmodule.PlatformAppModule.OtlqRprtFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlRasRprtFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.OtlRasRprtFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetsUView4">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8ba4-814d53431e28::appmodule.PlatformAppModule.OtlRasRprtFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8ba2-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8ba3-814d53431e28::appmodule.PlatformAppModule.OtlRasRprtFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RprtEmplEdtrFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.RprtEmplEdtrFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.EmplOtlEmployeesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsUView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8ba7-814d53431e28::appmodule.PlatformAppModule.RprtEmplEdtrFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8ba5-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8ba6-814d53431e28::appmodule.PlatformAppModule.RprtEmplEdtrFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RprtEmplRptrFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.RprtEmplRptrFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.EmplOtlEmployeesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsUView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8baa-814d53431e28::appmodule.PlatformAppModule.RprtEmplRptrFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8ba8-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8ba9-814d53431e28::appmodule.PlatformAppModule.RprtEmplRptrFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RprtFridFiFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.RprtFridFiFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.FridFirmIndustriesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsUView4">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bad-814d53431e28::appmodule.PlatformAppModule.RprtFridFiFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bab-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bac-814d53431e28::appmodule.PlatformAppModule.RprtFridFiFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RprtPanFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.RprtPanFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.PanPanelUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsUView5">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bb0-814d53431e28::appmodule.PlatformAppModule.RprtPanFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bae-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8baf-814d53431e28::appmodule.PlatformAppModule.RprtPanFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RprtRtypFkLink1"
+		ViewLinkObjectName="com.bawaweb.views.updatable.RprtRtypFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RtypReportTypesUView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsUView6">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bb3-814d53431e28::appmodule.PlatformAppModule.RprtRtypFkLink1::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bb1-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bb2-814d53431e28::appmodule.PlatformAppModule.RprtRtypFkLink1::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSrcCtryFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlSrcCtryFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.CtryCountriesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourcesRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bb6-814d53431e28::appmodule.PlatformAppModule.OtlSrcCtryFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bb4-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bb5-814d53431e28::appmodule.PlatformAppModule.OtlSrcCtryFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlEmrEmplFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlEmrEmplFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.EmplOtlEmployeesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlEmplRolesRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bb9-814d53431e28::appmodule.PlatformAppModule.OtlEmrEmplFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bb7-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bb8-814d53431e28::appmodule.PlatformAppModule.OtlEmrEmplFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="PanEmplFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.PanEmplFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.EmplOtlEmployeesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.PanPanelRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bbc-814d53431e28::appmodule.PlatformAppModule.PanEmplFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bba-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bbb-814d53431e28::appmodule.PlatformAppModule.PanEmplFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RprtEmplEdtrFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.RprtEmplEdtrFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.EmplOtlEmployeesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bbf-814d53431e28::appmodule.PlatformAppModule.RprtEmplEdtrFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bbd-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bbe-814d53431e28::appmodule.PlatformAppModule.RprtEmplEdtrFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RprtEmplRptrFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.RprtEmplRptrFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.EmplOtlEmployeesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsRView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bc2-814d53431e28::appmodule.PlatformAppModule.RprtEmplRptrFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bc0-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bc1-814d53431e28::appmodule.PlatformAppModule.RprtEmplRptrFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="AnsFridFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.AnsFridFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.FridFirmIndustriesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlAnswerSetsRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bc5-814d53431e28::appmodule.PlatformAppModule.AnsFridFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bc3-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bc4-814d53431e28::appmodule.PlatformAppModule.AnsFridFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlRasFridFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlRasFridFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.FridFirmIndustriesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetsRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bc8-814d53431e28::appmodule.PlatformAppModule.OtlRasFridFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bc6-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bc7-814d53431e28::appmodule.PlatformAppModule.OtlRasFridFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSrtFridFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlSrtFridFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.FridFirmIndustriesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSortingCriteriaRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bcb-814d53431e28::appmodule.PlatformAppModule.OtlSrtFridFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bc9-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bca-814d53431e28::appmodule.PlatformAppModule.OtlSrtFridFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="PanFridFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.PanFridFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.FridFirmIndustriesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.PanPanelRView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bce-814d53431e28::appmodule.PlatformAppModule.PanFridFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bcc-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bcd-814d53431e28::appmodule.PlatformAppModule.PanFridFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RprtFridFiFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.RprtFridFiFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.FridFirmIndustriesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsRView4">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bd1-814d53431e28::appmodule.PlatformAppModule.RprtFridFiFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bcf-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bd0-814d53431e28::appmodule.PlatformAppModule.RprtFridFiFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="AsvAnsFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.AsvAnsFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlAnswerSetsRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlAnswerSetValuesRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bd4-814d53431e28::appmodule.PlatformAppModule.AsvAnsFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bd2-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bd3-814d53431e28::appmodule.PlatformAppModule.AsvAnsFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RasAnsFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.RasAnsFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlAnswerSetsRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetsRView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bd7-814d53431e28::appmodule.PlatformAppModule.RasAnsFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bd5-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bd6-814d53431e28::appmodule.PlatformAppModule.RasAnsFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RavAsvFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.RavAsvFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlAnswerSetValuesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetValuesRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bda-814d53431e28::appmodule.PlatformAppModule.RavAsvFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bd8-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bd9-814d53431e28::appmodule.PlatformAppModule.RavAsvFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="SraAsvFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.SraAsvFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlAnswerSetValuesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceAnswersRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bdd-814d53431e28::appmodule.PlatformAppModule.SraAsvFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bdb-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bdc-814d53431e28::appmodule.PlatformAppModule.SraAsvFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSmaAsvFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlSmaAsvFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlAnswerSetValuesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceMultiAnswersRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8be0-814d53431e28::appmodule.PlatformAppModule.OtlSmaAsvFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bde-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bdf-814d53431e28::appmodule.PlatformAppModule.OtlSmaAsvFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="SraQstFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.SraQstFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlQuestionsRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceAnswersRView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8be3-814d53431e28::appmodule.PlatformAppModule.SraQstFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8be1-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8be2-814d53431e28::appmodule.PlatformAppModule.SraQstFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RavRasFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.RavRasFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetsRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetValuesRView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8be6-814d53431e28::appmodule.PlatformAppModule.RavRasFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8be4-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8be5-814d53431e28::appmodule.PlatformAppModule.RavRasFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="SraRavFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.SraRavFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetValuesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceAnswersRView4">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8be9-814d53431e28::appmodule.PlatformAppModule.SraRavFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8be7-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8be8-814d53431e28::appmodule.PlatformAppModule.SraRavFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSmaRavFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlSmaRavFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetValuesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceMultiAnswersRView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bec-814d53431e28::appmodule.PlatformAppModule.OtlSmaRavFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bea-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8beb-814d53431e28::appmodule.PlatformAppModule.OtlSmaRavFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="SraRpsFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.SraRpsFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportSourcesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceAnswersRView5">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bef-814d53431e28::appmodule.PlatformAppModule.SraRpsFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bed-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bee-814d53431e28::appmodule.PlatformAppModule.SraRpsFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSscRpsFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlSscRpsFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportSourcesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceSortingCriteriaRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bf2-814d53431e28::appmodule.PlatformAppModule.OtlSscRpsFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bf0-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bf1-814d53431e28::appmodule.PlatformAppModule.OtlSscRpsFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlEmrRolFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlEmrRolFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlRolesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlEmplRolesRView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bf5-814d53431e28::appmodule.PlatformAppModule.OtlEmrRolFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bf3-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bf4-814d53431e28::appmodule.PlatformAppModule.OtlEmrRolFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlRsoSrtFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlRsoSrtFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSortingCriteriaRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportSortingCriteriaRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bf8-814d53431e28::appmodule.PlatformAppModule.OtlRsoSrtFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bf6-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bf7-814d53431e28::appmodule.PlatformAppModule.OtlRsoSrtFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlScvSrtFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlScvSrtFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSortingCriteriaRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSortingCriteriaValuesRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bfb-814d53431e28::appmodule.PlatformAppModule.OtlScvSrtFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bf9-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bfa-814d53431e28::appmodule.PlatformAppModule.OtlScvSrtFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlScvScvFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlScvScvFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSortingCriteriaValuesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSortingCriteriaValuesRView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8bfe-814d53431e28::appmodule.PlatformAppModule.OtlScvScvFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bfc-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8bfd-814d53431e28::appmodule.PlatformAppModule.OtlScvScvFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSscScvFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlSscScvFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSortingCriteriaValuesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceSortingCriteriaRView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8c01-814d53431e28::appmodule.PlatformAppModule.OtlSscScvFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8bff-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8c00-814d53431e28::appmodule.PlatformAppModule.OtlSscScvFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RpsSrcFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.RpsSrcFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourcesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportSourcesRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8c04-814d53431e28::appmodule.PlatformAppModule.RpsSrcFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8c02-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8c03-814d53431e28::appmodule.PlatformAppModule.RpsSrcFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSmaSraFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlSmaSraFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceAnswersRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourceMultiAnswersRView4">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8c07-814d53431e28::appmodule.PlatformAppModule.OtlSmaSraFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8c05-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8c06-814d53431e28::appmodule.PlatformAppModule.OtlSmaSraFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlSrcTmzFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlSrcTmzFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlTimeZonesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlSourcesRView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8c0a-814d53431e28::appmodule.PlatformAppModule.OtlSrcTmzFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8c08-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8c09-814d53431e28::appmodule.PlatformAppModule.OtlSrcTmzFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RprtPanFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.RprtPanFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.PanPanelRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsRView5">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8c0d-814d53431e28::appmodule.PlatformAppModule.RprtPanFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8c0b-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8c0c-814d53431e28::appmodule.PlatformAppModule.RprtPanFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlqRprtFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlqRprtFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlQuestionsRView2">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8c10-814d53431e28::appmodule.PlatformAppModule.OtlqRprtFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8c0e-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8c0f-814d53431e28::appmodule.PlatformAppModule.OtlqRprtFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlRasRprtFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlRasRprtFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportAnswerSetsRView4">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8c13-814d53431e28::appmodule.PlatformAppModule.OtlRasRprtFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8c11-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8c12-814d53431e28::appmodule.PlatformAppModule.OtlRasRprtFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="OtlRsoRprtFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.OtlRsoRprtFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportSortingCriteriaRView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8c16-814d53431e28::appmodule.PlatformAppModule.OtlRsoRprtFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8c14-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8c15-814d53431e28::appmodule.PlatformAppModule.OtlRsoRprtFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RpsRprtFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.RpsRprtFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.OtlReportSourcesRView3">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8c19-814d53431e28::appmodule.PlatformAppModule.RpsRprtFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8c17-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8c18-814d53431e28::appmodule.PlatformAppModule.RpsRprtFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+	<ViewLinkUsage Name="RprtRtypFkLink2"
+		ViewLinkObjectName="com.bawaweb.views.readable.RprtRtypFkLink"
+		SrcViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RtypReportTypesRView1"
+		DstViewUsageName="com.bawaweb.appmodule.PlatformAppModule.RprtReportsRView6">
+		<Data>
+			<Property Name="DST_END_ID"
+				Value="6bca236d-011d-1000-8c1c-814d53431e28::appmodule.PlatformAppModule.RprtRtypFkLink2::ViewLinkEndInstance" />
+			<Property Name="DST_END_NAME" Value="Detail" />
+			<Property Name="DST_END_SEQUENCE" Value="10" />
+			<Property Name="ID"
+				Value="6bca236d-011d-1000-8c1a-814d53431e28::::ViewLinkInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="SRC_END_ID"
+				Value="6bca236d-011d-1000-8c1b-814d53431e28::appmodule.PlatformAppModule.RprtRtypFkLink2::ViewLinkEndInstance" />
+			<Property Name="SRC_END_NAME" Value="Master" />
+			<Property Name="SRC_END_SEQUENCE" Value="0" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_isCodegen" Value="true" />
+			<Attr Name="_version" Value="10.1.3.40.66" />
+		</DesignTime>
+	</ViewLinkUsage>
+</AppModule>

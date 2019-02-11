@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="SourcesSingleQuestionAnswers" BindingStyle="OracleName"
+	CustomQuery="true"
+	RowClass="com.bawaweb.views.gridcursors.SourcesSingleQuestionAnswersRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.SourcesSingleQuestionAnswersImpl"
+	DefClass="com.bawaweb.views.gridcursors.SourcesSingleQuestionAnswersDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.common.SourcesSingleQuestionAnswers"
+	ClientProxyName="com.bawaweb.views.gridcursors.client.SourcesSingleQuestionAnswersClient"
+	RowInterface="com.bawaweb.views.gridcursors.common.SourcesSingleQuestionAnswersRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.client.SourcesSingleQuestionAnswersRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="sra_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<Variable Name="rav_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+SELECT OtlSourceAnswers.SRA_ID, 
+       OtlSourceAnswers.SRA_QST_ID, 
+       OtlSourceAnswers.SRA_RPS_ID, 
+       OtlSourceAnswers.SRA_ANSWER, 
+       OtlSourceAnswers.SRA_ANSWER_TEXT, 
+       OtlSourceAnswers.SRA_ASV_ID, 
+       OtlSourceAnswers.SRA_EXCLUDE_YN, 
+       OtlSourceAnswers.SRA_WEIGHT_MULTIPLIER, 
+       OtlSourceAnswers.SRA_RAV_ID, 
+       OtlSourceAnswers.SRA_COLOR, 
+       OtlSourceAnswers.SRA_COMMENT, 
+       OtlReportAnswerSetValues.RAV_ID, 
+       OtlReportAnswerSetValues.RAV_RAS_ID, 
+       OtlReportAnswerSetValues.RAV_ANSWER, 
+       OtlReportAnswerSetValues.RAV_DISPLAY_SEQ, 
+       OtlReportAnswerSetValues.RAV_ASV_ID, 
+       OtlReportAnswerSetValues.RAV_DELETE_YN
+FROM BAwaWEb_SOURCE_ANSWERS OtlSourceAnswers, BAwaWEb_REPORT_ANSWER_SET_VALUES OtlReportAnswerSetValues
+WHERE OtlSourceAnswers.SRA_RAV_ID = OtlReportAnswerSetValues.RAV_ID
+and OtlSourceAnswers.SRA_ID = :sra_id
+and OtlReportAnswerSetValues.RAV_ID = :rav_id
+   ]]></SQLQuery>
+	<EntityUsage Name="OtlSourceAnswers" Entity="com.bawaweb.model.OtlSourceAnswers">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlReportAnswerSetValues"
+		Entity="com.bawaweb.model.OtlReportAnswerSetValues" Association="com.bawaweb.model.SraRavFkAssoc"
+		AssociationEnd="com.bawaweb.model.SraRavFkAssoc.OtlReportAnswerSetValues"
+		SourceUsage="com.bawaweb.views.gridcursors.SourcesSingleQuestionAnswers.OtlSourceAnswers"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlReportAnswerSetValues.RavId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.OtlSourceAnswers.SraRavId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="SraId" IsNotNull="true"
+		EntityAttrName="SraId" EntityUsage="OtlSourceAnswers" AliasName="SRA_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SraQstId" IsNotNull="true"
+		EntityAttrName="SraQstId" EntityUsage="OtlSourceAnswers" AliasName="SRA_QST_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SraRpsId" IsNotNull="true"
+		EntityAttrName="SraRpsId" EntityUsage="OtlSourceAnswers" AliasName="SRA_RPS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SraAnswer" EntityAttrName="SraAnswer"
+		EntityUsage="OtlSourceAnswers" AliasName="SRA_ANSWER">
+	</ViewAttribute>
+	<ViewAttribute Name="SraAnswerText" EntityAttrName="SraAnswerText"
+		EntityUsage="OtlSourceAnswers" AliasName="SRA_ANSWER_TEXT">
+	</ViewAttribute>
+	<ViewAttribute Name="SraAsvId" EntityAttrName="SraAsvId"
+		EntityUsage="OtlSourceAnswers" AliasName="SRA_ASV_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SraExcludeYn" IsNotNull="true"
+		EntityAttrName="SraExcludeYn" EntityUsage="OtlSourceAnswers"
+		AliasName="SRA_EXCLUDE_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="SraWeightMultiplier" EntityAttrName="SraWeightMultiplier"
+		EntityUsage="OtlSourceAnswers" AliasName="SRA_WEIGHT_MULTIPLIER">
+	</ViewAttribute>
+	<ViewAttribute Name="SraRavId" EntityAttrName="SraRavId"
+		EntityUsage="OtlSourceAnswers" AliasName="SRA_RAV_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SraColor" EntityAttrName="SraColor"
+		EntityUsage="OtlSourceAnswers" AliasName="SRA_COLOR">
+	</ViewAttribute>
+	<ViewAttribute Name="SraComment" EntityAttrName="SraComment"
+		EntityUsage="OtlSourceAnswers" AliasName="SRA_COMMENT">
+	</ViewAttribute>
+	<ViewAttribute Name="RavId" IsNotNull="true"
+		EntityAttrName="RavId" EntityUsage="OtlReportAnswerSetValues"
+		AliasName="RAV_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RavRasId" IsNotNull="true"
+		EntityAttrName="RavRasId" EntityUsage="OtlReportAnswerSetValues"
+		AliasName="RAV_RAS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RavAnswer" IsNotNull="true"
+		EntityAttrName="RavAnswer" EntityUsage="OtlReportAnswerSetValues"
+		AliasName="RAV_ANSWER">
+	</ViewAttribute>
+	<ViewAttribute Name="RavDisplaySeq" IsNotNull="true"
+		EntityAttrName="RavDisplaySeq" EntityUsage="OtlReportAnswerSetValues"
+		AliasName="RAV_DISPLAY_SEQ">
+	</ViewAttribute>
+	<ViewAttribute Name="RavAsvId" IsNotNull="true"
+		EntityAttrName="RavAsvId" EntityUsage="OtlReportAnswerSetValues"
+		AliasName="RAV_ASV_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RavDeleteYn" IsNotNull="true"
+		EntityAttrName="RavDeleteYn" EntityUsage="OtlReportAnswerSetValues"
+		AliasName="RAV_DELETE_YN">
+	</ViewAttribute>
+</ViewObject>

@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlReportAnswerSets" DBObjectType="table"
+	DBObjectName="BAwaWEb_REPORT_ANSWER_SETS" AliasName="OtlReportAnswerSets"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlReportAnswerSetsImpl" DefClass="com.bawaweb.model.OtlReportAnswerSetsDefImpl"
+	CollClass="com.bawaweb.model.OtlReportAnswerSetsCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="RasId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="RAS_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_REPORT_ANSWER_SETS"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RasRprtId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="RAS_RPRT_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_REPORT_ANSWER_SETS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RasAnsId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="RAS_ANS_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_REPORT_ANSWER_SETS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RasName" IsNotNull="true" Precision="100"
+		ColumnName="RAS_NAME" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_REPORT_ANSWER_SETS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RasFridId" Precision="12" Scale="0"
+		ColumnName="RAS_FRID_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_REPORT_ANSWER_SETS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RasOrderByNameYn" IsNotNull="true"
+		Precision="1" ColumnName="RAS_ORDER_BY_NAME_YN" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="BAwaWEb_REPORT_ANSWER_SETS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RasAddAnswerYn" IsNotNull="true" Precision="1"
+		ColumnName="RAS_ADD_ANSWER_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_REPORT_ANSWER_SETS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RasDeleteYn" IsNotNull="true" Precision="1"
+		ColumnName="RAS_DELETE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_REPORT_ANSWER_SETS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="FridFirmIndustries"
+		Association="com.bawaweb.model.OtlRasFridFkAssoc" AssociationEnd="com.bawaweb.model.OtlRasFridFkAssoc.FridFirmIndustries"
+		AssociationOtherEnd="com.bawaweb.model.OtlRasFridFkAssoc.OtlReportAnswerSets"
+		Type="com.bawaweb.model.FridFirmIndustriesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlAnswerSets"
+		Association="com.bawaweb.model.RasAnsFkAssoc" AssociationEnd="com.bawaweb.model.RasAnsFkAssoc.OtlAnswerSets"
+		AssociationOtherEnd="com.bawaweb.model.RasAnsFkAssoc.OtlReportAnswerSets"
+		Type="com.bawaweb.model.OtlAnswerSetsImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlReportAnswerSetValues"
+		Association="com.bawaweb.model.RavRasFkAssoc" AssociationEnd="com.bawaweb.model.RavRasFkAssoc.OtlReportAnswerSetValues"
+		AssociationOtherEnd="com.bawaweb.model.RavRasFkAssoc.OtlReportAnswerSets"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="RprtReports"
+		Association="com.bawaweb.model.OtlRasRprtFkAssoc" AssociationEnd="com.bawaweb.model.OtlRasRprtFkAssoc.RprtReports"
+		AssociationOtherEnd="com.bawaweb.model.OtlRasRprtFkAssoc.OtlReportAnswerSets"
+		Type="com.bawaweb.model.RprtReportsImpl">
+	</AccessorAttribute>
+	<Key Name="OtlRasAddAnswerYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasAddAnswerYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="ras_add_answer_yn IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_RAS_ADD_ANSWER_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlRasDeleteYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="ras_delete_yn IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_RAS_DELETE_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlRasOrderByNameYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasOrderByNameYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="ras_order_by_name_yn IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_RAS_ORDER_BY_NAME_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlRasPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_RAS_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004987">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RAS_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004987" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004988">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasRprtId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RAS_RPRT_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004988" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004989">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasAnsId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RAS_ANS_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004989" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004990">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasName" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RAS_NAME&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004990" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004991">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasOrderByNameYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RAS_ORDER_BY_NAME_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004991" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004992">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasAddAnswerYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RAS_ADD_ANSWER_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004992" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004993">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RAS_DELETE_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004993" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlRasFridFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasFridId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="FRID_FI_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_RAS_FRID_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlRasRprtFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasRprtId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="PK_RPRT_ID" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_RAS_RPRT_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="RasAnsFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasAnsId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_ANSWER_SETS_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="RAS_ANS_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

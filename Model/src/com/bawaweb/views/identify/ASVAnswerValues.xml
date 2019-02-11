@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="ASVAnswerValues"
+	SelectList="OtlAnswerSetValues.ASV_ANSWER, 
+       OtlAnswerSetValues.ASV_ID"
+	FromList="BAwaWEb_ANSWER_SET_VALUES OtlAnswerSetValues" OrderBy="ASV_ANSWER desc"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.identify.ASVAnswerValuesRowImpl"
+	ComponentClass="com.bawaweb.views.identify.ASVAnswerValuesImpl"
+	DefClass="com.bawaweb.views.identify.ASVAnswerValuesDefImpl"
+	ComponentInterface="com.bawaweb.views.identify.common.ASVAnswerValues"
+	ClientProxyName="com.bawaweb.views.identify.client.ASVAnswerValuesClient"
+	RowInterface="com.bawaweb.views.identify.common.ASVAnswerValuesRow"
+	ClientRowProxyName="com.bawaweb.views.identify.client.ASVAnswerValuesRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<EntityUsage Name="OtlAnswerSetValues" Entity="com.bawaweb.model.OtlAnswerSetValues">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryOrderBy" Value="ASV_ANSWER desc" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="AsvAnswer" IsNotNull="true"
+		EntityAttrName="AsvAnswer" EntityUsage="OtlAnswerSetValues" AliasName="ASV_ANSWER">
+	</ViewAttribute>
+	<ViewAttribute Name="AsvId" IsNotNull="true"
+		EntityAttrName="AsvId" EntityUsage="OtlAnswerSetValues" AliasName="ASV_ID">
+	</ViewAttribute>
+</ViewObject>

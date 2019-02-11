@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="SourceDistributionPreferences"
+	SelectList="OtlLookupData.LKD_LKT_CODE, 
+       OtlLookupData.LKD_CODE, 
+       OtlLookupData.LKD_DESCRIPTION, 
+       OtlLookupData.LKD_DISPLAY_SEQ"
+	FromList="BAwaWEb_LOOKUP_DATA OtlLookupData" Where="OtlLookupData.LKD_LKT_CODE =  &#39;DISTPREF&#39;"
+	OrderBy="OtlLookupData.LKD_DISPLAY_SEQ" BindingStyle="OracleName"
+	CustomQuery="false"
+	RowClass="com.bawaweb.views.utils.SourceDistributionPreferencesRowImpl"
+	ComponentClass="com.bawaweb.views.utils.SourceDistributionPreferencesImpl"
+	DefClass="com.bawaweb.views.utils.SourceDistributionPreferencesDefImpl"
+	ComponentInterface="com.bawaweb.views.utils.common.SourceDistributionPreferences"
+	ClientProxyName="com.bawaweb.views.utils.client.SourceDistributionPreferencesClient"
+	RowInterface="com.bawaweb.views.utils.common.SourceDistributionPreferencesRow"
+	ClientRowProxyName="com.bawaweb.views.utils.client.SourceDistributionPreferencesRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<EntityUsage Name="OtlLookupData" Entity="com.bawaweb.model.OtlLookupData">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryOrderBy" Value="OtlLookupData.LKD_DISPLAY_SEQ" />
+			<Attr Name="_queryWhere" Value="OtlLookupData.LKD_LKT_CODE =  &#39;DISTPREF&#39;" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="LkdLktCode" IsNotNull="true"
+		EntityAttrName="LkdLktCode" EntityUsage="OtlLookupData" AliasName="LKD_LKT_CODE">
+	</ViewAttribute>
+	<ViewAttribute Name="LkdCode" IsNotNull="true"
+		EntityAttrName="LkdCode" EntityUsage="OtlLookupData" AliasName="LKD_CODE">
+	</ViewAttribute>
+	<ViewAttribute Name="LkdDescription" IsNotNull="true"
+		EntityAttrName="LkdDescription" EntityUsage="OtlLookupData" AliasName="LKD_DESCRIPTION">
+	</ViewAttribute>
+	<ViewAttribute Name="LkdDisplaySeq" IsNotNull="true"
+		EntityAttrName="LkdDisplaySeq" EntityUsage="OtlLookupData" AliasName="LKD_DISPLAY_SEQ">
+	</ViewAttribute>
+</ViewObject>

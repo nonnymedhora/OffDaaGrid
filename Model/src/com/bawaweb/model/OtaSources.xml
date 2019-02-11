@@ -1,0 +1,488 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlSources" DBObjectType="table" DBObjectName="BAwaWEb_SOURCES"
+	AliasName="OtlSources" BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlSourcesImpl" DefClass="com.bawaweb.model.OtlSourcesDefImpl"
+	CollClass="com.bawaweb.model.OtlSourcesCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="SrcId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SRC_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SOURCES"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcLastName" Precision="30" ColumnName="SRC_LAST_NAME"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcFirstName" Precision="30" ColumnName="SRC_FIRST_NAME"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcCourtesyTitle" Precision="20"
+		ColumnName="SRC_COURTESY_TITLE" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcJobTitle" Precision="100" ColumnName="SRC_JOB_TITLE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcJobDescription" Precision="100"
+		ColumnName="SRC_JOB_DESCRIPTION" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcCompany" Precision="100" ColumnName="SRC_COMPANY"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcAddress1" Precision="100" ColumnName="SRC_ADDRESS1"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcAddress2" Precision="100" ColumnName="SRC_ADDRESS2"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcAddress3" Precision="100" ColumnName="SRC_ADDRESS3"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcCity" IsNotNull="true" Precision="50"
+		ColumnName="SRC_CITY" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcState" Precision="50" ColumnName="SRC_STATE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcZip" Precision="20" ColumnName="SRC_ZIP"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcCtryId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SRC_CTRY_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcTmzId" Precision="12" Scale="0"
+		ColumnName="SRC_TMZ_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcEmail" Precision="100" ColumnName="SRC_EMAIL"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcPhone" IsNotNull="true" Precision="25"
+		ColumnName="SRC_PHONE" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcPhoneExt" Precision="25" ColumnName="SRC_PHONE_EXT"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcCellPhone" Precision="25" ColumnName="SRC_CELL_PHONE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcFax" Precision="25" ColumnName="SRC_FAX"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcStatus" IsNotNull="true" Precision="9"
+		ColumnName="SRC_STATUS" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="9" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcExclusiveSourceYn" IsNotNull="true"
+		Precision="1" ColumnName="SRC_EXCLUSIVE_SOURCE_YN" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcDontContactYn" IsNotNull="true"
+		Precision="1" ColumnName="SRC_DONT_CONTACT_YN" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcCompanyType" Precision="100" ColumnName="SRC_COMPANY_TYPE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcAreaOfExpertise" Precision="500"
+		ColumnName="SRC_AREA_OF_EXPERTISE" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcIndustrySector" Precision="100"
+		ColumnName="SRC_INDUSTRY_SECTOR" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcIndustryView" Precision="13"
+		ColumnName="SRC_INDUSTRY_VIEW" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="13" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcVendors" Precision="500" ColumnName="SRC_VENDORS"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcCompanySize" Precision="20" ColumnName="SRC_COMPANY_SIZE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcDistributionPreference" Precision="15"
+		ColumnName="SRC_DISTRIBUTION_PREFERENCE" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="15" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcDistributionNotes" Precision="500"
+		ColumnName="SRC_DISTRIBUTION_NOTES" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcSpecialRequests" Precision="500"
+		ColumnName="SRC_SPECIAL_REQUESTS" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcReportersNotes" Precision="500"
+		ColumnName="SRC_REPORTERS_NOTES" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcQualityRating" Precision="9"
+		ColumnName="SRC_QUALITY_RATING" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="9" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcModifiedDate" ColumnName="SRC_MODIFIED_DATE"
+		Type="oracle.jbo.domain.Date" ColumnType="DATE" SQLType="DATE"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcModifiedBy" IsNotNull="true" Precision="30"
+		ColumnName="SRC_MODIFIED_BY" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcSuffixTitle" Precision="20" ColumnName="SRC_SUFFIX_TITLE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcInformedOfWebsite" Precision="1"
+		ColumnName="SRC_INFORMED_OF_WEBSITE" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcOfferedReport" Precision="1"
+		ColumnName="SRC_OFFERED_REPORT" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="CtryCountries"
+		Association="com.bawaweb.model.OtlSrcCtryFkAssoc" AssociationEnd="com.bawaweb.model.OtlSrcCtryFkAssoc.CtryCountries"
+		AssociationOtherEnd="com.bawaweb.model.OtlSrcCtryFkAssoc.OtlSources"
+		Type="com.bawaweb.model.CtryCountriesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlReportSources"
+		Association="com.bawaweb.model.RpsSrcFkAssoc" AssociationEnd="com.bawaweb.model.RpsSrcFkAssoc.OtlReportSources"
+		AssociationOtherEnd="com.bawaweb.model.RpsSrcFkAssoc.OtlSources" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlTimeZones"
+		Association="com.bawaweb.model.OtlSrcTmzFkAssoc" AssociationEnd="com.bawaweb.model.OtlSrcTmzFkAssoc.OtlTimeZones"
+		AssociationOtherEnd="com.bawaweb.model.OtlSrcTmzFkAssoc.OtlSources"
+		Type="com.bawaweb.model.OtlTimeZonesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlReporterSources"
+		Association="com.bawaweb.model.OtlRscSrcFkAssoc" AssociationEnd="com.bawaweb.model.OtlRscSrcFkAssoc.OtlReporterSources"
+		AssociationOtherEnd="com.bawaweb.model.OtlRscSrcFkAssoc.OtlSources"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlSourceIndustries"
+		Association="com.bawaweb.model.OtlSciSrcFkAssoc" AssociationEnd="com.bawaweb.model.OtlSciSrcFkAssoc.OtlSourceIndustries"
+		AssociationOtherEnd="com.bawaweb.model.OtlSciSrcFkAssoc.OtlSources"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<Key Name="OtlDistributionPrefChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcDistributionPreference" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition"
+				Value="SRC_DISTRIBUTION_PREFERENCE IN (&#39;EMAIL&#39;,&#39;MAIL&#39;,&#39;BOTH&#39;,&#39;SPECIAL&#39;,&#39;NONE&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_DISTRIBUTION_PREF_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlSrcDontContactYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcDontContactYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="SRC_DONT_CONTACT_YN IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SRC_DONT_CONTACT_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlSrcExclusiveSrcYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcExclusiveSourceYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition"
+				Value="SRC_EXCLUSIVE_SOURCE_YN IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SRC_EXCLUSIVE_SRC_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlSrcIndustryViewChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcIndustryView" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition"
+				Value="SRC_INDUSTRY_VIEW IN (&#39;INTERNATIONAL&#39;,&#39;NATIONAL&#39;,&#39;REGIONAL&#39;,&#39;LOCAL&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SRC_INDUSTRY_VIEW_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlSrcPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SRC_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlSrcQualityRatingChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcQualityRating" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition"
+				Value="SRC_QUALITY_RATING IN (&#39;EXCELLENT&#39;,&#39;VERY GOOD&#39;,&#39;GOOD&#39;,&#39;FAIR&#39;,&#39;POOR&#39;,&#39;NEW&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SRC_QUALITY_RATING_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlSrcStatusChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcStatus" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition"
+				Value="SRC_STATUS IN (&#39;ACTIVE&#39;, &#39;INACTIVE&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SRC_STATUS_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004694">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRC_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004694" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004695">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcCity" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRC_CITY&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004695" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004696">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcCtryId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRC_CTRY_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004696" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004697">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcPhone" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRC_PHONE&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004697" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004698">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcStatus" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRC_STATUS&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004698" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004699">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcExclusiveSourceYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRC_EXCLUSIVE_SOURCE_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004699" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004700">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcDontContactYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRC_DONT_CONTACT_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004700" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004701">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcModifiedBy" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRC_MODIFIED_BY&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004701" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlSrcCtryFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcCtryId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="PK_CTRY_COUNTRIES" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SRC_CTRY_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlSrcTmzFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSources.SrcTmzId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_TMZ_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SRC_TMZ_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

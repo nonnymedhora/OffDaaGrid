@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="GetErrXLFileInfo"
+	SelectList="AnsGridErrorFile.AGEF_ID, 
+       AnsGridErrorFile.AGEF_FILE_NAME, 
+       AnsGridErrorFile.AGEF_FILE_FORMAT_TYPE, 
+       AnsGridErrorFile.AGEF_RPRT_ID, 
+       AnsGridErrorFile.CREATION_DATE, 
+       AnsGridErrorFile.CREATED_BY, 
+       AnsGridErrorFile.AGEF_FILE"
+	FromList="BAwaWEb_ANSWER_GRID_ERROR_FILES AnsGridErrorFile" Where="AnsGridErrorFile.AGEF_ID = :agef_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.identify.GetErrXLFileInfoRowImpl"
+	ComponentClass="com.bawaweb.views.identify.GetErrXLFileInfoImpl"
+	DefClass="com.bawaweb.views.identify.GetErrXLFileInfoDefImpl"
+	ComponentInterface="com.bawaweb.views.identify.common.GetErrXLFileInfo"
+	ClientProxyName="com.bawaweb.views.identify.client.GetErrXLFileInfoClient"
+	RowInterface="com.bawaweb.views.identify.common.GetErrXLFileInfoRow"
+	ClientRowProxyName="com.bawaweb.views.identify.client.GetErrXLFileInfoRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="agef_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="AnsGridErrorFile" Entity="com.bawaweb.model.AnsGridErrorFile">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="AnsGridErrorFile.AGEF_ID = :agef_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="AgefId" IsNotNull="true"
+		EntityAttrName="AgefId" EntityUsage="AnsGridErrorFile" AliasName="AGEF_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="AgefFileName" EntityAttrName="AgefFileName"
+		EntityUsage="AnsGridErrorFile" AliasName="AGEF_FILE_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="AgefFileFormatType" EntityAttrName="AgefFileFormatType"
+		EntityUsage="AnsGridErrorFile" AliasName="AGEF_FILE_FORMAT_TYPE">
+	</ViewAttribute>
+	<ViewAttribute Name="AgefRprtId" IsNotNull="true"
+		EntityAttrName="AgefRprtId" EntityUsage="AnsGridErrorFile" AliasName="AGEF_RPRT_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="CreationDate" EntityAttrName="CreationDate"
+		EntityUsage="AnsGridErrorFile" AliasName="CREATION_DATE">
+	</ViewAttribute>
+	<ViewAttribute Name="CreatedBy" EntityAttrName="CreatedBy"
+		EntityUsage="AnsGridErrorFile" AliasName="CREATED_BY">
+	</ViewAttribute>
+	<ViewAttribute Name="AgefFile" IsQueriable="false"
+		EntityAttrName="AgefFile" EntityUsage="AnsGridErrorFile" AliasName="AGEF_FILE">
+	</ViewAttribute>
+</ViewObject>

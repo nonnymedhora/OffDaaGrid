@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlAnswerSetValues" DBObjectType="table"
+	DBObjectName="BAwaWEb_ANSWER_SET_VALUES" AliasName="OtlAnswerSetValues"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlAnswerSetValuesImpl" DefClass="com.bawaweb.model.OtlAnswerSetValuesDefImpl"
+	CollClass="com.bawaweb.model.OtlAnswerSetValuesCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="AsvId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="ASV_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_ANSWER_SET_VALUES"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="AsvAnsId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="ASV_ANS_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_ANSWER_SET_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="AsvAnswer" IsNotNull="true" Precision="100"
+		ColumnName="ASV_ANSWER" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_ANSWER_SET_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="AsvDisplaySeq" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="ASV_DISPLAY_SEQ" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_ANSWER_SET_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="AsvDeleteYn" IsNotNull="true" Precision="1"
+		ColumnName="ASV_DELETE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_ANSWER_SET_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="OtlAnswerSets"
+		Association="com.bawaweb.model.AsvAnsFkAssoc" AssociationEnd="com.bawaweb.model.AsvAnsFkAssoc.OtlAnswerSets"
+		AssociationOtherEnd="com.bawaweb.model.AsvAnsFkAssoc.OtlAnswerSetValues"
+		Type="com.bawaweb.model.OtlAnswerSetsImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlReportAnswerSetValues"
+		Association="com.bawaweb.model.RavAsvFkAssoc" AssociationEnd="com.bawaweb.model.RavAsvFkAssoc.OtlReportAnswerSetValues"
+		AssociationOtherEnd="com.bawaweb.model.RavAsvFkAssoc.OtlAnswerSetValues"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlSourceAnswers"
+		Association="com.bawaweb.model.SraAsvFkAssoc" AssociationEnd="com.bawaweb.model.SraAsvFkAssoc.OtlSourceAnswers"
+		AssociationOtherEnd="com.bawaweb.model.SraAsvFkAssoc.OtlAnswerSetValues"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlSourceMultiAnswers"
+		Association="com.bawaweb.model.OtlSmaAsvFkAssoc" AssociationEnd="com.bawaweb.model.OtlSmaAsvFkAssoc.OtlSourceMultiAnswers"
+		AssociationOtherEnd="com.bawaweb.model.OtlSmaAsvFkAssoc.OtlAnswerSetValues"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<Key Name="OtlAnswerSetValuesPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlAnswerSetValues.AsvId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_ANSWER_SET_VALUES_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005163">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlAnswerSetValues.AsvId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;ASV_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005163" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005164">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlAnswerSetValues.AsvAnsId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;ASV_ANS_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005164" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005165">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlAnswerSetValues.AsvAnswer" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;ASV_ANSWER&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005165" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005166">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlAnswerSetValues.AsvDisplaySeq" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;ASV_DISPLAY_SEQ&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005166" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005167">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlAnswerSetValues.AsvDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;ASV_DELETE_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005167" />
+		</DesignTime>
+	</Key>
+	<Key Name="AsvAnsFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlAnswerSetValues.AsvAnsId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_ANSWER_SETS_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="ASV_ANS_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

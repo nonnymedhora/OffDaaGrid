@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlReportSources" DBObjectType="table"
+	DBObjectName="BAwaWEb_REPORT_SOURCES" AliasName="OtlReportSources"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlReportSourcesImpl" DefClass="com.bawaweb.model.OtlReportSourcesDefImpl"
+	CollClass="com.bawaweb.model.OtlReportSourcesCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="RpsId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="RPS_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_REPORT_SOURCES"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RpsSrcId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="RPS_SRC_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_REPORT_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RpsRprtId" Precision="12" Scale="0"
+		ColumnName="RPS_RPRT_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_REPORT_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RpsRptrId" Precision="12" Scale="0"
+		ColumnName="RPS_RPTR_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_REPORT_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RpsCompedYn" Precision="1" ColumnName="RPS_COMPED_YN"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_REPORT_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RpsRepeatSourceYn" Precision="1"
+		ColumnName="RPS_REPEAT_SOURCE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_REPORT_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RpsDeleteYn" IsNotNull="true" Precision="1"
+		ColumnName="RPS_DELETE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_REPORT_SOURCES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="OtlSources"
+		Association="com.bawaweb.model.RpsSrcFkAssoc" AssociationEnd="com.bawaweb.model.RpsSrcFkAssoc.OtlSources"
+		AssociationOtherEnd="com.bawaweb.model.RpsSrcFkAssoc.OtlReportSources"
+		Type="com.bawaweb.model.OtlSourcesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlSourceAnswers"
+		Association="com.bawaweb.model.SraRpsFkAssoc" AssociationEnd="com.bawaweb.model.SraRpsFkAssoc.OtlSourceAnswers"
+		AssociationOtherEnd="com.bawaweb.model.SraRpsFkAssoc.OtlReportSources"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlSourceSortingCriteria"
+		Association="com.bawaweb.model.OtlSscRpsFkAssoc"
+		AssociationEnd="com.bawaweb.model.OtlSscRpsFkAssoc.OtlSourceSortingCriteria"
+		AssociationOtherEnd="com.bawaweb.model.OtlSscRpsFkAssoc.OtlReportSources"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="RprtReports"
+		Association="com.bawaweb.model.RpsRprtFkAssoc" AssociationEnd="com.bawaweb.model.RpsRprtFkAssoc.RprtReports"
+		AssociationOtherEnd="com.bawaweb.model.RpsRprtFkAssoc.OtlReportSources"
+		Type="com.bawaweb.model.RprtReportsImpl">
+	</AccessorAttribute>
+	<Key Name="OtlReportSourcesPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportSources.RpsId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_REPORT_SOURCES_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004909">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportSources.RpsId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RPS_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004909" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004910">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportSources.RpsSrcId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RPS_SRC_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004910" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004911">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportSources.RpsDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RPS_DELETE_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004911" />
+		</DesignTime>
+	</Key>
+	<Key Name="RpsRprtFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportSources.RpsRprtId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="PK_RPRT_ID" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="RPS_RPRT_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="RpsSrcFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportSources.RpsSrcId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_SRC_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="RPS_SRC_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

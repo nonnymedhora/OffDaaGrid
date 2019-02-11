@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="SuffixTitles" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.utils.SuffixTitlesRowImpl"
+	ComponentClass="com.bawaweb.views.utils.SuffixTitlesImpl" DefClass="com.bawaweb.views.utils.SuffixTitlesDefImpl"
+	ComponentInterface="com.bawaweb.views.utils.common.SuffixTitles"
+	ClientProxyName="com.bawaweb.views.utils.client.SuffixTitlesClient"
+	RowInterface="com.bawaweb.views.utils.common.SuffixTitlesRow"
+	ClientRowProxyName="com.bawaweb.views.utils.client.SuffixTitlesRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<SQLQuery><![CDATA[
+SELECT 
+	stl_suffix_title ctl_code, 
+	stl_suffix_title ctl_desc 
+FROM bawaweb_suffix_titles 
+	WHERE stl_delete_yn = 'N'
+ORDER BY stl_suffix_title
+   ]]></SQLQuery>
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<EntityUsage Name="OtlSuffixTitles" Entity="com.bawaweb.model.OtlSuffixTitles">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="CtlCode" IsPersistent="false"
+		IsNotNull="true" Precision="50" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="CTL_CODE" Expression="CTL_CODE" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="CtlDesc" IsPersistent="false"
+		IsNotNull="true" Precision="50" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="CTL_DESC" Expression="CTL_DESC" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="StlSuffixTitle" IsPersistent="false"
+		IsNotNull="true" Precision="50" Type="java.lang.String" ColumnType="$none$"
+		AliasName="STL_SUFFIX_TITLE" SQLType="VARCHAR">
+	</ViewAttribute>
+	<ViewAttribute Name="StlDeleteYn" IsPersistent="false"
+		IsNotNull="true" Precision="1" Type="java.lang.String" ColumnType="$none$"
+		AliasName="STL_DELETE_YN" SQLType="VARCHAR">
+	</ViewAttribute>
+</ViewObject>

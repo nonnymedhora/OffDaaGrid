@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtrTabLocksRView" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.readable.OtrTabLocksRViewRowImpl"
+	ComponentClass="com.bawaweb.views.readable.OtrTabLocksRViewImpl"
+	DefClass="com.bawaweb.views.readable.OtrTabLocksRViewDefImpl"
+	ComponentInterface="com.bawaweb.views.readable.common.OtrTabLocksRView"
+	ClientProxyName="com.bawaweb.views.readable.client.OtrTabLocksRViewClient"
+	RowInterface="com.bawaweb.views.readable.common.OtrTabLocksRViewRow"
+	ClientRowProxyName="com.bawaweb.views.readable.client.OtrTabLocksRViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="otl_id" Kind="where" Type="oracle.jbo.domain.Number"
+		IsUpdateable="false">
+	</Variable>
+	<SQLQuery><![CDATA[
+select * from bawaweb_tab_locks where otl_id = :otl_id
+   ]]></SQLQuery>
+	<EntityUsage Name="OtrTabLocks" Entity="com.bawaweb.model.OtrTabLocks"
+		ReadOnly="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="OtlId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="OTL_ID" Expression="OTL_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="OtlTabName" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="30" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="OTL_TAB_NAME" Expression="OTL_TAB_NAME"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="OtlTabId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="OTL_TAB_ID" Expression="OTL_TAB_ID"
+		SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="OtlEmplId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="40" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="OTL_EMPL_ID" Expression="OTL_EMPL_ID"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="40" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="OtlCreatedDt" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Type="oracle.jbo.domain.Date"
+		ColumnType="DATE" AliasName="OTL_CREATED_DT" Expression="OTL_CREATED_DT"
+		SQLType="DATE">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="OtlId" />
+		<Item Value="OtlTabName" />
+		<Item Value="OtlTabId" />
+	</AttrArray>
+</ViewObject>

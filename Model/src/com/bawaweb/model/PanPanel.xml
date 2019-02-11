@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="PanPanel" DBObjectType="table" DBObjectName="PAN_PANEL"
+	AliasName="PanPanel" BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.PanPanelImpl" DefClass="com.bawaweb.model.PanPanelDefImpl"
+	CollClass="com.bawaweb.model.PanPanelCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="PanId" IsNotNull="true" ColumnName="PAN_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="PAN_PANEL" PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="PanDesc" Precision="100" ColumnName="PAN_DESC"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="PAN_PANEL">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="FridId" ColumnName="FRID_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="PAN_PANEL">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="PanMultiNationalYn" Precision="1"
+		ColumnName="PAN_MULTI_NATIONAL_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="PAN_PANEL">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="PanSrReporter" ColumnName="PAN_SR_REPORTER"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="PAN_PANEL">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="PanStatus" ColumnName="PAN_STATUS"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="PAN_PANEL">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="PanEuropeanYn" Precision="1" ColumnName="PAN_EUROPEAN_YN"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="PAN_PANEL">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="PanEnhancedYn" Precision="1" ColumnName="PAN_ENHANCED_YN"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="PAN_PANEL">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="PanIsProprietaryYn" Precision="1"
+		ColumnName="PAN_IS_PROPRIETARY_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="PAN_PANEL">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="EmplOtlEmployees"
+		Association="com.bawaweb.model.PanEmplFkAssoc" AssociationEnd="com.bawaweb.model.PanEmplFkAssoc.EmplOtlEmployees"
+		AssociationOtherEnd="com.bawaweb.model.PanEmplFkAssoc.PanPanel" Type="com.bawaweb.model.EmplOtlEmployeesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="FridFirmIndustries"
+		Association="com.bawaweb.model.PanFridFkAssoc" AssociationEnd="com.bawaweb.model.PanFridFkAssoc.FridFirmIndustries"
+		AssociationOtherEnd="com.bawaweb.model.PanFridFkAssoc.PanPanel" Type="com.bawaweb.model.FridFirmIndustriesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="RprtReports"
+		Association="com.bawaweb.model.RprtPanFkAssoc" AssociationEnd="com.bawaweb.model.RprtPanFkAssoc.RprtReports"
+		AssociationOtherEnd="com.bawaweb.model.RprtPanFkAssoc.PanPanel" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</AccessorAttribute>
+	<Key Name="PkPanPanel">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.PanPanel.PanId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="PK_PAN_PANEL" />
+		</DesignTime>
+	</Key>
+	<Key Name="PanEmplFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.PanPanel.PanSrReporter" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="PKY_EMPL_ID" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="PAN_EMPL_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="PanFridFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.PanPanel.FridId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="FRID_FI_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="PAN_FRID_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

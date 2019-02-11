@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="EditorInfo" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.gridcursors.EditorInfoRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.EditorInfoImpl" DefClass="com.bawaweb.views.gridcursors.EditorInfoDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.common.EditorInfo"
+	ClientProxyName="com.bawaweb.views.gridcursors.client.EditorInfoClient"
+	RowInterface="com.bawaweb.views.gridcursors.common.EditorInfoRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.client.EditorInfoRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rprtId" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+select * from empl_bawaweb_employees where empl_id = 
+(select edtr_id from rprt_reports where rprt_id = :rprtId)
+   ]]></SQLQuery>
+	<EntityUsage Name="EmplOtlEmployees" Entity="com.bawaweb.model.EmplOtlEmployees">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="RprtReports" Entity="com.bawaweb.model.RprtReports"
+		Association="com.bawaweb.model.RprtEmplEdtrFkAssoc" AssociationEnd="com.bawaweb.model.RprtEmplEdtrFkAssoc.RprtReports"
+		SourceUsage="com.bawaweb.views.gridcursors.EditorInfo.EmplOtlEmployees"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.RprtReports.EdtrId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.EmplOtlEmployees.EmplId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="EmplId" IsPersistent="false"
+		IsNotNull="true" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="EMPL_ID" Expression="EMPL_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplInit" IsPersistent="false"
+		Precision="3" Type="java.lang.String" ColumnType="VARCHAR2" AliasName="EMPL_INIT"
+		Expression="EMPL_INIT" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="3" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplUserid" IsPersistent="false"
+		Precision="20" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_USERID" Expression="EMPL_USERID" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplLname" IsPersistent="false"
+		Precision="20" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_LNAME" Expression="EMPL_LNAME" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplFname" IsPersistent="false"
+		Precision="20" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_FNAME" Expression="EMPL_FNAME" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplInitial" IsPersistent="false"
+		Precision="1" Type="java.lang.String" ColumnType="VARCHAR2" AliasName="EMPL_INITIAL"
+		Expression="EMPL_INITIAL" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="DeptId" IsPersistent="false"
+		Precision="10" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="DEPT_ID" Expression="DEPT_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplTitle" IsPersistent="false"
+		Precision="30" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_TITLE" Expression="EMPL_TITLE" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplOfficeLoc" IsPersistent="false"
+		Precision="20" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_OFFICE_LOC" Expression="EMPL_OFFICE_LOC" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplDob" IsPersistent="false"
+		Type="oracle.jbo.domain.Date" ColumnType="DATE" AliasName="EMPL_DOB"
+		Expression="EMPL_DOB" SQLType="DATE">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplHireDate" IsPersistent="false"
+		Type="oracle.jbo.domain.Date" ColumnType="DATE" AliasName="EMPL_HIRE_DATE"
+		Expression="EMPL_HIRE_DATE" SQLType="DATE">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplAddress" IsPersistent="false"
+		Precision="60" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_ADDRESS" Expression="EMPL_ADDRESS" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="60" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplCity" IsPersistent="false"
+		Precision="30" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_CITY" Expression="EMPL_CITY" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplState" IsPersistent="false"
+		Precision="30" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_STATE" Expression="EMPL_STATE" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplZip" IsPersistent="false"
+		Precision="15" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_ZIP" Expression="EMPL_ZIP" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="15" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplCountry" IsPersistent="false"
+		Precision="15" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_COUNTRY" Expression="EMPL_COUNTRY" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="15" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplHomePhone" IsPersistent="false"
+		Precision="25" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_HOME_PHONE" Expression="EMPL_HOME_PHONE" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplOfficePhone" IsPersistent="false"
+		Precision="25" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_OFFICE_PHONE" Expression="EMPL_OFFICE_PHONE" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplIntExtension" IsPersistent="false"
+		Precision="12" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_INT_EXTENSION" Expression="EMPL_INT_EXTENSION"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="12" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplOfficeFax" IsPersistent="false"
+		Precision="25" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_OFFICE_FAX" Expression="EMPL_OFFICE_FAX" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplEmail" IsPersistent="false"
+		Precision="50" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_EMAIL" Expression="EMPL_EMAIL" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplInternet" IsPersistent="false"
+		Precision="50" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_INTERNET" Expression="EMPL_INTERNET" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplNotes" IsPersistent="false"
+		Precision="2000" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_NOTES" Expression="EMPL_NOTES" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="2000" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplReptsTo" IsPersistent="false"
+		Precision="10" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="EMPL_REPTS_TO" Expression="EMPL_REPTS_TO" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplDirListing" IsPersistent="false"
+		Precision="10" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="EMPL_DIR_LISTING" Expression="EMPL_DIR_LISTING" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplPassword" IsPersistent="false"
+		Precision="20" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_PASSWORD" Expression="EMPL_PASSWORD" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RegId" IsPersistent="false"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="REG_ID"
+		Expression="REG_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RergId" IsPersistent="false"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="RERG_ID"
+		Expression="RERG_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="AcgrId" IsPersistent="false"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="ACGR_ID"
+		Expression="ACGR_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplStatus" IsPersistent="false"
+		Precision="8" Type="java.lang.String" ColumnType="VARCHAR2" AliasName="EMPL_STATUS"
+		Expression="EMPL_STATUS" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="8" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplIdHr" IsPersistent="false"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="EMPL_ID_HR"
+		Expression="EMPL_ID_HR" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+</ViewObject>

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlSuffixTitles" DBObjectType="table"
+	DBObjectName="BAwaWEb_SUFFIX_TITLES" AliasName="OtlSuffixTitles"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlSuffixTitlesImpl" DefClass="com.bawaweb.model.OtlSuffixTitlesDefImpl"
+	CollClass="com.bawaweb.model.OtlSuffixTitlesCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|VarAccess" />
+	</DesignTime>
+	<Attribute Name="StlSuffixTitle" IsNotNull="true" Precision="50"
+		ColumnName="STL_SUFFIX_TITLE" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SUFFIX_TITLES" PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="StlDeleteYn" IsNotNull="true" Precision="1"
+		ColumnName="STL_DELETE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SUFFIX_TITLES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Key Name="OtlStlDeleteYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSuffixTitles.StlDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="stl_delete_yn IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_STL_DELETE_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlStlPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSuffixTitles.StlSuffixTitle" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_STL_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC0014502">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSuffixTitles.StlSuffixTitle" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;STL_SUFFIX_TITLE&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C0014502" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC0014503">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSuffixTitles.StlDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;STL_DELETE_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C0014503" />
+		</DesignTime>
+	</Key>
+</Entity>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="RtypReportTypesUView"
+	SelectList="RtypReportTypes.RTYP_ID, 
+       RtypReportTypes.RTYP_DESC, 
+       RtypReportTypes.RTYP_LIMIT_NUMBER, 
+       RtypReportTypes.RTYP_DISPLAY_SEQ, 
+       RtypReportTypes.RTYP_INTERVIEW_DAYS, 
+       RtypReportTypes.RTYP_TALLY_DAYS"
+	FromList="RTYP_REPORT_TYPES RtypReportTypes" Where="RtypReportTypes.RTYP_ID = :rtyp_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.RtypReportTypesUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.RtypReportTypesUViewImpl"
+	DefClass="com.bawaweb.views.updatable.RtypReportTypesUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.RtypReportTypesUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.RtypReportTypesUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.RtypReportTypesUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.RtypReportTypesUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rtyp_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="RtypReportTypes" Entity="com.bawaweb.model.RtypReportTypes">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="RtypReportTypes.RTYP_ID = :rtyp_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="RtypId" IsNotNull="true"
+		EntityAttrName="RtypId" EntityUsage="RtypReportTypes" AliasName="RTYP_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RtypDesc" EntityAttrName="RtypDesc"
+		EntityUsage="RtypReportTypes" AliasName="RTYP_DESC">
+	</ViewAttribute>
+	<ViewAttribute Name="RtypLimitNumber" IsNotNull="true"
+		EntityAttrName="RtypLimitNumber" EntityUsage="RtypReportTypes"
+		AliasName="RTYP_LIMIT_NUMBER">
+	</ViewAttribute>
+	<ViewAttribute Name="RtypDisplaySeq" EntityAttrName="RtypDisplaySeq"
+		EntityUsage="RtypReportTypes" AliasName="RTYP_DISPLAY_SEQ">
+	</ViewAttribute>
+	<ViewAttribute Name="RtypInterviewDays" EntityAttrName="RtypInterviewDays"
+		EntityUsage="RtypReportTypes" AliasName="RTYP_INTERVIEW_DAYS">
+	</ViewAttribute>
+	<ViewAttribute Name="RtypTallyDays" EntityAttrName="RtypTallyDays"
+		EntityUsage="RtypReportTypes" AliasName="RTYP_TALLY_DAYS">
+	</ViewAttribute>
+	<ViewLinkAccessor Name="RprtReportsUView"
+		ViewLink="com.bawaweb.views.updatable.RprtRtypFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+</ViewObject>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlTimeZonesUView"
+	SelectList="OtlTimeZones.TMZ_ID, 
+       OtlTimeZones.TMZ_NAME, 
+       OtlTimeZones.TMZ_DESCRIPTION, 
+       OtlTimeZones.TMZ_GMT_ADJUSTMENT_HRS, 
+       OtlTimeZones.TMZ_GMT_ADJUSTMENT_MIN, 
+       OtlTimeZones.TMZ_DELETE_YN"
+	FromList="BAwaWEb_TIME_ZONES OtlTimeZones" Where="OtlTimeZones.TMZ_ID = :tmz_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.OtlTimeZonesUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.OtlTimeZonesUViewImpl"
+	DefClass="com.bawaweb.views.updatable.OtlTimeZonesUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.OtlTimeZonesUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.OtlTimeZonesUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.OtlTimeZonesUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.OtlTimeZonesUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="tmz_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlTimeZones" Entity="com.bawaweb.model.OtlTimeZones">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="OtlTimeZones.TMZ_ID = :tmz_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="TmzId" IsNotNull="true"
+		EntityAttrName="TmzId" EntityUsage="OtlTimeZones" AliasName="TMZ_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="TmzName" IsNotNull="true"
+		EntityAttrName="TmzName" EntityUsage="OtlTimeZones" AliasName="TMZ_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="TmzDescription" EntityAttrName="TmzDescription"
+		EntityUsage="OtlTimeZones" AliasName="TMZ_DESCRIPTION">
+	</ViewAttribute>
+	<ViewAttribute Name="TmzGmtAdjustmentHrs" IsNotNull="true"
+		EntityAttrName="TmzGmtAdjustmentHrs" EntityUsage="OtlTimeZones"
+		AliasName="TMZ_GMT_ADJUSTMENT_HRS">
+	</ViewAttribute>
+	<ViewAttribute Name="TmzGmtAdjustmentMin" EntityAttrName="TmzGmtAdjustmentMin"
+		EntityUsage="OtlTimeZones" AliasName="TMZ_GMT_ADJUSTMENT_MIN">
+	</ViewAttribute>
+	<ViewAttribute Name="TmzDeleteYn" IsNotNull="true"
+		EntityAttrName="TmzDeleteYn" EntityUsage="OtlTimeZones" AliasName="TMZ_DELETE_YN">
+	</ViewAttribute>
+	<ViewLinkAccessor Name="OtlSourcesUView"
+		ViewLink="com.bawaweb.views.updatable.OtlSrcTmzFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+</ViewObject>

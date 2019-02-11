@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="SourceMultiAnswerSets" BindingStyle="OracleName"
+	CustomQuery="true"
+	RowClass="com.bawaweb.views.gridcursors.SourceMultiAnswerSetsRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.SourceMultiAnswerSetsImpl"
+	DefClass="com.bawaweb.views.gridcursors.SourceMultiAnswerSetsDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.common.SourceMultiAnswerSets"
+	ClientProxyName="com.bawaweb.views.gridcursors.client.SourceMultiAnswerSetsClient"
+	RowInterface="com.bawaweb.views.gridcursors.common.SourceMultiAnswerSetsRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.client.SourceMultiAnswerSetsRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="qst_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<Variable Name="rprt_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+SELECT rav_id, sra_rav_id, sma_rav_id, sra_id, sma_sra_id, sra_rps_id, q2.qmq_id, q2.qmq_number, q2.qmq_type, q1.qmq_qst_id, sra_qst_id, q1.answer, q1.sra_answer_text, q1.sra_color, q1.sra_comment, q1.qst_type , rav_asv_id, sra_asv_id, sma_asv_id, sra_exclude_yn, sma_exclude_yn, rav_display_seq, rav_delete_yn, sra_weight_multiplier, sma_weight_multiplier  
+                  FROM (             
+                  SELECT rav.rav_id, sra.sra_id, sma.sma_rav_id, sra.sra_asv_id, sma.sma_sra_id, sra.sra_rps_id, qmq.qmq_id, 
+                         qmq.qmq_qst_id, 
+                           qmq.qmq_number, 
+                           NVL(TRANSLATE(sma.sma_answer,'.,',(SELECT VALUE FROM V$NLS_PARAMETERS WHERE PARAMETER = 'NLS_NUMERIC_CHARACTERS')), rav.rav_answer) answer, 
+                           sra.sra_answer_text, 
+                         sra.sra_color, 
+                         sra.sra_comment,
+                         qt.qst_type, rav.rav_asv_id, sra.sra_exclude_yn, rav.rav_display_seq, 
+
+rav.rav_delete_yn, sra.sra_weight_multiplier, sma.sma_weight_multiplier, sma.sma_asv_id, sma.sma_exclude_yn , sra.sra_rav_id, sra.sra_qst_id
+                  FROM   bawaweb_report_answer_set_values rav, 
+                         bawaweb_multi_questions qmq, 
+                         bawaweb_source_multi_answers sma, 
+                         bawaweb_source_answers sra, 
+                         bawaweb_questions qt
+                  WHERE  sra.sra_qst_id = :qst_id
+                  AND    qt.qst_id = qmq.qmq_qst_id 
+                  AND    to_char(sra.sra_rps_id) in 
+
+(
+select distinct rps.rps_id
+ from rprt_reports rprt, bawaweb_sources src, empl_bawaweb_employees emp, bawaweb_report_sources rps 
+  where emp.empl_id =  rps.rps_rptr_id
+  and rprt.rprt_id = :rprt_id
+  and src.src_id = rps.rps_src_id 
+  and rps.rps_delete_yn = 'N' 
+  and rps.rps_comped_yn = 'N'     
+  and rprt.rprt_id = rps.rps_rprt_id
+)
+                  AND    sma.sma_sra_id(+) = sra.sra_id 
+                  AND    qmq.qmq_id(+) = sma.sma_qmq_id 
+                  AND    rav.rav_id(+) = sma.sma_rav_id 
+                  ORDER BY qmq.qmq_number 
+                        ) q1, 
+                          bawaweb_multi_questions q2
+                  WHERE  q2.qmq_qst_id = :qst_id  
+                  AND    q1.qmq_qst_id(+) = q2.qmq_qst_id 
+                  AND    q1.qmq_number(+) = q2.qmq_number
+   ]]></SQLQuery>
+	<EntityUsage Name="OtlReportAnswerSetValues"
+		Entity="com.bawaweb.model.OtlReportAnswerSetValues">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlMultiQuestions" Entity="com.bawaweb.model.OtlMultiQuestions"
+		SourceUsage="com.bawaweb.views.gridcursors.SourceMultiAnswerSets.OtlReportAnswerSetValues"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlSourceMultiAnswers" Entity="com.bawaweb.model.OtlSourceMultiAnswers"
+		Association="com.bawaweb.model.OtlSmaRavFkAssoc" AssociationEnd="com.bawaweb.model.OtlSmaRavFkAssoc.OtlSourceMultiAnswers"
+		SourceUsage="com.bawaweb.views.gridcursors.SourceMultiAnswerSets.OtlReportAnswerSetValues"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlSourceMultiAnswers.SmaRavId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.OtlReportAnswerSetValues.RavId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlSourceAnswers" Entity="com.bawaweb.model.OtlSourceAnswers"
+		Association="com.bawaweb.model.SraRavFkAssoc" AssociationEnd="com.bawaweb.model.SraRavFkAssoc.OtlSourceAnswers"
+		SourceUsage="com.bawaweb.views.gridcursors.SourceMultiAnswerSets.OtlReportAnswerSetValues"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlSourceAnswers.SraRavId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.OtlReportAnswerSetValues.RavId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="RprtReports" Entity="com.bawaweb.model.RprtReports"
+		SourceUsage="com.bawaweb.views.gridcursors.SourceMultiAnswerSets.OtlSourceAnswers"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlReportSources" Entity="com.bawaweb.model.OtlReportSources"
+		Association="com.bawaweb.model.SraRpsFkAssoc" AssociationEnd="com.bawaweb.model.SraRpsFkAssoc.OtlReportSources"
+		SourceUsage="com.bawaweb.views.gridcursors.SourceMultiAnswerSets.OtlSourceAnswers"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlReportSources.RpsId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.OtlSourceAnswers.SraRpsId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlQuestions" Entity="com.bawaweb.model.OtlQuestions"
+		Association="com.bawaweb.model.SraQstFkAssoc" AssociationEnd="com.bawaweb.model.SraQstFkAssoc.OtlQuestions"
+		SourceUsage="com.bawaweb.views.gridcursors.SourceMultiAnswerSets.OtlSourceAnswers"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlQuestions.QstId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.OtlSourceAnswers.SraQstId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="RavId" IsPersistent="false"
+		Precision="12" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="RAV_ID" Expression="RAV_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SraRavId" IsPersistent="false"
+		Precision="12" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="SRA_RAV_ID" Expression="SRA_RAV_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SmaRavId" IsPersistent="false"
+		Precision="12" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="SMA_RAV_ID" Expression="SMA_RAV_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SraId" IsPersistent="false"
+		Precision="12" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="SRA_ID" Expression="SRA_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SmaSraId" IsPersistent="false"
+		Precision="12" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="SMA_SRA_ID" Expression="SMA_SRA_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SraRpsId" IsPersistent="false"
+		Precision="12" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="SRA_RPS_ID" Expression="SRA_RPS_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QmqId" IsPersistent="false"
+		IsNotNull="true" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="QMQ_ID" Expression="QMQ_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QmqNumber" IsPersistent="false"
+		Precision="4" Type="java.lang.String" ColumnType="VARCHAR2" AliasName="QMQ_NUMBER"
+		Expression="QMQ_NUMBER" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="4" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QmqType" IsPersistent="false"
+		IsNotNull="true" Precision="20" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="QMQ_TYPE" Expression="QMQ_TYPE" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QmqQstId" IsPersistent="false"
+		Precision="12" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="QMQ_QST_ID" Expression="QMQ_QST_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SraQstId" IsPersistent="false"
+		Precision="12" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="SRA_QST_ID" Expression="SRA_QST_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Answer" IsPersistent="false"
+		Precision="100" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="ANSWER" Expression="ANSWER" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SraAnswerText" IsPersistent="false"
+		Precision="1900" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="SRA_ANSWER_TEXT" Expression="SRA_ANSWER_TEXT" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1900" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SraColor" IsPersistent="false"
+		Precision="100" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="SRA_COLOR" Expression="SRA_COLOR" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SraComment" IsPersistent="false"
+		Precision="1900" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="SRA_COMMENT" Expression="SRA_COMMENT" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1900" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QstType" IsPersistent="false"
+		Precision="20" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="QST_TYPE" Expression="QST_TYPE" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RavAsvId" IsPersistent="false"
+		Precision="12" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="RAV_ASV_ID" Expression="RAV_ASV_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SraAsvId" IsPersistent="false"
+		Precision="12" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="SRA_ASV_ID" Expression="SRA_ASV_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SmaAsvId" IsPersistent="false"
+		Precision="12" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="SMA_ASV_ID" Expression="SMA_ASV_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SraExcludeYn" IsPersistent="false"
+		Precision="1" Type="java.lang.String" ColumnType="VARCHAR2" AliasName="SRA_EXCLUDE_YN"
+		Expression="SRA_EXCLUDE_YN" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SmaExcludeYn" IsPersistent="false"
+		Precision="1" Type="java.lang.String" ColumnType="VARCHAR2" AliasName="SMA_EXCLUDE_YN"
+		Expression="SMA_EXCLUDE_YN" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RavDisplaySeq" IsPersistent="false"
+		Precision="12" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="RAV_DISPLAY_SEQ" Expression="RAV_DISPLAY_SEQ" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RavDeleteYn" IsPersistent="false"
+		Precision="1" Type="java.lang.String" ColumnType="VARCHAR2" AliasName="RAV_DELETE_YN"
+		Expression="RAV_DELETE_YN" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SraWeightMultiplier" IsPersistent="false"
+		Precision="12" Scale="3" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="SRA_WEIGHT_MULTIPLIER" Expression="SRA_WEIGHT_MULTIPLIER"
+		SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SmaWeightMultiplier" IsPersistent="false"
+		Precision="12" Scale="3" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="SMA_WEIGHT_MULTIPLIER" Expression="SMA_WEIGHT_MULTIPLIER"
+		SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="RavId" />
+		<Item Value="SraId" />
+		<Item Value="SmaSraId" />
+		<Item Value="SraRpsId" />
+		<Item Value="QmqId" />
+		<Item Value="QmqNumber" />
+		<Item Value="QmqType" />
+		<Item Value="QstType" />
+	</AttrArray>
+</ViewObject>

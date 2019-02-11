@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="DBInstance" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.DBInstanceRowImpl"
+	ComponentClass="com.bawaweb.views.DBInstanceImpl" DefClass="com.bawaweb.views.DBInstanceDefImpl"
+	RowInterface="com.bawaweb.views.common.DBInstanceRow"
+	ClientRowProxyName="com.bawaweb.views.client.DBInstanceRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<SQLQuery><![CDATA[
+select * from v$instance
+   ]]></SQLQuery>
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<ViewAttribute Name="InstanceNumber" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="INSTANCE_NUMBER" Expression="INSTANCE_NUMBER" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="InstanceName" IsUpdateable="false"
+		IsPersistent="false" Precision="16" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="INSTANCE_NAME" Expression="INSTANCE_NAME"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="16" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="HostName" IsUpdateable="false"
+		IsPersistent="false" Precision="64" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="HOST_NAME" Expression="HOST_NAME"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="64" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Version" IsUpdateable="false"
+		IsPersistent="false" Precision="17" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="VERSION" Expression="VERSION"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="17" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="StartupTime" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Date" ColumnType="DATE"
+		AliasName="STARTUP_TIME" Expression="STARTUP_TIME" SQLType="DATE">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Status" IsUpdateable="false"
+		IsPersistent="false" Precision="12" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="STATUS" Expression="STATUS" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="12" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Parallel" IsUpdateable="false"
+		IsPersistent="false" Precision="3" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="PARALLEL" Expression="PARALLEL" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="3" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Thread" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		Expression="THREAD#" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Archiver" IsUpdateable="false"
+		IsPersistent="false" Precision="7" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="ARCHIVER" Expression="ARCHIVER" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="LogSwitchWait" IsUpdateable="false"
+		IsPersistent="false" Precision="15" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="LOG_SWITCH_WAIT" Expression="LOG_SWITCH_WAIT"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="15" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Logins" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="LOGINS" Expression="LOGINS" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="10" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="ShutdownPending" IsUpdateable="false"
+		IsPersistent="false" Precision="3" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="SHUTDOWN_PENDING" Expression="SHUTDOWN_PENDING" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="3" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="DatabaseStatus" IsUpdateable="false"
+		IsPersistent="false" Precision="17" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="DATABASE_STATUS" Expression="DATABASE_STATUS"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="17" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="InstanceRole" IsUpdateable="false"
+		IsPersistent="false" Precision="18" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="INSTANCE_ROLE" Expression="INSTANCE_ROLE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="18" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="ActiveState" IsUpdateable="false"
+		IsPersistent="false" Precision="9" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="ACTIVE_STATE" Expression="ACTIVE_STATE" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="9" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Blocked" IsUpdateable="false"
+		IsPersistent="false" Precision="3" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="BLOCKED" Expression="BLOCKED" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="3" />
+		</DesignTime>
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="InstanceNumber" />
+	</AttrArray>
+</ViewObject>

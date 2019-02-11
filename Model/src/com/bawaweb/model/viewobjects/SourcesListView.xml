@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="SourcesListView" DBObjectType="view" DBObjectName="SOURCES_LIST_VIEW"
+	AliasName="SourcesListView" BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.viewobjects.SourcesListViewImpl" DefClass="com.bawaweb.model.viewobjects.SourcesListViewDefImpl"
+	CollClass="com.bawaweb.model.viewobjects.SourcesListViewCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_panelSchema" Value="view" />
+		<Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Def|Coll|Val|VarAccess" />
+	</DesignTime>
+	<Attribute Name="SrcId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SRC_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="SOURCES_LIST_VIEW"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RpsId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="RPS_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcLastName" Precision="30" ColumnName="SRC_LAST_NAME"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcFirstName" Precision="30" ColumnName="SRC_FIRST_NAME"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcCourtesyTitle" Precision="20"
+		ColumnName="SRC_COURTESY_TITLE" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcJobTitle" Precision="100" ColumnName="SRC_JOB_TITLE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcJobDescription" Precision="100"
+		ColumnName="SRC_JOB_DESCRIPTION" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcCompany" Precision="100" ColumnName="SRC_COMPANY"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcAddress1" Precision="100" ColumnName="SRC_ADDRESS1"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcAddress2" Precision="100" ColumnName="SRC_ADDRESS2"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcAddress3" Precision="100" ColumnName="SRC_ADDRESS3"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcCity" IsNotNull="true" Precision="50"
+		ColumnName="SRC_CITY" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcState" Precision="30" ColumnName="SRC_STATE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcZip" Precision="20" ColumnName="SRC_ZIP"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcCtryId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SRC_CTRY_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcTmzId" Precision="12" Scale="0"
+		ColumnName="SRC_TMZ_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcEmail" Precision="100" ColumnName="SRC_EMAIL"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcPhone" IsNotNull="true" Precision="25"
+		ColumnName="SRC_PHONE" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcPhoneExt" Precision="25" ColumnName="SRC_PHONE_EXT"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcCellPhone" Precision="25" ColumnName="SRC_CELL_PHONE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcFax" Precision="25" ColumnName="SRC_FAX"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcStatus" IsNotNull="true" Precision="9"
+		ColumnName="SRC_STATUS" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="9" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcExclusiveSourceYn" IsNotNull="true"
+		Precision="1" ColumnName="SRC_EXCLUSIVE_SOURCE_YN" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcDontContactYn" IsNotNull="true"
+		Precision="1" ColumnName="SRC_DONT_CONTACT_YN" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcCompanyType" Precision="100" ColumnName="SRC_COMPANY_TYPE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcAreaOfExpertise" Precision="500"
+		ColumnName="SRC_AREA_OF_EXPERTISE" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcIndustrySector" Precision="100"
+		ColumnName="SRC_INDUSTRY_SECTOR" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcIndustryView" Precision="13"
+		ColumnName="SRC_INDUSTRY_VIEW" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="13" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcVendors" Precision="500" ColumnName="SRC_VENDORS"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcCompanySize" Precision="20" ColumnName="SRC_COMPANY_SIZE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcDistributionPreference" Precision="15"
+		ColumnName="SRC_DISTRIBUTION_PREFERENCE" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="15" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcDistributionNotes" Precision="500"
+		ColumnName="SRC_DISTRIBUTION_NOTES" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcSpecialRequests" Precision="500"
+		ColumnName="SRC_SPECIAL_REQUESTS" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcReportersNotes" Precision="500"
+		ColumnName="SRC_REPORTERS_NOTES" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcQualityRating" Precision="9"
+		ColumnName="SRC_QUALITY_RATING" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="9" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcModifiedDate" ColumnName="SRC_MODIFIED_DATE"
+		Type="oracle.jbo.domain.Date" ColumnType="DATE" SQLType="DATE"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcModifiedBy" IsNotNull="true" Precision="30"
+		ColumnName="SRC_MODIFIED_BY" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrcSuffixTitle" Precision="20" ColumnName="SRC_SUFFIX_TITLE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtSourceDisplayField" Precision="10"
+		ColumnName="RPRT_SOURCE_DISPLAY_FIELD" Type="java.lang.String"
+		ColumnType="VARCHAR2" SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="10" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RpsRptrId" Precision="12" Scale="0"
+		ColumnName="RPS_RPTR_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RpsRepeatSourceYn" Precision="1"
+		ColumnName="RPS_REPEAT_SOURCE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplInit" Precision="3" ColumnName="EMPL_INIT"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="3" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtId" IsNotNull="true" Precision="10"
+		Scale="0" ColumnName="RPRT_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="SOURCES_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Key Name="SourceslistviewPrimaryKey">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.viewobjects.SourcesListView.SrcId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="SOURCESLISTVIEW_PRIMARY_KEY" />
+		</DesignTime>
+	</Key>
+</Entity>

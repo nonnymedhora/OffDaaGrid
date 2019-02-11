@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="QuestionsList" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.gridcursors.QuestionsListRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.QuestionsListImpl"
+	DefClass="com.bawaweb.views.gridcursors.QuestionsListDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.common.QuestionsList"
+	ClientProxyName="com.bawaweb.views.gridcursors.client.QuestionsListClient"
+	RowInterface="com.bawaweb.views.gridcursors.common.QuestionsListRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.client.QuestionsListRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rprt_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+SELECT qst.qst_id, qst.qst_number, DECODE (qst.qst_type, 'WEIGHT', 2, 4) order_by,
+       bawaweb_utils.numeric_part (qst.qst_number) numeric_part, bawaweb_utils.alpha_part (qst.qst_number) alpha_part, qst.qst_question,
+       qst.qst_type, qst.qst_multi_answers, qst.qst_question_hint, qst.qst_text_required_yn, qst.qst_text_hint, qst.qst_ras_id,
+       ras.ras_frid_id, qst.qst_tly_id,
+       (DECODE (qst.qst_type, 'MULTI', (2 * qst.qst_multi_answers), 2) + DECODE (qst.qst_text_required_yn, 'Y', 2, 0)) num_cols, qst.qst_ans_id
+  FROM bawaweb_report_answer_sets ras, bawaweb_questions qst
+ WHERE qst.qst_rprt_id = :rprt_id AND qst.qst_delete_yn = 'N' AND ras.ras_id(+) = qst.qst_ras_id  
+-- and qst.qst_type = 'MULTI' 
+UNION ALL
+SELECT 0, 'R', 1, NULL, NULL, 'Repeat Sources', 'REPEAT', NULL, 'Yes/No', 'N', NULL, NULL, NULL, NULL, 2, NULL
+  FROM DUAL
+UNION ALL
+SELECT (rso.rso_srt_id * -1), 'S' || rso.rso_display_seq, 3, rso.rso_display_seq, NULL, srt.srt_name, 'SORT', NULL,
+       'Sort #' || rso.rso_display_seq, 'N', NULL, NULL, NULL, NULL, 2, NULL
+  FROM bawaweb_sorting_criteria srt, bawaweb_report_sorting_criteria rso
+ WHERE rso.rso_rprt_id = :rprt_id AND srt.srt_id = rso.rso_srt_id
+order by 3, 4, 5
+   ]]></SQLQuery>
+	<EntityUsage Name="OtlQuestions" Entity="com.bawaweb.model.OtlQuestions">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlReportAnswerSets" Entity="com.bawaweb.model.OtlReportAnswerSets"
+		SourceUsage="com.bawaweb.views.gridcursors.QuestionsList.OtlQuestions"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlSortingCriteria" Entity="com.bawaweb.model.OtlSortingCriteria"
+		SourceUsage="com.bawaweb.views.gridcursors.QuestionsList.OtlReportAnswerSets"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlReportSortingCriteria"
+		Entity="com.bawaweb.model.OtlReportSortingCriteria" Association="com.bawaweb.model.OtlRsoSrtFkAssoc"
+		AssociationEnd="com.bawaweb.model.OtlRsoSrtFkAssoc.OtlReportSortingCriteria"
+		SourceUsage="com.bawaweb.views.gridcursors.QuestionsList.OtlSortingCriteria"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlReportSortingCriteria.RsoSrtId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.OtlSortingCriteria.SrtId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="QstId" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="QST_ID" Expression="QST_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QstNumber" IsUpdateable="false"
+		IsPersistent="false" Precision="41" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="QST_NUMBER" Expression="QST_NUMBER"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="41" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="OrderBy1" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="ORDER_BY" Expression="ORDER_BY" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="NumericPart" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="NUMERIC_PART" Expression="NUMERIC_PART" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="AlphaPart" IsUpdateable="false"
+		IsPersistent="false" Precision="4000" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="ALPHA_PART" Expression="ALPHA_PART"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="4000" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QstQuestion" IsUpdateable="false"
+		IsPersistent="false" Precision="500" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="QST_QUESTION" Expression="QST_QUESTION"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QstType" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="QST_TYPE" Expression="QST_TYPE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QstMultiAnswers" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="QST_MULTI_ANSWERS" Expression="QST_MULTI_ANSWERS" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QstQuestionHint" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="QST_QUESTION_HINT" Expression="QST_QUESTION_HINT"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QstTextRequiredYn" IsUpdateable="false"
+		IsPersistent="false" Precision="1" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="QST_TEXT_REQUIRED_YN" Expression="QST_TEXT_REQUIRED_YN"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QstTextHint" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="QST_TEXT_HINT" Expression="QST_TEXT_HINT"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QstRasId" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="QST_RAS_ID" Expression="QST_RAS_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RasFridId" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="RAS_FRID_ID" Expression="RAS_FRID_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QstTlyId" IsPersistent="false"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="QST_TLY_ID"
+		Expression="QST_TLY_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="NumCols" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="NUM_COLS" Expression="NUM_COLS" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QstAnsId" IsPersistent="false"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="QST_ANS_ID"
+		Expression="QST_ANS_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="QstId" />
+		<Item Value="QstTlyId" />
+	</AttrArray>
+</ViewObject>

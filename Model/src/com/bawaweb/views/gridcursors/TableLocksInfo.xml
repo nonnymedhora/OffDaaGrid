@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="TableLocksInfo" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.gridcursors.TableLocksInfoRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.TableLocksInfoImpl"
+	DefClass="com.bawaweb.views.gridcursors.TableLocksInfoDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.common.TableLocksInfo"
+	ClientProxyName="com.bawaweb.views.gridcursors.client.TableLocksInfoClient"
+	RowInterface="com.bawaweb.views.gridcursors.common.TableLocksInfoRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.client.TableLocksInfoRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="otl_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<Variable Name="emp_id" Kind="where" Type="java.lang.String">
+	</Variable>
+	<Variable Name="tab_name" Kind="where" Type="java.lang.String">
+	</Variable>
+	<Variable Name="tab_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+SELECT OtrTabLocks.OTL_ID, 
+       OtrTabLocks.OTL_TAB_NAME, 
+       OtrTabLocks.OTL_TAB_ID, 
+       OtrTabLocks.OTL_EMPL_ID, 
+       OtrTabLocks.OTL_CREATED_DT, 
+       OtrTabLocks.OTL_STATUS
+FROM BAwaWEb_TAB_LOCKS OtrTabLocks
+WHERE OtrTabLocks.OTL_ID = :otl_id 
+and OtrTabLocks.OTL_TAB_NAME = :tab_name
+and OtrTabLocks.OTL_TAB_ID = :tab_id
+and OtrTabLocks.OTL_EMPL_ID = :emp_id
+ORDER BY OTL_ID DESC
+   ]]></SQLQuery>
+	<EntityUsage Name="OtrTabLocks" Entity="com.bawaweb.model.OtrTabLocks">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="OtrTabLocks.OTL_ID = :otl_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="OtlId" IsUnique="true" IsNotNull="true"
+		EntityAttrName="OtlId" EntityUsage="OtrTabLocks" AliasName="OTL_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="OtlTabName" IsNotNull="true"
+		EntityAttrName="OtlTabName" EntityUsage="OtrTabLocks" AliasName="OTL_TAB_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="OtlTabId" IsNotNull="true"
+		EntityAttrName="OtlTabId" EntityUsage="OtrTabLocks" AliasName="OTL_TAB_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="OtlEmplId" IsNotNull="true"
+		EntityAttrName="OtlEmplId" EntityUsage="OtrTabLocks" AliasName="OTL_EMPL_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="OtlCreatedDt" IsNotNull="true"
+		EntityAttrName="OtlCreatedDt" EntityUsage="OtrTabLocks" AliasName="OTL_CREATED_DT">
+	</ViewAttribute>
+	<ViewAttribute Name="OtlStatus" EntityAttrName="OtlStatus"
+		EntityUsage="OtrTabLocks" AliasName="OTL_STATUS">
+	</ViewAttribute>
+</ViewObject>

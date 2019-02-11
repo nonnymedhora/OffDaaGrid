@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<data-sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/data-sources-10_1.xsd"
+	xmlns="http://xmlns.oracle.com/oracleas/schema">
+	<connection-pool name="jdev-connection-pool-SALES">
+		<connection-factory factory-class="oracle.jdbc.pool.OracleDataSource"
+			user="SALES" password="->DataBase_User_y7pkIynpkqZ0oCKwAjLMi6b4MAgACp-2"
+			url="jdbc:oracle:thin:@capella:1521:SALES" />
+	</connection-pool>
+	<managed-data-source name="jdev-connection-managed-SALES"
+		jndi-name="jdbc/SALESDS" connection-pool-name="jdev-connection-pool-SALES" />
+	<native-data-source name="jdev-connection-native-SALES"
+		jndi-name="jdbc/SALESCoreDS" url="jdbc:oracle:thin:@capella:1521:SALES"
+		user="SALES" password="->DataBase_User_ZVeb1BMj9Ve8vuj5buZnoRvLhqHKVqp0"
+		data-source-class="oracle.jdbc.pool.OracleDataSource" />
+	<connection-pool name="jdev-connection-pool-MAPINFO">
+		<connection-factory factory-class="oracle.jdbc.pool.OracleDataSource"
+			user="MAPINFO" password="->DataBase_User_0kzcxp_l7OQAwfRkDr6AjmfuTqJpNJ2j"
+			url="jdbc:oracle:thin:@capella:1521:SALES" />
+	</connection-pool>
+	<managed-data-source name="jdev-connection-managed-MAPINFO"
+		jndi-name="jdbc/MAPINFODS" connection-pool-name="jdev-connection-pool-MAPINFO" />
+	<native-data-source name="jdev-connection-native-MAPINFO"
+		jndi-name="jdbc/MAPINFOCoreDS" url="jdbc:oracle:thin:@capella:1521:SALES"
+		user="MAPINFO" password="->DataBase_User_wSKW86SWu4nfI8mE6MzhUANThIonp9p0"
+		data-source-class="oracle.jdbc.pool.OracleDataSource" />
+	<connection-pool name="jdev-connection-pool-SALESDEV">
+		<connection-factory factory-class="oracle.jdbc.pool.OracleDataSource"
+			user="SALES" password="->DataBase_User_RnZ2VgCUuqwN9X93uATNSDX_GUi14mJQ"
+			url="jdbc:oracle:thin:@otrdb.ox.com:1521:salesdev" />
+	</connection-pool>
+	<managed-data-source name="jdev-connection-managed-SALESDEV"
+		jndi-name="jdbc/SALESDEVDS" connection-pool-name="jdev-connection-pool-SALESDEV" />
+	<native-data-source name="jdev-connection-native-SALESDEV"
+		jndi-name="jdbc/SALESDEVCoreDS" url="jdbc:oracle:thin:@otrdb.ox.com:1521:salesdev"
+		user="SALES" password="->DataBase_User_h9teeCotKU1_wmlU9f3_qpsCE59XSz1r"
+		data-source-class="oracle.jdbc.pool.OracleDataSource" />
+	<connection-pool name="jdev-connection-pool-BAwaWEb_REPORTER_DEV">
+		<connection-factory factory-class="oracle.jdbc.pool.OracleDataSource"
+			user="BAwaWEb_REPORTER_DEV" password="->DataBase_User_facw4jWW0qEUZkbi4ZdU8FzSZz9UTBPm"
+			url="jdbc:oracle:thin:@capella:1521:IASDBEXT" />
+	</connection-pool>
+	<managed-data-source name="jdev-connection-managed-BAwaWEb_REPORTER_DEV"
+		jndi-name="jdbc/BAwaWEb_REPORTER_DEVDS" connection-pool-name="jdev-connection-pool-BAwaWEb_REPORTER_DEV" />
+	<native-data-source name="jdev-connection-native-BAwaWEb_REPORTER_DEV"
+		jndi-name="jdbc/BAwaWEb_REPORTER_DEVCoreDS" url="jdbc:oracle:thin:@capella:1521:IASDBEXT"
+		user="BAwaWEb_REPORTER_DEV" password="->DataBase_User_teR3ecSkOiVpY5r6NRccUCzBBn132BC-"
+		data-source-class="oracle.jdbc.pool.OracleDataSource" />
+	<connection-pool name="jdev-connection-pool-sales_xe">
+		<connection-factory factory-class="oracle.jdbc.pool.OracleDataSource"
+			user="SALES" password="->DataBase_User_ZYyKWGdscZsSbl-HrwIBPusG903QfVqp"
+			url="jdbc:oracle:thin:@san-wk-aweinste.ox.com:1522:xe" />
+	</connection-pool>
+	<managed-data-source name="jdev-connection-managed-sales_xe"
+		jndi-name="jdbc/sales_xeDS" connection-pool-name="jdev-connection-pool-sales_xe" />
+	<native-data-source name="jdev-connection-native-sales_xe"
+		jndi-name="jdbc/sales_xeCoreDS" url="jdbc:oracle:thin:@san-wk-aweinste.ox.com:1522:xe"
+		user="SALES" password="->DataBase_User_jmmJejBF53gXMD6wcY69MLxcS5FOiNvw"
+		data-source-class="oracle.jdbc.pool.OracleDataSource" />
+	<connection-pool name="jdev-connection-pool-SANDBOX">
+		<connection-factory factory-class="oracle.jdbc.pool.OracleDataSource"
+			user="sales" password="->DataBase_User_PvgnbpQXJ99AhgC3i0ODaVKfftf-y7zN"
+			url="jdbc:oracle:thin:@//san-sv-sbox.ox.com:1521/XE" />
+	</connection-pool>
+	<managed-data-source name="jdev-connection-managed-SANDBOX"
+		jndi-name="jdbc/SANDBOXDS" connection-pool-name="jdev-connection-pool-SANDBOX" />
+	<native-data-source name="jdev-connection-native-SANDBOX"
+		jndi-name="jdbc/SANDBOXCoreDS" url="jdbc:oracle:thin:@//san-sv-sbox.ox.com:1521/XE"
+		user="sales" password="->DataBase_User_wawsVdqJK7ZEqCE2EEXPS1ep-H8t-Pu7"
+		data-source-class="oracle.jdbc.pool.OracleDataSource" />
+</data-sources>

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="LeadReporterInfo" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.gridcursors.LeadReporterInfoRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.LeadReporterInfoImpl"
+	DefClass="com.bawaweb.views.gridcursors.LeadReporterInfoDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.common.LeadReporterInfo"
+	ClientProxyName="com.bawaweb.views.gridcursors.client.LeadReporterInfoClient"
+	RowInterface="com.bawaweb.views.gridcursors.common.LeadReporterInfoRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.client.LeadReporterInfoRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rprt_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+SELECT r.rprt_id, e.empl_id, e.empl_fname, e.empl_lname, t.rpty_id, NVL(t.rpty_desc, 'Unknown role') rpty_desc, r.distribution_notes FROM   rpty_reporter_types t, empl_bawaweb_employees e, rprt_report_reporter_xref r WHERE  r.rprt_id    = :rprt_id AND    e.empl_id    = r.rptr_id AND    t.rpty_id(+) = r.rpty_id AND r.rpty_id > 1 
+ORDER BY NVL(t.rpty_id, 0) DESC, e.empl_lname, e.empl_fname
+   ]]></SQLQuery>
+	<EntityUsage Name="EmplOtlEmployees" Entity="com.bawaweb.model.EmplOtlEmployees">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="RptyReporterTypes" Entity="com.bawaweb.model.RptyReporterTypes"
+		SourceUsage="com.bawaweb.views.gridcursors.LeadReporterInfo.EmplOtlEmployees"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="RprtReportReporterXref"
+		Entity="com.bawaweb.model.RprtReportReporterXref"
+		SourceUsage="com.bawaweb.views.gridcursors.LeadReporterInfo.RptyReporterTypes"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.RprtReportReporterXref.RptyId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.RptyReporterTypes.RptyId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="RprtId" IsPersistent="false"
+		IsNotNull="true" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPRT_ID" Expression="RPRT_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="10" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="EMPL_ID"
+		Expression="EMPL_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplFname" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_FNAME" Expression="EMPL_FNAME"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplLname" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_LNAME" Expression="EMPL_LNAME"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RptyId" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="RPTY_ID" Expression="RPTY_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RptyDesc" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPTY_DESC" Expression="RPTY_DESC"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="DistributionNotes" IsUpdateable="false"
+		IsPersistent="false" Precision="2000" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="DISTRIBUTION_NOTES" Expression="DISTRIBUTION_NOTES"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="2000" />
+		</DesignTime>
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="EmplId" />
+	</AttrArray>
+</ViewObject>

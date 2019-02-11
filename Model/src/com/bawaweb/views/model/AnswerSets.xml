@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="AnswerSets"
+	SelectList="OtlAnswerSets.ANS_ID, 
+       OtlAnswerSets.ANS_NAME, 
+       OtlAnswerSets.ANS_FRID_ID, 
+       OtlAnswerSets.ANS_ORDER_BY_NAME_YN, 
+       OtlAnswerSets.ANS_ADD_ANSWER_YN, 
+       OtlAnswerSets.ANS_DELETE_YN"
+	FromList="BAwaWEb_ANSWER_SETS OtlAnswerSets" Where="OtlAnswerSets.ANS_ID = :ans_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.model.AnswerSetsRowImpl" ComponentClass="com.bawaweb.views.model.AnswerSetsImpl"
+	DefClass="com.bawaweb.views.model.AnswerSetsDefImpl"
+	ComponentInterface="com.bawaweb.views.model.common.AnswerSets"
+	ClientProxyName="com.bawaweb.views.model.client.AnswerSetsClient"
+	RowInterface="com.bawaweb.views.model.common.AnswerSetsRow"
+	ClientRowProxyName="com.bawaweb.views.model.client.AnswerSetsRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="ans_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlAnswerSets" Entity="com.bawaweb.model.OtlAnswerSets">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="OtlAnswerSets.ANS_ID = :ans_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="AnsId" IsNotNull="true"
+		EntityAttrName="AnsId" EntityUsage="OtlAnswerSets" AliasName="ANS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="AnsName" IsNotNull="true"
+		EntityAttrName="AnsName" EntityUsage="OtlAnswerSets" AliasName="ANS_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="AnsFridId" EntityAttrName="AnsFridId"
+		EntityUsage="OtlAnswerSets" AliasName="ANS_FRID_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="AnsOrderByNameYn" IsNotNull="true"
+		EntityAttrName="AnsOrderByNameYn" EntityUsage="OtlAnswerSets"
+		AliasName="ANS_ORDER_BY_NAME_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="AnsAddAnswerYn" IsNotNull="true"
+		EntityAttrName="AnsAddAnswerYn" EntityUsage="OtlAnswerSets" AliasName="ANS_ADD_ANSWER_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="AnsDeleteYn" IsNotNull="true"
+		EntityAttrName="AnsDeleteYn" EntityUsage="OtlAnswerSets" AliasName="ANS_DELETE_YN">
+	</ViewAttribute>
+</ViewObject>

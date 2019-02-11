@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlRoles" DBObjectType="table" DBObjectName="BAwaWEb_ROLES"
+	AliasName="OtlRoles" BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlRolesImpl" DefClass="com.bawaweb.model.OtlRolesDefImpl"
+	CollClass="com.bawaweb.model.OtlRolesCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="RolId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="ROL_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_ROLES"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RolName" IsNotNull="true" Precision="20"
+		ColumnName="ROL_NAME" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_ROLES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RolSrcIndYn" IsNotNull="true" Precision="1"
+		ColumnName="ROL_SRC_IND_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_ROLES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RolRprtIndYn" IsNotNull="true" Precision="1"
+		ColumnName="ROL_RPRT_IND_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_ROLES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RolSrcRprtYn" IsNotNull="true" Precision="1"
+		ColumnName="ROL_SRC_RPRT_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_ROLES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RolDisplayOrder" Precision="10" Scale="0"
+		ColumnName="ROL_DISPLAY_ORDER" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_ROLES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="OtlEmplRoles"
+		Association="com.bawaweb.model.OtlEmrRolFkAssoc" AssociationEnd="com.bawaweb.model.OtlEmrRolFkAssoc.OtlEmplRoles"
+		AssociationOtherEnd="com.bawaweb.model.OtlEmrRolFkAssoc.OtlRoles"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<Key Name="OtlRolPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlRoles.RolId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_ROL_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="RolSrcIndYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlRoles.RolSrcIndYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="ROL_SRC_IND_YN IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="ROL_SRC_IND_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004818">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlRoles.RolId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;ROL_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004818" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004819">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlRoles.RolName" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;ROL_NAME&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004819" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004820">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlRoles.RolSrcIndYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;ROL_SRC_IND_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004820" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004821">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlRoles.RolRprtIndYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;ROL_RPRT_IND_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004821" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004822">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlRoles.RolSrcRprtYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;ROL_SRC_RPRT_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004822" />
+		</DesignTime>
+	</Key>
+</Entity>

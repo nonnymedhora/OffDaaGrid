@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage Name="gridcursors" SeparateXMLFiles="true"
+	PackageName="com.bawaweb.views.gridcursors">
+	<DesignTime>
+		<Attr Name="_ejbPackage" Value="false" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+	</DesignTime>
+	<Containee Name="AnsGridErrFileInfo"
+		FullName="com.bawaweb.views.gridcursors.AnsGridErrFileInfo"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="AnswerSetsInfo"
+		FullName="com.bawaweb.views.gridcursors.AnswerSetsInfo" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="EditorInfo" FullName="com.bawaweb.views.gridcursors.EditorInfo"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="EmployeeInfo" FullName="com.bawaweb.views.gridcursors.EmployeeInfo"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="LeadReporterInfo"
+		FullName="com.bawaweb.views.gridcursors.LeadReporterInfo" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="MultiAnswerSets"
+		FullName="com.bawaweb.views.gridcursors.MultiAnswerSets" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="MultiQuestionsList"
+		FullName="com.bawaweb.views.gridcursors.MultiQuestionsList"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="QuestionsList" FullName="com.bawaweb.views.gridcursors.QuestionsList"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="ReportGeneralInfo"
+		FullName="com.bawaweb.views.gridcursors.ReportGeneralInfo" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="RoleScope" FullName="com.bawaweb.views.gridcursors.RoleScope"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SingleAnswerSets"
+		FullName="com.bawaweb.views.gridcursors.SingleAnswerSets" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SortCriteriaSets"
+		FullName="com.bawaweb.views.gridcursors.SortCriteriaSets" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SourceMultiAnswerSets"
+		FullName="com.bawaweb.views.gridcursors.SourceMultiAnswerSets"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SourcesAnswerSets"
+		FullName="com.bawaweb.views.gridcursors.SourcesAnswerSets" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SourcesList" FullName="com.bawaweb.views.gridcursors.SourcesList"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SourcesMultiSingleQuestionAnswers"
+		FullName="com.bawaweb.views.gridcursors.SourcesMultiSingleQuestionAnswers"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SourcesSingleQuestionAnswers"
+		FullName="com.bawaweb.views.gridcursors.SourcesSingleQuestionAnswers"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SourcesSortingCriteriaSets"
+		FullName="com.bawaweb.views.gridcursors.SourcesSortingCriteriaSets"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="TableLocksInfo"
+		FullName="com.bawaweb.views.gridcursors.TableLocksInfo" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="TallyRangeSets"
+		FullName="com.bawaweb.views.gridcursors.TallyRangeSets" ObjectType="ViewObject">
+	</Containee>
+</JboPackage>

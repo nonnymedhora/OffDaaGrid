@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlSortingCriteria" DBObjectType="table"
+	DBObjectName="BAwaWEb_SORTING_CRITERIA" AliasName="OtlSortingCriteria"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlSortingCriteriaImpl" DefClass="com.bawaweb.model.OtlSortingCriteriaDefImpl"
+	CollClass="com.bawaweb.model.OtlSortingCriteriaCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="SrtId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SRT_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SORTING_CRITERIA"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrtName" IsNotNull="true" Precision="50"
+		ColumnName="SRT_NAME" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SORTING_CRITERIA">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrtFridId" Precision="12" Scale="0"
+		ColumnName="SRT_FRID_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_SORTING_CRITERIA">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SrtDeleteYn" IsNotNull="true" Precision="1"
+		ColumnName="SRT_DELETE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SORTING_CRITERIA">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="FridFirmIndustries"
+		Association="com.bawaweb.model.OtlSrtFridFkAssoc" AssociationEnd="com.bawaweb.model.OtlSrtFridFkAssoc.FridFirmIndustries"
+		AssociationOtherEnd="com.bawaweb.model.OtlSrtFridFkAssoc.OtlSortingCriteria"
+		Type="com.bawaweb.model.FridFirmIndustriesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlReportSortingCriteria"
+		Association="com.bawaweb.model.OtlRsoSrtFkAssoc"
+		AssociationEnd="com.bawaweb.model.OtlRsoSrtFkAssoc.OtlReportSortingCriteria"
+		AssociationOtherEnd="com.bawaweb.model.OtlRsoSrtFkAssoc.OtlSortingCriteria"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlSortingCriteriaValues"
+		Association="com.bawaweb.model.OtlScvSrtFkAssoc"
+		AssociationEnd="com.bawaweb.model.OtlScvSrtFkAssoc.OtlSortingCriteriaValues"
+		AssociationOtherEnd="com.bawaweb.model.OtlScvSrtFkAssoc.OtlSortingCriteria"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<Key Name="OtlSrtPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteria.SrtId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SRT_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005654">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteria.SrtId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRT_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005654" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005655">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteria.SrtName" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRT_NAME&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005655" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005656">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteria.SrtDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SRT_DELETE_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005656" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlSrtFridFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteria.SrtFridId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="FRID_FI_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SRT_FRID_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlTallyRangeLimits" DBObjectType="table"
+	DBObjectName="BAwaWEb_TALLY_RANGE_LIMITS" AliasName="OtlTallyRangeLimits"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlTallyRangeLimitsImpl" DefClass="com.bawaweb.model.OtlTallyRangeLimitsDefImpl"
+	CollClass="com.bawaweb.model.OtlTallyRangeLimitsCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="TrlId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="TRL_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_TALLY_RANGE_LIMITS"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="TrlTlyId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="TRL_TLY_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_TALLY_RANGE_LIMITS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="TrlFrom" Precision="20" ColumnName="TRL_FROM"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_TALLY_RANGE_LIMITS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="TrlTo" Precision="20" ColumnName="TRL_TO"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_TALLY_RANGE_LIMITS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="TrlDisplaySeq" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="TRL_DISPLAY_SEQ" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_TALLY_RANGE_LIMITS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="TrlType" IsNotNull="true" Precision="6"
+		ColumnName="TRL_TYPE" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_TALLY_RANGE_LIMITS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="6" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="TrlDeleteYn" IsNotNull="true" Precision="1"
+		ColumnName="TRL_DELETE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_TALLY_RANGE_LIMITS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="OtlTallyRanges"
+		Association="com.bawaweb.model.OtlTrlTlyFkAssoc" AssociationEnd="com.bawaweb.model.OtlTrlTlyFkAssoc.OtlTallyRanges"
+		AssociationOtherEnd="com.bawaweb.model.OtlTrlTlyFkAssoc.OtlTallyRangeLimits"
+		Type="com.bawaweb.model.OtlTallyRangesImpl">
+	</AccessorAttribute>
+	<Key Name="OtlTrlDeleteYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlTallyRangeLimits.TrlDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="trl_delete_yn IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_TRL_DELETE_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlTrlPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlTallyRangeLimits.TrlId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_TRL_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlTrlTypeChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlTallyRangeLimits.TrlType" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="trl_type IN (&#39;NUMBER&#39;, &#39;TEXT&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_TRL_TYPE_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC007613">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlTallyRangeLimits.TrlId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;TRL_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C007613" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC007614">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlTallyRangeLimits.TrlTlyId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;TRL_TLY_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C007614" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC007615">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlTallyRangeLimits.TrlDisplaySeq" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;TRL_DISPLAY_SEQ&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C007615" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC007616">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlTallyRangeLimits.TrlType" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;TRL_TYPE&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C007616" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC007617">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlTallyRangeLimits.TrlDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;TRL_DELETE_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C007617" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlTrlTlyFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlTallyRangeLimits.TrlTlyId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_TLY_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_isDisabledConstraint" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_TRL_TLY_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

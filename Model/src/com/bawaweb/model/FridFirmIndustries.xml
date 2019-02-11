@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="FridFirmIndustries" DBObjectType="table"
+	DBObjectName="FRID_FIRM_INDUSTRIES" AliasName="FridFirmIndustries"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.FridFirmIndustriesImpl" DefClass="com.bawaweb.model.FridFirmIndustriesDefImpl"
+	CollClass="com.bawaweb.model.FridFirmIndustriesCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="FridId" IsNotNull="true" Precision="10"
+		Scale="0" ColumnName="FRID_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="FRID_FIRM_INDUSTRIES"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="FridDescription" Precision="100"
+		ColumnName="FRID_DESCRIPTION" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="FRID_FIRM_INDUSTRIES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="FridPropCapacity" Precision="200"
+		ColumnName="FRID_PROP_CAPACITY" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="FRID_FIRM_INDUSTRIES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="200" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="OtlAnswerSets"
+		Association="com.bawaweb.model.AnsFridFkAssoc" AssociationEnd="com.bawaweb.model.AnsFridFkAssoc.OtlAnswerSets"
+		AssociationOtherEnd="com.bawaweb.model.AnsFridFkAssoc.FridFirmIndustries"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlReportAnswerSets"
+		Association="com.bawaweb.model.OtlRasFridFkAssoc" AssociationEnd="com.bawaweb.model.OtlRasFridFkAssoc.OtlReportAnswerSets"
+		AssociationOtherEnd="com.bawaweb.model.OtlRasFridFkAssoc.FridFirmIndustries"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlSortingCriteria"
+		Association="com.bawaweb.model.OtlSrtFridFkAssoc" AssociationEnd="com.bawaweb.model.OtlSrtFridFkAssoc.OtlSortingCriteria"
+		AssociationOtherEnd="com.bawaweb.model.OtlSrtFridFkAssoc.FridFirmIndustries"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="PanPanel"
+		Association="com.bawaweb.model.PanFridFkAssoc" AssociationEnd="com.bawaweb.model.PanFridFkAssoc.PanPanel"
+		AssociationOtherEnd="com.bawaweb.model.PanFridFkAssoc.FridFirmIndustries"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="RprtReports"
+		Association="com.bawaweb.model.RprtFridFiFkAssoc" AssociationEnd="com.bawaweb.model.RprtFridFiFkAssoc.RprtReports"
+		AssociationOtherEnd="com.bawaweb.model.RprtFridFiFkAssoc.FridFirmIndustries"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<Key Name="FridFiPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.FridFirmIndustries.FridId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="FRID_FI_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004867">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.FridFirmIndustries.FridId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;FRID_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004867" />
+		</DesignTime>
+	</Key>
+</Entity>

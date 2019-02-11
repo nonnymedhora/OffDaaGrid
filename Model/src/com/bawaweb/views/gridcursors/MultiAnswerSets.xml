@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="MultiAnswerSets" OrderBy="rav_display_seq"
+	BindingStyle="OracleName" CustomQuery="true"
+	RowClass="com.bawaweb.views.gridcursors.MultiAnswerSetsRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.MultiAnswerSetsImpl"
+	DefClass="com.bawaweb.views.gridcursors.MultiAnswerSetsDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.common.MultiAnswerSets"
+	ClientProxyName="com.bawaweb.views.gridcursors.client.MultiAnswerSetsClient"
+	RowInterface="com.bawaweb.views.gridcursors.common.MultiAnswerSetsRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.client.MultiAnswerSetsRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="qst_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+--SELECT rav.rav_id,
+--rav.rav_ras_id,
+--rav.rav_answer,
+--rav.rav_display_seq,
+--rav.rav_asv_id,
+--rav.rav_delete_yn
+--FROM bawaweb_report_answer_set_values rav
+--WHERE rav.rav_ras_id IN (SELECT qmq_ras_id
+--FROM bawaweb_multi_questions
+--WHERE qmq_qst_id = :qst_id)
+
+SELECT 
+    rav.rav_id,
+    rav.rav_ras_id,
+    rav.rav_answer,
+    rav.rav_display_seq,
+    rav.rav_asv_id,
+    rav.rav_delete_yn,
+    ans.ans_id
+FROM 
+    bawaweb_report_answer_set_values rav, 
+    bawaweb_answer_sets ans, 
+    bawaweb_report_answer_sets ras
+WHERE 
+    rav.rav_ras_id IN (
+        SELECT qmq_ras_id
+        FROM bawaweb_multi_questions
+        WHERE qmq_qst_id = :qst_id
+) and rav.rav_ras_id = ras.ras_id
+and ans.ans_id = ras.ras_ans_id
+   ]]></SQLQuery>
+	<EntityUsage Name="OtlMultiQuestions" Entity="com.bawaweb.model.OtlMultiQuestions">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlReportAnswerSetValues"
+		Entity="com.bawaweb.model.OtlReportAnswerSetValues"
+		SourceUsage="com.bawaweb.views.gridcursors.MultiAnswerSets.OtlMultiQuestions"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlAnswerSets" Entity="com.bawaweb.model.OtlAnswerSets"
+		Association="com.bawaweb.model.RasAnsFkAssoc" AssociationEnd="com.bawaweb.model.RasAnsFkAssoc.OtlAnswerSets"
+		SourceUsage="com.bawaweb.views.gridcursors.MultiAnswerSets.OtlReportAnswerSets"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlAnswerSets.AnsId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasAnsId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlReportAnswerSets" Entity="com.bawaweb.model.OtlReportAnswerSets"
+		Association="com.bawaweb.model.RavRasFkAssoc" AssociationEnd="com.bawaweb.model.RavRasFkAssoc.OtlReportAnswerSets"
+		SourceUsage="com.bawaweb.views.gridcursors.MultiAnswerSets.OtlReportAnswerSetValues"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.OtlReportAnswerSetValues.RavRasId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="RavId" IsPersistent="false"
+		IsNotNull="true" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RAV_ID" Expression="RAV_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RavRasId" IsPersistent="false"
+		IsNotNull="true" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RAV_RAS_ID" Expression="RAV_RAS_ID"
+		SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RavAnswer" IsPersistent="false"
+		IsNotNull="true" Precision="100" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="RAV_ANSWER" Expression="RAV_ANSWER" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RavDisplaySeq" IsPersistent="false"
+		IsNotNull="true" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RAV_DISPLAY_SEQ" Expression="RAV_DISPLAY_SEQ"
+		SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RavAsvId" IsPersistent="false"
+		IsNotNull="true" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RAV_ASV_ID" Expression="RAV_ASV_ID"
+		SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RavDeleteYn" IsPersistent="false"
+		IsNotNull="true" Precision="1" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="RAV_DELETE_YN" Expression="RAV_DELETE_YN" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="AnsId" IsPersistent="false"
+		IsNotNull="true" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="ANS_ID" Expression="ANS_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="AsvId" />
+		<Item Value="AsvAnsId" />
+	</AttrArray>
+</ViewObject>

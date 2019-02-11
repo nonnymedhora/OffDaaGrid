@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlMultiQuestions" DBObjectType="table"
+	DBObjectName="BAwaWEb_MULTI_QUESTIONS" AliasName="OtlMultiQuestions"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlMultiQuestionsImpl" DefClass="com.bawaweb.model.OtlMultiQuestionsDefImpl"
+	CollClass="com.bawaweb.model.OtlMultiQuestionsCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="QmqId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="QMQ_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_MULTI_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QmqQstId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="QMQ_QST_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_MULTI_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QmqNumber" Precision="4" ColumnName="QMQ_NUMBER"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_MULTI_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="4" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QmqType" IsNotNull="true" Precision="20"
+		ColumnName="QMQ_TYPE" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_MULTI_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QmqHint" Precision="100" ColumnName="QMQ_HINT"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_MULTI_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QmqAnsId" Precision="12" Scale="0"
+		ColumnName="QMQ_ANS_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_MULTI_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QmqTlyId" Precision="12" Scale="0"
+		ColumnName="QMQ_TLY_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_MULTI_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QmqPointSpread" Precision="12" Scale="3"
+		ColumnName="QMQ_POINT_SPREAD" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_MULTI_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QmqRasId" Precision="12" Scale="0"
+		ColumnName="QMQ_RAS_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_MULTI_QUESTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RowID" IsUpdateable="false" ColumnName="ROWID"
+		Type="oracle.jbo.domain.RowID" ColumnType="ROWID" SQLType="ROWID"
+		TableName="BAwaWEb_MULTI_QUESTIONS" PrimaryKey="true">
+	</Attribute>
+	<Key Name="SysC005134">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlMultiQuestions.QmqId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;QMQ_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005134" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005135">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlMultiQuestions.QmqQstId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;QMQ_QST_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005135" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005136">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlMultiQuestions.QmqType" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;QMQ_TYPE&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005136" />
+		</DesignTime>
+	</Key>
+</Entity>

@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<orion-application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/orion-application-10_0.xsd">
+	<web-module id="PlatformBAwaWEb-ViewController-webapp"
+		path="file:/C:/jdevstudio10132/jdev/mywork/PlatformBAwaWEb/ViewController/public_html/" />
+	<jazn provider="XML" location="PlatformBAwaWEb-jazn-data.xml"
+		default-realm="jazn.com" />
+	<data-sources path="PlatformBAwaWEb-data-sources.xml" />
+</orion-application>

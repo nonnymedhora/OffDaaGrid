@@ -1,0 +1,434 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="SourcesList" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.gridcursors.SourcesListRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.SourcesListImpl"
+	DefClass="com.bawaweb.views.gridcursors.SourcesListDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.common.SourcesList"
+	ClientProxyName="com.bawaweb.views.gridcursors.client.SourcesListClient"
+	RowInterface="com.bawaweb.views.gridcursors.common.SourcesListRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.client.SourcesListRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rprt_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<Variable Name="rprtr_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+SELECT DISTINCT src.src_id, rps.rps_id, src.src_last_name, src.src_first_name, src.src_courtesy_title, src.src_job_title,
+                src.src_job_description, src.src_company, src.src_address1, src.src_address2, src.src_address3, src.src_city,
+                src.src_state, src.src_zip, src.src_ctry_id, src.src_tmz_id, src.src_email, src.src_phone, src.src_phone_ext,
+                src.src_cell_phone, src.src_fax, src.src_status, src.src_exclusive_source_yn, src.src_dont_contact_yn,
+                src.src_company_type, src.src_area_of_expertise, src.src_industry_sector, src.src_industry_view, src.src_vendors,
+                src.src_company_size, src.src_distribution_preference, src.src_distribution_notes, src.src_special_requests,
+                src.src_reporters_notes, src.src_quality_rating, src.src_modified_date, src.src_modified_by, src.src_suffix_title,
+                rprt.rprt_source_display_field, rps.rps_rptr_id, rps.rps_repeat_source_yn, emp.empl_init,
+                src.src_offered_report, src.src_informed_of_website                
+           FROM rprt_reports rprt, bawaweb_sources src, empl_bawaweb_employees emp, bawaweb_report_sources rps
+          WHERE emp.empl_id = rps.rps_rptr_id
+            AND rps.rps_rptr_id = :rprtr_id
+            AND rprt.rprt_id = :rprt_id
+            AND src.src_id = rps.rps_src_id
+            AND rps.rps_delete_yn = 'N'
+            AND rps.rps_comped_yn = 'N'
+            AND rprt.rprt_id = rps.rps_rprt_id
+   ]]></SQLQuery>
+	<EntityUsage Name="OtlSources" Entity="com.bawaweb.model.OtlSources">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="RprtReports" Entity="com.bawaweb.model.RprtReports"
+		SourceUsage="com.bawaweb.views.gridcursors.SourcesList.OtlSources"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlReportSources" Entity="com.bawaweb.model.OtlReportSources"
+		Association="com.bawaweb.model.RpsSrcFkAssoc" AssociationEnd="com.bawaweb.model.RpsSrcFkAssoc.OtlReportSources"
+		SourceUsage="com.bawaweb.views.gridcursors.SourcesList.OtlSources"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlReportSources.RpsSrcId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.OtlSources.SrcId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="EmplOtlEmployees" Entity="com.bawaweb.model.EmplOtlEmployees"
+		Association="com.bawaweb.model.RprtEmplEdtrFkAssoc" AssociationEnd="com.bawaweb.model.RprtEmplEdtrFkAssoc.EmplOtlEmployees"
+		SourceUsage="com.bawaweb.views.gridcursors.SourcesList.RprtReports"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.EmplOtlEmployees.EmplId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.RprtReports.EdtrId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="SrcId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="SRC_ID"
+		Expression="SRC_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RpsId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="RPS_ID"
+		Expression="RPS_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcLastName" IsUpdateable="false"
+		IsPersistent="false" Precision="30" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_LAST_NAME" Expression="SRC_LAST_NAME"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcFirstName" IsUpdateable="false"
+		IsPersistent="false" Precision="30" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_FIRST_NAME" Expression="SRC_FIRST_NAME"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCourtesyTitle" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_COURTESY_TITLE" Expression="SRC_COURTESY_TITLE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcJobTitle" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_JOB_TITLE" Expression="SRC_JOB_TITLE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcJobDescription" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_JOB_DESCRIPTION" Expression="SRC_JOB_DESCRIPTION"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCompany" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_COMPANY" Expression="SRC_COMPANY"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAddress1" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_ADDRESS1" Expression="SRC_ADDRESS1"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAddress2" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_ADDRESS2" Expression="SRC_ADDRESS2"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAddress3" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_ADDRESS3" Expression="SRC_ADDRESS3"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCity" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="50" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_CITY" Expression="SRC_CITY"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcState" IsUpdateable="false"
+		IsPersistent="false" Precision="50" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_STATE" Expression="SRC_STATE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcZip" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_ZIP" Expression="SRC_ZIP"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCtryId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="SRC_CTRY_ID"
+		Expression="SRC_CTRY_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcTmzId" IsUpdateable="false"
+		IsPersistent="false" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="SRC_TMZ_ID" Expression="SRC_TMZ_ID"
+		SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcEmail" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_EMAIL" Expression="SRC_EMAIL"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcPhone" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="25" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_PHONE" Expression="SRC_PHONE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcPhoneExt" IsUpdateable="false"
+		IsPersistent="false" Precision="25" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_PHONE_EXT" Expression="SRC_PHONE_EXT"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCellPhone" IsUpdateable="false"
+		IsPersistent="false" Precision="25" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_CELL_PHONE" Expression="SRC_CELL_PHONE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcFax" IsUpdateable="false"
+		IsPersistent="false" Precision="25" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_FAX" Expression="SRC_FAX"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcStatus" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="9" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_STATUS" Expression="SRC_STATUS"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="9" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcExclusiveSourceYn" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="1" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_EXCLUSIVE_SOURCE_YN" Expression="SRC_EXCLUSIVE_SOURCE_YN"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcDontContactYn" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="1" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_DONT_CONTACT_YN" Expression="SRC_DONT_CONTACT_YN"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCompanyType" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_COMPANY_TYPE" Expression="SRC_COMPANY_TYPE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAreaOfExpertise" IsUpdateable="false"
+		IsPersistent="false" Precision="500" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_AREA_OF_EXPERTISE" Expression="SRC_AREA_OF_EXPERTISE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcIndustrySector" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_INDUSTRY_SECTOR" Expression="SRC_INDUSTRY_SECTOR"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcIndustryView" IsUpdateable="false"
+		IsPersistent="false" Precision="13" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_INDUSTRY_VIEW" Expression="SRC_INDUSTRY_VIEW"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="13" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcVendors" IsUpdateable="false"
+		IsPersistent="false" Precision="500" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_VENDORS" Expression="SRC_VENDORS"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCompanySize" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_COMPANY_SIZE" Expression="SRC_COMPANY_SIZE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcDistributionPreference"
+		IsUpdateable="false" IsPersistent="false" Precision="15" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_DISTRIBUTION_PREFERENCE"
+		Expression="SRC_DISTRIBUTION_PREFERENCE" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="15" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcDistributionNotes" IsUpdateable="false"
+		IsPersistent="false" Precision="500" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_DISTRIBUTION_NOTES" Expression="SRC_DISTRIBUTION_NOTES"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcSpecialRequests" IsUpdateable="false"
+		IsPersistent="false" Precision="500" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_SPECIAL_REQUESTS" Expression="SRC_SPECIAL_REQUESTS"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcReportersNotes" IsUpdateable="false"
+		IsPersistent="false" Precision="500" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_REPORTERS_NOTES" Expression="SRC_REPORTERS_NOTES"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcQualityRating" IsUpdateable="false"
+		IsPersistent="false" Precision="9" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="SRC_QUALITY_RATING" Expression="SRC_QUALITY_RATING"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="9" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcModifiedDate" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Date" ColumnType="DATE"
+		AliasName="SRC_MODIFIED_DATE" Expression="SRC_MODIFIED_DATE" SQLType="DATE">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcModifiedBy" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="30" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_MODIFIED_BY" Expression="SRC_MODIFIED_BY"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcSuffixTitle" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_SUFFIX_TITLE" Expression="SRC_SUFFIX_TITLE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RprtSourceDisplayField"
+		IsUpdateable="false" IsPersistent="false" Precision="10" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="RPRT_SOURCE_DISPLAY_FIELD"
+		Expression="RPRT_SOURCE_DISPLAY_FIELD" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="10" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RpsRptrId" IsUpdateable="false"
+		IsPersistent="false" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="RPS_RPTR_ID" Expression="RPS_RPTR_ID"
+		SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RpsRepeatSourceYn" IsUpdateable="false"
+		IsPersistent="false" Precision="1" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="RPS_REPEAT_SOURCE_YN" Expression="RPS_REPEAT_SOURCE_YN"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplInit" IsUpdateable="false"
+		IsPersistent="false" Precision="3" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_INIT" Expression="EMPL_INIT" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="3" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcOfferedReport" IsPersistent="false"
+		Precision="1" Type="java.lang.String" ColumnType="VARCHAR2" AliasName="SRC_OFFERED_REPORT"
+		Expression="SRC_OFFERED_REPORT" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcInformedOfWebsite" IsPersistent="false"
+		Precision="1" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="SRC_INFORMED_OF_WEBSITE" Expression="SRC_INFORMED_OF_WEBSITE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="SrcId" />
+	</AttrArray>
+</ViewObject>

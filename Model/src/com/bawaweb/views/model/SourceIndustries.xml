@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="SourceIndustries"
+	SelectList="OtlSourceIndustries.SCI_SRC_ID, 
+       OtlSourceIndustries.SCI_FRID_ID, 
+       OtlSourceIndustries.SCI_DELETE_YN"
+	FromList="BAwaWEb_SOURCE_INDUSTRIES OtlSourceIndustries" Where="OtlSourceIndustries.SCI_SRC_ID = :src_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.model.SourceIndustriesRowImpl"
+	ComponentClass="com.bawaweb.views.model.SourceIndustriesImpl" DefClass="com.bawaweb.views.model.SourceIndustriesDefImpl"
+	ComponentInterface="com.bawaweb.views.model.common.SourceIndustries"
+	ClientProxyName="com.bawaweb.views.model.client.SourceIndustriesClient"
+	RowInterface="com.bawaweb.views.model.common.SourceIndustriesRow"
+	ClientRowProxyName="com.bawaweb.views.model.client.SourceIndustriesRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="src_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlSourceIndustries" Entity="com.bawaweb.model.OtlSourceIndustries">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="OtlSourceIndustries.SCI_SRC_ID = :src_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="SciSrcId" IsNotNull="true"
+		EntityAttrName="SciSrcId" EntityUsage="OtlSourceIndustries" AliasName="SCI_SRC_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SciFridId" IsNotNull="true"
+		EntityAttrName="SciFridId" EntityUsage="OtlSourceIndustries"
+		AliasName="SCI_FRID_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SciDeleteYn" EntityAttrName="SciDeleteYn"
+		EntityUsage="OtlSourceIndustries" AliasName="SCI_DELETE_YN">
+	</ViewAttribute>
+</ViewObject>

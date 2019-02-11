@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="SourcesAnswerSetsView" DBObjectType="view"
+	DBObjectName="SOURCES_ANSWER_SETS_VIEW" AliasName="SourcesAnswerSetsView"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.viewobjects.SourcesAnswerSetsViewImpl"
+	DefClass="com.bawaweb.model.viewobjects.SourcesAnswerSetsViewDefImpl"
+	CollClass="com.bawaweb.model.viewobjects.SourcesAnswerSetsViewCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_panelSchema" Value="view" />
+		<Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Def|Coll|Val|VarAccess" />
+	</DesignTime>
+	<Attribute Name="RavId" Precision="12" Scale="0" ColumnName="RAV_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="SOURCES_ANSWER_SETS_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SRA_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="SOURCES_ANSWER_SETS_VIEW"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstType" IsNotNull="true" Precision="20"
+		ColumnName="QST_TYPE" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_ANSWER_SETS_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="Answer" Precision="1900" ColumnName="ANSWER"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_ANSWER_SETS_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1900" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraAnswerText" Precision="1900" ColumnName="SRA_ANSWER_TEXT"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_ANSWER_SETS_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1900" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraColor" Precision="100" ColumnName="SRA_COLOR"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_ANSWER_SETS_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraComment" Precision="1900" ColumnName="SRA_COMMENT"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_ANSWER_SETS_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1900" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraRpsId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SRA_RPS_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="SOURCES_ANSWER_SETS_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraQstId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SRA_QST_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="SOURCES_ANSWER_SETS_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RavAsvId" Precision="12" Scale="0"
+		ColumnName="RAV_ASV_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="SOURCES_ANSWER_SETS_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraExcludeYn" IsNotNull="true" Precision="1"
+		ColumnName="SRA_EXCLUDE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="SOURCES_ANSWER_SETS_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RavDisplaySeq" Precision="12" Scale="0"
+		ColumnName="RAV_DISPLAY_SEQ" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="SOURCES_ANSWER_SETS_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RavDeleteYn" Precision="1" ColumnName="RAV_DELETE_YN"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="SOURCES_ANSWER_SETS_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SraWeightMultiplier" Precision="12" Scale="3"
+		ColumnName="SRA_WEIGHT_MULTIPLIER" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="SOURCES_ANSWER_SETS_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="RPRT_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="SOURCES_ANSWER_SETS_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Key Name="SourcesanswersetsviewPrimaryKey">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.viewobjects.SourcesAnswerSetsView.SraId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="SOURCESANSWERSETSVIEW_PRIMARY_" />
+		</DesignTime>
+	</Key>
+</Entity>

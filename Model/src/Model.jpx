@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+
+<JboProject
+   Name="Model"
+   SeparateXMLFiles="true"
+   PackageName="" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_NamedConnection" Value="SALESDEV" />
+      <Attr Name="_version" Value="10.1.3.40.66" />
+      <Attr Name="_jprName" Value="../Model.jpr" />
+      <Attr Name="_appModuleNames0" Value="com.bawaweb.appmodule.PlatformAppModule" />
+   </DesignTime>
+   <Containee
+      Name="appmodule"
+      FullName="com.bawaweb.appmodule.appmodule"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="model"
+      FullName="com.bawaweb.model.model"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="viewobjects"
+      FullName="com.bawaweb.model.viewobjects.viewobjects"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="gridcursors"
+      FullName="com.bawaweb.views.gridcursors.gridcursors"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="views"
+      FullName="com.bawaweb.views.gridcursors.views.views"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="identify"
+      FullName="com.bawaweb.views.identify.identify"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="model"
+      FullName="com.bawaweb.views.model.model"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="readable"
+      FullName="com.bawaweb.views.readable.readable"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="updatable"
+      FullName="com.bawaweb.views.updatable.updatable"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="utils"
+      FullName="com.bawaweb.views.utils.utils"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="views"
+      FullName="com.bawaweb.views.views"
+      ObjectType="JboPackage" >
+   </Containee>
+</JboProject>

@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="QuestionListView" DBObjectType="view" DBObjectName="QUESTION_LIST_VIEW"
+	AliasName="QuestionListView" BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.viewobjects.QuestionListViewImpl" DefClass="com.bawaweb.model.viewobjects.QuestionListViewDefImpl"
+	CollClass="com.bawaweb.model.viewobjects.QuestionListViewCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_panelSchema" Value="view" />
+		<Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Def|Coll|Val|VarAccess" />
+	</DesignTime>
+	<Attribute Name="QstId" ColumnName="QST_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="QUESTION_LIST_VIEW"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstNumber" Precision="41" ColumnName="QST_NUMBER"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="41" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="OrderBy1" ColumnName="ORDER_BY"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="NumericPart" ColumnName="NUMERIC_PART"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="AlphaPart" Precision="4000" ColumnName="ALPHA_PART"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="4000" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstQuestion" Precision="500" ColumnName="QST_QUESTION"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstType" Precision="20" ColumnName="QST_TYPE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstMultiAnswers" ColumnName="QST_MULTI_ANSWERS"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstQuestionHint" Precision="100"
+		ColumnName="QST_QUESTION_HINT" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstTextRequiredYn" Precision="1"
+		ColumnName="QST_TEXT_REQUIRED_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstTextHint" Precision="100" ColumnName="QST_TEXT_HINT"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstRasId" ColumnName="QST_RAS_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RasFridId" ColumnName="RAS_FRID_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstTlyId" ColumnName="QST_TLY_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="NumCols" ColumnName="NUM_COLS"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="QstAnsId" ColumnName="QST_ANS_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RprtId" ColumnName="RPRT_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="QUESTION_LIST_VIEW">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Key Name="QuestionlistviewPrimaryKey">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.viewobjects.QuestionListView.QstId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="QUESTIONLISTVIEW_PRIMARY_KEY" />
+		</DesignTime>
+	</Key>
+</Entity>

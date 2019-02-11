@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="SourcesSortingCriteriaSets" BindingStyle="OracleName"
+	CustomQuery="true"
+	RowClass="com.bawaweb.views.gridcursors.SourcesSortingCriteriaSetsRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.SourcesSortingCriteriaSetsImpl"
+	DefClass="com.bawaweb.views.gridcursors.SourcesSortingCriteriaSetsDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.common.SourcesSortingCriteriaSets"
+	ClientProxyName="com.bawaweb.views.gridcursors.client.SourcesSortingCriteriaSetsClient"
+	RowInterface="com.bawaweb.views.gridcursors.common.SourcesSortingCriteriaSetsRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.client.SourcesSortingCriteriaSetsRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rprt_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<Variable Name="qst_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+SELECT scv.scv_id, ssc_rps_id, scv.scv_name, ( scv.scv_srt_id * (-1) ) qst_id 
+FROM   bawaweb_sorting_criteria_values scv,  
+    bawaweb_source_sorting_criteria ssc 
+WHERE  ssc.ssc_rps_id in 
+(
+select distinct rps.rps_id
+ from rprt_reports rprt, bawaweb_sources src, empl_bawaweb_employees emp, bawaweb_report_sources rps 
+  where emp.empl_id =  rps.rps_rptr_id
+  and rprt.rprt_id = :rprt_id
+  and src.src_id = rps.rps_src_id 
+  and rps.rps_delete_yn = 'N' 
+  and rps.rps_comped_yn = 'N'     
+  and rprt.rprt_id = rps.rps_rprt_id
+
+) 
+AND    scv.scv_id = ssc.ssc_scv_id
+AND    scv.scv_srt_id = ((-1) * :qst_id)
+   ]]></SQLQuery>
+	<EntityUsage Name="OtlSortingCriteriaValues"
+		Entity="com.bawaweb.model.OtlSortingCriteriaValues">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlSourceSortingCriteria"
+		Entity="com.bawaweb.model.OtlSourceSortingCriteria" Association="com.bawaweb.model.OtlSscScvFkAssoc"
+		AssociationEnd="com.bawaweb.model.OtlSscScvFkAssoc.OtlSourceSortingCriteria"
+		SourceUsage="com.bawaweb.views.gridcursors.SourcesSortingCriteriaSets.OtlSortingCriteriaValues"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlSourceSortingCriteria.SscScvId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.OtlSortingCriteriaValues.ScvId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="RprtReports" Entity="com.bawaweb.model.RprtReports"
+		SourceUsage="com.bawaweb.views.gridcursors.SourcesSortingCriteriaSets.OtlSourceSortingCriteria"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlSources" Entity="com.bawaweb.model.OtlSources"
+		SourceUsage="com.bawaweb.views.gridcursors.SourcesSortingCriteriaSets.RprtReports"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="EmplOtlEmployees" Entity="com.bawaweb.model.EmplOtlEmployees"
+		Association="com.bawaweb.model.RprtEmplEdtrFkAssoc" AssociationEnd="com.bawaweb.model.RprtEmplEdtrFkAssoc.EmplOtlEmployees"
+		SourceUsage="com.bawaweb.views.gridcursors.SourcesSortingCriteriaSets.RprtReports"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.EmplOtlEmployees.EmplId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.RprtReports.EdtrId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlReportSources" Entity="com.bawaweb.model.OtlReportSources"
+		Association="com.bawaweb.model.RpsRprtFkAssoc" AssociationEnd="com.bawaweb.model.RpsRprtFkAssoc.OtlReportSources"
+		SourceUsage="com.bawaweb.views.gridcursors.SourcesSortingCriteriaSets.OtlSortingCriteriaValues"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlReportSources.RpsRprtId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.RprtReports.RprtId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtrTabLocks" Entity="com.bawaweb.model.OtrTabLocks"
+		SourceUsage="com.bawaweb.views.gridcursors.SourcesSortingCriteriaSets.OtlReportSources"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="ScvId" IsPersistent="false"
+		IsNotNull="true" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="SCV_ID" Expression="SCV_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SscRpsId" IsPersistent="false"
+		IsNotNull="true" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="SSC_RPS_ID" Expression="SSC_RPS_ID"
+		SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="ScvName" IsPersistent="false"
+		IsNotNull="true" Precision="50" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="SCV_NAME" Expression="SCV_NAME" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="QstId" IsPersistent="false"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="QST_ID"
+		Expression="QST_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="SscRpsId" />
+	</AttrArray>
+</ViewObject>

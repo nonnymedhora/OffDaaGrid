@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlSourceSortingCriteriaUView"
+	SelectList="OtlSourceSortingCriteria.SSC_RPS_ID, 
+       OtlSourceSortingCriteria.SSC_SCV_ID"
+	FromList="BAwaWEb_SOURCE_SORTING_CRITERIA OtlSourceSortingCriteria"
+	Where="OtlSourceSortingCriteria.SSC_RPS_ID = :ssc_rps_id" BindingStyle="OracleName"
+	CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.OtlSourceSortingCriteriaUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.OtlSourceSortingCriteriaUViewImpl"
+	DefClass="com.bawaweb.views.updatable.OtlSourceSortingCriteriaUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.OtlSourceSortingCriteriaUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.OtlSourceSortingCriteriaUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.OtlSourceSortingCriteriaUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.OtlSourceSortingCriteriaUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="ssc_rps_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlSourceSortingCriteria"
+		Entity="com.bawaweb.model.OtlSourceSortingCriteria">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="OtlSourceSortingCriteria.SSC_RPS_ID = :ssc_rps_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="SscRpsId" IsNotNull="true"
+		EntityAttrName="SscRpsId" EntityUsage="OtlSourceSortingCriteria"
+		AliasName="SSC_RPS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SscScvId" IsNotNull="true"
+		EntityAttrName="SscScvId" EntityUsage="OtlSourceSortingCriteria"
+		AliasName="SSC_SCV_ID">
+	</ViewAttribute>
+</ViewObject>

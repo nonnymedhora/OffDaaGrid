@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="QuestionsListView"
+	SelectList="QuestionListView.QST_ID, 
+       QuestionListView.QST_NUMBER, 
+       QuestionListView.ORDER_BY, 
+       QuestionListView.NUMERIC_PART, 
+       QuestionListView.ALPHA_PART, 
+       QuestionListView.QST_QUESTION, 
+       QuestionListView.QST_TYPE, 
+       QuestionListView.QST_MULTI_ANSWERS, 
+       QuestionListView.QST_QUESTION_HINT, 
+       QuestionListView.QST_TEXT_REQUIRED_YN, 
+       QuestionListView.QST_TEXT_HINT, 
+       QuestionListView.QST_RAS_ID, 
+       QuestionListView.RAS_FRID_ID, 
+       QuestionListView.QST_TLY_ID, 
+       QuestionListView.NUM_COLS, 
+       QuestionListView.QST_ANS_ID, 
+       QuestionListView.RPRT_ID"
+	FromList="QUESTION_LIST_VIEW QuestionListView" Where="QuestionListView.RPRT_ID = :rprt_id"
+	OrderBy="3,4,5" BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.gridcursors.views.QuestionsListViewRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.views.QuestionsListViewImpl"
+	DefClass="com.bawaweb.views.gridcursors.views.QuestionsListViewDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.views.common.QuestionsListView"
+	ClientProxyName="com.bawaweb.views.gridcursors.views.client.QuestionsListViewClient"
+	RowInterface="com.bawaweb.views.gridcursors.views.common.QuestionsListViewRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.views.client.QuestionsListViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rprt_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="QuestionListView"
+		Entity="com.bawaweb.model.viewobjects.QuestionListView">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryOrderBy" Value="3,4,5" />
+			<Attr Name="_queryWhere" Value="QuestionListView.RPRT_ID = :rprt_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="QstId" EntityAttrName="QstId"
+		EntityUsage="QuestionListView" AliasName="QST_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QstNumber" EntityAttrName="QstNumber"
+		EntityUsage="QuestionListView" AliasName="QST_NUMBER">
+	</ViewAttribute>
+	<ViewAttribute Name="OrderBy1" EntityAttrName="OrderBy1"
+		EntityUsage="QuestionListView" AliasName="ORDER_BY">
+	</ViewAttribute>
+	<ViewAttribute Name="NumericPart" EntityAttrName="NumericPart"
+		EntityUsage="QuestionListView" AliasName="NUMERIC_PART">
+	</ViewAttribute>
+	<ViewAttribute Name="AlphaPart" EntityAttrName="AlphaPart"
+		EntityUsage="QuestionListView" AliasName="ALPHA_PART">
+	</ViewAttribute>
+	<ViewAttribute Name="QstQuestion" EntityAttrName="QstQuestion"
+		EntityUsage="QuestionListView" AliasName="QST_QUESTION">
+	</ViewAttribute>
+	<ViewAttribute Name="QstType" EntityAttrName="QstType"
+		EntityUsage="QuestionListView" AliasName="QST_TYPE">
+	</ViewAttribute>
+	<ViewAttribute Name="QstMultiAnswers" EntityAttrName="QstMultiAnswers"
+		EntityUsage="QuestionListView" AliasName="QST_MULTI_ANSWERS">
+	</ViewAttribute>
+	<ViewAttribute Name="QstQuestionHint" EntityAttrName="QstQuestionHint"
+		EntityUsage="QuestionListView" AliasName="QST_QUESTION_HINT">
+	</ViewAttribute>
+	<ViewAttribute Name="QstTextRequiredYn" EntityAttrName="QstTextRequiredYn"
+		EntityUsage="QuestionListView" AliasName="QST_TEXT_REQUIRED_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="QstTextHint" EntityAttrName="QstTextHint"
+		EntityUsage="QuestionListView" AliasName="QST_TEXT_HINT">
+	</ViewAttribute>
+	<ViewAttribute Name="QstRasId" EntityAttrName="QstRasId"
+		EntityUsage="QuestionListView" AliasName="QST_RAS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RasFridId" EntityAttrName="RasFridId"
+		EntityUsage="QuestionListView" AliasName="RAS_FRID_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QstTlyId" EntityAttrName="QstTlyId"
+		EntityUsage="QuestionListView" AliasName="QST_TLY_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="NumCols" EntityAttrName="NumCols"
+		EntityUsage="QuestionListView" AliasName="NUM_COLS">
+	</ViewAttribute>
+	<ViewAttribute Name="QstAnsId" EntityAttrName="QstAnsId"
+		EntityUsage="QuestionListView" AliasName="QST_ANS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RprtId" EntityAttrName="RprtId"
+		EntityUsage="QuestionListView" AliasName="RPRT_ID">
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="QstId" />
+		<Item Value="RprtId" />
+	</AttrArray>
+</ViewObject>

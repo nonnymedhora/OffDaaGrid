@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee">
+	<description>The BAwaWEb Platform</description>
+
+	<!-- <filter> <filter-name>adfFaces</filter-name> <filter-class>oracle.adf.view.faces.webapp.AdfFacesFilter</filter-class> 
+		</filter> <filter-mapping> <filter-name>adfFaces</filter-name> <servlet-name>Faces 
+		Servlet</servlet-name> <dispatcher>FORWARD</dispatcher> <dispatcher>REQUEST</dispatcher> 
+		</filter-mapping> <servlet> <servlet-name>Faces Servlet</servlet-name> <servlet-class>javax.faces.webapp.FacesServlet</servlet-class> 
+		<load-on-startup>1</load-on-startup> </servlet> <servlet> <servlet-name>resources</servlet-name> 
+		<servlet-class>oracle.adf.view.faces.webapp.ResourceServlet</servlet-class> 
+		</servlet> -->
+	<servlet>
+		<servlet-name>AnswersGridServlet</servlet-name>
+		<servlet-class>com.bawaweb.servlets.AnswersGridServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>TestServlet</servlet-name>
+		<servlet-class>com.bawaweb.servlets.TestServlet</servlet-class>
+	</servlet>
+	<!-- <servlet-mapping> <servlet-name>Faces Servlet</servlet-name> <url-pattern>/faces/*</url-pattern> 
+		</servlet-mapping> <servlet-mapping> <servlet-name>resources</servlet-name> 
+		<url-pattern>/adf/*</url-pattern> </servlet-mapping> -->
+	<servlet>
+		<servlet-name>ttServlet</servlet-name>
+		<servlet-class>com.bawaweb.servlets.ttServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SnoopServlet</servlet-name>
+		<servlet-class>com.bawaweb.servlets.SnoopServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>_submit__login</servlet-name>
+		<servlet-class>com.bawaweb.servlets._submit__login</servlet-class>
+	</servlet>
+	<!-- <servlet> <servlet-name>Faces Servlet</servlet-name> <servlet-class>javax.faces.webapp.FacesServlet</servlet-class> 
+		<load-on-startup>1</load-on-startup> </servlet> -->
+	<servlet>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<servlet-class>com.bawaweb.servlets.FileUploadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>TestDBServlet</servlet-name>
+		<servlet-class>com.bawaweb.servlets.TestDBServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>JXLColorsServlet</servlet-name>
+		<servlet-class>com.bawaweb.servlets.JXLColorsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AnswersGridServlet</servlet-name>
+		<url-pattern>/servlet/answersgridservlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TestServlet</servlet-name>
+		<url-pattern>/servlet/testservlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ttServlet</servlet-name>
+		<url-pattern>/servlet/ttservlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SnoopServlet</servlet-name>
+		<url-pattern>/servlet/snoopservlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>_submit__login</servlet-name>
+		<url-pattern>/servlet/_submit__login</url-pattern>
+	</servlet-mapping>
+	<!-- <servlet-mapping> <servlet-name>Faces Servlet</servlet-name> <url-pattern>/faces/*</url-pattern> 
+		</servlet-mapping> -->
+	<servlet-mapping>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<url-pattern>/servlet/fileuploadservlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TestDBServlet</servlet-name>
+		<url-pattern>/servlet/testdbservlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JXLColorsServlet</servlet-name>
+		<url-pattern>/servlet/jxlcolorsservlet</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>35</session-timeout>
+	</session-config>
+	<mime-mapping>
+		<extension>html</extension>
+		<mime-type>text/html</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>txt</extension>
+		<mime-type>text/plain</mime-type>
+	</mime-mapping>
+	<!-- Set Excel mime-mapping so spreadsheets open properly instead of being 
+		sent as an octet/stream -->
+	<mime-mapping>
+		<extension>xls</extension>
+		<mime-type>application/vnd.ms-excel</mime-type>
+	</mime-mapping>
+</web-app>

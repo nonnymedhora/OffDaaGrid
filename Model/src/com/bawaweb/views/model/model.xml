@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage Name="model" SeparateXMLFiles="true"
+	PackageName="com.bawaweb.views.model">
+	<DesignTime>
+		<Attr Name="_ejbPackage" Value="false" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+	</DesignTime>
+	<Containee Name="AnswerSets" FullName="com.bawaweb.views.model.AnswerSets"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="AnswerSetValues" FullName="com.bawaweb.views.model.AnswerSetValues"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="CountriesList" FullName="com.bawaweb.views.model.CountriesList"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlAnswerSetValues" FullName="com.bawaweb.views.model.OtlAnswerSetValues"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="OtlReportAnswerSetValues"
+		FullName="com.bawaweb.views.model.OtlReportAnswerSetValues"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="Questions" FullName="com.bawaweb.views.model.Questions"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="ReportAnswerSetValues"
+		FullName="com.bawaweb.views.model.ReportAnswerSetValues" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="ReporterSources" FullName="com.bawaweb.views.model.ReporterSources"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="ReportSources" FullName="com.bawaweb.views.model.ReportSources"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SourceAnswers" FullName="com.bawaweb.views.model.SourceAnswers"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SourceIndustries" FullName="com.bawaweb.views.model.SourceIndustries"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SourceMultiAnswers" FullName="com.bawaweb.views.model.SourceMultiAnswers"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="Sources" FullName="com.bawaweb.views.model.Sources"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SourceSortingCriteria"
+		FullName="com.bawaweb.views.model.SourceSortingCriteria" ObjectType="ViewObject">
+	</Containee>
+</JboPackage>

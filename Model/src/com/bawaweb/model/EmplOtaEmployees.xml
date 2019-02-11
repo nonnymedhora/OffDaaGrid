@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="EmplOtlEmployees" DBObjectType="table"
+	DBObjectName="EMPL_BAwaWEb_EMPLOYEES" AliasName="EmplOtlEmployees"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.EmplOtlEmployeesImpl" DefClass="com.bawaweb.model.EmplOtlEmployeesDefImpl"
+	CollClass="com.bawaweb.model.EmplOtlEmployeesCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="EmplId" IsNotNull="true" Precision="10"
+		Scale="0" ColumnName="EMPL_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="EMPL_BAwaWEb_EMPLOYEES"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplInit" Precision="3" ColumnName="EMPL_INIT"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="3" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplUserid" Precision="20" ColumnName="EMPL_USERID"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplLname" Precision="20" ColumnName="EMPL_LNAME"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplFname" Precision="20" ColumnName="EMPL_FNAME"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplInitial" Precision="1" ColumnName="EMPL_INITIAL"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="DeptId" Precision="10" Scale="0" ColumnName="DEPT_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplTitle" Precision="30" ColumnName="EMPL_TITLE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplOfficeLoc" Precision="20" ColumnName="EMPL_OFFICE_LOC"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplDob" ColumnName="EMPL_DOB" Type="oracle.jbo.domain.Date"
+		ColumnType="DATE" SQLType="DATE" TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplHireDate" ColumnName="EMPL_HIRE_DATE"
+		Type="oracle.jbo.domain.Date" ColumnType="DATE" SQLType="DATE"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplAddress" Precision="60" ColumnName="EMPL_ADDRESS"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="60" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplCity" Precision="30" ColumnName="EMPL_CITY"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplState" Precision="30" ColumnName="EMPL_STATE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplZip" Precision="15" ColumnName="EMPL_ZIP"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="15" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplCountry" Precision="15" ColumnName="EMPL_COUNTRY"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="15" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplHomePhone" Precision="25" ColumnName="EMPL_HOME_PHONE"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplOfficePhone" Precision="25"
+		ColumnName="EMPL_OFFICE_PHONE" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplIntExtension" Precision="12"
+		ColumnName="EMPL_INT_EXTENSION" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="12" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplOfficeFax" Precision="25" ColumnName="EMPL_OFFICE_FAX"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplEmail" Precision="50" ColumnName="EMPL_EMAIL"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplInternet" Precision="50" ColumnName="EMPL_INTERNET"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplNotes" Precision="2000" ColumnName="EMPL_NOTES"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="2000" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplReptsTo" Precision="10" Scale="0"
+		ColumnName="EMPL_REPTS_TO" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplDirListing" Precision="10" Scale="0"
+		ColumnName="EMPL_DIR_LISTING" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplPassword" Precision="20" ColumnName="EMPL_PASSWORD"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RegId" ColumnName="REG_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RergId" ColumnName="RERG_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="AcgrId" ColumnName="ACGR_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplStatus" Precision="8" ColumnName="EMPL_STATUS"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="8" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="EmplIdHr" ColumnName="EMPL_ID_HR"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="EMPL_BAwaWEb_EMPLOYEES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="OtlEmplRoles"
+		Association="com.bawaweb.model.OtlEmrEmplFkAssoc" AssociationEnd="com.bawaweb.model.OtlEmrEmplFkAssoc.OtlEmplRoles"
+		AssociationOtherEnd="com.bawaweb.model.OtlEmrEmplFkAssoc.EmplOtlEmployees"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="PanPanel"
+		Association="com.bawaweb.model.PanEmplFkAssoc" AssociationEnd="com.bawaweb.model.PanEmplFkAssoc.PanPanel"
+		AssociationOtherEnd="com.bawaweb.model.PanEmplFkAssoc.EmplOtlEmployees"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="RprtReports"
+		Association="com.bawaweb.model.RprtEmplEdtrFkAssoc" AssociationEnd="com.bawaweb.model.RprtEmplEdtrFkAssoc.RprtReports"
+		AssociationOtherEnd="com.bawaweb.model.RprtEmplEdtrFkAssoc.EmplOtlEmployees"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="RprtReports1"
+		Association="com.bawaweb.model.RprtEmplRptrFkAssoc" AssociationEnd="com.bawaweb.model.RprtEmplRptrFkAssoc.RprtReports1"
+		AssociationOtherEnd="com.bawaweb.model.RprtEmplRptrFkAssoc.EmplOtlEmployees1"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlReporterSources"
+		Association="com.bawaweb.model.OtlRscEmplFkAssoc" AssociationEnd="com.bawaweb.model.OtlRscEmplFkAssoc.OtlReporterSources"
+		AssociationOtherEnd="com.bawaweb.model.OtlRscEmplFkAssoc.EmplOtlEmployees"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<Key Name="OtlEmplStatusChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.EmplOtlEmployees.EmplStatus" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition"
+				Value="empl_status IN (&#39;ACTIVE&#39;,&#39;INACTIVE&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_EMPL_STATUS_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="PkyEmplId">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.EmplOtlEmployees.EmplId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="PKY_EMPL_ID" />
+		</DesignTime>
+	</Key>
+	<Key Name="EmplRergFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.EmplOtlEmployees.RergId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="PK_RERG" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="EMPL_RERG_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

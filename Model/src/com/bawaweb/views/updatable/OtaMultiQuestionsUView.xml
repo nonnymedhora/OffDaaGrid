@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlMultiQuestionsUView"
+	SelectList="OtlMultiQuestions.QMQ_ID, 
+       OtlMultiQuestions.QMQ_QST_ID, 
+       OtlMultiQuestions.QMQ_NUMBER, 
+       OtlMultiQuestions.QMQ_TYPE, 
+       OtlMultiQuestions.QMQ_HINT, 
+       OtlMultiQuestions.QMQ_ANS_ID, 
+       OtlMultiQuestions.QMQ_TLY_ID, 
+       OtlMultiQuestions.QMQ_POINT_SPREAD, 
+       OtlMultiQuestions.QMQ_RAS_ID, 
+       OtlMultiQuestions.ROWID"
+	FromList="BAwaWEb_MULTI_QUESTIONS OtlMultiQuestions" Where="OtlMultiQuestions.QMQ_ID = :qmq_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.OtlMultiQuestionsUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.OtlMultiQuestionsUViewImpl"
+	DefClass="com.bawaweb.views.updatable.OtlMultiQuestionsUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.OtlMultiQuestionsUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.OtlMultiQuestionsUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.OtlMultiQuestionsUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.OtlMultiQuestionsUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="qmq_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlMultiQuestions" Entity="com.bawaweb.model.OtlMultiQuestions">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="OtlMultiQuestions.QMQ_ID = :qmq_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="QmqId" IsNotNull="true"
+		EntityAttrName="QmqId" EntityUsage="OtlMultiQuestions" AliasName="QMQ_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QmqQstId" IsNotNull="true"
+		EntityAttrName="QmqQstId" EntityUsage="OtlMultiQuestions" AliasName="QMQ_QST_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QmqNumber" EntityAttrName="QmqNumber"
+		EntityUsage="OtlMultiQuestions" AliasName="QMQ_NUMBER">
+	</ViewAttribute>
+	<ViewAttribute Name="QmqType" IsNotNull="true"
+		EntityAttrName="QmqType" EntityUsage="OtlMultiQuestions" AliasName="QMQ_TYPE">
+	</ViewAttribute>
+	<ViewAttribute Name="QmqHint" EntityAttrName="QmqHint"
+		EntityUsage="OtlMultiQuestions" AliasName="QMQ_HINT">
+	</ViewAttribute>
+	<ViewAttribute Name="QmqAnsId" EntityAttrName="QmqAnsId"
+		EntityUsage="OtlMultiQuestions" AliasName="QMQ_ANS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QmqTlyId" EntityAttrName="QmqTlyId"
+		EntityUsage="OtlMultiQuestions" AliasName="QMQ_TLY_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QmqPointSpread" EntityAttrName="QmqPointSpread"
+		EntityUsage="OtlMultiQuestions" AliasName="QMQ_POINT_SPREAD">
+	</ViewAttribute>
+	<ViewAttribute Name="QmqRasId" EntityAttrName="QmqRasId"
+		EntityUsage="OtlMultiQuestions" AliasName="QMQ_RAS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RowID" IsUpdateable="false"
+		EntityAttrName="RowID" EntityUsage="OtlMultiQuestions" AliasName="ROWID">
+	</ViewAttribute>
+</ViewObject>

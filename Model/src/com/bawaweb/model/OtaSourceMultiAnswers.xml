@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlSourceMultiAnswers" DBObjectType="table"
+	DBObjectName="BAwaWEb_SOURCE_MULTI_ANSWERS" AliasName="OtlSourceMultiAnswers"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlSourceMultiAnswersImpl" DefClass="com.bawaweb.model.OtlSourceMultiAnswersDefImpl"
+	CollClass="com.bawaweb.model.OtlSourceMultiAnswersCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="SmaSraId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SMA_SRA_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SOURCE_MULTI_ANSWERS"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SmaAnswer" Precision="100" ColumnName="SMA_ANSWER"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_SOURCE_MULTI_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SmaAsvId" Precision="12" Scale="0"
+		ColumnName="SMA_ASV_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_SOURCE_MULTI_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SmaQmqId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="SMA_QMQ_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SOURCE_MULTI_ANSWERS"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SmaExcludeYn" IsNotNull="true" Precision="1"
+		ColumnName="SMA_EXCLUDE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_SOURCE_MULTI_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SmaWeightMultiplier" Precision="12" Scale="3"
+		ColumnName="SMA_WEIGHT_MULTIPLIER" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_SOURCE_MULTI_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="SmaRavId" Precision="12" Scale="0"
+		ColumnName="SMA_RAV_ID" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_SOURCE_MULTI_ANSWERS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="OtlAnswerSetValues"
+		Association="com.bawaweb.model.OtlSmaAsvFkAssoc" AssociationEnd="com.bawaweb.model.OtlSmaAsvFkAssoc.OtlAnswerSetValues"
+		AssociationOtherEnd="com.bawaweb.model.OtlSmaAsvFkAssoc.OtlSourceMultiAnswers"
+		Type="com.bawaweb.model.OtlAnswerSetValuesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlReportAnswerSetValues"
+		Association="com.bawaweb.model.OtlSmaRavFkAssoc"
+		AssociationEnd="com.bawaweb.model.OtlSmaRavFkAssoc.OtlReportAnswerSetValues"
+		AssociationOtherEnd="com.bawaweb.model.OtlSmaRavFkAssoc.OtlSourceMultiAnswers"
+		Type="com.bawaweb.model.OtlReportAnswerSetValuesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlSourceAnswers"
+		Association="com.bawaweb.model.OtlSmaSraFkAssoc" AssociationEnd="com.bawaweb.model.OtlSmaSraFkAssoc.OtlSourceAnswers"
+		AssociationOtherEnd="com.bawaweb.model.OtlSmaSraFkAssoc.OtlSourceMultiAnswers"
+		Type="com.bawaweb.model.OtlSourceAnswersImpl">
+	</AccessorAttribute>
+	<Key Name="OtlSmaExcludeYnChk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceMultiAnswers.SmaExcludeYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="sma_exclude_yn IN (&#39;Y&#39;, &#39;N&#39;)" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SMA_EXCLUDE_YN_CHK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlSmaPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceMultiAnswers.SmaSraId" />
+			<Item Value="com.bawaweb.model.OtlSourceMultiAnswers.SmaQmqId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SMA_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005698">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceMultiAnswers.SmaSraId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SMA_SRA_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005698" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005699">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceMultiAnswers.SmaQmqId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SMA_QMQ_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005699" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005700">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceMultiAnswers.SmaExcludeYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;SMA_EXCLUDE_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005700" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlSmaAsvFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceMultiAnswers.SmaAsvId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_ANSWER_SET_VALUES_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SMA_ASV_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlSmaRavFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceMultiAnswers.SmaRavId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_REPORT_ANSWER_SET_VALUESPK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SMA_RAV_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="OtlSmaSraFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSourceMultiAnswers.SmaSraId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_SOURCE_ANSWERS_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_SMA_SRA_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

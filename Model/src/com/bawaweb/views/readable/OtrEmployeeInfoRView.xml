@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtrEmployeeInfoRView" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.readable.OtrEmployeeInfoRViewRowImpl"
+	ComponentClass="com.bawaweb.views.readable.OtrEmployeeInfoRViewImpl"
+	DefClass="com.bawaweb.views.readable.OtrEmployeeInfoRViewDefImpl"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<SQLQuery><![CDATA[
+SELECT OtrEmployeeInfo.LAST_NAME,
+       OtrEmployeeInfo.FIRST_NAME,
+       OtrEmployeeInfo.TITLE,
+       OtrEmployeeInfo.DEPARTMENT,
+       OtrEmployeeInfo.SECTORS,
+       OtrEmployeeInfo.COUNTRY,
+       OtrEmployeeInfo.REGION,
+       OtrEmployeeInfo.SHORT_BIO,
+       OtrEmployeeInfo.LONG_BIO,
+       OtrEmployeeInfo.REPORTS_TO,
+       OtrEmployeeInfo.BAwaWEb_SINCE,
+       OtrEmployeeInfo.ADDITIONAL_EXPERTISE,
+       OtrEmployeeInfo.COVERS
+FROM BAwaWEb_EMPLOYEE_INFO OtrEmployeeInfo
+   ]]></SQLQuery>
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|VarAccess" />
+	</DesignTime>
+	<ViewAttribute Name="LastName" IsUpdateable="false"
+		IsPersistent="false" Precision="254" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="LAST_NAME" Expression="LAST_NAME"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="254" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="FirstName" IsUpdateable="false"
+		IsPersistent="false" Precision="256" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="FIRST_NAME" Expression="FIRST_NAME"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="256" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Title" IsUpdateable="false"
+		IsPersistent="false" Precision="256" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="TITLE" Expression="TITLE" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="256" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Department" IsUpdateable="false"
+		IsPersistent="false" Precision="256" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="DEPARTMENT" Expression="DEPARTMENT"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="256" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Sectors" IsUpdateable="false"
+		IsPersistent="false" Precision="256" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SECTORS" Expression="SECTORS"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="256" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Country" IsUpdateable="false"
+		IsPersistent="false" Precision="256" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="COUNTRY" Expression="COUNTRY"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="256" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Region" IsUpdateable="false"
+		IsPersistent="false" Precision="256" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="REGION" Expression="REGION" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="256" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="ShortBio" IsUpdateable="false"
+		IsPersistent="false" Precision="2000" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SHORT_BIO" Expression="SHORT_BIO"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="2000" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="LongBio" IsUpdateable="false"
+		IsPersistent="false" Precision="4000" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="LONG_BIO" Expression="LONG_BIO"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="4000" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="ReportsTo" IsUpdateable="false"
+		IsPersistent="false" Precision="256" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="REPORTS_TO" Expression="REPORTS_TO"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="256" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="OtrSince" IsUpdateable="false"
+		IsPersistent="false" Precision="256" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="BAwaWEb_SINCE" Expression="BAwaWEb_SINCE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="256" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="AdditionalExpertise" IsUpdateable="false"
+		IsPersistent="false" Precision="4000" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="ADDITIONAL_EXPERTISE" Expression="ADDITIONAL_EXPERTISE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="4000" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Covers" IsUpdateable="false"
+		IsPersistent="false" Precision="4000" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="COVERS" Expression="COVERS" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="4000" />
+		</DesignTime>
+	</ViewAttribute>
+</ViewObject>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="RptyReporterTypesUView"
+	SelectList="RptyReporterTypes.RPTY_ID, 
+       RptyReporterTypes.RPTY_DESC"
+	FromList="RPTY_REPORTER_TYPES RptyReporterTypes" Where="RptyReporterTypes.RPTY_ID = :rpty_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.RptyReporterTypesUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.RptyReporterTypesUViewImpl"
+	DefClass="com.bawaweb.views.updatable.RptyReporterTypesUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.RptyReporterTypesUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.RptyReporterTypesUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.RptyReporterTypesUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.RptyReporterTypesUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rpty_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="RptyReporterTypes" Entity="com.bawaweb.model.RptyReporterTypes">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="RptyReporterTypes.RPTY_ID = :rpty_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="RptyId" IsNotNull="true"
+		EntityAttrName="RptyId" EntityUsage="RptyReporterTypes" AliasName="RPTY_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RptyDesc" EntityAttrName="RptyDesc"
+		EntityUsage="RptyReporterTypes" AliasName="RPTY_DESC">
+	</ViewAttribute>
+</ViewObject>

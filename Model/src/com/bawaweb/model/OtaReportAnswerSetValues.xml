@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlReportAnswerSetValues" DBObjectType="table"
+	DBObjectName="BAwaWEb_REPORT_ANSWER_SET_VALUES" AliasName="OtlReportAnswerSetValues"
+	BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlReportAnswerSetValuesImpl" DefClass="com.bawaweb.model.OtlReportAnswerSetValuesDefImpl"
+	CollClass="com.bawaweb.model.OtlReportAnswerSetValuesCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="RavId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="RAV_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_REPORT_ANSWER_SET_VALUES"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RavRasId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="RAV_RAS_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_REPORT_ANSWER_SET_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RavAnswer" IsNotNull="true" Precision="100"
+		ColumnName="RAV_ANSWER" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_REPORT_ANSWER_SET_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RavDisplaySeq" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="RAV_DISPLAY_SEQ" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_REPORT_ANSWER_SET_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RavAsvId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="RAV_ASV_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_REPORT_ANSWER_SET_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RavDeleteYn" IsNotNull="true" Precision="1"
+		ColumnName="RAV_DELETE_YN" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_REPORT_ANSWER_SET_VALUES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="OtlAnswerSetValues"
+		Association="com.bawaweb.model.RavAsvFkAssoc" AssociationEnd="com.bawaweb.model.RavAsvFkAssoc.OtlAnswerSetValues"
+		AssociationOtherEnd="com.bawaweb.model.RavAsvFkAssoc.OtlReportAnswerSetValues"
+		Type="com.bawaweb.model.OtlAnswerSetValuesImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlReportAnswerSets"
+		Association="com.bawaweb.model.RavRasFkAssoc" AssociationEnd="com.bawaweb.model.RavRasFkAssoc.OtlReportAnswerSets"
+		AssociationOtherEnd="com.bawaweb.model.RavRasFkAssoc.OtlReportAnswerSetValues"
+		Type="com.bawaweb.model.OtlReportAnswerSetsImpl">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlSourceAnswers"
+		Association="com.bawaweb.model.SraRavFkAssoc" AssociationEnd="com.bawaweb.model.SraRavFkAssoc.OtlSourceAnswers"
+		AssociationOtherEnd="com.bawaweb.model.SraRavFkAssoc.OtlReportAnswerSetValues"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<AccessorAttribute Name="OtlSourceMultiAnswers"
+		Association="com.bawaweb.model.OtlSmaRavFkAssoc" AssociationEnd="com.bawaweb.model.OtlSmaRavFkAssoc.OtlSourceMultiAnswers"
+		AssociationOtherEnd="com.bawaweb.model.OtlSmaRavFkAssoc.OtlReportAnswerSetValues"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<Key Name="OtlReportAnswerSetValuespk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSetValues.RavId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_REPORT_ANSWER_SET_VALUESPK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005039">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSetValues.RavId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RAV_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005039" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005040">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSetValues.RavRasId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RAV_RAS_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005040" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005041">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSetValues.RavAnswer" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RAV_ANSWER&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005041" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005042">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSetValues.RavDisplaySeq" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RAV_DISPLAY_SEQ&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005042" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005043">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSetValues.RavAsvId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RAV_ASV_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005043" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC005044">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSetValues.RavDeleteYn" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;RAV_DELETE_YN&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C005044" />
+		</DesignTime>
+	</Key>
+	<Key Name="RavAsvFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSetValues.RavAsvId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_ANSWER_SET_VALUES_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="RAV_ASV_FK" />
+		</DesignTime>
+	</Key>
+	<Key Name="RavRasFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSetValues.RavRasId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="BAwaWEb_RAS_PK" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="RAV_RAS__FK" />
+		</DesignTime>
+	</Key>
+</Entity>

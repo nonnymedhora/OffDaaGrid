@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="MaxAsvId" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.identify.MaxAsvIdRowImpl"
+	ComponentClass="com.bawaweb.views.identify.MaxAsvIdImpl" DefClass="com.bawaweb.views.identify.MaxAsvIdDefImpl"
+	ComponentInterface="com.bawaweb.views.identify.common.MaxAsvId"
+	ClientProxyName="com.bawaweb.views.identify.client.MaxAsvIdClient"
+	RowInterface="com.bawaweb.views.identify.common.MaxAsvIdRow"
+	ClientRowProxyName="com.bawaweb.views.identify.client.MaxAsvIdRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<SQLQuery><![CDATA[
+select max(asv_id) from bawaweb_answer_set_values
+   ]]></SQLQuery>
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<ViewAttribute Name="MaxAsvId" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="MAXASVID" Expression="MAX(ASV_ID)" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+</ViewObject>

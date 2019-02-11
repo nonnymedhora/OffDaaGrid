@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="CourtesyTitles" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.utils.CourtesyTitlesRowImpl"
+	ComponentClass="com.bawaweb.views.utils.CourtesyTitlesImpl" DefClass="com.bawaweb.views.utils.CourtesyTitlesDefImpl"
+	ComponentInterface="com.bawaweb.views.utils.common.CourtesyTitles"
+	ClientProxyName="com.bawaweb.views.utils.client.CourtesyTitlesClient"
+	RowInterface="com.bawaweb.views.utils.common.CourtesyTitlesRow"
+	ClientRowProxyName="com.bawaweb.views.utils.client.CourtesyTitlesRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<SQLQuery><![CDATA[
+SELECT ctl_courtesy_title ctl_code, ctl_courtesy_title ctl_desc FROM bawaweb_courtesy_titles WHERE ctl_delete_yn = 'N' ORDER BY ctl_courtesy_title
+   ]]></SQLQuery>
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<EntityUsage Name="OtlCourtesyTitles" Entity="com.bawaweb.model.OtlCourtesyTitles">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="CtlCode" IsPersistent="false"
+		IsNotNull="true" Precision="50" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="CTL_CODE" Expression="CTL_CODE" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="CtlDesc" IsPersistent="false"
+		IsNotNull="true" Precision="50" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="CTL_DESC" Expression="CTL_DESC" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="CtlCourtesyTitle" IsPersistent="false"
+		IsNotNull="true" Precision="50" Type="java.lang.String" ColumnType="$none$"
+		AliasName="CTL_COURTESY_TITLE" SQLType="VARCHAR">
+	</ViewAttribute>
+	<ViewAttribute Name="CtlDeleteYn" IsPersistent="false"
+		IsNotNull="true" Precision="1" Type="java.lang.String" ColumnType="$none$"
+		AliasName="CTL_DELETE_YN" SQLType="VARCHAR">
+	</ViewAttribute>
+</ViewObject>

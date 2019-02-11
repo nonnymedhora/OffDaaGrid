@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+
+<Association Name="RasAnsFkAssoc">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+	</DesignTime>
+	<AssociationEnd Name="OtlAnswerSets" Cardinality="1"
+		Source="true" Owner="com.bawaweb.model.OtlAnswerSets">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlAnswerSets.AnsId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_finderName" Value="OtlAnswerSets" />
+			<Attr Name="_aggregation" Value="0" />
+			<Attr Name="_foreignKey" Value="com.bawaweb.model.OtlAnswerSets.OtlAnswerSetsPk" />
+			<Attr Name="_minCardinality" Value="1" />
+			<Attr Name="_isUpdateable" Value="true" />
+		</DesignTime>
+	</AssociationEnd>
+	<AssociationEnd Name="OtlReportAnswerSets" Cardinality="-1"
+		Owner="com.bawaweb.model.OtlReportAnswerSets">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlReportAnswerSets.RasAnsId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_finderName" Value="OtlReportAnswerSets" />
+			<Attr Name="_aggregation" Value="0" />
+			<Attr Name="_foreignKey" Value="com.bawaweb.model.OtlReportAnswerSets.RasAnsFk" />
+			<Attr Name="_isUpdateable" Value="true" />
+		</DesignTime>
+	</AssociationEnd>
+</Association>

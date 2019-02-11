@@ -1,0 +1,1070 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlSourcesRView" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.readable.OtlSourcesRViewRowImpl"
+	ComponentClass="com.bawaweb.views.readable.OtlSourcesRViewImpl"
+	DefClass="com.bawaweb.views.readable.OtlSourcesRViewDefImpl"
+	ComponentInterface="com.bawaweb.views.readable.common.OtlSourcesRView"
+	ClientProxyName="com.bawaweb.views.readable.client.OtlSourcesRViewClient"
+	RowInterface="com.bawaweb.views.readable.common.OtlSourcesRViewRow"
+	ClientRowProxyName="com.bawaweb.views.readable.client.OtlSourcesRViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="src_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<Data>
+		<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+		<Property Name="ID"
+			Value="6bca2263-011d-1000-8739-814d53431e28::::ViewObject" />
+		<Property Name="IS_ABSTRACT" Value="FALSE" />
+		<Property Name="IS_ACTIVE" Value="FALSE" />
+		<Property Name="IS_LEAF" Value="FALSE" />
+		<Property Name="IS_ROOT" Value="FALSE" />
+		<Property Name="VISIBILITY" Value="PUBLIC" />
+	</Data>
+	<SQLQuery><![CDATA[
+SELECT OtlSources.SRC_ID,
+       OtlSources.SRC_LAST_NAME,
+       OtlSources.SRC_FIRST_NAME,
+       OtlSources.SRC_COURTESY_TITLE,
+       OtlSources.SRC_JOB_TITLE,
+       OtlSources.SRC_JOB_DESCRIPTION,
+       OtlSources.SRC_COMPANY,
+       OtlSources.SRC_ADDRESS1,
+       OtlSources.SRC_ADDRESS2,
+       OtlSources.SRC_ADDRESS3,
+       OtlSources.SRC_CITY,
+       OtlSources.SRC_STATE,
+       OtlSources.SRC_ZIP,
+       OtlSources.SRC_CTRY_ID,
+       OtlSources.SRC_TMZ_ID,
+       OtlSources.SRC_EMAIL,
+       OtlSources.SRC_PHONE,
+       OtlSources.SRC_PHONE_EXT,
+       OtlSources.SRC_CELL_PHONE,
+       OtlSources.SRC_FAX,
+       OtlSources.SRC_STATUS,
+       OtlSources.SRC_EXCLUSIVE_SOURCE_YN,
+       OtlSources.SRC_DONT_CONTACT_YN,
+       OtlSources.SRC_COMPANY_TYPE,
+       OtlSources.SRC_AREA_OF_EXPERTISE,
+       OtlSources.SRC_INDUSTRY_SECTOR,
+       OtlSources.SRC_INDUSTRY_VIEW,
+       OtlSources.SRC_VENDORS,
+       OtlSources.SRC_COMPANY_SIZE,
+       OtlSources.SRC_DISTRIBUTION_PREFERENCE,
+       OtlSources.SRC_DISTRIBUTION_NOTES,
+       OtlSources.SRC_SPECIAL_REQUESTS,
+       OtlSources.SRC_REPORTERS_NOTES,
+       OtlSources.SRC_QUALITY_RATING,
+       OtlSources.SRC_MODIFIED_DATE,
+       OtlSources.SRC_MODIFIED_BY,
+       OtlSources.SRC_SUFFIX_TITLE,
+       OtlSources.SRC_INFORMED_OF_WEBSITE,
+       OtlSources.SRC_OFFERED_REPORT
+FROM BAwaWEb_SOURCES OtlSources
+where OtlSources.SRC_ID = :src_id
+   ]]></SQLQuery>
+	<EntityUsage Name="OtlSources" Entity="com.bawaweb.model.OtlSources">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6c0d2593-011d-1000-8c3d-814d53431e28::readable.OtlSourcesRView$OtlSources::EntityObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="SrcId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="SRC_ID"
+		Expression="SRC_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-873a-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcLastName" IsUpdateable="false"
+		IsPersistent="false" Precision="30" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_LAST_NAME" Expression="SRC_LAST_NAME"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-873b-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcFirstName" IsUpdateable="false"
+		IsPersistent="false" Precision="30" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_FIRST_NAME" Expression="SRC_FIRST_NAME"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-873c-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCourtesyTitle" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_COURTESY_TITLE" Expression="SRC_COURTESY_TITLE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-873d-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcJobTitle" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_JOB_TITLE" Expression="SRC_JOB_TITLE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-873e-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcJobDescription" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_JOB_DESCRIPTION" Expression="SRC_JOB_DESCRIPTION"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-873f-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCompany" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_COMPANY" Expression="SRC_COMPANY"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8740-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAddress1" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_ADDRESS1" Expression="SRC_ADDRESS1"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8741-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAddress2" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_ADDRESS2" Expression="SRC_ADDRESS2"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8742-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAddress3" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_ADDRESS3" Expression="SRC_ADDRESS3"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8743-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCity" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="50" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_CITY" Expression="SRC_CITY"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8744-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcState" IsUpdateable="false"
+		IsPersistent="false" Precision="50" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_STATE" Expression="SRC_STATE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8745-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcZip" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_ZIP" Expression="SRC_ZIP"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8746-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCtryId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="SRC_CTRY_ID"
+		Expression="SRC_CTRY_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8747-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcTmzId" IsUpdateable="false"
+		IsPersistent="false" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="SRC_TMZ_ID" Expression="SRC_TMZ_ID"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8748-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcEmail" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_EMAIL" Expression="SRC_EMAIL"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8749-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcPhone" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="25" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_PHONE" Expression="SRC_PHONE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-874a-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcPhoneExt" IsUpdateable="false"
+		IsPersistent="false" Precision="25" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_PHONE_EXT" Expression="SRC_PHONE_EXT"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-874b-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCellPhone" IsUpdateable="false"
+		IsPersistent="false" Precision="25" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_CELL_PHONE" Expression="SRC_CELL_PHONE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-874c-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcFax" IsUpdateable="false"
+		IsPersistent="false" Precision="25" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_FAX" Expression="SRC_FAX"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-874d-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcStatus" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="9" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_STATUS" Expression="SRC_STATUS"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-874e-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="9" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcExclusiveSourceYn" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="1" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_EXCLUSIVE_SOURCE_YN" Expression="SRC_EXCLUSIVE_SOURCE_YN"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-874f-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcDontContactYn" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="1" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_DONT_CONTACT_YN" Expression="SRC_DONT_CONTACT_YN"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8750-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCompanyType" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_COMPANY_TYPE" Expression="SRC_COMPANY_TYPE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8751-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAreaOfExpertise" IsUpdateable="false"
+		IsPersistent="false" Precision="500" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_AREA_OF_EXPERTISE" Expression="SRC_AREA_OF_EXPERTISE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8752-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcIndustrySector" IsUpdateable="false"
+		IsPersistent="false" Precision="100" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_INDUSTRY_SECTOR" Expression="SRC_INDUSTRY_SECTOR"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8753-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="100" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcIndustryView" IsUpdateable="false"
+		IsPersistent="false" Precision="13" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_INDUSTRY_VIEW" Expression="SRC_INDUSTRY_VIEW"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8754-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="13" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcVendors" IsUpdateable="false"
+		IsPersistent="false" Precision="500" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_VENDORS" Expression="SRC_VENDORS"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8755-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCompanySize" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_COMPANY_SIZE" Expression="SRC_COMPANY_SIZE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8756-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcDistributionPreference"
+		IsUpdateable="false" IsPersistent="false" Precision="15" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_DISTRIBUTION_PREFERENCE"
+		Expression="SRC_DISTRIBUTION_PREFERENCE" SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8757-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="15" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcDistributionNotes" IsUpdateable="false"
+		IsPersistent="false" Precision="500" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_DISTRIBUTION_NOTES" Expression="SRC_DISTRIBUTION_NOTES"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8758-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcSpecialRequests" IsUpdateable="false"
+		IsPersistent="false" Precision="500" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_SPECIAL_REQUESTS" Expression="SRC_SPECIAL_REQUESTS"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8759-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcReportersNotes" IsUpdateable="false"
+		IsPersistent="false" Precision="500" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_REPORTERS_NOTES" Expression="SRC_REPORTERS_NOTES"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-875a-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="500" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcQualityRating" IsUpdateable="false"
+		IsPersistent="false" Precision="9" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="SRC_QUALITY_RATING" Expression="SRC_QUALITY_RATING"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-875b-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="9" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcModifiedDate" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Date" ColumnType="DATE"
+		AliasName="SRC_MODIFIED_DATE" Expression="SRC_MODIFIED_DATE" SQLType="DATE">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-875c-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcModifiedBy" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="30" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_MODIFIED_BY" Expression="SRC_MODIFIED_BY"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-875d-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcSuffixTitle" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="SRC_SUFFIX_TITLE" Expression="SRC_SUFFIX_TITLE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-875e-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcInformedOfWebsite" IsUpdateable="false"
+		IsPersistent="false" Precision="1" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="SRC_INFORMED_OF_WEBSITE" Expression="SRC_INFORMED_OF_WEBSITE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-875f-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcOfferedReport" IsUpdateable="false"
+		IsPersistent="false" Precision="1" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="SRC_OFFERED_REPORT" Expression="SRC_OFFERED_REPORT"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2263-011d-1000-8760-814d53431e28::readable.OtlSourcesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="SrcId" />
+	</AttrArray>
+	<ViewLinkAccessor Name="OtlReportSourcesRView"
+		ViewLink="com.bawaweb.views.readable.RpsSrcFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+</ViewObject>

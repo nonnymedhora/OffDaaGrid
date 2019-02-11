@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlSortingCriteriaUView"
+	SelectList="OtlSortingCriteria.SRT_ID, 
+       OtlSortingCriteria.SRT_NAME, 
+       OtlSortingCriteria.SRT_FRID_ID, 
+       OtlSortingCriteria.SRT_DELETE_YN"
+	FromList="BAwaWEb_SORTING_CRITERIA OtlSortingCriteria" Where="OtlSortingCriteria.SRT_ID = :srt_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.OtlSortingCriteriaUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.OtlSortingCriteriaUViewImpl"
+	DefClass="com.bawaweb.views.updatable.OtlSortingCriteriaUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.OtlSortingCriteriaUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.OtlSortingCriteriaUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.OtlSortingCriteriaUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.OtlSortingCriteriaUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="srt_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlSortingCriteria" Entity="com.bawaweb.model.OtlSortingCriteria">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="OtlSortingCriteria.SRT_ID = :srt_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="SrtId" IsNotNull="true"
+		EntityAttrName="SrtId" EntityUsage="OtlSortingCriteria" AliasName="SRT_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SrtName" IsNotNull="true"
+		EntityAttrName="SrtName" EntityUsage="OtlSortingCriteria" AliasName="SRT_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="SrtFridId" EntityAttrName="SrtFridId"
+		EntityUsage="OtlSortingCriteria" AliasName="SRT_FRID_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SrtDeleteYn" IsNotNull="true"
+		EntityAttrName="SrtDeleteYn" EntityUsage="OtlSortingCriteria"
+		AliasName="SRT_DELETE_YN">
+	</ViewAttribute>
+	<ViewLinkAccessor Name="OtlReportSortingCriteriaUView"
+		ViewLink="com.bawaweb.views.updatable.OtlRsoSrtFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+	<ViewLinkAccessor Name="OtlSortingCriteriaValuesUView"
+		ViewLink="com.bawaweb.views.updatable.OtlScvSrtFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+</ViewObject>

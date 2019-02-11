@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="RoleScope" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.gridcursors.RoleScopeRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.RoleScopeImpl" DefClass="com.bawaweb.views.gridcursors.RoleScopeDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.common.RoleScope"
+	ClientProxyName="com.bawaweb.views.gridcursors.client.RoleScopeClient"
+	RowInterface="com.bawaweb.views.gridcursors.common.RoleScopeRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.client.RoleScopeRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="p_empl_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+SELECT *
+      FROM   bawaweb_roles rol,
+             bawaweb_empl_roles emr
+      WHERE  emr.emr_empl_id = :p_empl_id
+      AND    rol.rol_id = emr.emr_rol_id
+      AND    rol.rol_rprt_ind_yn = 'Y'
+   ]]></SQLQuery>
+	<EntityUsage Name="OtlRoles" Entity="com.bawaweb.model.OtlRoles">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<EntityUsage Name="OtlEmplRoles" Entity="com.bawaweb.model.OtlEmplRoles"
+		Association="com.bawaweb.model.OtlEmrRolFkAssoc" AssociationEnd="com.bawaweb.model.OtlEmrRolFkAssoc.OtlEmplRoles"
+		SourceUsage="com.bawaweb.views.gridcursors.RoleScope.OtlRoles"
+		Reference="true">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+			<AttrArray Name="_dstAttributes">
+				<Item Value="com.bawaweb.model.OtlEmplRoles.EmrRolId" />
+			</AttrArray>
+			<AttrArray Name="_srcAttributes">
+				<Item Value="com.bawaweb.model.OtlRoles.RolId" />
+			</AttrArray>
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="RolId" IsPersistent="false"
+		IsNotNull="true" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="ROL_ID" Expression="ROL_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RolName" IsPersistent="false"
+		IsNotNull="true" Precision="20" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="ROL_NAME" Expression="ROL_NAME" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RolSrcIndYn" IsPersistent="false"
+		IsNotNull="true" Precision="1" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="ROL_SRC_IND_YN" Expression="ROL_SRC_IND_YN" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RolRprtIndYn" IsPersistent="false"
+		IsNotNull="true" Precision="1" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="ROL_RPRT_IND_YN" Expression="ROL_RPRT_IND_YN" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RolSrcRprtYn" IsPersistent="false"
+		IsNotNull="true" Precision="1" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="ROL_SRC_RPRT_YN" Expression="ROL_SRC_RPRT_YN" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RolDisplayOrder" IsPersistent="false"
+		Precision="10" Scale="0" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="ROL_DISPLAY_ORDER" Expression="ROL_DISPLAY_ORDER" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmrEmplId" IsPersistent="false"
+		IsNotNull="true" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="EMR_EMPL_ID" Expression="EMR_EMPL_ID"
+		SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmrRolId" IsPersistent="false"
+		IsNotNull="true" Precision="12" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="EMR_ROL_ID" Expression="EMR_ROL_ID"
+		SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="Y" IsUpdateable="false"
+		IsPersistent="false" Precision="1" Type="java.lang.String" ColumnType="CHAR"
+		AliasName="Y" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+</ViewObject>

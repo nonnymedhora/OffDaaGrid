@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration"
+                    version="10.1.3.40.66" Package="com.bawaweb.model"
+                    id="DataControls">
+  <JavaBeanDataControl SupportsTransactions="true" SupportsFindMode="false"
+                       SupportsResetState="false" SupportsRangesize="true"
+                       SupportsSortCollection="true" SupportsUpdates="false"
+                       id="SourcesSingleQuestionAnswersVODataControl"
+                       xmlns="http://xmlns.oracle.com/adfm/datacontrol"
+                       FactoryClass="oracle.adf.model.generic.DataControlFactoryImpl"
+                       Definition="com.bawaweb.lifecycle.SourcesSingleQuestionAnswersVO"
+                       BeanClass="com.bawaweb.lifecycle.SourcesSingleQuestionAnswersVO">
+    <CreatableTypes>
+      <TypeInfo FullName="com.bawaweb.lifecycle.SourcesAnswerInfoVO"/>
+    </CreatableTypes>
+  </JavaBeanDataControl>
+</DataControlConfigs>

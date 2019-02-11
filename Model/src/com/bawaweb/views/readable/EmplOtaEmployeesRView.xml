@@ -1,0 +1,865 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="EmplOtlEmployeesRView" BindingStyle="OracleName"
+	CustomQuery="true" RowClass="com.bawaweb.views.readable.EmplOtlEmployeesRViewRowImpl"
+	ComponentClass="com.bawaweb.views.readable.EmplOtlEmployeesRViewImpl"
+	DefClass="com.bawaweb.views.readable.EmplOtlEmployeesRViewDefImpl"
+	ComponentInterface="com.bawaweb.views.readable.common.EmplOtlEmployeesRView"
+	ClientProxyName="com.bawaweb.views.readable.client.EmplOtlEmployeesRViewClient"
+	RowInterface="com.bawaweb.views.readable.common.EmplOtlEmployeesRViewRow"
+	ClientRowProxyName="com.bawaweb.views.readable.client.EmplOtlEmployeesRViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="empl_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<Data>
+		<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+		<Property Name="ID"
+			Value="6bca2273-011d-1000-876d-814d53431e28::::ViewObject" />
+		<Property Name="IS_ABSTRACT" Value="FALSE" />
+		<Property Name="IS_ACTIVE" Value="FALSE" />
+		<Property Name="IS_LEAF" Value="FALSE" />
+		<Property Name="IS_ROOT" Value="FALSE" />
+		<Property Name="VISIBILITY" Value="PUBLIC" />
+	</Data>
+	<SQLQuery><![CDATA[
+SELECT EmplOtlEmployees.EMPL_ID,
+       EmplOtlEmployees.EMPL_INIT,
+       EmplOtlEmployees.EMPL_USERID,
+       EmplOtlEmployees.EMPL_LNAME,
+       EmplOtlEmployees.EMPL_FNAME,
+       EmplOtlEmployees.EMPL_INITIAL,
+       EmplOtlEmployees.DEPT_ID,
+       EmplOtlEmployees.EMPL_TITLE,
+       EmplOtlEmployees.EMPL_OFFICE_LOC,
+       EmplOtlEmployees.EMPL_DOB,
+       EmplOtlEmployees.EMPL_HIRE_DATE,
+       EmplOtlEmployees.EMPL_ADDRESS,
+       EmplOtlEmployees.EMPL_CITY,
+       EmplOtlEmployees.EMPL_STATE,
+       EmplOtlEmployees.EMPL_ZIP,
+       EmplOtlEmployees.EMPL_COUNTRY,
+       EmplOtlEmployees.EMPL_HOME_PHONE,
+       EmplOtlEmployees.EMPL_OFFICE_PHONE,
+       EmplOtlEmployees.EMPL_INT_EXTENSION,
+       EmplOtlEmployees.EMPL_OFFICE_FAX,
+       EmplOtlEmployees.EMPL_EMAIL,
+       EmplOtlEmployees.EMPL_INTERNET,
+       EmplOtlEmployees.EMPL_NOTES,
+       EmplOtlEmployees.EMPL_REPTS_TO,
+       EmplOtlEmployees.EMPL_DIR_LISTING,
+       EmplOtlEmployees.EMPL_PASSWORD,
+       EmplOtlEmployees.REG_ID,
+       EmplOtlEmployees.RERG_ID,
+       EmplOtlEmployees.ACGR_ID,
+       EmplOtlEmployees.EMPL_STATUS,
+       EmplOtlEmployees.EMPL_ID_HR
+FROM EMPL_BAwaWEb_EMPLOYEES EmplOtlEmployees
+where EmplOtlEmployees.EMPL_ID = :empl_id
+   ]]></SQLQuery>
+	<EntityUsage Name="EmplOtlEmployees" Entity="com.bawaweb.model.EmplOtlEmployees">
+		<Data>
+			<Property Name="COMPLETE_LIBRARY" Value="FALSE" />
+			<Property Name="ID"
+				Value="6bf77e49-011d-1000-8c2b-814d53431e28::readable.EmplOtlEmployeesRView$EmplOtlEmployees::EntityObjectInstance" />
+			<Property Name="IS_ABSTRACT" Value="FALSE" />
+			<Property Name="IS_ACTIVE" Value="FALSE" />
+			<Property Name="IS_LEAF" Value="FALSE" />
+			<Property Name="IS_ROOT" Value="FALSE" />
+			<Property Name="VISIBILITY" Value="PUBLIC" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="EmplId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="10" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="EMPL_ID"
+		Expression="EMPL_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-876e-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplInit" IsUpdateable="false"
+		IsPersistent="false" Precision="3" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_INIT" Expression="EMPL_INIT" SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-876f-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="3" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplUserid" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_USERID" Expression="EMPL_USERID"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8770-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplLname" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_LNAME" Expression="EMPL_LNAME"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8771-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplFname" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_FNAME" Expression="EMPL_FNAME"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8772-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplInitial" IsUpdateable="false"
+		IsPersistent="false" Precision="1" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_INITIAL" Expression="EMPL_INITIAL" SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8773-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="DeptId" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="DEPT_ID" Expression="DEPT_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8774-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplTitle" IsUpdateable="false"
+		IsPersistent="false" Precision="30" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_TITLE" Expression="EMPL_TITLE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8775-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplOfficeLoc" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_OFFICE_LOC" Expression="EMPL_OFFICE_LOC"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8776-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplDob" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Date" ColumnType="DATE"
+		AliasName="EMPL_DOB" Expression="EMPL_DOB" SQLType="DATE">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8777-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplHireDate" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Date" ColumnType="DATE"
+		AliasName="EMPL_HIRE_DATE" Expression="EMPL_HIRE_DATE" SQLType="DATE">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8778-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="7" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplAddress" IsUpdateable="false"
+		IsPersistent="false" Precision="60" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_ADDRESS" Expression="EMPL_ADDRESS"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8779-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="60" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplCity" IsUpdateable="false"
+		IsPersistent="false" Precision="30" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_CITY" Expression="EMPL_CITY"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-877a-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplState" IsUpdateable="false"
+		IsPersistent="false" Precision="30" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_STATE" Expression="EMPL_STATE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-877b-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplZip" IsUpdateable="false"
+		IsPersistent="false" Precision="15" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_ZIP" Expression="EMPL_ZIP"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-877c-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="15" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplCountry" IsUpdateable="false"
+		IsPersistent="false" Precision="15" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_COUNTRY" Expression="EMPL_COUNTRY"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-877d-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="15" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplHomePhone" IsUpdateable="false"
+		IsPersistent="false" Precision="25" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_HOME_PHONE" Expression="EMPL_HOME_PHONE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-877e-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplOfficePhone" IsUpdateable="false"
+		IsPersistent="false" Precision="25" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_OFFICE_PHONE" Expression="EMPL_OFFICE_PHONE"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-877f-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplIntExtension" IsUpdateable="false"
+		IsPersistent="false" Precision="12" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_INT_EXTENSION" Expression="EMPL_INT_EXTENSION"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8780-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="12" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplOfficeFax" IsUpdateable="false"
+		IsPersistent="false" Precision="25" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_OFFICE_FAX" Expression="EMPL_OFFICE_FAX"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8781-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="25" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplEmail" IsUpdateable="false"
+		IsPersistent="false" Precision="50" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_EMAIL" Expression="EMPL_EMAIL"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8782-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplInternet" IsUpdateable="false"
+		IsPersistent="false" Precision="50" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_INTERNET" Expression="EMPL_INTERNET"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8783-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="50" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplNotes" IsUpdateable="false"
+		IsPersistent="false" Precision="2000" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_NOTES" Expression="EMPL_NOTES"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8784-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="2000" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplReptsTo" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="EMPL_REPTS_TO" Expression="EMPL_REPTS_TO"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8785-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplDirListing" IsUpdateable="false"
+		IsPersistent="false" Precision="10" Scale="0" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" AliasName="EMPL_DIR_LISTING" Expression="EMPL_DIR_LISTING"
+		SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8786-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplPassword" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="EMPL_PASSWORD" Expression="EMPL_PASSWORD"
+		SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8787-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RegId" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="REG_ID" Expression="REG_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8788-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="RergId" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="RERG_ID" Expression="RERG_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-8789-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="AcgrId" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="ACGR_ID" Expression="ACGR_ID" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-878a-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplStatus" IsUpdateable="false"
+		IsPersistent="false" Precision="8" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="EMPL_STATUS" Expression="EMPL_STATUS" SQLType="VARCHAR">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-878b-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="8" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="EmplIdHr" IsUpdateable="false"
+		IsPersistent="false" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		AliasName="EMPL_ID_HR" Expression="EMPL_ID_HR" SQLType="NUMERIC">
+		<Data>
+			<Property Name="ATTR_LOAD" Value="LOAD_EACH" />
+			<Property Name="CHANGEABILITY" Value="CHANGEABLE" />
+			<Property Name="ID"
+				Value="6bca2273-011d-1000-878c-814d53431e28::readable.EmplOtlEmployeesRView::ViewObjectAttribute" />
+			<Property Name="IS_NOT_NULL" Value="TRUE" />
+			<Property Name="IS_OVERRIDE_ATTR" Value="FALSE" />
+			<Property Name="IS_PERSISTENT" Value="TRUE" />
+			<Property Name="IS_QUERIABLE" Value="TRUE" />
+			<Property Name="IS_SUPER_ATTR" Value="FALSE" />
+			<Property Name="IS_UNIQUE" Value="FALSE" />
+			<Property Name="IS_UPDATEABLE" Value="UPDATEABLE" />
+			<Property Name="IS_VISIBLE" Value="TRUE" />
+			<Property Name="MULTIPLICITY" Value="1" />
+			<Property Name="OWNER_SCOPE" Value="INSTANCE" />
+			<Property Name="VISIBILITY" Value="PACKAGE" />
+		</Data>
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="EmplId" />
+	</AttrArray>
+	<ViewLinkAccessor Name="OtlEmplRolesRView"
+		ViewLink="com.bawaweb.views.readable.OtlEmrEmplFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+	<ViewLinkAccessor Name="PanPanelRView"
+		ViewLink="com.bawaweb.views.readable.PanEmplFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+	<ViewLinkAccessor Name="RprtReportsRView"
+		ViewLink="com.bawaweb.views.readable.RprtEmplEdtrFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+	<ViewLinkAccessor Name="RprtReportsRView"
+		ViewLink="com.bawaweb.views.readable.RprtEmplRptrFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+</ViewObject>

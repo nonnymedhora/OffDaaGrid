@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.6.5
+Created-By: 1.5.0_06-b05 (Sun Microsystems Inc.)
+
+Manifest Entry:
+Class-Path: ../WEB-INF/Model.jpx ../WEB-INF/lib/commons-beanutils.jar ../WEB-INF/lib/commons-collections.jar ../WEB-INF/lib/commons-digester.jar ../WEB-INF/lib/commons-discovery.jar ../WEB-INF/lib/commons-fileupload.jar ./WEB-INF/lib/commons-httpclient.jar ../WEB-INF/lib/commons-logging.jar ../WEB-INF/lib/commons-validator.jar ../WEB-INF/lib/javaee.jar  ../WEB-INF/lib/jxl.jar ../WEB-INF/lib/platform.jar

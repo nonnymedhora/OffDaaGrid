@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="DoesSourceMultiAnswerExist"
+	SelectList="OtlSourceMultiAnswers.SMA_SRA_ID, 
+       OtlSourceMultiAnswers.SMA_ANSWER, 
+       OtlSourceMultiAnswers.SMA_ASV_ID, 
+       OtlSourceMultiAnswers.SMA_QMQ_ID, 
+       OtlSourceMultiAnswers.SMA_EXCLUDE_YN, 
+       OtlSourceMultiAnswers.SMA_WEIGHT_MULTIPLIER, 
+       OtlSourceMultiAnswers.SMA_RAV_ID"
+	FromList="BAwaWEb_SOURCE_MULTI_ANSWERS OtlSourceMultiAnswers"
+	Where="OtlSourceMultiAnswers.SMA_SRA_ID = :sma_sra_id  AND  OtlSourceMultiAnswers.SMA_QMQ_ID = :qmq_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.identify.DoesSourceMultiAnswerExistRowImpl"
+	ComponentClass="com.bawaweb.views.identify.DoesSourceMultiAnswerExistImpl"
+	DefClass="com.bawaweb.views.identify.DoesSourceMultiAnswerExistDefImpl"
+	ComponentInterface="com.bawaweb.views.identify.common.DoesSourceMultiAnswerExist"
+	ClientProxyName="com.bawaweb.views.identify.client.DoesSourceMultiAnswerExistClient"
+	RowInterface="com.bawaweb.views.identify.common.DoesSourceMultiAnswerExistRow"
+	ClientRowProxyName="com.bawaweb.views.identify.client.DoesSourceMultiAnswerExistRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="sma_sra_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<Variable Name="qmq_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlSourceMultiAnswers" Entity="com.bawaweb.model.OtlSourceMultiAnswers">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere"
+				Value="OtlSourceMultiAnswers.SMA_SRA_ID = :sma_sra_id  AND  OtlSourceMultiAnswers.SMA_QMQ_ID = :qmq_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="SmaSraId" IsNotNull="true"
+		EntityAttrName="SmaSraId" EntityUsage="OtlSourceMultiAnswers"
+		AliasName="SMA_SRA_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SmaAnswer" EntityAttrName="SmaAnswer"
+		EntityUsage="OtlSourceMultiAnswers" AliasName="SMA_ANSWER">
+	</ViewAttribute>
+	<ViewAttribute Name="SmaAsvId" EntityAttrName="SmaAsvId"
+		EntityUsage="OtlSourceMultiAnswers" AliasName="SMA_ASV_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SmaQmqId" IsNotNull="true"
+		EntityAttrName="SmaQmqId" EntityUsage="OtlSourceMultiAnswers"
+		AliasName="SMA_QMQ_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SmaExcludeYn" IsNotNull="true"
+		EntityAttrName="SmaExcludeYn" EntityUsage="OtlSourceMultiAnswers"
+		AliasName="SMA_EXCLUDE_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="SmaWeightMultiplier" EntityAttrName="SmaWeightMultiplier"
+		EntityUsage="OtlSourceMultiAnswers" AliasName="SMA_WEIGHT_MULTIPLIER">
+	</ViewAttribute>
+	<ViewAttribute Name="SmaRavId" EntityAttrName="SmaRavId"
+		EntityUsage="OtlSourceMultiAnswers" AliasName="SMA_RAV_ID">
+	</ViewAttribute>
+</ViewObject>

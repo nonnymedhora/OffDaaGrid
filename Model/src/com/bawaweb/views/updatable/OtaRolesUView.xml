@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlRolesUView"
+	SelectList="OtlRoles.ROL_ID, 
+       OtlRoles.ROL_NAME, 
+       OtlRoles.ROL_SRC_IND_YN, 
+       OtlRoles.ROL_RPRT_IND_YN, 
+       OtlRoles.ROL_SRC_RPRT_YN, 
+       OtlRoles.ROL_DISPLAY_ORDER"
+	FromList="BAwaWEb_ROLES OtlRoles" Where="OtlRoles.ROL_ID = :rol_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.OtlRolesUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.OtlRolesUViewImpl"
+	DefClass="com.bawaweb.views.updatable.OtlRolesUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.OtlRolesUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.OtlRolesUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.OtlRolesUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.OtlRolesUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rol_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlRoles" Entity="com.bawaweb.model.OtlRoles">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="OtlRoles.ROL_ID = :rol_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="RolId" IsNotNull="true"
+		EntityAttrName="RolId" EntityUsage="OtlRoles" AliasName="ROL_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RolName" IsNotNull="true"
+		EntityAttrName="RolName" EntityUsage="OtlRoles" AliasName="ROL_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="RolSrcIndYn" IsNotNull="true"
+		EntityAttrName="RolSrcIndYn" EntityUsage="OtlRoles" AliasName="ROL_SRC_IND_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="RolRprtIndYn" IsNotNull="true"
+		EntityAttrName="RolRprtIndYn" EntityUsage="OtlRoles" AliasName="ROL_RPRT_IND_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="RolSrcRprtYn" IsNotNull="true"
+		EntityAttrName="RolSrcRprtYn" EntityUsage="OtlRoles" AliasName="ROL_SRC_RPRT_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="RolDisplayOrder" EntityAttrName="RolDisplayOrder"
+		EntityUsage="OtlRoles" AliasName="ROL_DISPLAY_ORDER">
+	</ViewAttribute>
+	<ViewLinkAccessor Name="OtlEmplRolesUView"
+		ViewLink="com.bawaweb.views.updatable.OtlEmrRolFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+</ViewObject>

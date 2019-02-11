@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlTallyRangeLimitsUView"
+	SelectList="OtlTallyRangeLimits.TRL_ID, 
+       OtlTallyRangeLimits.TRL_TLY_ID, 
+       OtlTallyRangeLimits.TRL_FROM, 
+       OtlTallyRangeLimits.TRL_TO, 
+       OtlTallyRangeLimits.TRL_DISPLAY_SEQ, 
+       OtlTallyRangeLimits.TRL_TYPE, 
+       OtlTallyRangeLimits.TRL_DELETE_YN"
+	FromList="BAwaWEb_TALLY_RANGE_LIMITS OtlTallyRangeLimits" BindingStyle="OracleName"
+	CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.OtlTallyRangeLimitsUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.OtlTallyRangeLimitsUViewImpl"
+	DefClass="com.bawaweb.views.updatable.OtlTallyRangeLimitsUViewDefImpl"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|VarAccess" />
+	</DesignTime>
+	<EntityUsage Name="OtlTallyRangeLimits" Entity="com.bawaweb.model.OtlTallyRangeLimits">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="TrlId" IsNotNull="true"
+		EntityAttrName="TrlId" EntityUsage="OtlTallyRangeLimits" AliasName="TRL_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="TrlTlyId" IsNotNull="true"
+		EntityAttrName="TrlTlyId" EntityUsage="OtlTallyRangeLimits" AliasName="TRL_TLY_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="TrlFrom" EntityAttrName="TrlFrom"
+		EntityUsage="OtlTallyRangeLimits" AliasName="TRL_FROM">
+	</ViewAttribute>
+	<ViewAttribute Name="TrlTo" EntityAttrName="TrlTo"
+		EntityUsage="OtlTallyRangeLimits" AliasName="TRL_TO">
+	</ViewAttribute>
+	<ViewAttribute Name="TrlDisplaySeq" IsNotNull="true"
+		EntityAttrName="TrlDisplaySeq" EntityUsage="OtlTallyRangeLimits"
+		AliasName="TRL_DISPLAY_SEQ">
+	</ViewAttribute>
+	<ViewAttribute Name="TrlType" IsNotNull="true"
+		EntityAttrName="TrlType" EntityUsage="OtlTallyRangeLimits" AliasName="TRL_TYPE">
+	</ViewAttribute>
+	<ViewAttribute Name="TrlDeleteYn" IsNotNull="true"
+		EntityAttrName="TrlDeleteYn" EntityUsage="OtlTallyRangeLimits"
+		AliasName="TRL_DELETE_YN">
+	</ViewAttribute>
+</ViewObject>

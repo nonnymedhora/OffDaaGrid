@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="GetBestSourceId"
+	SelectList="SrcRprtRprtrDateView.SRC_ID, 
+       SrcRprtRprtrDateView.REPORTS, 
+       SrcRprtRprtrDateView.REPORTERS, 
+       SrcRprtRprtrDateView.LASTDUEDATE"
+	FromList="SRC_RPRT_RPRTR_DATE_VIEW SrcRprtRprtrDateView"
+	Where="to_char(SrcRprtRprtrDateView.SRC_ID) in :list_ids and SrcRprtRprtrDateView.LASTDUEDATE =  (  select max(lastduedate) from SRC_RPRT_RPRTR_DATE_VIEW where    to_char(SrcRprtRprtrDateView.SRC_ID) in :list_ids )"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.identify.GetBestSourceIdRowImpl"
+	ComponentClass="com.bawaweb.views.identify.GetBestSourceIdImpl"
+	DefClass="com.bawaweb.views.identify.GetBestSourceIdDefImpl"
+	ComponentInterface="com.bawaweb.views.identify.common.GetBestSourceId"
+	ClientProxyName="com.bawaweb.views.identify.client.GetBestSourceIdClient"
+	RowInterface="com.bawaweb.views.identify.common.GetBestSourceIdRow"
+	ClientRowProxyName="com.bawaweb.views.identify.client.GetBestSourceIdRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="list_ids" Kind="where" Type="java.lang.String">
+	</Variable>
+	<EntityUsage Name="SrcRprtRprtrDateView"
+		Entity="com.bawaweb.model.viewobjects.SrcRprtRprtrDateView">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere"
+				Value="to_char(SrcRprtRprtrDateView.SRC_ID) in :list_ids and SrcRprtRprtrDateView.LASTDUEDATE =  (  select max(lastduedate) from SRC_RPRT_RPRTR_DATE_VIEW where    to_char(SrcRprtRprtrDateView.SRC_ID) in :list_ids )" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="SrcId" IsNotNull="true"
+		EntityAttrName="SrcId" EntityUsage="SrcRprtRprtrDateView" AliasName="SRC_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="Reports" EntityAttrName="Reports"
+		EntityUsage="SrcRprtRprtrDateView" AliasName="REPORTS">
+	</ViewAttribute>
+	<ViewAttribute Name="Reporters" EntityAttrName="Reporters"
+		EntityUsage="SrcRprtRprtrDateView" AliasName="REPORTERS">
+	</ViewAttribute>
+	<ViewAttribute Name="Lastduedate" EntityAttrName="Lastduedate"
+		EntityUsage="SrcRprtRprtrDateView" AliasName="LASTDUEDATE">
+	</ViewAttribute>
+</ViewObject>

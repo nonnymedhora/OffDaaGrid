@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtlQuestionsUView"
+	SelectList="OtlQuestions.QST_ID, 
+       OtlQuestions.QST_RPRT_ID, 
+       OtlQuestions.QST_DISPLAY_SEQ, 
+       OtlQuestions.QST_UNIQUE_ID, 
+       OtlQuestions.QST_NUMBER, 
+       OtlQuestions.QST_TYPE, 
+       OtlQuestions.QST_QUESTION, 
+       OtlQuestions.QST_QUESTION_HINT, 
+       OtlQuestions.QST_TEXT_REQUIRED_YN, 
+       OtlQuestions.QST_TEXT_HINT, 
+       OtlQuestions.QST_ANS_ID, 
+       OtlQuestions.QST_COMMENT, 
+       OtlQuestions.QST_MULTI_ANSWERS, 
+       OtlQuestions.QST_TLY_ID, 
+       OtlQuestions.QST_DELETE_YN, 
+       OtlQuestions.QST_POINT_SPREAD, 
+       OtlQuestions.QST_RAS_ID, 
+       OtlQuestions.QST_ANALYSIS_SHOW_YN"
+	FromList="BAwaWEb_QUESTIONS OtlQuestions" Where="OtlQuestions.QST_ID = :qst_id"
+	BindingStyle="OracleName" CustomQuery="false"
+	RowClass="com.bawaweb.views.updatable.OtlQuestionsUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.OtlQuestionsUViewImpl"
+	DefClass="com.bawaweb.views.updatable.OtlQuestionsUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.OtlQuestionsUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.OtlQuestionsUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.OtlQuestionsUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.OtlQuestionsUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="qst_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<EntityUsage Name="OtlQuestions" Entity="com.bawaweb.model.OtlQuestions">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere" Value="OtlQuestions.QST_ID = :qst_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="QstId" IsNotNull="true"
+		EntityAttrName="QstId" EntityUsage="OtlQuestions" AliasName="QST_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QstRprtId" IsNotNull="true"
+		EntityAttrName="QstRprtId" EntityUsage="OtlQuestions" AliasName="QST_RPRT_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QstDisplaySeq" IsNotNull="true"
+		EntityAttrName="QstDisplaySeq" EntityUsage="OtlQuestions" AliasName="QST_DISPLAY_SEQ">
+	</ViewAttribute>
+	<ViewAttribute Name="QstUniqueId" EntityAttrName="QstUniqueId"
+		EntityUsage="OtlQuestions" AliasName="QST_UNIQUE_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QstNumber" IsNotNull="true"
+		EntityAttrName="QstNumber" EntityUsage="OtlQuestions" AliasName="QST_NUMBER">
+	</ViewAttribute>
+	<ViewAttribute Name="QstType" IsNotNull="true"
+		EntityAttrName="QstType" EntityUsage="OtlQuestions" AliasName="QST_TYPE">
+	</ViewAttribute>
+	<ViewAttribute Name="QstQuestion" IsNotNull="true"
+		EntityAttrName="QstQuestion" EntityUsage="OtlQuestions" AliasName="QST_QUESTION">
+	</ViewAttribute>
+	<ViewAttribute Name="QstQuestionHint" EntityAttrName="QstQuestionHint"
+		EntityUsage="OtlQuestions" AliasName="QST_QUESTION_HINT">
+	</ViewAttribute>
+	<ViewAttribute Name="QstTextRequiredYn" IsNotNull="true"
+		EntityAttrName="QstTextRequiredYn" EntityUsage="OtlQuestions"
+		AliasName="QST_TEXT_REQUIRED_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="QstTextHint" EntityAttrName="QstTextHint"
+		EntityUsage="OtlQuestions" AliasName="QST_TEXT_HINT">
+	</ViewAttribute>
+	<ViewAttribute Name="QstAnsId" EntityAttrName="QstAnsId"
+		EntityUsage="OtlQuestions" AliasName="QST_ANS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QstComment" EntityAttrName="QstComment"
+		EntityUsage="OtlQuestions" AliasName="QST_COMMENT">
+	</ViewAttribute>
+	<ViewAttribute Name="QstMultiAnswers" EntityAttrName="QstMultiAnswers"
+		EntityUsage="OtlQuestions" AliasName="QST_MULTI_ANSWERS">
+	</ViewAttribute>
+	<ViewAttribute Name="QstTlyId" EntityAttrName="QstTlyId"
+		EntityUsage="OtlQuestions" AliasName="QST_TLY_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QstDeleteYn" IsNotNull="true"
+		EntityAttrName="QstDeleteYn" EntityUsage="OtlQuestions" AliasName="QST_DELETE_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="QstPointSpread" EntityAttrName="QstPointSpread"
+		EntityUsage="OtlQuestions" AliasName="QST_POINT_SPREAD">
+	</ViewAttribute>
+	<ViewAttribute Name="QstRasId" EntityAttrName="QstRasId"
+		EntityUsage="OtlQuestions" AliasName="QST_RAS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="QstAnalysisShowYn" EntityAttrName="QstAnalysisShowYn"
+		EntityUsage="OtlQuestions" AliasName="QST_ANALYSIS_SHOW_YN">
+	</ViewAttribute>
+	<ViewLinkAccessor Name="OtlSourceAnswersUView"
+		ViewLink="com.bawaweb.views.updatable.SraQstFkLink" Type="oracle.jbo.RowIterator"
+		IsUpdateable="false">
+	</ViewLinkAccessor>
+</ViewObject>

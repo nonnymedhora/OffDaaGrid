@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage Name="identify" SeparateXMLFiles="true"
+	PackageName="com.bawaweb.views.identify">
+	<DesignTime>
+		<Attr Name="_ejbPackage" Value="false" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+	</DesignTime>
+	<Containee Name="AddAnswerSetForQstn"
+		FullName="com.bawaweb.views.identify.AddAnswerSetForQstn" ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="ASVAnswerValues" FullName="com.bawaweb.views.identify.ASVAnswerValues"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="DoesSourceAnswerExist"
+		FullName="com.bawaweb.views.identify.DoesSourceAnswerExist"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="DoesSourceMultiAnswerExist"
+		FullName="com.bawaweb.views.identify.DoesSourceMultiAnswerExist"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="ExtraQstnsAnswerSetValues"
+		FullName="com.bawaweb.views.identify.ExtraQstnsAnswerSetValues"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="ExtraQstnsReportAnswerSetValues"
+		FullName="com.bawaweb.views.identify.ExtraQstnsReportAnswerSetValues"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="GetBestSourceId" FullName="com.bawaweb.views.identify.GetBestSourceId"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="GetErrXLFileInfo" FullName="com.bawaweb.views.identify.GetErrXLFileInfo"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="MaxAsvId" FullName="com.bawaweb.views.identify.MaxAsvId"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="MaxRavId" FullName="com.bawaweb.views.identify.MaxRavId"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="MaxRpsId" FullName="com.bawaweb.views.identify.MaxRpsId"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="RAVInfo" FullName="com.bawaweb.views.identify.RAVInfo"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="ReportLockInfo" FullName="com.bawaweb.views.identify.ReportLockInfo"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SrcAnsUniqueInfo" FullName="com.bawaweb.views.identify.SrcAnsUniqueInfo"
+		ObjectType="ViewObject">
+	</Containee>
+	<Containee Name="SSCInfo" FullName="com.bawaweb.views.identify.SSCInfo"
+		ObjectType="ViewObject">
+	</Containee>
+</JboPackage>

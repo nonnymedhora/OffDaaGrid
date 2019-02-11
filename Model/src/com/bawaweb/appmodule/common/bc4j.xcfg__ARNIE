@@ -1,0 +1,28 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig>
+   <AppModuleConfigBag>
+      <AppModuleConfig name="PlatformAppModuleLocal">
+         <AppModuleJndiName>com.bawaweb.appmodule.PlatformAppModule</AppModuleJndiName>
+         <DeployPlatform>LOCAL</DeployPlatform>
+         <JDBCName>sales_xe</JDBCName>
+         <ApplicationName>com.bawaweb.appmodule.PlatformAppModule</ApplicationName>
+         <jbo.project>Model</jbo.project>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <ConnectionDefinition name="sales_xe">
+      <ENTRY name="JDBC_PORT" value="1522"/>
+      <ENTRY name="ConnectionType" value="JDBC"/>
+      <ENTRY name="HOSTNAME" value="san-wk-aweinste.ox.com"/>
+      <ENTRY name="DeployPassword" value="true"/>
+      <ENTRY name="user" value="SALES"/>
+      <ENTRY name="ConnectionName" value="sales_xe"/>
+      <ENTRY name="ServiceName" value="xe"/>
+      <ENTRY name="Role" value="Normal"/>
+      <ENTRY name="JdbcDriver" value="oracle.jdbc.OracleDriver"/>
+      <ENTRY name="password">
+         <![CDATA[{904}0574B29C4F036DEAD4A3DDA9D9E640C9A2]]>
+      </ENTRY>
+      <ENTRY name="ORACLE_JDBC_TYPE" value="thin"/>
+      <ENTRY name="DeployPassword" value="true"/>
+   </ConnectionDefinition>
+</BC4JConfig>

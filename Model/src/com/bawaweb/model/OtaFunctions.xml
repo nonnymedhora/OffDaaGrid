@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="OtlFunctions" DBObjectType="table" DBObjectName="BAwaWEb_FUNCTIONS"
+	AliasName="OtlFunctions" BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.OtlFunctionsImpl" DefClass="com.bawaweb.model.OtlFunctionsDefImpl"
+	CollClass="com.bawaweb.model.OtlFunctionsCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="FncId" IsNotNull="true" Precision="12"
+		Scale="0" ColumnName="FNC_ID" Type="oracle.jbo.domain.Number"
+		ColumnType="NUMBER" SQLType="NUMERIC" TableName="BAwaWEb_FUNCTIONS"
+		PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="FncName" IsNotNull="true" Precision="30"
+		ColumnName="FNC_NAME" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_FUNCTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="FncMenu" Precision="20" ColumnName="FNC_MENU"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_FUNCTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="FncCallMenu" Precision="20" ColumnName="FNC_CALL_MENU"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_FUNCTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="FncPage" IsNotNull="true" Precision="30"
+		ColumnName="FNC_PAGE" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_FUNCTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="FncMenuSeq" Precision="12" Scale="0"
+		ColumnName="FNC_MENU_SEQ" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_FUNCTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="FncIcon1" Precision="30" ColumnName="FNC_ICON_1"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="BAwaWEb_FUNCTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="FncLink1" Precision="12" Scale="0"
+		ColumnName="FNC_LINK_1" Type="oracle.jbo.domain.Number" ColumnType="NUMBER"
+		SQLType="NUMERIC" TableName="BAwaWEb_FUNCTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="FncPageNewVersion" Precision="30"
+		ColumnName="FNC_PAGE_NEW_VERSION" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="BAwaWEb_FUNCTIONS">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</Attribute>
+	<Key Name="OtlFncPk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlFunctions.FncId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="BAwaWEb_FNC_PK" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004825">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlFunctions.FncId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;FNC_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004825" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004826">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlFunctions.FncName" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;FNC_NAME&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004826" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004827">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlFunctions.FncPage" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;FNC_PAGE&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004827" />
+		</DesignTime>
+	</Key>
+</Entity>

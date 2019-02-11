@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+
+<Association Name="OtlScvSrtFkAssoc">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+	</DesignTime>
+	<AssociationEnd Name="OtlSortingCriteria" Cardinality="1"
+		Source="true" Owner="com.bawaweb.model.OtlSortingCriteria">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteria.SrtId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_finderName" Value="OtlSortingCriteria" />
+			<Attr Name="_aggregation" Value="0" />
+			<Attr Name="_foreignKey" Value="com.bawaweb.model.OtlSortingCriteria.OtlSrtPk" />
+			<Attr Name="_minCardinality" Value="1" />
+			<Attr Name="_isUpdateable" Value="true" />
+		</DesignTime>
+	</AssociationEnd>
+	<AssociationEnd Name="OtlSortingCriteriaValues"
+		Cardinality="-1" Owner="com.bawaweb.model.OtlSortingCriteriaValues">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.OtlSortingCriteriaValues.ScvSrtId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_finderName" Value="OtlSortingCriteriaValues" />
+			<Attr Name="_aggregation" Value="0" />
+			<Attr Name="_foreignKey"
+				Value="com.bawaweb.model.OtlSortingCriteriaValues.OtlScvSrtFk" />
+			<Attr Name="_isUpdateable" Value="true" />
+		</DesignTime>
+	</AssociationEnd>
+</Association>

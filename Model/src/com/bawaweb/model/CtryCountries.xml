@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity Name="CtryCountries" DBObjectType="table" DBObjectName="CTRY_COUNTRIES"
+	AliasName="CtryCountries" BindingStyle="OracleName" UseGlueCode="false"
+	RowClass="com.bawaweb.model.CtryCountriesImpl" DefClass="com.bawaweb.model.CtryCountriesDefImpl"
+	CollClass="com.bawaweb.model.CtryCountriesCollImpl">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<AttrArray Name="_publishEvents">
+		</AttrArray>
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll" />
+	</DesignTime>
+	<Attribute Name="CtryId" IsNotNull="true" ColumnName="CTRY_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="CTRY_COUNTRIES" PrimaryKey="true">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="CtryShortname" Precision="10" ColumnName="CTRY_SHORTNAME"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="CTRY_COUNTRIES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="10" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="CtryName" Precision="200" ColumnName="CTRY_NAME"
+		Type="java.lang.String" ColumnType="VARCHAR2" SQLType="VARCHAR"
+		TableName="CTRY_COUNTRIES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="200" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="RergId" ColumnName="RERG_ID"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" SQLType="NUMERIC"
+		TableName="CTRY_COUNTRIES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</Attribute>
+	<Attribute Name="CtryIsoCntryCode" Precision="4"
+		ColumnName="CTRY_ISO_CNTRY_CODE" Type="java.lang.String" ColumnType="VARCHAR2"
+		SQLType="VARCHAR" TableName="CTRY_COUNTRIES">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="4" />
+		</DesignTime>
+	</Attribute>
+	<AccessorAttribute Name="OtlSources"
+		Association="com.bawaweb.model.OtlSrcCtryFkAssoc" AssociationEnd="com.bawaweb.model.OtlSrcCtryFkAssoc.OtlSources"
+		AssociationOtherEnd="com.bawaweb.model.OtlSrcCtryFkAssoc.CtryCountries"
+		Type="oracle.jbo.RowIterator" IsUpdateable="false">
+	</AccessorAttribute>
+	<Key Name="PkCtryCountries">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.CtryCountries.CtryId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_isPrimary" Value="true" />
+			<Attr Name="_DBObjectName" Value="PK_CTRY_COUNTRIES" />
+		</DesignTime>
+	</Key>
+	<Key Name="SysC004711">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.CtryCountries.CtryId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_checkCondition" Value="&#34;CTRY_ID&#34; IS NOT NULL" />
+			<Attr Name="_isCheck" Value="true" />
+			<Attr Name="_DBObjectName" Value="SYS_C004711" />
+		</DesignTime>
+	</Key>
+	<Key Name="CtryRegFk">
+		<AttrArray Name="Attributes">
+			<Item Value="com.bawaweb.model.CtryCountries.RergId" />
+		</AttrArray>
+		<DesignTime>
+			<Attr Name="_referencedKey" Value="PK_REG" />
+			<Attr Name="_isForeign" Value="true" />
+			<Attr Name="_DBObjectName" Value="CTRY_REG_FK" />
+		</DesignTime>
+	</Key>
+</Entity>

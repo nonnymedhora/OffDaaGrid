@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="OtrEmployeeInfoUView"
+	SelectList="OtrEmployeeInfo.LAST_NAME, 
+       OtrEmployeeInfo.FIRST_NAME, 
+       OtrEmployeeInfo.TITLE, 
+       OtrEmployeeInfo.DEPARTMENT, 
+       OtrEmployeeInfo.SECTORS, 
+       OtrEmployeeInfo.COUNTRY, 
+       OtrEmployeeInfo.REGION, 
+       OtrEmployeeInfo.SHORT_BIO, 
+       OtrEmployeeInfo.LONG_BIO, 
+       OtrEmployeeInfo.REPORTS_TO, 
+       OtrEmployeeInfo.BAwaWEb_SINCE, 
+       OtrEmployeeInfo.ADDITIONAL_EXPERTISE, 
+       OtrEmployeeInfo.COVERS, 
+       OtrEmployeeInfo.ROWID"
+	FromList="BAwaWEb_EMPLOYEE_INFO OtrEmployeeInfo" BindingStyle="OracleName"
+	CustomQuery="false" RowClass="com.bawaweb.views.updatable.OtrEmployeeInfoUViewRowImpl"
+	ComponentClass="com.bawaweb.views.updatable.OtrEmployeeInfoUViewImpl"
+	DefClass="com.bawaweb.views.updatable.OtrEmployeeInfoUViewDefImpl"
+	ComponentInterface="com.bawaweb.views.updatable.common.OtrEmployeeInfoUView"
+	ClientProxyName="com.bawaweb.views.updatable.client.OtrEmployeeInfoUViewClient"
+	RowInterface="com.bawaweb.views.updatable.common.OtrEmployeeInfoUViewRow"
+	ClientRowProxyName="com.bawaweb.views.updatable.client.OtrEmployeeInfoUViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<EntityUsage Name="OtrEmployeeInfo" Entity="com.bawaweb.model.OtrEmployeeInfo">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="false" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="LastName" EntityAttrName="LastName"
+		EntityUsage="OtrEmployeeInfo" AliasName="LAST_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="FirstName" EntityAttrName="FirstName"
+		EntityUsage="OtrEmployeeInfo" AliasName="FIRST_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="Title" EntityAttrName="Title"
+		EntityUsage="OtrEmployeeInfo" AliasName="TITLE">
+	</ViewAttribute>
+	<ViewAttribute Name="Department" EntityAttrName="Department"
+		EntityUsage="OtrEmployeeInfo" AliasName="DEPARTMENT">
+	</ViewAttribute>
+	<ViewAttribute Name="Sectors" EntityAttrName="Sectors"
+		EntityUsage="OtrEmployeeInfo" AliasName="SECTORS">
+	</ViewAttribute>
+	<ViewAttribute Name="Country" EntityAttrName="Country"
+		EntityUsage="OtrEmployeeInfo" AliasName="COUNTRY">
+	</ViewAttribute>
+	<ViewAttribute Name="Region" EntityAttrName="Region"
+		EntityUsage="OtrEmployeeInfo" AliasName="REGION">
+	</ViewAttribute>
+	<ViewAttribute Name="ShortBio" EntityAttrName="ShortBio"
+		EntityUsage="OtrEmployeeInfo" AliasName="SHORT_BIO">
+	</ViewAttribute>
+	<ViewAttribute Name="LongBio" EntityAttrName="LongBio"
+		EntityUsage="OtrEmployeeInfo" AliasName="LONG_BIO">
+	</ViewAttribute>
+	<ViewAttribute Name="ReportsTo" EntityAttrName="ReportsTo"
+		EntityUsage="OtrEmployeeInfo" AliasName="REPORTS_TO">
+	</ViewAttribute>
+	<ViewAttribute Name="OtrSince" EntityAttrName="OtrSince"
+		EntityUsage="OtrEmployeeInfo" AliasName="BAwaWEb_SINCE">
+	</ViewAttribute>
+	<ViewAttribute Name="AdditionalExpertise" EntityAttrName="AdditionalExpertise"
+		EntityUsage="OtrEmployeeInfo" AliasName="ADDITIONAL_EXPERTISE">
+	</ViewAttribute>
+	<ViewAttribute Name="Covers" EntityAttrName="Covers"
+		EntityUsage="OtrEmployeeInfo" AliasName="COVERS">
+	</ViewAttribute>
+	<ViewAttribute Name="RowID" IsUpdateable="false"
+		EntityAttrName="RowID" EntityUsage="OtrEmployeeInfo" AliasName="ROWID">
+	</ViewAttribute>
+</ViewObject>

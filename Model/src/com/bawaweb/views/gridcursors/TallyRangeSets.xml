@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="TallyRangeSets" OrderBy="trl_display_seq"
+	BindingStyle="OracleName" CustomQuery="true"
+	RowClass="com.bawaweb.views.gridcursors.TallyRangeSetsRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.TallyRangeSetsImpl"
+	DefClass="com.bawaweb.views.gridcursors.TallyRangeSetsDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.common.TallyRangeSets"
+	ClientProxyName="com.bawaweb.views.gridcursors.client.TallyRangeSetsClient"
+	RowInterface="com.bawaweb.views.gridcursors.common.TallyRangeSetsRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.client.TallyRangeSetsRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="tly_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+select * from 
+	bawaweb_tally_ranges r, 
+	bawaweb_tally_range_limits l
+where
+	r.tly_id = l.trl_tly_id
+     and r.tly_id = :tly_id
+   ]]></SQLQuery>
+	<ViewAttribute Name="TlyId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="TLY_ID"
+		Expression="TLY_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="TlyName" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="30" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="TLY_NAME" Expression="TLY_NAME"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="30" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="TlyPrefix" IsUpdateable="false"
+		IsPersistent="false" Precision="6" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="TLY_PREFIX" Expression="TLY_PREFIX" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="6" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="TlySuffix" IsUpdateable="false"
+		IsPersistent="false" Precision="6" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="TLY_SUFFIX" Expression="TLY_SUFFIX" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="6" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="TlyDeleteYn" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="1" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="TLY_DELETE_YN" Expression="TLY_DELETE_YN"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="TrlId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="TRL_ID"
+		Expression="TRL_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="TrlTlyId" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="TRL_TLY_ID"
+		Expression="TRL_TLY_ID" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="TrlFrom" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="TRL_FROM" Expression="TRL_FROM"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="TrlTo" IsUpdateable="false"
+		IsPersistent="false" Precision="20" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="TRL_TO" Expression="TRL_TO" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="20" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="TrlDisplaySeq" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="12" Scale="0"
+		Type="oracle.jbo.domain.Number" ColumnType="NUMBER" AliasName="TRL_DISPLAY_SEQ"
+		Expression="TRL_DISPLAY_SEQ" SQLType="NUMERIC">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="22" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="TrlType" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="6" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="TRL_TYPE" Expression="TRL_TYPE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="6" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="TrlDeleteYn" IsUpdateable="false"
+		IsPersistent="false" IsNotNull="true" Precision="1" Type="java.lang.String"
+		ColumnType="VARCHAR2" AliasName="TRL_DELETE_YN" Expression="TRL_DELETE_YN"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<AttrArray Name="KeyAttributes">
+		<Item Value="TlyId" />
+	</AttrArray>
+</ViewObject>

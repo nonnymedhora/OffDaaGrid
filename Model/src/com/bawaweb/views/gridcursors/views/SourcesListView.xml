@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject Name="SourcesListView" BindingStyle="OracleName"
+	CustomQuery="true"
+	RowClass="com.bawaweb.views.gridcursors.views.SourcesListViewRowImpl"
+	ComponentClass="com.bawaweb.views.gridcursors.views.SourcesListViewImpl"
+	DefClass="com.bawaweb.views.gridcursors.views.SourcesListViewDefImpl"
+	ComponentInterface="com.bawaweb.views.gridcursors.views.common.SourcesListView"
+	ClientProxyName="com.bawaweb.views.gridcursors.views.client.SourcesListViewClient"
+	RowInterface="com.bawaweb.views.gridcursors.views.common.SourcesListViewRow"
+	ClientRowProxyName="com.bawaweb.views.gridcursors.views.client.SourcesListViewRowClient"
+	FetchMode="FETCH_AS_NEEDED" UseGlueCode="false">
+	<DesignTime>
+		<Attr Name="_isCodegen" Value="true" />
+		<Attr Name="_isExpertMode" Value="true" />
+		<Attr Name="_version" Value="10.1.3.40.66" />
+		<Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess" />
+	</DesignTime>
+	<Variable Name="rprt_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<Variable Name="rprtr_id" Kind="where" Type="oracle.jbo.domain.Number">
+	</Variable>
+	<SQLQuery><![CDATA[
+SELECT SourcesListView.SRC_ID, 
+       SourcesListView.RPS_ID, 
+       SourcesListView.SRC_LAST_NAME, 
+       SourcesListView.SRC_FIRST_NAME, 
+       SourcesListView.SRC_COURTESY_TITLE, 
+       SourcesListView.SRC_JOB_TITLE, 
+       SourcesListView.SRC_JOB_DESCRIPTION, 
+       SourcesListView.SRC_COMPANY, 
+       SourcesListView.SRC_ADDRESS1, 
+       SourcesListView.SRC_ADDRESS2, 
+       SourcesListView.SRC_ADDRESS3, 
+       SourcesListView.SRC_CITY, 
+       SourcesListView.SRC_STATE, 
+       SourcesListView.SRC_ZIP, 
+       SourcesListView.SRC_CTRY_ID, 
+       SourcesListView.SRC_TMZ_ID, 
+       SourcesListView.SRC_EMAIL, 
+       SourcesListView.SRC_PHONE, 
+       SourcesListView.SRC_PHONE_EXT, 
+       SourcesListView.SRC_CELL_PHONE, 
+       SourcesListView.SRC_FAX, 
+       SourcesListView.SRC_STATUS, 
+       SourcesListView.SRC_EXCLUSIVE_SOURCE_YN, 
+       SourcesListView.SRC_DONT_CONTACT_YN, 
+       SourcesListView.SRC_COMPANY_TYPE, 
+       SourcesListView.SRC_AREA_OF_EXPERTISE, 
+       SourcesListView.SRC_INDUSTRY_SECTOR, 
+       SourcesListView.SRC_INDUSTRY_VIEW, 
+       SourcesListView.SRC_VENDORS, 
+       SourcesListView.SRC_COMPANY_SIZE, 
+       SourcesListView.SRC_DISTRIBUTION_PREFERENCE, 
+       SourcesListView.SRC_DISTRIBUTION_NOTES, 
+       SourcesListView.SRC_SPECIAL_REQUESTS, 
+       SourcesListView.SRC_REPORTERS_NOTES, 
+       SourcesListView.SRC_QUALITY_RATING, 
+       SourcesListView.SRC_MODIFIED_DATE, 
+       SourcesListView.SRC_MODIFIED_BY, 
+       SourcesListView.SRC_SUFFIX_TITLE, 
+       SourcesListView.RPRT_SOURCE_DISPLAY_FIELD, 
+       SourcesListView.RPS_RPTR_ID, 
+       SourcesListView.RPS_REPEAT_SOURCE_YN, 
+       SourcesListView.EMPL_INIT, 
+       SourcesListView.RPRT_ID,
+       SourcesListView.SRC_OFFERED_REPORT,
+       SourcesListView.SRC_INFORMED_OF_WEBSITE
+FROM SOURCES_LIST_VIEW SourcesListView
+WHERE SourcesListView.RPRT_ID = :rprt_id AND SourcesListView.RPS_RPTR_ID = :rprtr_id
+   ]]></SQLQuery>
+	<EntityUsage Name="SourcesListView"
+		Entity="com.bawaweb.model.viewobjects.SourcesListView">
+		<DesignTime>
+			<Attr Name="_queryClause" Value="true" />
+			<Attr Name="_queryWhere"
+				Value="SourcesListView.RPRT_ID = :rprt_id AND SourcesListView.RPS_RPTR_ID = :rprtr_id" />
+		</DesignTime>
+	</EntityUsage>
+	<ViewAttribute Name="SrcId" IsNotNull="true"
+		EntityAttrName="SrcId" EntityUsage="SourcesListView" AliasName="SRC_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RpsId" IsNotNull="true"
+		EntityAttrName="RpsId" EntityUsage="SourcesListView" AliasName="RPS_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcLastName" EntityAttrName="SrcLastName"
+		EntityUsage="SourcesListView" AliasName="SRC_LAST_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcFirstName" EntityAttrName="SrcFirstName"
+		EntityUsage="SourcesListView" AliasName="SRC_FIRST_NAME">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCourtesyTitle" EntityAttrName="SrcCourtesyTitle"
+		EntityUsage="SourcesListView" AliasName="SRC_COURTESY_TITLE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcJobTitle" EntityAttrName="SrcJobTitle"
+		EntityUsage="SourcesListView" AliasName="SRC_JOB_TITLE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcJobDescription" EntityAttrName="SrcJobDescription"
+		EntityUsage="SourcesListView" AliasName="SRC_JOB_DESCRIPTION">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCompany" EntityAttrName="SrcCompany"
+		EntityUsage="SourcesListView" AliasName="SRC_COMPANY">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAddress1" EntityAttrName="SrcAddress1"
+		EntityUsage="SourcesListView" AliasName="SRC_ADDRESS1">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAddress2" EntityAttrName="SrcAddress2"
+		EntityUsage="SourcesListView" AliasName="SRC_ADDRESS2">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAddress3" EntityAttrName="SrcAddress3"
+		EntityUsage="SourcesListView" AliasName="SRC_ADDRESS3">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCity" IsNotNull="true"
+		EntityAttrName="SrcCity" EntityUsage="SourcesListView" AliasName="SRC_CITY">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcState" EntityAttrName="SrcState"
+		EntityUsage="SourcesListView" AliasName="SRC_STATE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcZip" EntityAttrName="SrcZip"
+		EntityUsage="SourcesListView" AliasName="SRC_ZIP">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCtryId" IsNotNull="true"
+		EntityAttrName="SrcCtryId" EntityUsage="SourcesListView" AliasName="SRC_CTRY_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcTmzId" EntityAttrName="SrcTmzId"
+		EntityUsage="SourcesListView" AliasName="SRC_TMZ_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcEmail" EntityAttrName="SrcEmail"
+		EntityUsage="SourcesListView" AliasName="SRC_EMAIL">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcPhone" IsNotNull="true"
+		EntityAttrName="SrcPhone" EntityUsage="SourcesListView" AliasName="SRC_PHONE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcPhoneExt" EntityAttrName="SrcPhoneExt"
+		EntityUsage="SourcesListView" AliasName="SRC_PHONE_EXT">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCellPhone" EntityAttrName="SrcCellPhone"
+		EntityUsage="SourcesListView" AliasName="SRC_CELL_PHONE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcFax" EntityAttrName="SrcFax"
+		EntityUsage="SourcesListView" AliasName="SRC_FAX">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcStatus" IsNotNull="true"
+		EntityAttrName="SrcStatus" EntityUsage="SourcesListView" AliasName="SRC_STATUS">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcExclusiveSourceYn" IsNotNull="true"
+		EntityAttrName="SrcExclusiveSourceYn" EntityUsage="SourcesListView"
+		AliasName="SRC_EXCLUSIVE_SOURCE_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcDontContactYn" IsNotNull="true"
+		EntityAttrName="SrcDontContactYn" EntityUsage="SourcesListView"
+		AliasName="SRC_DONT_CONTACT_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCompanyType" EntityAttrName="SrcCompanyType"
+		EntityUsage="SourcesListView" AliasName="SRC_COMPANY_TYPE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcAreaOfExpertise" EntityAttrName="SrcAreaOfExpertise"
+		EntityUsage="SourcesListView" AliasName="SRC_AREA_OF_EXPERTISE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcIndustrySector" EntityAttrName="SrcIndustrySector"
+		EntityUsage="SourcesListView" AliasName="SRC_INDUSTRY_SECTOR">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcIndustryView" EntityAttrName="SrcIndustryView"
+		EntityUsage="SourcesListView" AliasName="SRC_INDUSTRY_VIEW">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcVendors" EntityAttrName="SrcVendors"
+		EntityUsage="SourcesListView" AliasName="SRC_VENDORS">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcCompanySize" EntityAttrName="SrcCompanySize"
+		EntityUsage="SourcesListView" AliasName="SRC_COMPANY_SIZE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcDistributionPreference"
+		EntityAttrName="SrcDistributionPreference" EntityUsage="SourcesListView"
+		AliasName="SRC_DISTRIBUTION_PREFERENCE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcDistributionNotes"
+		EntityAttrName="SrcDistributionNotes" EntityUsage="SourcesListView"
+		AliasName="SRC_DISTRIBUTION_NOTES">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcSpecialRequests" EntityAttrName="SrcSpecialRequests"
+		EntityUsage="SourcesListView" AliasName="SRC_SPECIAL_REQUESTS">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcReportersNotes" EntityAttrName="SrcReportersNotes"
+		EntityUsage="SourcesListView" AliasName="SRC_REPORTERS_NOTES">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcQualityRating" EntityAttrName="SrcQualityRating"
+		EntityUsage="SourcesListView" AliasName="SRC_QUALITY_RATING">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcModifiedDate" EntityAttrName="SrcModifiedDate"
+		EntityUsage="SourcesListView" AliasName="SRC_MODIFIED_DATE">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcModifiedBy" IsNotNull="true"
+		EntityAttrName="SrcModifiedBy" EntityUsage="SourcesListView"
+		AliasName="SRC_MODIFIED_BY">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcSuffixTitle" EntityAttrName="SrcSuffixTitle"
+		EntityUsage="SourcesListView" AliasName="SRC_SUFFIX_TITLE">
+	</ViewAttribute>
+	<ViewAttribute Name="RprtSourceDisplayField"
+		EntityAttrName="RprtSourceDisplayField" EntityUsage="SourcesListView"
+		AliasName="RPRT_SOURCE_DISPLAY_FIELD">
+	</ViewAttribute>
+	<ViewAttribute Name="RpsRptrId" EntityAttrName="RpsRptrId"
+		EntityUsage="SourcesListView" AliasName="RPS_RPTR_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="RpsRepeatSourceYn" EntityAttrName="RpsRepeatSourceYn"
+		EntityUsage="SourcesListView" AliasName="RPS_REPEAT_SOURCE_YN">
+	</ViewAttribute>
+	<ViewAttribute Name="EmplInit" EntityAttrName="EmplInit"
+		EntityUsage="SourcesListView" AliasName="EMPL_INIT">
+	</ViewAttribute>
+	<ViewAttribute Name="RprtId" IsNotNull="true"
+		EntityAttrName="RprtId" EntityUsage="SourcesListView" AliasName="RPRT_ID">
+	</ViewAttribute>
+	<ViewAttribute Name="SrcOfferedReport" IsPersistent="false"
+		Precision="1" Type="java.lang.String" ColumnType="VARCHAR2" AliasName="SRC_OFFERED_REPORT"
+		Expression="SRC_OFFERED_REPORT" SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+	<ViewAttribute Name="SrcInformedOfWebsite" IsPersistent="false"
+		Precision="1" Type="java.lang.String" ColumnType="VARCHAR2"
+		AliasName="SRC_INFORMED_OF_WEBSITE" Expression="SRC_INFORMED_OF_WEBSITE"
+		SQLType="VARCHAR">
+		<DesignTime>
+			<Attr Name="_DisplaySize" Value="1" />
+		</DesignTime>
+	</ViewAttribute>
+</ViewObject>
